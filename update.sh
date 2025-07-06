@@ -15,8 +15,10 @@ TAG=v10${BASE_OCI_VERSION}
 ## Clone options
 
 OCI_VERSION=v${BASE_OCI_VERSION}
-SOURCE="/tmp/oci-go-sdk/"
-DEST="/tmp/oci-go-sdk-clone"
+# SOURCE="/tmp/oci-go-sdk-clone/"
+SOURCE=$(mktemp -d)
+# DEST="/tmp/oci-go-sdk-fork"
+DEST=$(mktemp -d)
 DEST_BRANCH="modules"
 
 ## Clone original repository
@@ -25,6 +27,36 @@ rm -rf ${SOURCE}
 git clone -c advice.detachedHead=false -q --branch ${OCI_VERSION} --single-branch --depth 1 git@github.com:oracle/oci-go-sdk.git ${SOURCE}
 cd ${SOURCE}
 
+CUR_GO=$(go mod edit -json | jq -r .Go)
+
+## Quick fix existing code
+
+cat > .golangci.yml <<EOF
+version: "2"
+
+formatters:
+    enable:
+      - gci
+
+linters:
+    default: none
+    enable:
+      - govet
+    settings:
+        govet:
+          disable-all: true
+          enable:
+            - printf
+EOF
+
+go mod edit -go 1.24.0 -toolchain=none
+go mod tidy
+
+golangci-lint fmt
+golangci-lint run --fix
+
+rm .golangci.yml
+git checkout HEAD go.mod go.sum
 
 ############################################
 ##              Modules                   ##
@@ -37,7 +69,8 @@ mvpkg ./example/helpers ./helpers
 
 ## Format existing code
 
-golangci-lint fmt --enable gci
+# --enable gci
+golangci-lint fmt
 
 ## Find package dependencies
 
@@ -66,7 +99,7 @@ echo "create module github.com/${ORG}/oci-go-sdk/common/${NEW_MAJOR_VERSION}"
 cd common
 
 go mod init github.com/${ORG}/oci-go-sdk/common/${NEW_MAJOR_VERSION}
-go mod edit -go 1.13 -toolchain=none
+go mod edit -go ${CUR_GO} -toolchain=none
 go mod tidy
 
 cd ..
@@ -77,7 +110,7 @@ for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd' | grep -v 'common'); do
     cd ${row}
 
     go mod init github.com/${ORG}/oci-go-sdk/${row}/${NEW_MAJOR_VERSION}
-    go mod edit -go 1.13 -toolchain=none
+    go mod edit -go ${CUR_GO} -toolchain=none
 
     for dep in $(cat "${row}.txt"); do
         target=$(echo ${dep} | awk -F/ 'BEGIN{OFS="/"} {print $4}')
@@ -102,7 +135,7 @@ done
 ## Replace package with module
 
 for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'); do
-    echo "Replace ${row}"
+    echo "Replace package with module ${row}"
 
     find . -type f -name "*.go" \
       -exec grep -l "github.com/oracle/oci-go-sdk/${OLD_MAJOR_VERSION}/${row}" {} + \
@@ -162,7 +195,7 @@ cd ${DEST}
 
 git rm -f -r --ignore-unmatch '*'
 
-cp -r ${SOURCE}. .
+cp -r ${SOURCE}/. .
 
 git add .
 
