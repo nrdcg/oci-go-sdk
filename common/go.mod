@@ -2,8 +2,6 @@ module github.com/nrdcg/oci-go-sdk/common/v1065
 
 go 1.21.0
 
-toolchain go1.24.4
-
 require (
 	github.com/gofrs/flock v0.12.1
 	github.com/sony/gobreaker v1.0.0

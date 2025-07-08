@@ -2,8 +2,6 @@ module github.com/nrdcg/oci-go-sdk/objectstorage/v1065
 
 go 1.21.0
 
-toolchain go1.24.4
-
 replace github.com/nrdcg/oci-go-sdk/common/v1065 => ../common
 
 replace github.com/nrdcg/oci-go-sdk/helpers/v1065 => ../helpers

@@ -2,8 +2,6 @@ module github.com/nrdcg/oci-go-sdk/example/v1065
 
 go 1.21.0
 
-toolchain go1.24.4
-
 replace github.com/nrdcg/oci-go-sdk/artifacts/v1065 => ../artifacts
 
 replace github.com/nrdcg/oci-go-sdk/audit/v1065 => ../audit
