@@ -14,8 +14,9 @@ package opsi
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeHostInsightHostRecommendationAggregation Returns list of hosts with resource statistics like usage, capacity, utilization, usage change percent and load.
@@ -56,7 +57,7 @@ func (m SummarizeHostInsightHostRecommendationAggregation) ValidateEnumValue() (
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

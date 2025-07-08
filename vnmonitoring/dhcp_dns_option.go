@@ -13,8 +13,9 @@ package vnmonitoring
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DhcpDnsOption DHCP option for specifying how DNS (hostname resolution) is handled in the subnets in the VCN.
@@ -56,7 +57,7 @@ func (m DhcpDnsOption) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

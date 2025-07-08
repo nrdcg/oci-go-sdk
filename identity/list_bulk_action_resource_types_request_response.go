@@ -6,9 +6,10 @@ package identity
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListBulkActionResourceTypesRequest wrapper for the ListBulkActionResourceTypes operation
@@ -71,7 +72,7 @@ func (request ListBulkActionResourceTypesRequest) ValidateEnumValue() (bool, err
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for BulkActionType: %s. Supported values are: %s.", request.BulkActionType, strings.Join(GetListBulkActionResourceTypesBulkActionTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

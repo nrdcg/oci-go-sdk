@@ -6,9 +6,10 @@ package servicemesh
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateVirtualServiceRouteTableRequest wrapper for the CreateVirtualServiceRouteTable operation
@@ -68,7 +69,7 @@ func (request CreateVirtualServiceRouteTableRequest) RetryPolicy() *common.Retry
 func (request CreateVirtualServiceRouteTableRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

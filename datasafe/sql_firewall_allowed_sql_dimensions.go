@@ -11,8 +11,9 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SqlFirewallAllowedSqlDimensions The dimensions available for SQL Firewall allow SQL analytics.
@@ -50,7 +51,7 @@ func (m SqlFirewallAllowedSqlDimensions) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LifecycleState: %s. Supported values are: %s.", m.LifecycleState, strings.Join(GetSqlFirewallAllowedSqlLifecycleStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

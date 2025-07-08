@@ -14,8 +14,9 @@ package opsi
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DatabaseInsightSummary Summary of a database insight resource.
@@ -173,6 +174,10 @@ func (m *databaseinsightsummary) UnmarshalPolymorphicJSON(data []byte) (interfac
 		mm := ExternalMysqlDatabaseInsightSummary{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+		mm := MacsManagedAutonomousDatabaseInsightSummary{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	default:
 		common.Logf("Received unsupported enum value for DatabaseInsightSummary: %s.", m.EntitySource)
 		return *m, nil
@@ -286,7 +291,7 @@ func (m databaseinsightsummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LifecycleState: %s. Supported values are: %s.", m.LifecycleState, strings.Join(GetLifecycleStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

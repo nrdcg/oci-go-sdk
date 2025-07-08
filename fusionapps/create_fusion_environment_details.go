@@ -12,8 +12,9 @@ package fusionapps
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateFusionEnvironmentDetails The configuration details of the FusionEnvironment. For more information about these fields, see Managing Environments (https://docs.oracle.com/iaas/Content/fusion-applications/manage-environment.htm).
@@ -70,7 +71,7 @@ func (m CreateFusionEnvironmentDetails) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

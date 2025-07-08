@@ -6,9 +6,10 @@ package aispeech
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListVoicesRequest wrapper for the ListVoices operation
@@ -70,7 +71,7 @@ func (request ListVoicesRequest) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ModelName: %s. Supported values are: %s.", request.ModelName, strings.Join(GetTtsOracleModelDetailsModelNameEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

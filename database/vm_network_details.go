@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // VmNetworkDetails Details of the client or backup networks in an Exadata VM cluster network. Applies to Exadata Cloud@Customer instances only.
@@ -51,7 +52,7 @@ func (m VmNetworkDetails) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package mediaservices
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetStreamDistributionChannelRequest wrapper for the GetStreamDistributionChannel operation
@@ -61,7 +62,7 @@ func (request GetStreamDistributionChannelRequest) RetryPolicy() *common.RetryPo
 func (request GetStreamDistributionChannelRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

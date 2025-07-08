@@ -6,9 +6,10 @@ package stackmonitoring
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateMetricExtensionRequest wrapper for the UpdateMetricExtension operation
@@ -72,7 +73,7 @@ func (request UpdateMetricExtensionRequest) RetryPolicy() *common.RetryPolicy {
 func (request UpdateMetricExtensionRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

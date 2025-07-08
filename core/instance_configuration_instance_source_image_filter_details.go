@@ -17,8 +17,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // InstanceConfigurationInstanceSourceImageFilterDetails These are the criteria for selecting an image. This is required if imageId is not specified.
@@ -51,7 +52,7 @@ func (m InstanceConfigurationInstanceSourceImageFilterDetails) ValidateEnumValue
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

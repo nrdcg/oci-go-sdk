@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RestoreOciConsolePolicy Schema to restoring OCI Console Policy to Factory Defaults.
@@ -184,7 +185,7 @@ func (m RestoreOciConsolePolicy) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

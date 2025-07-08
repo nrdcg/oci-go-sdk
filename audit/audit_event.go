@@ -13,8 +13,9 @@ package audit
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AuditEvent All the attributes of an audit event. For more information, see Viewing Audit Log Events (https://docs.oracle.com/iaas/Content/Audit/Tasks/viewinglogevents.htm).
@@ -68,7 +69,7 @@ func (m AuditEvent) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package rover
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetRoverNodeGetRptRequest wrapper for the GetRoverNodeGetRpt operation
@@ -65,7 +66,7 @@ func (request GetRoverNodeGetRptRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetRoverNodeGetRptRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

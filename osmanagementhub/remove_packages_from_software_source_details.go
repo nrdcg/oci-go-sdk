@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RemovePackagesFromSoftwareSourceDetails Provides a list of packages to be removed from the software source.
@@ -34,7 +35,7 @@ func (m RemovePackagesFromSoftwareSourceDetails) ValidateEnumValue() (bool, erro
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

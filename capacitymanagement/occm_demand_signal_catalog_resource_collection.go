@@ -11,8 +11,9 @@ package capacitymanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OccmDemandSignalCatalogResourceCollection A list containing detailed information about different resources.
@@ -33,7 +34,7 @@ func (m OccmDemandSignalCatalogResourceCollection) ValidateEnumValue() (bool, er
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

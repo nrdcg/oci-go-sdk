@@ -18,8 +18,9 @@ package dbmulticloud
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateMultiCloudResourceDiscoveryDetails This object is about to provide input params to discover resource.
@@ -62,7 +63,7 @@ func (m CreateMultiCloudResourceDiscoveryDetails) ValidateEnumValue() (bool, err
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package containerinstances
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ShapeNetworkingBandwidthOptions For a flexible shape, the amount of networking bandwidth available for container instances that use this shape.
@@ -39,7 +40,7 @@ func (m ShapeNetworkingBandwidthOptions) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

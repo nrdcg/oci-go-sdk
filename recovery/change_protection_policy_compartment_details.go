@@ -11,8 +11,9 @@ package recovery
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeProtectionPolicyCompartmentDetails The configuration details required to move a protection policy from the existing compartment to a specified compartment.
@@ -33,7 +34,7 @@ func (m ChangeProtectionPolicyCompartmentDetails) ValidateEnumValue() (bool, err
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

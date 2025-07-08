@@ -12,8 +12,9 @@ package aidocument
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ObjectStorageDocumentDetails A document in OCI Object Storage.
@@ -27,6 +28,9 @@ type ObjectStorageDocumentDetails struct {
 
 	// The Object Storage object name.
 	ObjectName *string `mandatory:"true" json:"objectName"`
+
+	// The page ranges to be analysed.
+	PageRange []string `mandatory:"false" json:"pageRange"`
 }
 
 func (m ObjectStorageDocumentDetails) String() string {
@@ -40,7 +44,7 @@ func (m ObjectStorageDocumentDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

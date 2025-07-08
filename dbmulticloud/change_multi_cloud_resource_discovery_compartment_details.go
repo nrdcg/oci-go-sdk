@@ -18,8 +18,9 @@ package dbmulticloud
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeMultiCloudResourceDiscoveryCompartmentDetails Details of the new compartment to contain the Multi Cloud Resource Discovery.
@@ -54,7 +55,7 @@ func (m ChangeMultiCloudResourceDiscoveryCompartmentDetails) ValidateEnumValue()
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

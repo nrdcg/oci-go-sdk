@@ -6,9 +6,10 @@ package rover
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateRoverEntitlementRequest wrapper for the UpdateRoverEntitlement operation
@@ -71,7 +72,7 @@ func (request UpdateRoverEntitlementRequest) RetryPolicy() *common.RetryPolicy {
 func (request UpdateRoverEntitlementRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

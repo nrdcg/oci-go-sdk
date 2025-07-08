@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ExadataIormConfig The IORM settings of the Exadata DB system.
@@ -50,7 +51,7 @@ func (m ExadataIormConfig) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for Objective: %s. Supported values are: %s.", m.Objective, strings.Join(GetExadataIormConfigObjectiveEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package marketplacepublisher
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateTermVersionRequest wrapper for the UpdateTermVersion operation
@@ -71,7 +72,7 @@ func (request UpdateTermVersionRequest) RetryPolicy() *common.RetryPolicy {
 func (request UpdateTermVersionRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

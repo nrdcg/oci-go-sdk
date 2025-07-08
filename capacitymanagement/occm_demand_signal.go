@@ -11,8 +11,9 @@ package capacitymanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OccmDemandSignal An occm demand signal is a resource that communicates the forecasting needs of a customer to OCI in advance.
@@ -78,7 +79,7 @@ func (m OccmDemandSignal) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

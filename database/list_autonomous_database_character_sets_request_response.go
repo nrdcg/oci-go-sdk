@@ -6,9 +6,10 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListAutonomousDatabaseCharacterSetsRequest wrapper for the ListAutonomousDatabaseCharacterSets operation
@@ -70,7 +71,7 @@ func (request ListAutonomousDatabaseCharacterSetsRequest) ValidateEnumValue() (b
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CharacterSetType: %s. Supported values are: %s.", request.CharacterSetType, strings.Join(GetListAutonomousDatabaseCharacterSetsCharacterSetTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package capacitymanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OccmDemandSignalItem An occm demand signal item is a resource that is used to communicate the forecasting need for a particular resource with OCI. It's a sub-resource and need to be grouped inside a demand signal.
@@ -97,7 +98,7 @@ func (m OccmDemandSignalItem) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

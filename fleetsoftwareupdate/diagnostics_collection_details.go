@@ -12,8 +12,9 @@ package fleetsoftwareupdate
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DiagnosticsCollectionDetails Details to configure diagnostics collection for targets affected by this Exadata Fleet Update Maintenance Cycle.
@@ -38,7 +39,7 @@ func (m DiagnosticsCollectionDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LogCollectionMode: %s. Supported values are: %s.", m.LogCollectionMode, strings.Join(GetDataCollectionModesEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

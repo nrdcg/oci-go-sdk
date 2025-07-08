@@ -11,8 +11,9 @@ package fleetappsmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SchedulerDefinitionCollection Results of a schedulerDefinition search. Contains boh SchedulerDefinitionSummary items and other information, such as metadata.
@@ -33,7 +34,7 @@ func (m SchedulerDefinitionCollection) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

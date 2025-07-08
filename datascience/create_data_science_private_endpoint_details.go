@@ -11,8 +11,9 @@ package datascience
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateDataSciencePrivateEndpointDetails The details required to create a Data Science private endpoint.
@@ -62,7 +63,7 @@ func (m CreateDataSciencePrivateEndpointDetails) ValidateEnumValue() (bool, erro
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

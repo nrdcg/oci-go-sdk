@@ -17,8 +17,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ComputeGpuMemoryClusterInstanceSummary The customer facing GPU memory cluster instance object details.
@@ -75,7 +76,7 @@ func (m ComputeGpuMemoryClusterInstanceSummary) ValidateEnumValue() (bool, error
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LifecycleState: %s. Supported values are: %s.", m.LifecycleState, strings.Join(GetComputeGpuMemoryClusterInstanceSummaryLifecycleStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

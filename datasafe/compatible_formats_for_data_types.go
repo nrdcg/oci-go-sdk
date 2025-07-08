@@ -11,8 +11,9 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CompatibleFormatsForDataTypes A list of basic masking formats compatible with and grouped by the supported data types. The data types are grouped into
@@ -40,7 +41,7 @@ func (m CompatibleFormatsForDataTypes) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

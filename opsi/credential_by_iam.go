@@ -14,15 +14,16 @@ package opsi
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CredentialByIam IAM Credential Details to connect to the database.
 type CredentialByIam struct {
 
-	// Credential source name that had been added in Management Agent wallet. This is supplied in the External Database Service.
-	CredentialSourceName *string `mandatory:"true" json:"credentialSourceName"`
+	// Credential source name that had been added in Management Agent wallet. This value is only required when Credential set by CREDENTIALS_BY_SOURCE and is optional properties for ther others.
+	CredentialSourceName *string `mandatory:"false" json:"credentialSourceName"`
 }
 
 // GetCredentialSourceName returns CredentialSourceName
@@ -41,7 +42,7 @@ func (m CredentialByIam) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

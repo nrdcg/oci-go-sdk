@@ -13,8 +13,9 @@ package optimizer
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ProfileLevelCollection A list of profile levels that match the filter criteria, if any. The result contains `ProfileLevelSummary` objects.
@@ -35,7 +36,7 @@ func (m ProfileLevelCollection) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

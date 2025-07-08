@@ -16,8 +16,9 @@ package generativeaiagentruntime
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // HumanApprovalRequiredAction An object describing human confirmation of tool execution that is required from the user.
@@ -54,7 +55,7 @@ func (m HumanApprovalRequiredAction) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

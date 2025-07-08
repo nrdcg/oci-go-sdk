@@ -12,8 +12,9 @@ package databasemigration
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OracleAwsS3DataTransferMediumDetails AWS S3 bucket details used for source Connection resources with RDS_ORACLE type.
@@ -50,7 +51,7 @@ func (m OracleAwsS3DataTransferMediumDetails) ValidateEnumValue() (bool, error) 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -12,8 +12,9 @@ package filestorage
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ScheduleDowngradeShapeMountTargetDetails Shape details about the Mount Target.
@@ -35,7 +36,7 @@ func (m ScheduleDowngradeShapeMountTargetDetails) ValidateEnumValue() (bool, err
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

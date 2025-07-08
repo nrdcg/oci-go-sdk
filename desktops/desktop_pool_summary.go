@@ -11,8 +11,9 @@ package desktops
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DesktopPoolSummary Provides information about the desktop pool such as number of active desktops, name, OCID, state, and maximum size.
@@ -67,7 +68,7 @@ func (m DesktopPoolSummary) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

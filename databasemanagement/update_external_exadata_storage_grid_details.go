@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateExternalExadataStorageGridDetails The details required to update an Exadata storage server grid.
@@ -42,7 +43,7 @@ func (m UpdateExternalExadataStorageGridDetails) ValidateEnumValue() (bool, erro
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

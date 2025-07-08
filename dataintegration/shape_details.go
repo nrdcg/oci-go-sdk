@@ -11,8 +11,9 @@ package dataintegration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ShapeDetails OCI DataFlow Shape configuration. Use shapeOcpuParam and shapeMemoryParam config params for configuring number of OCPUs and memory in GBs respectively.
@@ -31,7 +32,7 @@ func (m ShapeDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

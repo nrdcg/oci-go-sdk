@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AutonomousDatabaseBackupConfig Autonomous Database configuration details for storing manual backups (https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/backup-restore.html#GUID-9035DFB8-4702-4CEB-8281-C2A303820809) in the Object Storage (https://docs.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm) service.
@@ -39,7 +40,7 @@ func (m AutonomousDatabaseBackupConfig) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ManualBackupType: %s. Supported values are: %s.", m.ManualBackupType, strings.Join(GetAutonomousDatabaseBackupConfigManualBackupTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

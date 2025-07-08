@@ -11,8 +11,9 @@ package goldengate
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TestConnectionAssignmentResult The result of the connectivity test performed between the GoldenGate deployment and the associated database / service.
@@ -42,7 +43,7 @@ func (m TestConnectionAssignmentResult) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

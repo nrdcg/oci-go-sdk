@@ -12,8 +12,9 @@ package goldengate
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateAzureDataLakeStorageIcebergStorageDetails The information to update the Azure Data Lake Storage storage used in the Iceberg connection.
@@ -44,7 +45,7 @@ func (m UpdateAzureDataLakeStorageIcebergStorageDetails) ValidateEnumValue() (bo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

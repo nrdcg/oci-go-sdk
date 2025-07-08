@@ -11,8 +11,9 @@ package opensearch
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OpensearchClusterInternalDetails This is the ClusterLoadBalancer which can store the State of the cluster, opensearchLoadbalancerIps, remoteLoadbalancerIps
@@ -51,7 +52,7 @@ func (m OpensearchClusterInternalDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package dts
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetApplianceExportJobRequest wrapper for the GetApplianceExportJob operation
@@ -62,7 +63,7 @@ func (request GetApplianceExportJobRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetApplianceExportJobRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

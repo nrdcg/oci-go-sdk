@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AddmTaskSummary The object containing the ADDM task metadata.
@@ -74,7 +75,7 @@ func (m AddmTaskSummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for HowCreated: %s. Supported values are: %s.", m.HowCreated, strings.Join(GetAddmTaskSummaryHowCreatedEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

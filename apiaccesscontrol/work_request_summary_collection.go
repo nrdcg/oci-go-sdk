@@ -16,8 +16,9 @@ package apiaccesscontrol
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // WorkRequestSummaryCollection A list of work requests. Can contain both work requests and other information, such as metadata.
@@ -38,7 +39,7 @@ func (m WorkRequestSummaryCollection) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RuleExtensionOciconsolesignonpolicyconsentPolicy This extension defines attributes used to record consent for modification of the "Security Policy for OCI Console" sign-on policy, Rule, Condition or ConditionGroup.
@@ -65,7 +66,7 @@ func (m RuleExtensionOciconsolesignonpolicyconsentPolicy) ValidateEnumValue() (b
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

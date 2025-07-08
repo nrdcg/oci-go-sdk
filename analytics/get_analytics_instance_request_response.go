@@ -6,9 +6,10 @@ package analytics
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetAnalyticsInstanceRequest wrapper for the GetAnalyticsInstance operation
@@ -62,7 +63,7 @@ func (request GetAnalyticsInstanceRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetAnalyticsInstanceRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

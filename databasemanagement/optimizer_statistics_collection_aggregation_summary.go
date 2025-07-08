@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OptimizerStatisticsCollectionAggregationSummary The summary of the Optimizer Statistics Collection, which includes the aggregated number of tasks grouped by status.
@@ -70,7 +71,7 @@ func (m OptimizerStatisticsCollectionAggregationSummary) ValidateEnumValue() (bo
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for GroupBy: %s. Supported values are: %s.", m.GroupBy, strings.Join(GetOptimizerStatisticsGroupByTypesEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

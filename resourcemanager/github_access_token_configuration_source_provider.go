@@ -15,8 +15,9 @@ package resourcemanager
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GithubAccessTokenConfigurationSourceProvider The properties that define a configuration source provider of the type `GITHUB_ACCESS_TOKEN`.
@@ -137,7 +138,7 @@ func (m GithubAccessTokenConfigurationSourceProvider) ValidateEnumValue() (bool,
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LifecycleState: %s. Supported values are: %s.", m.LifecycleState, strings.Join(GetConfigurationSourceProviderLifecycleStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

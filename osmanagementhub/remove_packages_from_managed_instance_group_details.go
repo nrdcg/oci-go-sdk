@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RemovePackagesFromManagedInstanceGroupDetails The names of the packages to be removed from the managed instance group.
@@ -36,7 +37,7 @@ func (m RemovePackagesFromManagedInstanceGroupDetails) ValidateEnumValue() (bool
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

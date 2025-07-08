@@ -11,8 +11,9 @@ package aidocument
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // Page One page document analysis result.
@@ -40,6 +41,15 @@ type Page struct {
 
 	// The form fields detected on the page.
 	DocumentFields []DocumentField `mandatory:"false" json:"documentFields"`
+
+	// The signatures detected on the page.
+	Signatures []Signature `mandatory:"false" json:"signatures"`
+
+	// The bar codes detected on the page.
+	BarCodes []BarCode `mandatory:"false" json:"barCodes"`
+
+	// The checkboxes and selection marks detected on the page.
+	SelectionMarks []SelectionMark `mandatory:"false" json:"selectionMarks"`
 }
 
 func (m Page) String() string {
@@ -53,7 +63,7 @@ func (m Page) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ExternalClusterScanListenerConfiguration The details of a SCAN listener in an external cluster.
@@ -47,7 +48,7 @@ func (m ExternalClusterScanListenerConfiguration) ValidateEnumValue() (bool, err
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ScanProtocol: %s. Supported values are: %s.", m.ScanProtocol, strings.Join(GetExternalClusterScanListenerConfigurationScanProtocolEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

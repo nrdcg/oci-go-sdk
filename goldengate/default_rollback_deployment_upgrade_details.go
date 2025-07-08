@@ -12,8 +12,9 @@ package goldengate
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DefaultRollbackDeploymentUpgradeDetails Definition of the additional attributes for default upgrade rollback.
@@ -31,7 +32,7 @@ func (m DefaultRollbackDeploymentUpgradeDetails) ValidateEnumValue() (bool, erro
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

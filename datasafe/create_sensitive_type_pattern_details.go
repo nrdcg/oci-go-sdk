@@ -12,8 +12,9 @@ package datasafe
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateSensitiveTypePatternDetails Details to create a new sensitive type with regular expressions.
@@ -108,7 +109,7 @@ func (m CreateSensitiveTypePatternDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SearchType: %s. Supported values are: %s.", m.SearchType, strings.Join(GetSensitiveTypePatternSearchTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

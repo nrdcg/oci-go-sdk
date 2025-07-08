@@ -6,9 +6,10 @@ package jms
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DisableDrsRequest wrapper for the DisableDrs operation
@@ -78,7 +79,7 @@ func (request DisableDrsRequest) RetryPolicy() *common.RetryPolicy {
 func (request DisableDrsRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

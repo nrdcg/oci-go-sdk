@@ -12,10 +12,11 @@ package identity
 import (
 	"context"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
-	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
 	"net/http"
 	"time"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
+	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
 )
 
 // IdentityClient a client for Identity

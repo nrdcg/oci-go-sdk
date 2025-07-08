@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AuthenticationFactorSettingsIdentityStoreSettings Settings related to the use of a user's profile details from the identity store
@@ -62,7 +63,7 @@ func (m AuthenticationFactorSettingsIdentityStoreSettings) ValidateEnumValue() (
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ConvertStandbyAutonomousContainerDatabaseDetails The configuration details for change Autonomous Container Database Dataguard role
@@ -42,7 +43,7 @@ func (m ConvertStandbyAutonomousContainerDatabaseDetails) ValidateEnumValue() (b
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ConnectionStringsType: %s. Supported values are: %s.", m.ConnectionStringsType, strings.Join(GetConvertStandbyAutonomousContainerDatabaseDetailsConnectionStringsTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

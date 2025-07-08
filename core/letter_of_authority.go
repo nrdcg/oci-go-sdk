@@ -17,8 +17,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // LetterOfAuthority The Letter of Authority for the cross-connect. You must submit this letter when
@@ -62,7 +63,7 @@ func (m LetterOfAuthority) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CircuitType: %s. Supported values are: %s.", m.CircuitType, strings.Join(GetLetterOfAuthorityCircuitTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

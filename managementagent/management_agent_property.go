@@ -12,8 +12,9 @@ package managementagent
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ManagementAgentProperty Property item in name/value pair, with optional unit type.
@@ -43,7 +44,7 @@ func (m ManagementAgentProperty) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for Units: %s. Supported values are: %s.", m.Units, strings.Join(GetPropertyUnitsEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

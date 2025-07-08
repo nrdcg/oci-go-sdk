@@ -11,8 +11,9 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SecurityFeatureAnalyticsDimensions The scope of analytics data.
@@ -36,7 +37,7 @@ func (m SecurityFeatureAnalyticsDimensions) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SecurityFeature: %s. Supported values are: %s.", m.SecurityFeature, strings.Join(GetSecurityFeatureAnalyticsDimensionsSecurityFeatureEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

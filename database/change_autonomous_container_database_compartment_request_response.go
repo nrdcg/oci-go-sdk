@@ -6,9 +6,10 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeAutonomousContainerDatabaseCompartmentRequest wrapper for the ChangeAutonomousContainerDatabaseCompartment operation
@@ -76,7 +77,7 @@ func (request ChangeAutonomousContainerDatabaseCompartmentRequest) RetryPolicy()
 func (request ChangeAutonomousContainerDatabaseCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

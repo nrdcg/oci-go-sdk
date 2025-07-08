@@ -12,8 +12,9 @@ package fleetsoftwareupdate
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeFsuCycleCompartmentDetails Compartment to move the Exadata Fleet Update Cycle to.
@@ -35,7 +36,7 @@ func (m ChangeFsuCycleCompartmentDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

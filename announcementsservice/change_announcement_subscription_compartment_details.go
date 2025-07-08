@@ -11,8 +11,9 @@ package announcementsservice
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeAnnouncementSubscriptionCompartmentDetails The details of the request to change the compartment of the announcement subscription.
@@ -34,7 +35,7 @@ func (m ChangeAnnouncementSubscriptionCompartmentDetails) ValidateEnumValue() (b
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

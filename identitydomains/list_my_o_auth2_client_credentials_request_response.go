@@ -6,9 +6,10 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListMyOAuth2ClientCredentialsRequest wrapper for the ListMyOAuth2ClientCredentials operation
@@ -92,7 +93,7 @@ func (request ListMyOAuth2ClientCredentialsRequest) ValidateEnumValue() (bool, e
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SortOrder: %s. Supported values are: %s.", request.SortOrder, strings.Join(GetListMyOAuth2ClientCredentialsSortOrderEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

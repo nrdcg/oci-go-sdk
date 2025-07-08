@@ -12,8 +12,9 @@ package databasemigration
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateTargetDefaultsAutoCreateTablespaceDetails Migration tablespace settings valid for TARGET_DEFAULTS_AUTOCREATE target type. The service will compute
@@ -33,7 +34,7 @@ func (m UpdateTargetDefaultsAutoCreateTablespaceDetails) ValidateEnumValue() (bo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

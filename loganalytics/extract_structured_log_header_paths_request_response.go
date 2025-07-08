@@ -6,9 +6,10 @@ package loganalytics
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ExtractStructuredLogHeaderPathsRequest wrapper for the ExtractStructuredLogHeaderPaths operation
@@ -77,7 +78,7 @@ func (request ExtractStructuredLogHeaderPathsRequest) ValidateEnumValue() (bool,
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ParserType: %s. Supported values are: %s.", request.ParserType, strings.Join(GetExtractStructuredLogHeaderPathsParserTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

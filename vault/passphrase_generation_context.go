@@ -12,8 +12,9 @@ package vault
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PassphraseGenerationContext Generates Passphrase type secrets. By default, passphrase type secrets have no structure. The generated content is stored in Base64 format.
@@ -51,7 +52,7 @@ func (m PassphraseGenerationContext) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

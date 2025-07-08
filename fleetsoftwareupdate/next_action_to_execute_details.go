@@ -12,8 +12,9 @@ package fleetsoftwareupdate
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // NextActionToExecuteDetails Details of the next Exadata Fleet Update Action to execute in a Maintenance Cycle.
@@ -41,7 +42,7 @@ func (m NextActionToExecuteDetails) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

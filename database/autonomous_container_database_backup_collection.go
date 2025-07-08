@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AutonomousContainerDatabaseBackupCollection A list of all of the Autonomous Container Database Backups in the specified compartment.
@@ -33,7 +34,7 @@ func (m AutonomousContainerDatabaseBackupCollection) ValidateEnumValue() (bool, 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

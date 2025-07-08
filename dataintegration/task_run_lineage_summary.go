@@ -11,8 +11,9 @@ package dataintegration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TaskRunLineageSummary The information about TaskRunLineage.
@@ -72,7 +73,7 @@ func (m TaskRunLineageSummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for TaskExecutionStatus: %s. Supported values are: %s.", m.TaskExecutionStatus, strings.Join(GetTaskRunLineageSummaryTaskExecutionStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

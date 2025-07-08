@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SearchSoftwareSourcePackageGroupsDetails Provides the software sources and search parameters to get a list of associated package groups.
@@ -55,7 +56,7 @@ func (m SearchSoftwareSourcePackageGroupsDetails) ValidateEnumValue() (bool, err
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for GroupType: %s. Supported values are: %s.", m.GroupType, strings.Join(GetPackageGroupGroupTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

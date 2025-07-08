@@ -6,9 +6,10 @@ package fleetappsmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeTaskRecordCompartmentRequest wrapper for the ChangeTaskRecordCompartment operation
@@ -78,7 +79,7 @@ func (request ChangeTaskRecordCompartmentRequest) RetryPolicy() *common.RetryPol
 func (request ChangeTaskRecordCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

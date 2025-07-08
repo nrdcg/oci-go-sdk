@@ -6,9 +6,10 @@ package apigateway
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateSubscriberRequest wrapper for the UpdateSubscriber operation
@@ -71,7 +72,7 @@ func (request UpdateSubscriberRequest) RetryPolicy() *common.RetryPolicy {
 func (request UpdateSubscriberRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

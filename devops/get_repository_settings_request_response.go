@@ -6,9 +6,10 @@ package devops
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetRepositorySettingsRequest wrapper for the GetRepositorySettings operation
@@ -61,7 +62,7 @@ func (request GetRepositorySettingsRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetRepositorySettingsRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

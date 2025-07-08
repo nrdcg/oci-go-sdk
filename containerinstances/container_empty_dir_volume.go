@@ -12,8 +12,9 @@ package containerinstances
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ContainerEmptyDirVolume The empty directory volume of a container instance. You can create up to 64 EmptyDir per container instance.
@@ -45,7 +46,7 @@ func (m ContainerEmptyDirVolume) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

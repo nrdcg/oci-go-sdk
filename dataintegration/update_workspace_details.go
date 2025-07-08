@@ -11,8 +11,9 @@ package dataintegration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateWorkspaceDetails The information to be updated, the private network can be enabled and VCN and subnet set only when initially it is has been created with it off.
@@ -47,7 +48,7 @@ func (m UpdateWorkspaceDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -12,8 +12,9 @@ package distributeddatabase
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PatchDistributedAutonomousDatabaseDetails Provide PatchInstuction(s) in items array. All instructions in items have to be of same type.
@@ -37,7 +38,7 @@ func (m PatchDistributedAutonomousDatabaseDetails) ValidateEnumValue() (bool, er
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

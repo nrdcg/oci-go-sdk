@@ -13,8 +13,9 @@ package dns
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateResolverVnicEndpointDetails The body for defining a new resolver VNIC endpoint. Either isForwarding or isListening must be true, but not both.
@@ -84,7 +85,7 @@ func (m CreateResolverVnicEndpointDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

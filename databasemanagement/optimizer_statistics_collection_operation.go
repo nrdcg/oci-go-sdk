@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OptimizerStatisticsCollectionOperation The summary of the Optimizer Statistics Collection tasks, which includes details of the Managed Database and the execution.
@@ -80,7 +81,7 @@ func (m OptimizerStatisticsCollectionOperation) ValidateEnumValue() (bool, error
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

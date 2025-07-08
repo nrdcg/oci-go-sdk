@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OpsiDataObjectQueryParam Details for a query parameter to be applied on an OPSI data object, when a data object query is executed.
@@ -38,7 +39,7 @@ func (m OpsiDataObjectQueryParam) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

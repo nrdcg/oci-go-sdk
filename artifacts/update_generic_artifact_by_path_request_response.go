@@ -6,9 +6,10 @@ package artifacts
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateGenericArtifactByPathRequest wrapper for the UpdateGenericArtifactByPath operation
@@ -79,7 +80,7 @@ func (request UpdateGenericArtifactByPathRequest) RetryPolicy() *common.RetryPol
 func (request UpdateGenericArtifactByPathRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

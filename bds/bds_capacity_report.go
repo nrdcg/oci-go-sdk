@@ -11,8 +11,9 @@ package bds
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // BdsCapacityReport A report of the host capacity within an availability domain that is available for you to create bds clusters. Host capacity is the physical infrastructure that resources such as compute instances run on. Use the capacity report to determine whether sufficient capacity is available for a shape before you create a bds cluster or change the shape of a bds cluster.
@@ -39,7 +40,7 @@ func (m BdsCapacityReport) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

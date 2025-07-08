@@ -6,9 +6,10 @@ package integration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateIntegrationInstanceRequest wrapper for the CreateIntegrationInstance operation
@@ -69,7 +70,7 @@ func (request CreateIntegrationInstanceRequest) RetryPolicy() *common.RetryPolic
 func (request CreateIntegrationInstanceRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -14,11 +14,11 @@ package objectstorage
 import (
 	"context"
 	"fmt"
+	"net/http"
+	"regexp"
+
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
-	"net/http"
-
-	"regexp"
 )
 
 // ObjectStorageClient a client for ObjectStorage

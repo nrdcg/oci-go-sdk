@@ -15,8 +15,9 @@ package disasterrecovery
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DrProtectionGroupMemberAutonomousDatabase The properties for an Autonomous Database Serverless member of a DR protection group.
@@ -58,7 +59,7 @@ func (m DrProtectionGroupMemberAutonomousDatabase) ValidateEnumValue() (bool, er
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for AutonomousDatabaseStandbyTypeForDrDrills: %s. Supported values are: %s.", m.AutonomousDatabaseStandbyTypeForDrDrills, strings.Join(GetAutonomousDatabaseStandbyTypeForDrDrillsEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

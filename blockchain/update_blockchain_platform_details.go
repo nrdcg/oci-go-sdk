@@ -11,8 +11,9 @@ package blockchain
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateBlockchainPlatformDetails Blockchain Platform details for updating a service.
@@ -55,7 +56,7 @@ func (m UpdateBlockchainPlatformDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LoadBalancerShape: %s. Supported values are: %s.", m.LoadBalancerShape, strings.Join(GetBlockchainPlatformLoadBalancerShapeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

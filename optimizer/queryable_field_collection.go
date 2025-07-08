@@ -13,8 +13,9 @@ package optimizer
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // QueryableFieldCollection List of the fields that are indexed for querying and their associated value types. Results contain `QueryableFieldSummary` objects.
@@ -35,7 +36,7 @@ func (m QueryableFieldCollection) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

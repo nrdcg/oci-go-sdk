@@ -12,8 +12,9 @@ package integration
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeIntegrationInstanceNetworkEndpointDetails Input payload to update an Integration instance endpoint details. An empty payload will clear out any existing configuration.
@@ -35,7 +36,7 @@ func (m ChangeIntegrationInstanceNetworkEndpointDetails) ValidateEnumValue() (bo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

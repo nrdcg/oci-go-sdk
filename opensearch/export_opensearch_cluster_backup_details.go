@@ -11,8 +11,9 @@ package opensearch
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ExportOpensearchClusterBackupDetails Information about the cluster backup to export.
@@ -59,7 +60,7 @@ func (m ExportOpensearchClusterBackupDetails) ValidateEnumValue() (bool, error) 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

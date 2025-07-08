@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DeregisterAutonomousDatabaseDataSafeDetails Details to deregister an Autonomous Database with Data Safe.
@@ -33,7 +34,7 @@ func (m DeregisterAutonomousDatabaseDataSafeDetails) ValidateEnumValue() (bool, 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

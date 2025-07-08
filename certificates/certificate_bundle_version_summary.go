@@ -11,8 +11,9 @@ package certificates
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CertificateBundleVersionSummary The properties of the certificate bundle. Certificate bundle version summary objects do not include the actual contents of the certificate.
@@ -66,7 +67,7 @@ func (m CertificateBundleVersionSummary) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

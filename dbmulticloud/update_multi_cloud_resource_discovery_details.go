@@ -18,8 +18,9 @@ package dbmulticloud
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateMultiCloudResourceDiscoveryDetails This object is about to provide input params to update Multi Cloud Resource Discovery.
@@ -62,7 +63,7 @@ func (m UpdateMultiCloudResourceDiscoveryDetails) ValidateEnumValue() (bool, err
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ResourceType: %s. Supported values are: %s.", m.ResourceType, strings.Join(GetMultiCloudResourceDiscoveryResourceTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

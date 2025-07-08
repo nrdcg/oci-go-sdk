@@ -11,8 +11,9 @@ package streaming
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CustomEncryptionKey Custom Encryption Key which will be used for encryption by all the streams in the pool.
@@ -39,7 +40,7 @@ func (m CustomEncryptionKey) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for KeyState: %s. Supported values are: %s.", m.KeyState, strings.Join(GetCustomEncryptionKeyKeyStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package datascience
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeMlApplicationCompartmentRequest wrapper for the ChangeMlApplicationCompartment operation
@@ -74,7 +75,7 @@ func (request ChangeMlApplicationCompartmentRequest) RetryPolicy() *common.Retry
 func (request ChangeMlApplicationCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

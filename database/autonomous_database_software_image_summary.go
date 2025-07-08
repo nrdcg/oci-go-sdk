@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AutonomousDatabaseSoftwareImageSummary The Database service supports the creation of Autonomous Database Software Images for use in creating Autonomous Container Database.
@@ -82,7 +83,7 @@ func (m AutonomousDatabaseSoftwareImageSummary) ValidateEnumValue() (bool, error
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

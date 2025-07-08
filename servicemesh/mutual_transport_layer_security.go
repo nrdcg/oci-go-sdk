@@ -11,8 +11,9 @@ package servicemesh
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // MutualTransportLayerSecurity Mutual TLS settings used when communicating with other virtual services or ingress gateways within the mesh.
@@ -47,7 +48,7 @@ func (m MutualTransportLayerSecurity) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -16,8 +16,9 @@ package generativeaiagent
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // HttpEndpointOciResourcePrincipalAuthConfig Specifies authentication using Oracle Cloud Infrastructure (OCI) Resource Principal, leveraging OCI's identity-based authentication mechanism.
@@ -35,7 +36,7 @@ func (m HttpEndpointOciResourcePrincipalAuthConfig) ValidateEnumValue() (bool, e
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

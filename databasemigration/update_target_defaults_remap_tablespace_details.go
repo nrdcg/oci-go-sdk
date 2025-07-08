@@ -12,8 +12,9 @@ package databasemigration
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateTargetDefaultsRemapTablespaceDetails Migration tablespace settings valid for TARGET_DEFAULTS_REMAP target type. The service will compute the targetType
@@ -33,7 +34,7 @@ func (m UpdateTargetDefaultsRemapTablespaceDetails) ValidateEnumValue() (bool, e
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

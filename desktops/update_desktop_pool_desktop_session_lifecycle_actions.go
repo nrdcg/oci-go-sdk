@@ -11,8 +11,9 @@ package desktops
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateDesktopPoolDesktopSessionLifecycleActions The update details of action to be triggered in case of inactivity or disconnect
@@ -33,7 +34,7 @@ func (m UpdateDesktopPoolDesktopSessionLifecycleActions) ValidateEnumValue() (bo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

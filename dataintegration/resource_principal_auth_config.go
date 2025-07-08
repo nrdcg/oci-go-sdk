@@ -12,8 +12,9 @@ package dataintegration
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ResourcePrincipalAuthConfig Authentication configuration that uses OCI Resource Principal Auth for Generic REST invocation.
@@ -60,7 +61,7 @@ func (m ResourcePrincipalAuthConfig) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

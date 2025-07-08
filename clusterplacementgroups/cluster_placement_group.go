@@ -11,8 +11,9 @@ package clusterplacementgroups
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ClusterPlacementGroup A cluster placement group, which is a logical grouping of resources that offer low latency within an availability domain by being placed in close physical proximity.
@@ -82,7 +83,7 @@ func (m ClusterPlacementGroup) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

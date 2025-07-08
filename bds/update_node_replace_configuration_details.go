@@ -12,8 +12,9 @@ package bds
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateNodeReplaceConfigurationDetails The information about the NodeReplaceConfiguration
@@ -44,7 +45,7 @@ func (m UpdateNodeReplaceConfigurationDetails) ValidateEnumValue() (bool, error)
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for MetricType: %s. Supported values are: %s.", m.MetricType, strings.Join(GetNodeReplaceConfigurationMetricTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

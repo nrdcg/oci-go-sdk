@@ -13,8 +13,9 @@ package vnmonitoring
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // NetworkLoadBalancerEndpoint Defines the details required for a NETWORK_LOAD_BALANCER-type `Endpoint`.
@@ -35,7 +36,7 @@ func (m NetworkLoadBalancerEndpoint) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

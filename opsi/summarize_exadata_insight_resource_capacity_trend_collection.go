@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeExadataInsightResourceCapacityTrendCollection capacity results with breakdown by databases, hosts, storage servers or diskgroup.
@@ -62,7 +63,7 @@ func (m SummarizeExadataInsightResourceCapacityTrendCollection) ValidateEnumValu
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

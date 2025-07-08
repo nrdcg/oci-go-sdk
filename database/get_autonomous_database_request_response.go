@@ -6,9 +6,10 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetAutonomousDatabaseRequest wrapper for the GetAutonomousDatabase operation
@@ -61,7 +62,7 @@ func (request GetAutonomousDatabaseRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetAutonomousDatabaseRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

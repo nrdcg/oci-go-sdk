@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeExadataInsightResourceUsageAggregation Resource usage summation for the current time period
@@ -68,7 +69,7 @@ func (m SummarizeExadataInsightResourceUsageAggregation) ValidateEnumValue() (bo
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

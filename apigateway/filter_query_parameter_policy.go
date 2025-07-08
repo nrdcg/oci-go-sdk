@@ -13,8 +13,9 @@ package apigateway
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // FilterQueryParameterPolicy Filter parameters from the query string as they pass through the gateway.  The gateway applies filters after other
@@ -43,7 +44,7 @@ func (m FilterQueryParameterPolicy) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

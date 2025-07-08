@@ -11,8 +11,9 @@ package capacitymanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateInternalOccCapacityRequestDetails The details required for making an internal API update call for the capacity requests.
@@ -39,7 +40,7 @@ func (m UpdateInternalOccCapacityRequestDetails) ValidateEnumValue() (bool, erro
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RequestState: %s. Supported values are: %s.", m.RequestState, strings.Join(GetUpdateInternalOccCapacityRequestDetailsRequestStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

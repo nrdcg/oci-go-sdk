@@ -11,8 +11,9 @@ package apmtraces
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // QueryResultRowTypeSummary Summary of the datatype, unit and related metadata of an individual row element of a query result row that is returned.
@@ -46,7 +47,7 @@ func (m QueryResultRowTypeSummary) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

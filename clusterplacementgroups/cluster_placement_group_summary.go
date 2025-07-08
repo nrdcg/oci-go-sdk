@@ -11,8 +11,9 @@ package clusterplacementgroups
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ClusterPlacementGroupSummary A summary object that provides the metadata details of the cluster placement group.
@@ -75,7 +76,7 @@ func (m ClusterPlacementGroupSummary) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

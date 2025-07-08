@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeExadbVmClusterCompartmentDetails The configuration details for moving the Exadata VM cluster on Exascale Infrastructure to another compartment. Applies to Exadata Database Service on Exascale Infrastructure only.
@@ -33,7 +34,7 @@ func (m ChangeExadbVmClusterCompartmentDetails) ValidateEnumValue() (bool, error
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

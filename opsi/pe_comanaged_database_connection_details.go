@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PeComanagedDatabaseConnectionDetails Connection details of the private endpoints.
@@ -44,7 +45,7 @@ func (m PeComanagedDatabaseConnectionDetails) ValidateEnumValue() (bool, error) 
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for Protocol: %s. Supported values are: %s.", m.Protocol, strings.Join(GetPeComanagedDatabaseConnectionDetailsProtocolEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

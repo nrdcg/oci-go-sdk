@@ -6,9 +6,10 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListAccountRecoverySettingsRequest wrapper for the ListAccountRecoverySettings operation
@@ -86,7 +87,7 @@ func (request ListAccountRecoverySettingsRequest) ValidateEnumValue() (bool, err
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

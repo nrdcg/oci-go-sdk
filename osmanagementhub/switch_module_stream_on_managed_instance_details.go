@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SwitchModuleStreamOnManagedInstanceDetails Provides the information used to switch module streams on a managed instance.
@@ -42,7 +43,7 @@ func (m SwitchModuleStreamOnManagedInstanceDetails) ValidateEnumValue() (bool, e
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

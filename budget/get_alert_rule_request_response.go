@@ -6,9 +6,10 @@ package budget
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetAlertRuleRequest wrapper for the GetAlertRule operation
@@ -64,7 +65,7 @@ func (request GetAlertRuleRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetAlertRuleRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

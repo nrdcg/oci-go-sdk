@@ -18,8 +18,9 @@ package core
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // InstanceConfigurationPerformanceBasedAutotunePolicy If a volume is being throttled at the current setting for a certain period of time, auto-tune will
@@ -44,7 +45,7 @@ func (m InstanceConfigurationPerformanceBasedAutotunePolicy) ValidateEnumValue()
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

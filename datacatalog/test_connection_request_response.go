@@ -6,9 +6,10 @@ package datacatalog
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TestConnectionRequest wrapper for the TestConnection operation
@@ -74,7 +75,7 @@ func (request TestConnectionRequest) RetryPolicy() *common.RetryPolicy {
 func (request TestConnectionRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

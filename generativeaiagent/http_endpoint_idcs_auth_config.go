@@ -16,8 +16,9 @@ package generativeaiagent
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // HttpEndpointIdcsAuthConfig Specifies authentication using Oracle Identity Cloud Service (IDCS), leveraging OAuth 2.0 for token-based authentication.
@@ -36,7 +37,7 @@ func (m HttpEndpointIdcsAuthConfig) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

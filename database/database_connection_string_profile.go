@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DatabaseConnectionStringProfile The connection string profile to allow clients to group, filter and select connection string values based on structured metadata.
@@ -76,7 +77,7 @@ func (m DatabaseConnectionStringProfile) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for TlsAuthentication: %s. Supported values are: %s.", m.TlsAuthentication, strings.Join(GetDatabaseConnectionStringProfileTlsAuthenticationEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

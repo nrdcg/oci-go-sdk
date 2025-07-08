@@ -14,8 +14,9 @@ package resourcemanager
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TerraformAdvancedOptions Specifies advanced options for Terraform commands. These options are not necessary for normal usage of Terraform.
@@ -50,7 +51,7 @@ func (m TerraformAdvancedOptions) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for DetailedLogLevel: %s. Supported values are: %s.", m.DetailedLogLevel, strings.Join(GetTerraformAdvancedOptionsDetailedLogLevelEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

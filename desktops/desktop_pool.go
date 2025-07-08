@@ -11,8 +11,9 @@ package desktops
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DesktopPool Provides information about a desktop pool including all configuration parameters.
@@ -118,7 +119,7 @@ func (m DesktopPool) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for UseDedicatedVmHost: %s. Supported values are: %s.", m.UseDedicatedVmHost, strings.Join(GetDesktopPoolUseDedicatedVmHostEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

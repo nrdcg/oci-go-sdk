@@ -12,8 +12,9 @@ package certificatesmanagement
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CertificateAuthorityIssuanceExpiryRule A rule that enforces how long certificates or certificate authorities (CAs) issued by this particular CA are valid.
@@ -40,7 +41,7 @@ func (m CertificateAuthorityIssuanceExpiryRule) ValidateEnumValue() (bool, error
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

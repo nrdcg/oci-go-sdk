@@ -6,9 +6,10 @@ package usageapi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RequestAverageCarbonEmissionRequest wrapper for the RequestAverageCarbonEmission operation
@@ -62,7 +63,7 @@ func (request RequestAverageCarbonEmissionRequest) RetryPolicy() *common.RetryPo
 func (request RequestAverageCarbonEmissionRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

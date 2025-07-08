@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // InstallModuleStreamProfileOnManagedInstanceGroupDetails Provides the details for installing a module stream profile on a managed instance group.
@@ -45,7 +46,7 @@ func (m InstallModuleStreamProfileOnManagedInstanceGroupDetails) ValidateEnumVal
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

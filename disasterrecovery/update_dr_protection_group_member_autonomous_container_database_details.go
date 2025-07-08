@@ -15,8 +15,9 @@ package disasterrecovery
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateDrProtectionGroupMemberAutonomousContainerDatabaseDetails Update properties for an Autonomous Container Database member.
@@ -50,7 +51,7 @@ func (m UpdateDrProtectionGroupMemberAutonomousContainerDatabaseDetails) Validat
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ConnectionStringType: %s. Supported values are: %s.", m.ConnectionStringType, strings.Join(GetAutonomousContainerDatabaseSnapshotStandbyConnectionStringTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

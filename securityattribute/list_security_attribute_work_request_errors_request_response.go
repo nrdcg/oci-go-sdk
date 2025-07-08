@@ -6,9 +6,10 @@ package securityattribute
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListSecurityAttributeWorkRequestErrorsRequest wrapper for the ListSecurityAttributeWorkRequestErrors operation
@@ -70,7 +71,7 @@ func (request ListSecurityAttributeWorkRequestErrorsRequest) RetryPolicy() *comm
 func (request ListSecurityAttributeWorkRequestErrorsRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

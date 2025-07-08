@@ -11,8 +11,9 @@ package aidocument
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AnalyzeDocumentResult The document analysis results.
@@ -43,6 +44,12 @@ type AnalyzeDocumentResult struct {
 	// The document table extraction model version.
 	TableExtractionModelVersion *string `mandatory:"false" json:"tableExtractionModelVersion"`
 
+	// The document signature extraction model version.
+	SignatureExtractionModelVersion *string `mandatory:"false" json:"signatureExtractionModelVersion"`
+
+	// The document bar code extraction model version.
+	BarCodeExtractionModelVersion *string `mandatory:"false" json:"barCodeExtractionModelVersion"`
+
 	// The errors encountered during document analysis.
 	Errors []ProcessingError `mandatory:"false" json:"errors"`
 
@@ -61,7 +68,7 @@ func (m AnalyzeDocumentResult) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

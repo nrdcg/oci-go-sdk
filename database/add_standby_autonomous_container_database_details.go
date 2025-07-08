@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AddStandbyAutonomousContainerDatabaseDetails Create Standby Autonomous Container Database to an existing Autonomous Container Database
@@ -66,7 +67,7 @@ func (m AddStandbyAutonomousContainerDatabaseDetails) ValidateEnumValue() (bool,
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ProtectionMode: %s. Supported values are: %s.", m.ProtectionMode, strings.Join(GetAddStandbyAutonomousContainerDatabaseDetailsProtectionModeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

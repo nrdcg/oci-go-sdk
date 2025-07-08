@@ -6,9 +6,10 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetSecurityPolicyRequest wrapper for the GetSecurityPolicy operation
@@ -61,7 +62,7 @@ func (request GetSecurityPolicyRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetSecurityPolicyRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

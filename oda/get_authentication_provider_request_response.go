@@ -6,9 +6,10 @@ package oda
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetAuthenticationProviderRequest wrapper for the GetAuthenticationProvider operation
@@ -69,7 +70,7 @@ func (request GetAuthenticationProviderRequest) RetryPolicy() *common.RetryPolic
 func (request GetAuthenticationProviderRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -12,8 +12,9 @@ package devops
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ComputeInstanceGroupSelectorCollection A collection of selectors. The combination of instances matching the selectors are included in the instance group.
@@ -34,7 +35,7 @@ func (m ComputeInstanceGroupSelectorCollection) ValidateEnumValue() (bool, error
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

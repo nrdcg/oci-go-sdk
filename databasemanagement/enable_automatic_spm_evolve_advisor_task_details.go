@@ -14,8 +14,9 @@ package databasemanagement
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // EnableAutomaticSpmEvolveAdvisorTaskDetails The details required to enable Automatic SPM Evolve Advisor task.
@@ -37,7 +38,7 @@ func (m EnableAutomaticSpmEvolveAdvisorTaskDetails) ValidateEnumValue() (bool, e
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

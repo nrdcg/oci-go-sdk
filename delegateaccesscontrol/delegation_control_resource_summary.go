@@ -15,8 +15,9 @@ package delegateaccesscontrol
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DelegationControlResourceSummary Details of the resources that this Delegation Control is applicable to.
@@ -43,7 +44,7 @@ func (m DelegationControlResourceSummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ResourceStatus: %s. Supported values are: %s.", m.ResourceStatus, strings.Join(GetDelegationControlResourceSummaryResourceStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

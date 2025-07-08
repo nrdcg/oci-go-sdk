@@ -12,9 +12,10 @@ package redis
 import (
 	"context"
 	"fmt"
+	"net/http"
+
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
-	"net/http"
 )
 
 // RedisClusterClient a client for RedisCluster

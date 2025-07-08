@@ -11,8 +11,9 @@ package servicemesh
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // Mesh The mesh resource is the top-level container that represents the logical boundary of application traffic between the services and deployments that reside within it. A mesh also provides a unit of access control.
@@ -80,7 +81,7 @@ func (m Mesh) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

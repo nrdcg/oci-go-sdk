@@ -14,8 +14,9 @@ package apigateway
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OAuth2ResponseValidationFailurePolicy Policy to specify OAuth2 flow configuration.
@@ -64,7 +65,7 @@ func (m OAuth2ResponseValidationFailurePolicy) ValidateEnumValue() (bool, error)
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

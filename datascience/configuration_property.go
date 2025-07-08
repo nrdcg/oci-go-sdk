@@ -11,8 +11,9 @@ package datascience
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ConfigurationProperty Property that is used for provisioning of the given MlApplicationInstance. It is validated against configurationSchema defined in referenced MlApplicationImplementation. The value is mandatory with exception for ConfigurationProperty of SECRET type where read operation does not return value field as it contains plain text secret and update operation does not have to contain value field when the secret value should not be updated.
@@ -36,7 +37,7 @@ func (m ConfigurationProperty) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

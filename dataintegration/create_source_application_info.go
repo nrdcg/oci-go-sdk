@@ -11,8 +11,9 @@ package dataintegration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateSourceApplicationInfo The information about the application.
@@ -42,7 +43,7 @@ func (m CreateSourceApplicationInfo) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CopyType: %s. Supported values are: %s.", m.CopyType, strings.Join(GetCreateSourceApplicationInfoCopyTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

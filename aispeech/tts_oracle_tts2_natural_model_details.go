@@ -12,8 +12,9 @@ package aispeech
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TtsOracleTts2NaturalModelDetails Use this schema for specifying properties of TTS_2_NATURAL model from Oracle model family.
@@ -35,7 +36,7 @@ func (m TtsOracleTts2NaturalModelDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

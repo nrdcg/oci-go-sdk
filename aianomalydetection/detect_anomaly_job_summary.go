@@ -13,8 +13,9 @@ package aianomalydetection
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DetectAnomalyJobSummary Anomaly Job summary contains minimal information for asynchronous inference of anomalies
@@ -81,7 +82,7 @@ func (m DetectAnomalyJobSummary) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

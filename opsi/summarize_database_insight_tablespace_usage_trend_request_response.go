@@ -6,9 +6,10 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeDatabaseInsightTablespaceUsageTrendRequest wrapper for the SummarizeDatabaseInsightTablespaceUsageTrend operation
@@ -99,7 +100,7 @@ func (request SummarizeDatabaseInsightTablespaceUsageTrendRequest) RetryPolicy()
 func (request SummarizeDatabaseInsightTablespaceUsageTrendRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

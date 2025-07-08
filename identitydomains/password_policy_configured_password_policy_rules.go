@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PasswordPolicyConfiguredPasswordPolicyRules List of password policy rules that have values set. This map of stringKey:stringValue pairs can be used to aid users while setting/resetting password
@@ -54,7 +55,7 @@ func (m PasswordPolicyConfiguredPasswordPolicyRules) ValidateEnumValue() (bool, 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

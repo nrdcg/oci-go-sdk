@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateOperationsInsightsWarehouseUserDetails The information about a Operations Insights Warehouse User to be created. Input compartmentId MUST be the root compartment.
@@ -61,7 +62,7 @@ func (m CreateOperationsInsightsWarehouseUserDetails) ValidateEnumValue() (bool,
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

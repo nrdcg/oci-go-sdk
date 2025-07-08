@@ -11,8 +11,9 @@ package certificatesmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CertificateAuthorityVersionSummary The metadata details of the certificate authority (CA) version. This summary object does not contain the CA contents.
@@ -61,7 +62,7 @@ func (m CertificateAuthorityVersionSummary) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

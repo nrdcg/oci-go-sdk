@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AppExtensionOpcServiceApp This extension defines attributes specific to Apps that represent instances of an Oracle Public Cloud (OPC) service.
@@ -128,7 +129,7 @@ func (m AppExtensionOpcServiceApp) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for NextSynchronizationMode: %s. Supported values are: %s.", m.NextSynchronizationMode, strings.Join(GetAppExtensionOpcServiceAppNextSynchronizationModeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

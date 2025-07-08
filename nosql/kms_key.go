@@ -14,8 +14,9 @@ package nosql
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // KmsKey Information about the state of the service's encryption key management.
@@ -61,7 +62,7 @@ func (m KmsKey) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for KmsKeyState: %s. Supported values are: %s.", m.KmsKeyState, strings.Join(GetKmsKeyKmsKeyStateEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

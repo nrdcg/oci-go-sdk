@@ -11,8 +11,9 @@ package distributeddatabase
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeDistributedAutonomousDatabaseCompartmentDetails The configuration details for moving the resource for Globally distributed autonomous database to other compartment.
@@ -33,7 +34,7 @@ func (m ChangeDistributedAutonomousDatabaseCompartmentDetails) ValidateEnumValue
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

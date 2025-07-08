@@ -6,9 +6,10 @@ package mediaservices
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RemoveMediaAssetLockRequest wrapper for the RemoveMediaAssetLock operation
@@ -78,7 +79,7 @@ func (request RemoveMediaAssetLockRequest) RetryPolicy() *common.RetryPolicy {
 func (request RemoveMediaAssetLockRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

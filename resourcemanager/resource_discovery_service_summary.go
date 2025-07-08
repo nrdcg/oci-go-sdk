@@ -14,8 +14,9 @@ package resourcemanager
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ResourceDiscoveryServiceSummary A service supported for use with Resource Discovery (https://www.terraform.io/docs/providers/oci/guides/resource_discovery.html#services).
@@ -45,7 +46,7 @@ func (m ResourceDiscoveryServiceSummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for DiscoveryScope: %s. Supported values are: %s.", m.DiscoveryScope, strings.Join(GetResourceDiscoveryServiceSummaryDiscoveryScopeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

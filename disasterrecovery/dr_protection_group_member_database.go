@@ -15,8 +15,9 @@ package disasterrecovery
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DrProtectionGroupMemberDatabase The properties for a Base Database or Exadata Database member of a DR protection group.
@@ -48,7 +49,7 @@ func (m DrProtectionGroupMemberDatabase) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

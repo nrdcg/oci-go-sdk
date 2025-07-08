@@ -11,8 +11,9 @@ package servicecatalog
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateServiceCatalogAssociationDetails The model to create a single association between a service catalog and a resource.
@@ -39,7 +40,7 @@ func (m CreateServiceCatalogAssociationDetails) ValidateEnumValue() (bool, error
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

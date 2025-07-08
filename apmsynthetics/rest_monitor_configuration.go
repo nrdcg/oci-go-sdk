@@ -12,8 +12,9 @@ package apmsynthetics
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RestMonitorConfiguration Request configuration details for the REST monitor type.
@@ -86,7 +87,7 @@ func (m RestMonitorConfiguration) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ReqAuthenticationScheme: %s. Supported values are: %s.", m.ReqAuthenticationScheme, strings.Join(GetRequestAuthenticationSchemesEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

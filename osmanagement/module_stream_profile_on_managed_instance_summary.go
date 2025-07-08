@@ -12,8 +12,9 @@ package osmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ModuleStreamProfileOnManagedInstanceSummary Summary information pertaining to a module stream profile on a managed instance
@@ -55,7 +56,7 @@ func (m ModuleStreamProfileOnManagedInstanceSummary) ValidateEnumValue() (bool, 
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

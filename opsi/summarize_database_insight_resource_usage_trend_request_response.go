@@ -6,9 +6,10 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeDatabaseInsightResourceUsageTrendRequest wrapper for the SummarizeDatabaseInsightResourceUsageTrend operation
@@ -163,7 +164,7 @@ func (request SummarizeDatabaseInsightResourceUsageTrendRequest) ValidateEnumVal
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SortBy: %s. Supported values are: %s.", request.SortBy, strings.Join(GetSummarizeDatabaseInsightResourceUsageTrendSortByEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }
@@ -221,6 +222,10 @@ const (
 	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeComanagedExaccNoncdb SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "COMANAGED-EXACC-NONCDB"
 	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeMdsMysql             SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "MDS-MYSQL"
 	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalMysql        SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "EXTERNAL-MYSQL"
+	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeAtpExacc             SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "ATP-EXACC"
+	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeAdwExacc             SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "ADW-EXACC"
+	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalAdw          SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "EXTERNAL-ADW"
+	SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalAtp          SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = "EXTERNAL-ATP"
 )
 
 var mappingSummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = map[string]SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum{
@@ -244,6 +249,10 @@ var mappingSummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum = map[stri
 	"COMANAGED-EXACC-NONCDB": SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeComanagedExaccNoncdb,
 	"MDS-MYSQL":              SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeMdsMysql,
 	"EXTERNAL-MYSQL":         SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalMysql,
+	"ATP-EXACC":              SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeAtpExacc,
+	"ADW-EXACC":              SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeAdwExacc,
+	"EXTERNAL-ADW":           SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalAdw,
+	"EXTERNAL-ATP":           SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalAtp,
 }
 
 var mappingSummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnumLowerCase = map[string]SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum{
@@ -267,6 +276,10 @@ var mappingSummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnumLowerCase =
 	"comanaged-exacc-noncdb": SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeComanagedExaccNoncdb,
 	"mds-mysql":              SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeMdsMysql,
 	"external-mysql":         SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalMysql,
+	"atp-exacc":              SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeAtpExacc,
+	"adw-exacc":              SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeAdwExacc,
+	"external-adw":           SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalAdw,
+	"external-atp":           SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeExternalAtp,
 }
 
 // GetSummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnumValues Enumerates the set of values for SummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnum
@@ -301,6 +314,10 @@ func GetSummarizeDatabaseInsightResourceUsageTrendDatabaseTypeEnumStringValues()
 		"COMANAGED-EXACC-NONCDB",
 		"MDS-MYSQL",
 		"EXTERNAL-MYSQL",
+		"ATP-EXACC",
+		"ADW-EXACC",
+		"EXTERNAL-ADW",
+		"EXTERNAL-ATP",
 	}
 }
 

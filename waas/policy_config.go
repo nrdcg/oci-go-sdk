@@ -12,8 +12,9 @@ package waas
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PolicyConfig The configuration details for the WAAS policy.
@@ -99,7 +100,7 @@ func (m PolicyConfig) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CipherGroup: %s. Supported values are: %s.", m.CipherGroup, strings.Join(GetPolicyConfigCipherGroupEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

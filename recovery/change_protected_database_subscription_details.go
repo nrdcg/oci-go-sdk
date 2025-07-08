@@ -11,8 +11,9 @@ package recovery
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeProtectedDatabaseSubscriptionDetails Subscription details of the new cloud service environment, such as Microsoft Azure, where the protected database will be provisioned.
@@ -36,7 +37,7 @@ func (m ChangeProtectedDatabaseSubscriptionDetails) ValidateEnumValue() (bool, e
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

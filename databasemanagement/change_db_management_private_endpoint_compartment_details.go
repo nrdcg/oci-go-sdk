@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeDbManagementPrivateEndpointCompartmentDetails The details used to move the Database Management private endpoint to another compartment.
@@ -35,7 +36,7 @@ func (m ChangeDbManagementPrivateEndpointCompartmentDetails) ValidateEnumValue()
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

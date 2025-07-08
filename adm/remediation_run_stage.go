@@ -12,8 +12,9 @@ package adm
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RemediationRunStage A remediation run stage is one step of an remediation run. Each stage provides output logs and has a specific type.
@@ -173,7 +174,7 @@ func (m remediationrunstage) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for NextStageType: %s. Supported values are: %s.", m.NextStageType, strings.Join(GetRemediationRunStageTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

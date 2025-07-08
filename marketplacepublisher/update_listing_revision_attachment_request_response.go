@@ -6,9 +6,10 @@ package marketplacepublisher
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateListingRevisionAttachmentRequest wrapper for the UpdateListingRevisionAttachment operation
@@ -71,7 +72,7 @@ func (request UpdateListingRevisionAttachmentRequest) RetryPolicy() *common.Retr
 func (request UpdateListingRevisionAttachmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

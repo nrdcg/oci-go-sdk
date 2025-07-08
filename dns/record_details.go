@@ -12,8 +12,9 @@ package dns
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RecordDetails A DNS resource record. For more information about records, see RFC 1034 (https://tools.ietf.org/html/rfc1034#section-3.6).
@@ -57,7 +58,7 @@ func (m RecordDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AttachComputeHostGroupHostRequest wrapper for the AttachComputeHostGroupHost operation
@@ -77,7 +78,7 @@ func (request AttachComputeHostGroupHostRequest) RetryPolicy() *common.RetryPoli
 func (request AttachComputeHostGroupHostRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

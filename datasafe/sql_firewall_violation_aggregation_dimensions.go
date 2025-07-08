@@ -11,8 +11,9 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SqlFirewallViolationAggregationDimensions The details of the aggregation dimensions used for summarizing SQL violations.
@@ -71,7 +72,7 @@ func (m SqlFirewallViolationAggregationDimensions) ValidateEnumValue() (bool, er
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

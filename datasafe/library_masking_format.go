@@ -12,8 +12,9 @@ package datasafe
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // LibraryMaskingFormat A library masking format is a masking format stored in an Oracle Cloud Infrastructure compartment and can be used in
@@ -81,7 +82,7 @@ func (m LibraryMaskingFormat) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

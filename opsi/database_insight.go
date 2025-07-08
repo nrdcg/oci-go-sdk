@@ -14,8 +14,9 @@ package opsi
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DatabaseInsight Database insight resource.
@@ -127,6 +128,10 @@ func (m *databaseinsight) UnmarshalPolymorphicJSON(data []byte) (interface{}, er
 	switch m.EntitySource {
 	case "EM_MANAGED_EXTERNAL_DATABASE":
 		mm := EmManagedExternalDatabaseInsight{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
+	case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+		mm := MacsManagedAutonomousDatabaseInsight{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
 	case "MACS_MANAGED_EXTERNAL_DATABASE":
@@ -246,7 +251,7 @@ func (m databaseinsight) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

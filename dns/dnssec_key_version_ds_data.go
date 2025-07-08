@@ -12,8 +12,9 @@ package dns
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DnssecKeyVersionDsData Data for a parent zone DS record corresponding to this key-signing key (KSK).
@@ -41,7 +42,7 @@ func (m DnssecKeyVersionDsData) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for DigestType: %s. Supported values are: %s.", m.DigestType, strings.Join(GetDnssecDigestTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package aispeech
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RealtimeParameters Parameters to be sent to the realtime speech service over a websocket connection.
@@ -87,7 +88,7 @@ func (m RealtimeParameters) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for Punctuation: %s. Supported values are: %s.", m.Punctuation, strings.Join(GetRealtimeParametersPunctuationEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -17,8 +17,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // Byoasn Oracle offers the ability to Bring Your Own Autonomous System Number (BYOASN), importing AS Numbers you currently own to Oracle Cloud Infrastructure. A `Byoasn` resource is a record of the imported AS Number and also some associated metadata. The process used to Bring Your Own ASN (https://docs.oracle.com/iaas/Content/Network/Concepts/BYOASN.htm) is explained in the documentation.
@@ -83,7 +84,7 @@ func (m Byoasn) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

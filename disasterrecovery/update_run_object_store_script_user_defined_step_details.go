@@ -15,8 +15,9 @@ package disasterrecovery
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateRunObjectStoreScriptUserDefinedStepDetails The details for updating a Run Object Store Script step.
@@ -43,7 +44,7 @@ func (m UpdateRunObjectStoreScriptUserDefinedStepDetails) ValidateEnumValue() (b
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

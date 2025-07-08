@@ -11,8 +11,9 @@ package fusionapps
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // QuarterlyUpgradeBeginTimes Determines the quarterly upgrade begin times (monthly maintenance group schedule ) of the Fusion environment.
@@ -39,7 +40,7 @@ func (m QuarterlyUpgradeBeginTimes) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for OverrideType: %s. Supported values are: %s.", m.OverrideType, strings.Join(GetQuarterlyUpgradeBeginTimesOverrideTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

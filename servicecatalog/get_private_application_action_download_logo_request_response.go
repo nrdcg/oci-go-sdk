@@ -6,10 +6,11 @@ package servicecatalog
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetPrivateApplicationActionDownloadLogoRequest wrapper for the GetPrivateApplicationActionDownloadLogo operation
@@ -63,7 +64,7 @@ func (request GetPrivateApplicationActionDownloadLogoRequest) RetryPolicy() *com
 func (request GetPrivateApplicationActionDownloadLogoRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

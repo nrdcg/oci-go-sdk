@@ -6,9 +6,10 @@ package apmtraces
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetSpanRequest wrapper for the GetSpan operation
@@ -80,7 +81,7 @@ func (request GetSpanRequest) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SpanNamespace: %s. Supported values are: %s.", request.SpanNamespace, strings.Join(GetGetSpanSpanNamespaceEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

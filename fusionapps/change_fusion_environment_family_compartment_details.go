@@ -11,8 +11,9 @@ package fusionapps
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeFusionEnvironmentFamilyCompartmentDetails Details about the compartment the environment family should be moved to.
@@ -33,7 +34,7 @@ func (m ChangeFusionEnvironmentFamilyCompartmentDetails) ValidateEnumValue() (bo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

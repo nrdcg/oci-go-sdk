@@ -12,8 +12,9 @@ package apmsynthetics
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DnsSecMonitorConfiguration Request configuration details for the DNSSEC monitor type.
@@ -56,7 +57,7 @@ func (m DnsSecMonitorConfiguration) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RecordType: %s. Supported values are: %s.", m.RecordType, strings.Join(GetDnsRecordTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

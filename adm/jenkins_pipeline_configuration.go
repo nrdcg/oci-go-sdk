@@ -12,8 +12,9 @@ package adm
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // JenkinsPipelineConfiguration Extends a Verify configuration with appropriate data to reach and use the build service provided by a Jenkins Pipeline.
@@ -47,7 +48,7 @@ func (m JenkinsPipelineConfiguration) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

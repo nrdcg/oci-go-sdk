@@ -12,8 +12,9 @@ package governancerulescontrolplane
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // InclusionCriterion Represents the criterion for the inclusion of the child tenancies under a governance rule. This can be either TENANCY or TAG.
@@ -59,7 +60,7 @@ func (m InclusionCriterion) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

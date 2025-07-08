@@ -14,8 +14,9 @@ package containerengine
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // FlannelOverlayNodePoolPodNetworkOptionDetails Network options specific to using the flannel (FLANNEL_OVERLAY) CNI
@@ -33,7 +34,7 @@ func (m FlannelOverlayNodePoolPodNetworkOptionDetails) ValidateEnumValue() (bool
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

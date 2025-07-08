@@ -11,8 +11,9 @@ package datalabelingservicedataplane
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // NormalizedVertex A NormalizedVertex is a cartesian coordinate that represents a corner between two segments of a polygon.
@@ -36,7 +37,7 @@ func (m NormalizedVertex) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

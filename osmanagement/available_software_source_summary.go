@@ -12,8 +12,9 @@ package osmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AvailableSoftwareSourceSummary A software source which can be added to a managed instance. Once a software source is added, packages from that software source can be installed on that managed instance.
@@ -46,7 +47,7 @@ func (m AvailableSoftwareSourceSummary) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

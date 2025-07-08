@@ -15,8 +15,9 @@ package disasterrecovery
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateDrProtectionGroupMemberVolumeGroupDetails Create properties for a volume group member.
@@ -60,7 +61,7 @@ func (m CreateDrProtectionGroupMemberVolumeGroupDetails) ValidateEnumValue() (bo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

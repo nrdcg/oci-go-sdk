@@ -6,9 +6,10 @@ package marketplaceprivateoffer
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetAttachmentRequest wrapper for the GetAttachment operation
@@ -64,7 +65,7 @@ func (request GetAttachmentRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetAttachmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

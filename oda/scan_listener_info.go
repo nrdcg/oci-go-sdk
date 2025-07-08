@@ -11,8 +11,9 @@ package oda
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ScanListenerInfo Customer's Real Application Cluster (RAC)'s SCAN listener FQDN, port or list IPs and their ports.
@@ -39,7 +40,7 @@ func (m ScanListenerInfo) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

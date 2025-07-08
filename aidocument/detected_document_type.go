@@ -11,8 +11,9 @@ package aidocument
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DetectedDocumentType The detected document type.
@@ -23,6 +24,9 @@ type DetectedDocumentType struct {
 
 	// The confidence score between 0 and 1.
 	Confidence *float32 `mandatory:"true" json:"confidence"`
+
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Key-Value Extraction model that was used to extract the key-value pairs.
+	DocumentId *string `mandatory:"false" json:"documentId"`
 }
 
 func (m DetectedDocumentType) String() string {
@@ -36,7 +40,7 @@ func (m DetectedDocumentType) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

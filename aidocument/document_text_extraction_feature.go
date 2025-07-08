@@ -12,8 +12,9 @@ package aidocument
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DocumentTextExtractionFeature Text recognition
@@ -21,6 +22,12 @@ type DocumentTextExtractionFeature struct {
 
 	// Whether or not to generate a searchable PDF file.
 	GenerateSearchablePdf *bool `mandatory:"false" json:"generateSearchablePdf"`
+
+	// Unique identifier custom model OCID that should be used for inference.
+	ModelId *string `mandatory:"false" json:"modelId"`
+
+	// Whether checkbox detection feature is enabled or disabled.
+	SelectionMarkDetection *bool `mandatory:"false" json:"selectionMarkDetection"`
 }
 
 func (m DocumentTextExtractionFeature) String() string {
@@ -34,7 +41,7 @@ func (m DocumentTextExtractionFeature) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeHostInsightTopProcessesUsageTrendRequest wrapper for the SummarizeHostInsightTopProcessesUsageTrend operation
@@ -125,7 +126,7 @@ func (request SummarizeHostInsightTopProcessesUsageTrendRequest) ValidateEnumVal
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

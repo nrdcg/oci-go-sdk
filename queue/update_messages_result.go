@@ -11,8 +11,9 @@ package queue
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateMessagesResult The response to a UpdateMessages request. It indicates the number of server and client failures as well as an array of entries for successful and failed actions.
@@ -42,7 +43,7 @@ func (m UpdateMessagesResult) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package dataintegration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TaskRunLineageDetails The task lineage object provides information on the lineage information of a task after execution.
@@ -72,7 +73,7 @@ func (m TaskRunLineageDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for TaskExecutionStatus: %s. Supported values are: %s.", m.TaskExecutionStatus, strings.Join(GetTaskRunLineageDetailsTaskExecutionStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

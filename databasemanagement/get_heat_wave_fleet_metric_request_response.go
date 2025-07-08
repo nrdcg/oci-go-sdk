@@ -6,9 +6,10 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetHeatWaveFleetMetricRequest wrapper for the GetHeatWaveFleetMetric operation
@@ -84,7 +85,7 @@ func (request GetHeatWaveFleetMetricRequest) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for FilterByHeatWaveStatus: %s. Supported values are: %s.", request.FilterByHeatWaveStatus, strings.Join(GetGetHeatWaveFleetMetricFilterByHeatWaveStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package jmsjavadownloads
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RequestSummarizedJavaDownloadCountsDetails Attributes to summarize the Java download counts in a tenancy.
@@ -69,7 +70,7 @@ func (m RequestSummarizedJavaDownloadCountsDetails) ValidateEnumValue() (bool, e
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SortOrder: %s. Supported values are: %s.", m.SortOrder, strings.Join(GetSortOrderEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

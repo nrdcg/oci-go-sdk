@@ -11,8 +11,9 @@ package identity
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // StandardTagDefinitionTemplate The template of the tag definition. This object includes necessary details to create the provided standard tag definition.
@@ -54,7 +55,7 @@ func (m StandardTagDefinitionTemplate) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for EnumMutability: %s. Supported values are: %s.", m.EnumMutability, strings.Join(GetStandardTagDefinitionTemplateEnumMutabilityEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

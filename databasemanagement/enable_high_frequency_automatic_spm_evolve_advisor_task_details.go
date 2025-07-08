@@ -14,8 +14,9 @@ package databasemanagement
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // EnableHighFrequencyAutomaticSpmEvolveAdvisorTaskDetails The details required to enable high frequency Automatic SPM Evolve Advisor task.
@@ -37,7 +38,7 @@ func (m EnableHighFrequencyAutomaticSpmEvolveAdvisorTaskDetails) ValidateEnumVal
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

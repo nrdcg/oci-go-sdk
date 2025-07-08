@@ -11,8 +11,9 @@ package bds
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // NodeTypeShapeConfig Shape configuration at node type level. Start cluster will start all nodes as is if no config is specified.
@@ -40,7 +41,7 @@ func (m NodeTypeShapeConfig) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListMaskingPolicyHealthReportLogsRequest wrapper for the ListMaskingPolicyHealthReportLogs operation
@@ -85,7 +86,7 @@ func (request ListMaskingPolicyHealthReportLogsRequest) ValidateEnumValue() (boo
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for MessageType: %s. Supported values are: %s.", request.MessageType, strings.Join(GetListMaskingPolicyHealthReportLogsMessageTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

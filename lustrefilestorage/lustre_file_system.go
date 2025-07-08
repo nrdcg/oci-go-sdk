@@ -11,8 +11,9 @@ package lustrefilestorage
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // LustreFileSystem A Lustre file system is a parallel file system that is used as a storage solution for HPC/AI/ML workloads.
@@ -138,7 +139,7 @@ func (m LustreFileSystem) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

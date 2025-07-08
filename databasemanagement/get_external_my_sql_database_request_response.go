@@ -6,9 +6,10 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetExternalMySqlDatabaseRequest wrapper for the GetExternalMySqlDatabase operation
@@ -61,7 +62,7 @@ func (request GetExternalMySqlDatabaseRequest) RetryPolicy() *common.RetryPolicy
 func (request GetExternalMySqlDatabaseRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

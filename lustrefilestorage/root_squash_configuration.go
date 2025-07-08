@@ -11,8 +11,9 @@ package lustrefilestorage
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RootSquashConfiguration An administrative feature that allows you to restrict root level access from clients that try to access your Lustre file system as root.
@@ -52,7 +53,7 @@ func (m RootSquashConfiguration) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for IdentitySquash: %s. Supported values are: %s.", m.IdentitySquash, strings.Join(GetRootSquashConfigurationIdentitySquashEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

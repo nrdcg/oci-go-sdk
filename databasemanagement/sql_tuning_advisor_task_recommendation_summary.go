@@ -13,8 +13,9 @@ package databasemanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SqlTuningAdvisorTaskRecommendationSummary A recommendation for a given object in a SQL Tuning Task.
@@ -65,7 +66,7 @@ func (m SqlTuningAdvisorTaskRecommendationSummary) ValidateEnumValue() (bool, er
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

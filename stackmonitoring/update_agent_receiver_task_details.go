@@ -12,8 +12,9 @@ package stackmonitoring
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateAgentReceiverTaskDetails Request details for enabling/disabling the metric receiver on the management agent.
@@ -45,7 +46,7 @@ func (m UpdateAgentReceiverTaskDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for HandlerType: %s. Supported values are: %s.", m.HandlerType, strings.Join(GetHandlerTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

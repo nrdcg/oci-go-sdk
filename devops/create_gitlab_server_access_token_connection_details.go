@@ -12,8 +12,9 @@ package devops
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateGitlabServerAccessTokenConnectionDetails The details for creating a connection of the type `GITLAB_SERVER_ACCESS_TOKEN`.
@@ -80,7 +81,7 @@ func (m CreateGitlabServerAccessTokenConnectionDetails) ValidateEnumValue() (boo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

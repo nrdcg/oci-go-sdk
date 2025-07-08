@@ -6,9 +6,10 @@ package autoscaling
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeAutoScalingConfigurationCompartmentRequest wrapper for the ChangeAutoScalingConfigurationCompartment operation
@@ -75,7 +76,7 @@ func (request ChangeAutoScalingConfigurationCompartmentRequest) RetryPolicy() *c
 func (request ChangeAutoScalingConfigurationCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

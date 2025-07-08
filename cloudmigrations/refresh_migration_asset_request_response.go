@@ -6,9 +6,10 @@ package cloudmigrations
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RefreshMigrationAssetRequest wrapper for the RefreshMigrationAsset operation
@@ -75,7 +76,7 @@ func (request RefreshMigrationAssetRequest) RetryPolicy() *common.RetryPolicy {
 func (request RefreshMigrationAssetRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

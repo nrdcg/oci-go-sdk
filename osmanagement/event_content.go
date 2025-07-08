@@ -12,8 +12,9 @@ package osmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // EventContent Information about the data collected as a ZIP file when the event occurred.
@@ -43,7 +44,7 @@ func (m EventContent) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ContentAvailability: %s. Supported values are: %s.", m.ContentAvailability, strings.Join(GetContentAvailabilityEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

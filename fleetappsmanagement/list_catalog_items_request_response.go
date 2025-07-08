@@ -6,9 +6,10 @@ package fleetappsmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListCatalogItemsRequest wrapper for the ListCatalogItems operation
@@ -105,7 +106,7 @@ func (request ListCatalogItemsRequest) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CatalogListingVersionCriteria: %s. Supported values are: %s.", request.CatalogListingVersionCriteria, strings.Join(GetListCatalogItemsCatalogListingVersionCriteriaEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

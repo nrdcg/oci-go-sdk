@@ -11,8 +11,9 @@ package jms
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PostInstallationActionSettings List of available post actions you can execute after the successful Java installation.
@@ -52,7 +53,7 @@ func (m PostInstallationActionSettings) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for GlobalLoggingLevel: %s. Supported values are: %s.", m.GlobalLoggingLevel, strings.Join(GetGlobalLoggingLevelEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,10 +6,11 @@ package resourcemanager
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetJobTfPlanRequest wrapper for the GetJobTfPlan operation
@@ -69,7 +70,7 @@ func (request GetJobTfPlanRequest) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for TfPlanFormat: %s. Supported values are: %s.", request.TfPlanFormat, strings.Join(GetGetJobTfPlanTfPlanFormatEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package databasemigration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateMySqlInitialLoadSettings Optional dump settings
@@ -61,7 +62,7 @@ func (m UpdateMySqlInitialLoadSettings) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for HandleGrantErrors: %s. Supported values are: %s.", m.HandleGrantErrors, strings.Join(GetHandleGrantErrorsEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

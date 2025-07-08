@@ -15,8 +15,9 @@ package generativeaiagent
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // Agent An agent is an LLM-based autonomous system that understands and generates human-like text, enabling natural-language processing interactions. OCI Generative AI Agents supports retrieval-augmented generation (RAG) agents. A RAG agent connects to a data source, retrieves data, and augments model responses with the information from the data sources to generate more relevant responses.
@@ -87,7 +88,7 @@ func (m Agent) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

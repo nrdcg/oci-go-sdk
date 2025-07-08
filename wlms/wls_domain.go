@@ -13,8 +13,9 @@ package wlms
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // WlsDomain WLSDomain is representative of a WebLogic Domain running on one or more managed instances.
@@ -93,7 +94,7 @@ func (m WlsDomain) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for PatchReadinessStatus: %s. Supported values are: %s.", m.PatchReadinessStatus, strings.Join(GetPatchReadinessStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

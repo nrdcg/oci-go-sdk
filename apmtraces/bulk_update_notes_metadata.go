@@ -11,8 +11,9 @@ package apmtraces
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // BulkUpdateNotesMetadata Metadata about the bulk update notes operation.  The bulk update notes operation is atomic and binary.  If the processing of any of the attributes
@@ -54,7 +55,7 @@ func (m BulkUpdateNotesMetadata) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

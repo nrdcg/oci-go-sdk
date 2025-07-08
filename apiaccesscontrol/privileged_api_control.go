@@ -16,8 +16,9 @@ package apiaccesscontrol
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PrivilegedApiControl A PrivilegedApiControl is a kind of Policy definition which provides details about which operations needs to be secure; who can approve a privilegedApiRequest requesting for a particular operation, whether the operations needs to be approved by customer or is it preApproved.
@@ -111,7 +112,7 @@ func (m PrivilegedApiControl) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

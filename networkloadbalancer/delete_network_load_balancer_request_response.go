@@ -6,9 +6,10 @@ package networkloadbalancer
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DeleteNetworkLoadBalancerRequest wrapper for the DeleteNetworkLoadBalancer operation
@@ -69,7 +70,7 @@ func (request DeleteNetworkLoadBalancerRequest) RetryPolicy() *common.RetryPolic
 func (request DeleteNetworkLoadBalancerRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateEmManagedExternalExadataMemberEntityDetails Compartment OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Enterprise Manager member entity (e.g. databases and hosts) associated with an Exadata system.
@@ -38,7 +39,7 @@ func (m CreateEmManagedExternalExadataMemberEntityDetails) ValidateEnumValue() (
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

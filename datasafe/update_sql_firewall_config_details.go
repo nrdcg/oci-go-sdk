@@ -11,8 +11,9 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateSqlFirewallConfigDetails Details to update the SQL Firewall config.
@@ -49,7 +50,7 @@ func (m UpdateSqlFirewallConfigDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ExcludeJob: %s. Supported values are: %s.", m.ExcludeJob, strings.Join(GetUpdateSqlFirewallConfigDetailsExcludeJobEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -12,8 +12,9 @@ package adm
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // OciCodeRepositoryConfiguration An OCI Code repository configuration extends a SCM Configuration with necessary data to reach and use the OCI DevOps Code Repository.
@@ -60,7 +61,7 @@ func (m OciCodeRepositoryConfiguration) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -12,8 +12,9 @@ package databasemigration
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateOracleObjectStorageDataTransferMediumDetails OCI Object Storage bucket will be used to store Data Pump dump files for the migration.
@@ -36,7 +37,7 @@ func (m CreateOracleObjectStorageDataTransferMediumDetails) ValidateEnumValue() 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

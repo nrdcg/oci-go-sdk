@@ -6,10 +6,11 @@ package datascience
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetModelDefinedMetadatumArtifactContentRequest wrapper for the GetModelDefinedMetadatumArtifactContent operation
@@ -69,7 +70,7 @@ func (request GetModelDefinedMetadatumArtifactContentRequest) RetryPolicy() *com
 func (request GetModelDefinedMetadatumArtifactContentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

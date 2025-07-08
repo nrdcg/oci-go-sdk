@@ -6,9 +6,10 @@ package osmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListAvailableWindowsUpdatesForManagedInstanceRequest wrapper for the ListAvailableWindowsUpdatesForManagedInstance operation
@@ -92,7 +93,7 @@ func (request ListAvailableWindowsUpdatesForManagedInstanceRequest) ValidateEnum
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for IsEligibleForInstallation: %s. Supported values are: %s.", request.IsEligibleForInstallation, strings.Join(GetListAvailableWindowsUpdatesForManagedInstanceIsEligibleForInstallationEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

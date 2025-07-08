@@ -12,8 +12,9 @@ package datasafe
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PatchMergeInstruction An operation that recursively updates items of the selection, or adding the value if the selection is empty. If the value is not an object, it is used directly, otherwise each key-value member is used to create or update a member of the same name in the target and the same process is applied recursively for each object-typed value (similar to RFC 7396 (https://tools.ietf.org/html/rfc7396#section-2) JSON Merge Patch, except that null values are copied rather than transformed into deletions). NOT_FOUND exceptions are handled by creating the implied containing structure. To avoid referential errors if an item's descendant is also in the selection, items of the selection are processed in order of decreasing depth.
@@ -42,7 +43,7 @@ func (m PatchMergeInstruction) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

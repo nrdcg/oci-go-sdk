@@ -6,9 +6,10 @@ package containerengine
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateAddonRequest wrapper for the UpdateAddon operation
@@ -73,7 +74,7 @@ func (request UpdateAddonRequest) RetryPolicy() *common.RetryPolicy {
 func (request UpdateAddonRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

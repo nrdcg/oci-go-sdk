@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // InstallWindowsUpdatesOnManagedInstanceGroupDetails Provides the details for the Windows update installed on the managed instance group.
@@ -41,7 +42,7 @@ func (m InstallWindowsUpdatesOnManagedInstanceGroupDetails) ValidateEnumValue() 
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

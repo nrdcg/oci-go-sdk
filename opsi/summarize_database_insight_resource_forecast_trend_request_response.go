@@ -6,9 +6,10 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SummarizeDatabaseInsightResourceForecastTrendRequest wrapper for the SummarizeDatabaseInsightResourceForecastTrend operation
@@ -196,7 +197,7 @@ func (request SummarizeDatabaseInsightResourceForecastTrendRequest) ValidateEnum
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for UtilizationLevel: %s. Supported values are: %s.", request.UtilizationLevel, strings.Join(GetSummarizeDatabaseInsightResourceForecastTrendUtilizationLevelEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }
@@ -254,6 +255,10 @@ const (
 	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeComanagedExaccNoncdb SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "COMANAGED-EXACC-NONCDB"
 	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeMdsMysql             SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "MDS-MYSQL"
 	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalMysql        SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "EXTERNAL-MYSQL"
+	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeAtpExacc             SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "ATP-EXACC"
+	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeAdwExacc             SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "ADW-EXACC"
+	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalAdw          SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "EXTERNAL-ADW"
+	SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalAtp          SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = "EXTERNAL-ATP"
 )
 
 var mappingSummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = map[string]SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum{
@@ -277,6 +282,10 @@ var mappingSummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum = map[s
 	"COMANAGED-EXACC-NONCDB": SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeComanagedExaccNoncdb,
 	"MDS-MYSQL":              SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeMdsMysql,
 	"EXTERNAL-MYSQL":         SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalMysql,
+	"ATP-EXACC":              SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeAtpExacc,
+	"ADW-EXACC":              SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeAdwExacc,
+	"EXTERNAL-ADW":           SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalAdw,
+	"EXTERNAL-ATP":           SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalAtp,
 }
 
 var mappingSummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnumLowerCase = map[string]SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum{
@@ -300,6 +309,10 @@ var mappingSummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnumLowerCas
 	"comanaged-exacc-noncdb": SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeComanagedExaccNoncdb,
 	"mds-mysql":              SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeMdsMysql,
 	"external-mysql":         SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalMysql,
+	"atp-exacc":              SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeAtpExacc,
+	"adw-exacc":              SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeAdwExacc,
+	"external-adw":           SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalAdw,
+	"external-atp":           SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeExternalAtp,
 }
 
 // GetSummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnumValues Enumerates the set of values for SummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnum
@@ -334,6 +347,10 @@ func GetSummarizeDatabaseInsightResourceForecastTrendDatabaseTypeEnumStringValue
 		"COMANAGED-EXACC-NONCDB",
 		"MDS-MYSQL",
 		"EXTERNAL-MYSQL",
+		"ATP-EXACC",
+		"ADW-EXACC",
+		"EXTERNAL-ADW",
+		"EXTERNAL-ATP",
 	}
 }
 

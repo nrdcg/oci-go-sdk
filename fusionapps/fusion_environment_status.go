@@ -11,8 +11,9 @@ package fusionapps
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // FusionEnvironmentStatus The health status of the Fusion Applications environment. For more information, see Environment Status (https://docs.oracle.com/iaas/Content/fusion-applications/manage-environment.htm#environment-status).
@@ -36,7 +37,7 @@ func (m FusionEnvironmentStatus) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -17,8 +17,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateInstanceMaintenanceEventDetails Specifies the properties for updating maintenance due date.
@@ -67,7 +68,7 @@ func (m UpdateInstanceMaintenanceEventDetails) ValidateEnumValue() (bool, error)
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for AlternativeResolutionAction: %s. Supported values are: %s.", m.AlternativeResolutionAction, strings.Join(GetInstanceMaintenanceAlternativeResolutionActionsEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

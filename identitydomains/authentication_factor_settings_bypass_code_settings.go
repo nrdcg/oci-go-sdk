@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AuthenticationFactorSettingsBypassCodeSettings Settings related to the bypass code, such as bypass code length, bypass code expiry, max active bypass codes, and so on
@@ -114,7 +115,7 @@ func (m AuthenticationFactorSettingsBypassCodeSettings) ValidateEnumValue() (boo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

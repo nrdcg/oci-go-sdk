@@ -6,9 +6,10 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RebootLifecycleStageRequest wrapper for the RebootLifecycleStage operation
@@ -78,7 +79,7 @@ func (request RebootLifecycleStageRequest) RetryPolicy() *common.RetryPolicy {
 func (request RebootLifecycleStageRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -12,8 +12,9 @@ package datasafe
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // BulkCreateSqlFirewallAllowedSqlsDetails The details used to append the violation logs as allowed SQLs
@@ -42,7 +43,7 @@ func (m BulkCreateSqlFirewallAllowedSqlsDetails) ValidateEnumValue() (bool, erro
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

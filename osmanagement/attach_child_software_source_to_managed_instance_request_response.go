@@ -6,9 +6,10 @@ package osmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AttachChildSoftwareSourceToManagedInstanceRequest wrapper for the AttachChildSoftwareSourceToManagedInstance operation
@@ -71,7 +72,7 @@ func (request AttachChildSoftwareSourceToManagedInstanceRequest) RetryPolicy() *
 func (request AttachChildSoftwareSourceToManagedInstanceRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

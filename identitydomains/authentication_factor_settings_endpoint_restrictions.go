@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AuthenticationFactorSettingsEndpointRestrictions Settings that describe the set of restrictions that the system should apply to devices and trusted endpoints of a user
@@ -103,7 +104,7 @@ func (m AuthenticationFactorSettingsEndpointRestrictions) ValidateEnumValue() (b
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package keymanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetWrappingKeyRequest wrapper for the GetWrappingKey operation
@@ -60,7 +61,7 @@ func (request GetWrappingKeyRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetWrappingKeyRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

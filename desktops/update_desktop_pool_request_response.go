@@ -6,9 +6,10 @@ package desktops
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateDesktopPoolRequest wrapper for the UpdateDesktopPool operation
@@ -67,7 +68,7 @@ func (request UpdateDesktopPoolRequest) RetryPolicy() *common.RetryPolicy {
 func (request UpdateDesktopPoolRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

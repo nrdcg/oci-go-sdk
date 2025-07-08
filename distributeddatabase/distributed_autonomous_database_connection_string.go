@@ -11,8 +11,9 @@ package distributeddatabase
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DistributedAutonomousDatabaseConnectionString Details of Globally distributed autonomous database connection String.
@@ -33,7 +34,7 @@ func (m DistributedAutonomousDatabaseConnectionString) ValidateEnumValue() (bool
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

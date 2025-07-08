@@ -12,8 +12,9 @@ package computecloudatcustomer
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CccInfrastructureRoutingDynamicDetails Dynamic routing information for the Compute Cloud@Customer infrastructure.
@@ -44,7 +45,7 @@ func (m CccInfrastructureRoutingDynamicDetails) ValidateEnumValue() (bool, error
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for BgpTopology: %s. Supported values are: %s.", m.BgpTopology, strings.Join(GetCccInfrastructureRoutingDynamicDetailsBgpTopologyEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

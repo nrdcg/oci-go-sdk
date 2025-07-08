@@ -6,9 +6,10 @@ package bds
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetBdsApiKeyRequest wrapper for the GetBdsApiKey operation
@@ -64,7 +65,7 @@ func (request GetBdsApiKeyRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetBdsApiKeyRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

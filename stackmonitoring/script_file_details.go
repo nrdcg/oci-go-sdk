@@ -11,8 +11,9 @@ package stackmonitoring
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ScriptFileDetails Script details applicable to any OS Command based Metric Extension which needs to run a script to collect data. For removing it during update, set its "content" property to an empty string. In that case, "name" property value is ignored.
@@ -36,7 +37,7 @@ func (m ScriptFileDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

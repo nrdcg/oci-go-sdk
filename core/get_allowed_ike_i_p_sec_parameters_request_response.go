@@ -6,9 +6,10 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetAllowedIkeIPSecParametersRequest wrapper for the GetAllowedIkeIPSecParameters operation
@@ -59,7 +60,7 @@ func (request GetAllowedIkeIPSecParametersRequest) RetryPolicy() *common.RetryPo
 func (request GetAllowedIkeIPSecParametersRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

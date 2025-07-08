@@ -6,9 +6,10 @@ package osubusage
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListComputedUsageAggregatedsRequest wrapper for the ListComputedUsageAggregateds operation
@@ -90,7 +91,7 @@ func (request ListComputedUsageAggregatedsRequest) ValidateEnumValue() (bool, er
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for Grouping: %s. Supported values are: %s.", request.Grouping, strings.Join(GetListComputedUsageAggregatedsGroupingEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -15,8 +15,9 @@ package delegateaccesscontrol
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DelegatedResourceAccessRequest A support operator raises Delegated Resource Access Request when they need access to any infrastructure resource governed by Delegation Control.
@@ -178,7 +179,7 @@ func (m DelegatedResourceAccessRequest) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

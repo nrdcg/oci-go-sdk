@@ -12,8 +12,9 @@ package datascience
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // MlApplicationImplementationVersion Read-only fully managed snapshot of MlApplicationImplementation taken when MlApplicationImplementation was updated with new ML Application package.
@@ -87,7 +88,7 @@ func (m MlApplicationImplementationVersion) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

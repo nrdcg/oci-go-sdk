@@ -11,8 +11,9 @@ package mysql
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateDeletionPolicyDetails Policy for how the DB System and related resources should be handled at the time of its deletion.
@@ -47,7 +48,7 @@ func (m UpdateDeletionPolicyDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for FinalBackup: %s. Supported values are: %s.", m.FinalBackup, strings.Join(GetUpdateDeletionPolicyDetailsFinalBackupEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

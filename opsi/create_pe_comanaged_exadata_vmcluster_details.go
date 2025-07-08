@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreatePeComanagedExadataVmclusterDetails The information of the VM Cluster which contains databases. Either an opsiPrivateEndpointId or dbmPrivateEndpointId must be specified. If the dbmPrivateEndpointId is specified, a new Operations Insights private endpoint will be created.
@@ -34,6 +35,12 @@ type CreatePeComanagedExadataVmclusterDetails struct {
 
 	// The databases that belong to the VM Cluster
 	MemberDatabaseDetails []CreatePeComanagedDatabaseInsightDetails `mandatory:"false" json:"memberDatabaseDetails"`
+
+	// Exadata VMCluster type
+	VmClusterType ExadataVmClusterTypeEnum `mandatory:"false" json:"vmClusterType,omitempty"`
+
+	// The autonomous databases that belong to the Autonomous VM Cluster
+	MemberAutonomousDetails []CreateAutonomousDatabaseInsightDetails `mandatory:"false" json:"memberAutonomousDetails"`
 }
 
 func (m CreatePeComanagedExadataVmclusterDetails) String() string {
@@ -46,8 +53,11 @@ func (m CreatePeComanagedExadataVmclusterDetails) String() string {
 func (m CreatePeComanagedExadataVmclusterDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
+	if _, ok := GetMappingExadataVmClusterTypeEnum(string(m.VmClusterType)); !ok && m.VmClusterType != "" {
+		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for VmClusterType: %s. Supported values are: %s.", m.VmClusterType, strings.Join(GetExadataVmClusterTypeEnumStringValues(), ",")))
+	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

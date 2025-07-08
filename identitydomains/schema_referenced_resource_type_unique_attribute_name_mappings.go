@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SchemaReferencedResourceTypeUniqueAttributeNameMappings This attribute specifies the mapping of "uniqueAttributeNameForDisplay" attributes(s) of the referenced resource with the columnHeaderName(s). This attribute should be given in the idcsCsvAttributeNameMappings when uniqueAttributeNameForDisplay contains more than one attribute.
@@ -54,7 +55,7 @@ func (m SchemaReferencedResourceTypeUniqueAttributeNameMappings) ValidateEnumVal
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

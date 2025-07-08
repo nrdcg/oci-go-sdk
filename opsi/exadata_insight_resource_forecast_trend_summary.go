@@ -13,8 +13,9 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ExadataInsightResourceForecastTrendSummary List of resource id, name , capacity insight value, pattern, historical usage and projected data.
@@ -56,7 +57,7 @@ func (m ExadataInsightResourceForecastTrendSummary) ValidateEnumValue() (bool, e
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package mngdmac
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TerminateMacDeviceRequest wrapper for the TerminateMacDevice operation
@@ -80,7 +81,7 @@ func (request TerminateMacDeviceRequest) RetryPolicy() *common.RetryPolicy {
 func (request TerminateMacDeviceRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

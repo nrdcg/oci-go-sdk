@@ -14,8 +14,9 @@ package opsi
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateDatabaseInsightDetails The information to be updated.
@@ -92,6 +93,10 @@ func (m *updatedatabaseinsightdetails) UnmarshalPolymorphicJSON(data []byte) (in
 		mm := UpdateExternalMysqlDatabaseInsightDetails{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+		mm := UpdateMacsManagedAutonomousDatabaseInsightDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	default:
 		common.Logf("Received unsupported enum value for UpdateDatabaseInsightDetails: %s.", m.EntitySource)
 		return *m, nil
@@ -119,7 +124,7 @@ func (m updatedatabaseinsightdetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

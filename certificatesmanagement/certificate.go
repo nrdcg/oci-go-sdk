@@ -12,8 +12,9 @@ package certificatesmanagement
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // Certificate The details of the certificate. This object does not contain the certificate contents.
@@ -106,7 +107,7 @@ func (m Certificate) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CertificateProfileType: %s. Supported values are: %s.", m.CertificateProfileType, strings.Join(GetCertificateProfileTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

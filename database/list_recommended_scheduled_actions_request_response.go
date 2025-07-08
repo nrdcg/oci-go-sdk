@@ -6,9 +6,10 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListRecommendedScheduledActionsRequest wrapper for the ListRecommendedScheduledActions operation
@@ -76,7 +77,7 @@ func (request ListRecommendedScheduledActionsRequest) ValidateEnumValue() (bool,
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for PlanIntent: %s. Supported values are: %s.", request.PlanIntent, strings.Join(GetListRecommendedScheduledActionsPlanIntentEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

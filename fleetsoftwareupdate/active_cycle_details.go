@@ -12,8 +12,9 @@ package fleetsoftwareupdate
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ActiveCycleDetails Active Exadata Fleet Update Cycle resource for this Collection. Object would be null if there is no active Cycle.
@@ -37,7 +38,7 @@ func (m ActiveCycleDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

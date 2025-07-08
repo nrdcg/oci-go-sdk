@@ -11,8 +11,9 @@ package adm
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ApplicationDependencyRecommendationSummary An application dependency with the recommended version that does not contain any CVE.
@@ -49,7 +50,7 @@ func (m ApplicationDependencyRecommendationSummary) ValidateEnumValue() (bool, e
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

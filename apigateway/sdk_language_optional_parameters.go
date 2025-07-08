@@ -13,8 +13,9 @@ package apigateway
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SdkLanguageOptionalParameters List of additional applicable parameters for any given target language.
@@ -61,7 +62,7 @@ func (m SdkLanguageOptionalParameters) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for InputType: %s. Supported values are: %s.", m.InputType, strings.Join(GetSdkLanguageOptionalParametersInputTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

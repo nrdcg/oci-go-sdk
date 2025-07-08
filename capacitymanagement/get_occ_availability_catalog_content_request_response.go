@@ -6,10 +6,11 @@ package capacitymanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetOccAvailabilityCatalogContentRequest wrapper for the GetOccAvailabilityCatalogContent operation
@@ -77,7 +78,7 @@ func (request GetOccAvailabilityCatalogContentRequest) RetryPolicy() *common.Ret
 func (request GetOccAvailabilityCatalogContentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

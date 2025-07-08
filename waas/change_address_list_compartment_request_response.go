@@ -6,9 +6,10 @@ package waas
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeAddressListCompartmentRequest wrapper for the ChangeAddressListCompartment operation
@@ -70,7 +71,7 @@ func (request ChangeAddressListCompartmentRequest) RetryPolicy() *common.RetryPo
 func (request ChangeAddressListCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

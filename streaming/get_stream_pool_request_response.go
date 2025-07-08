@@ -6,9 +6,10 @@ package streaming
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetStreamPoolRequest wrapper for the GetStreamPool operation
@@ -62,7 +63,7 @@ func (request GetStreamPoolRequest) RetryPolicy() *common.RetryPolicy {
 func (request GetStreamPoolRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

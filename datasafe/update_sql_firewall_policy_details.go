@@ -11,8 +11,9 @@ package datasafe
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateSqlFirewallPolicyDetails Details to update the SQL Firewall policy.
@@ -77,7 +78,7 @@ func (m UpdateSqlFirewallPolicyDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ViolationAudit: %s. Supported values are: %s.", m.ViolationAudit, strings.Join(GetUpdateSqlFirewallPolicyDetailsViolationAuditEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

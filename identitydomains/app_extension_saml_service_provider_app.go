@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AppExtensionSamlServiceProviderApp This extension defines attributes related to the Service Providers configuration.
@@ -373,7 +374,7 @@ func (m AppExtensionSamlServiceProviderApp) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for FederationProtocol: %s. Supported values are: %s.", m.FederationProtocol, strings.Join(GetAppExtensionSamlServiceProviderAppFederationProtocolEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

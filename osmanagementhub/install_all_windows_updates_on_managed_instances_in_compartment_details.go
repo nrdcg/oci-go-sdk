@@ -12,8 +12,9 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // InstallAllWindowsUpdatesOnManagedInstancesInCompartmentDetails Provides the information used to install all Windows updates of a specified type on managed instances within the specified compartment.
@@ -45,7 +46,7 @@ func (m InstallAllWindowsUpdatesOnManagedInstancesInCompartmentDetails) Validate
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

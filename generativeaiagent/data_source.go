@@ -16,8 +16,9 @@ package generativeaiagent
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DataSource A data source points to the source of your data. After you add a data source to a knowledge base, you must ingest the data source's data, so that agents using the knowledge base can refer to the data.
@@ -88,7 +89,7 @@ func (m DataSource) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

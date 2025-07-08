@@ -11,8 +11,9 @@ package distributeddatabase
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DistributedAutonomousDatabaseSummary Globally distributed autonomous database.
@@ -133,7 +134,7 @@ func (m DistributedAutonomousDatabaseSummary) ValidateEnumValue() (bool, error) 
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ReplicationMethod: %s. Supported values are: %s.", m.ReplicationMethod, strings.Join(GetDistributedAutonomousDatabaseReplicationMethodEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

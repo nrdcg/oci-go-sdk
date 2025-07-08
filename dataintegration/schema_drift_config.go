@@ -11,8 +11,9 @@ package dataintegration
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // SchemaDriftConfig The configuration for handling schema drift in a Source or Target operator.
@@ -51,7 +52,7 @@ func (m SchemaDriftConfig) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for DataTypeChangeHandling: %s. Supported values are: %s.", m.DataTypeChangeHandling, strings.Join(GetSchemaDriftConfigDataTypeChangeHandlingEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

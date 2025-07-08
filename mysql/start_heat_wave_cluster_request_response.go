@@ -6,9 +6,10 @@ package mysql
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // StartHeatWaveClusterRequest wrapper for the StartHeatWaveCluster operation
@@ -78,7 +79,7 @@ func (request StartHeatWaveClusterRequest) RetryPolicy() *common.RetryPolicy {
 func (request StartHeatWaveClusterRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -17,8 +17,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeComputeGpuMemoryFabricCompartmentDetails Specifies the compartment to move the compute GPU memory fabric to.
@@ -40,7 +41,7 @@ func (m ChangeComputeGpuMemoryFabricCompartmentDetails) ValidateEnumValue() (boo
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

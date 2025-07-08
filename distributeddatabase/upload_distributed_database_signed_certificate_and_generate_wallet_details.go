@@ -11,8 +11,9 @@ package distributeddatabase
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UploadDistributedDatabaseSignedCertificateAndGenerateWalletDetails Details of the request to upload the CA signed certificates to GSMs and generate wallets for
@@ -34,7 +35,7 @@ func (m UploadDistributedDatabaseSignedCertificateAndGenerateWalletDetails) Vali
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

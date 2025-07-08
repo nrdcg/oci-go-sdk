@@ -12,8 +12,9 @@ package aidocument
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ValueTime The time field value.
@@ -32,6 +33,12 @@ type ValueTime struct {
 
 	// The detected text of a field.
 	Text *string `mandatory:"false" json:"text"`
+
+	// The normalized value.
+	NormalizedValue *string `mandatory:"false" json:"normalizedValue"`
+
+	// The normalized value confidence score between 0 and 1.
+	NormalizedConfidence *float32 `mandatory:"false" json:"normalizedConfidence"`
 }
 
 // GetText returns Text
@@ -54,6 +61,16 @@ func (m ValueTime) GetWordIndexes() []int {
 	return m.WordIndexes
 }
 
+// GetNormalizedValue returns NormalizedValue
+func (m ValueTime) GetNormalizedValue() *string {
+	return m.NormalizedValue
+}
+
+// GetNormalizedConfidence returns NormalizedConfidence
+func (m ValueTime) GetNormalizedConfidence() *float32 {
+	return m.NormalizedConfidence
+}
+
 func (m ValueTime) String() string {
 	return common.PointerString(m)
 }
@@ -65,7 +82,7 @@ func (m ValueTime) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package dblm
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PatchActivityDetails Details of deploy, update and migrate-listener(only for single Instance database) operations for this resource.
@@ -66,7 +67,7 @@ func (m PatchActivityDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for MigrateListenerStatus: %s. Supported values are: %s.", m.MigrateListenerStatus, strings.Join(GetPatchActivityDetailsMigrateListenerStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

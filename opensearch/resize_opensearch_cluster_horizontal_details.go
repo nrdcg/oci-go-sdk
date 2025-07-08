@@ -11,8 +11,9 @@ package opensearch
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ResizeOpensearchClusterHorizontalDetails The node count configuration to update on an existing OpenSearch cluster for horizontal resizing (https://docs.oracle.com/iaas/Content/search-opensearch/Tasks/resizingacluster.htm#horizontalresize).
@@ -50,7 +51,7 @@ func (m ResizeOpensearchClusterHorizontalDetails) ValidateEnumValue() (bool, err
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

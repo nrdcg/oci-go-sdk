@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GenerateAutonomousDatabaseWalletDetails Details to create and download an Oracle Autonomous Database wallet.
@@ -46,7 +47,7 @@ func (m GenerateAutonomousDatabaseWalletDetails) ValidateEnumValue() (bool, erro
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for GenerateType: %s. Supported values are: %s.", m.GenerateType, strings.Join(GetGenerateAutonomousDatabaseWalletDetailsGenerateTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

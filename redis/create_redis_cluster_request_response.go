@@ -6,9 +6,10 @@ package redis
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateRedisClusterRequest wrapper for the CreateRedisCluster operation
@@ -68,7 +69,7 @@ func (request CreateRedisClusterRequest) RetryPolicy() *common.RetryPolicy {
 func (request CreateRedisClusterRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

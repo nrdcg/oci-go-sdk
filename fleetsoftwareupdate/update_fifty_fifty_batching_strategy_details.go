@@ -13,8 +13,9 @@ package fleetsoftwareupdate
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateFiftyFiftyBatchingStrategyDetails Fifty-Fifty batching strategy details to use during PRECHECK and APPLY Cycle Actions.
@@ -39,7 +40,7 @@ func (m UpdateFiftyFiftyBatchingStrategyDetails) ValidateEnumValue() (bool, erro
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

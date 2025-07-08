@@ -6,10 +6,11 @@ package distributeddatabase
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DownloadDistributedAutonomousDatabaseGsmCertificateSigningRequestRequest wrapper for the DownloadDistributedAutonomousDatabaseGsmCertificateSigningRequest operation
@@ -76,7 +77,7 @@ func (request DownloadDistributedAutonomousDatabaseGsmCertificateSigningRequestR
 func (request DownloadDistributedAutonomousDatabaseGsmCertificateSigningRequestRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

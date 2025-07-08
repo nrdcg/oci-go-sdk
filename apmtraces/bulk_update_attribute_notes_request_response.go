@@ -6,9 +6,10 @@ package apmtraces
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // BulkUpdateAttributeNotesRequest wrapper for the BulkUpdateAttributeNotes operation
@@ -65,7 +66,7 @@ func (request BulkUpdateAttributeNotesRequest) RetryPolicy() *common.RetryPolicy
 func (request BulkUpdateAttributeNotesRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

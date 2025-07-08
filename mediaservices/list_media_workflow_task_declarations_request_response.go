@@ -6,9 +6,10 @@ package mediaservices
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListMediaWorkflowTaskDeclarationsRequest wrapper for the ListMediaWorkflowTaskDeclarations operation
@@ -89,7 +90,7 @@ func (request ListMediaWorkflowTaskDeclarationsRequest) ValidateEnumValue() (boo
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SortOrder: %s. Supported values are: %s.", request.SortOrder, strings.Join(GetListMediaWorkflowTaskDeclarationsSortOrderEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

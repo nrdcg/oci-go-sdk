@@ -6,10 +6,11 @@ package osmanagementhub
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetManagedInstanceAnalyticContentRequest wrapper for the GetManagedInstanceAnalyticContent operation
@@ -141,7 +142,7 @@ func (request GetManagedInstanceAnalyticContentRequest) ValidateEnumValue() (boo
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ReportType: %s. Supported values are: %s.", request.ReportType, strings.Join(GetGetManagedInstanceAnalyticContentReportTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

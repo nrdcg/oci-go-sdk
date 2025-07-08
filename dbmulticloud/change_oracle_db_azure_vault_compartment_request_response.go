@@ -6,9 +6,10 @@ package dbmulticloud
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeOracleDbAzureVaultCompartmentRequest wrapper for the ChangeOracleDbAzureVaultCompartment operation
@@ -78,7 +79,7 @@ func (request ChangeOracleDbAzureVaultCompartmentRequest) RetryPolicy() *common.
 func (request ChangeOracleDbAzureVaultCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

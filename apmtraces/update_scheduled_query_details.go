@@ -11,8 +11,9 @@ package apmtraces
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateScheduledQueryDetails Object that contains the details about the scheduled query to be updated.
@@ -76,7 +77,7 @@ func (m UpdateScheduledQueryDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ScheduledQueryRetentionCriteria: %s. Supported values are: %s.", m.ScheduledQueryRetentionCriteria, strings.Join(GetScheduledQueryRetentionCriteriaEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

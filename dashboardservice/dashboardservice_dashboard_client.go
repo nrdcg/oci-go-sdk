@@ -18,9 +18,10 @@ package dashboardservice
 import (
 	"context"
 	"fmt"
+	"net/http"
+
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
-	"net/http"
 )
 
 // DashboardClient a client for Dashboard

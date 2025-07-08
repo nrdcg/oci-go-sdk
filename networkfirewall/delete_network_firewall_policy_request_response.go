@@ -6,9 +6,10 @@ package networkfirewall
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DeleteNetworkFirewallPolicyRequest wrapper for the DeleteNetworkFirewallPolicy operation
@@ -68,7 +69,7 @@ func (request DeleteNetworkFirewallPolicyRequest) RetryPolicy() *common.RetryPol
 func (request DeleteNetworkFirewallPolicyRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package loganalytics
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // LogAnalyticsEntityTypeSummary Summary of a log analytics entity type.
@@ -63,7 +64,7 @@ func (m LogAnalyticsEntityTypeSummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ManagementAgentEligibilityStatus: %s. Supported values are: %s.", m.ManagementAgentEligibilityStatus, strings.Join(GetLogAnalyticsEntityTypeSummaryManagementAgentEligibilityStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

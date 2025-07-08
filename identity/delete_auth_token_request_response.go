@@ -6,9 +6,10 @@ package identity
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DeleteAuthTokenRequest wrapper for the DeleteAuthToken operation
@@ -70,7 +71,7 @@ func (request DeleteAuthTokenRequest) RetryPolicy() *common.RetryPolicy {
 func (request DeleteAuthTokenRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

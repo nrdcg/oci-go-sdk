@@ -13,8 +13,9 @@ package containerengine
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PersistentVolumeConfigDetails Configuration to be applied to block volumes created by Kubernetes Persistent Volume Claims (PVC)
@@ -42,7 +43,7 @@ func (m PersistentVolumeConfigDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package disasterrecovery
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeDrProtectionGroupCompartmentRequest wrapper for the ChangeDrProtectionGroupCompartment operation
@@ -79,7 +80,7 @@ func (request ChangeDrProtectionGroupCompartmentRequest) RetryPolicy() *common.R
 func (request ChangeDrProtectionGroupCompartmentRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

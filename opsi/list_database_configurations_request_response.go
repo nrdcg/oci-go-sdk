@@ -6,9 +6,10 @@ package opsi
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ListDatabaseConfigurationsRequest wrapper for the ListDatabaseConfigurations operation
@@ -145,7 +146,7 @@ func (request ListDatabaseConfigurationsRequest) ValidateEnumValue() (bool, erro
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for SortBy: %s. Supported values are: %s.", request.SortBy, strings.Join(GetListDatabaseConfigurationsSortByEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }
@@ -206,6 +207,10 @@ const (
 	ListDatabaseConfigurationsDatabaseTypeComanagedExaccNoncdb ListDatabaseConfigurationsDatabaseTypeEnum = "COMANAGED-EXACC-NONCDB"
 	ListDatabaseConfigurationsDatabaseTypeMdsMysql             ListDatabaseConfigurationsDatabaseTypeEnum = "MDS-MYSQL"
 	ListDatabaseConfigurationsDatabaseTypeExternalMysql        ListDatabaseConfigurationsDatabaseTypeEnum = "EXTERNAL-MYSQL"
+	ListDatabaseConfigurationsDatabaseTypeAtpExacc             ListDatabaseConfigurationsDatabaseTypeEnum = "ATP-EXACC"
+	ListDatabaseConfigurationsDatabaseTypeAdwExacc             ListDatabaseConfigurationsDatabaseTypeEnum = "ADW-EXACC"
+	ListDatabaseConfigurationsDatabaseTypeExternalAdw          ListDatabaseConfigurationsDatabaseTypeEnum = "EXTERNAL-ADW"
+	ListDatabaseConfigurationsDatabaseTypeExternalAtp          ListDatabaseConfigurationsDatabaseTypeEnum = "EXTERNAL-ATP"
 )
 
 var mappingListDatabaseConfigurationsDatabaseTypeEnum = map[string]ListDatabaseConfigurationsDatabaseTypeEnum{
@@ -229,6 +234,10 @@ var mappingListDatabaseConfigurationsDatabaseTypeEnum = map[string]ListDatabaseC
 	"COMANAGED-EXACC-NONCDB": ListDatabaseConfigurationsDatabaseTypeComanagedExaccNoncdb,
 	"MDS-MYSQL":              ListDatabaseConfigurationsDatabaseTypeMdsMysql,
 	"EXTERNAL-MYSQL":         ListDatabaseConfigurationsDatabaseTypeExternalMysql,
+	"ATP-EXACC":              ListDatabaseConfigurationsDatabaseTypeAtpExacc,
+	"ADW-EXACC":              ListDatabaseConfigurationsDatabaseTypeAdwExacc,
+	"EXTERNAL-ADW":           ListDatabaseConfigurationsDatabaseTypeExternalAdw,
+	"EXTERNAL-ATP":           ListDatabaseConfigurationsDatabaseTypeExternalAtp,
 }
 
 var mappingListDatabaseConfigurationsDatabaseTypeEnumLowerCase = map[string]ListDatabaseConfigurationsDatabaseTypeEnum{
@@ -252,6 +261,10 @@ var mappingListDatabaseConfigurationsDatabaseTypeEnumLowerCase = map[string]List
 	"comanaged-exacc-noncdb": ListDatabaseConfigurationsDatabaseTypeComanagedExaccNoncdb,
 	"mds-mysql":              ListDatabaseConfigurationsDatabaseTypeMdsMysql,
 	"external-mysql":         ListDatabaseConfigurationsDatabaseTypeExternalMysql,
+	"atp-exacc":              ListDatabaseConfigurationsDatabaseTypeAtpExacc,
+	"adw-exacc":              ListDatabaseConfigurationsDatabaseTypeAdwExacc,
+	"external-adw":           ListDatabaseConfigurationsDatabaseTypeExternalAdw,
+	"external-atp":           ListDatabaseConfigurationsDatabaseTypeExternalAtp,
 }
 
 // GetListDatabaseConfigurationsDatabaseTypeEnumValues Enumerates the set of values for ListDatabaseConfigurationsDatabaseTypeEnum
@@ -286,6 +299,10 @@ func GetListDatabaseConfigurationsDatabaseTypeEnumStringValues() []string {
 		"COMANAGED-EXACC-NONCDB",
 		"MDS-MYSQL",
 		"EXTERNAL-MYSQL",
+		"ATP-EXACC",
+		"ADW-EXACC",
+		"EXTERNAL-ADW",
+		"EXTERNAL-ATP",
 	}
 }
 

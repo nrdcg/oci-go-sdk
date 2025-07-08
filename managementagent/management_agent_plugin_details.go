@@ -12,8 +12,9 @@ package managementagent
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ManagementAgentPluginDetails The information about the current management agent plugins that agent is having.
@@ -55,7 +56,7 @@ func (m ManagementAgentPluginDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for PluginStatus: %s. Supported values are: %s.", m.PluginStatus, strings.Join(GetPluginStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -6,9 +6,10 @@ package osmanagement
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DeleteSoftwareSourceRequest wrapper for the DeleteSoftwareSource operation
@@ -68,7 +69,7 @@ func (request DeleteSoftwareSourceRequest) RetryPolicy() *common.RetryPolicy {
 func (request DeleteSoftwareSourceRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

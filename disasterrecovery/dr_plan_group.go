@@ -14,8 +14,9 @@ package disasterrecovery
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DrPlanGroup Details of a group in a DR plan.
@@ -63,7 +64,7 @@ func (m DrPlanGroup) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RefreshStatus: %s. Supported values are: %s.", m.RefreshStatus, strings.Join(GetDrPlanGroupRefreshStatusEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -13,9 +13,10 @@ package managementdashboard
 import (
 	"context"
 	"fmt"
+	"net/http"
+
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
-	"net/http"
 )
 
 // DashxApisClient a client for DashxApis

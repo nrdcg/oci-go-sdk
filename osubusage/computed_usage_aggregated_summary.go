@@ -11,8 +11,9 @@ package osubusage
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ComputedUsageAggregatedSummary Subscribed Service Contract details
@@ -62,7 +63,7 @@ func (m ComputedUsageAggregatedSummary) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for PricingModel: %s. Supported values are: %s.", m.PricingModel, strings.Join(GetComputedUsageAggregatedSummaryPricingModelEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

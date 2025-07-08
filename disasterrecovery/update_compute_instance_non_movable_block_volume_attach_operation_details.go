@@ -14,8 +14,9 @@ package disasterrecovery
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateComputeInstanceNonMovableBlockVolumeAttachOperationDetails The details for updating a block volume attachment or detachment operation.
@@ -42,7 +43,7 @@ func (m UpdateComputeInstanceNonMovableBlockVolumeAttachOperationDetails) Valida
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

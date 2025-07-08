@@ -12,8 +12,9 @@ package vnmonitoring
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // PhaseOneConfigDetails Configuration details for IKE phase one (ISAKMP) configuration parameters.
@@ -55,7 +56,7 @@ func (m PhaseOneConfigDetails) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for DiffieHelmanGroup: %s. Supported values are: %s.", m.DiffieHelmanGroup, strings.Join(GetPhaseOneConfigDetailsDiffieHelmanGroupEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

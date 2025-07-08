@@ -11,8 +11,9 @@ package database
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // RotateAutonomousVmClusterOrdsCertsDetails The details for configuring the SSL certificates on Autonomous VM Cluster
@@ -45,7 +46,7 @@ func (m RotateAutonomousVmClusterOrdsCertsDetails) ValidateEnumValue() (bool, er
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -13,8 +13,9 @@ package fleetsoftwareupdate
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // CreateUpgradeFsuCycle Upgrade Exadata Fleet Update Cycle resource creation details. Batching strategy should always be NON_ROLLING for DB collection upgrade.
@@ -112,7 +113,7 @@ func (m CreateUpgradeFsuCycle) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

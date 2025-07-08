@@ -12,8 +12,9 @@ package governancerulescontrolplane
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // EnforcedGovernanceRule Represents the governance rule shown to the child which is a subset of governance rule resource in parent tenancy.
@@ -63,7 +64,7 @@ func (m EnforcedGovernanceRule) ValidateEnumValue() (bool, error) {
 	}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

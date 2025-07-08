@@ -12,8 +12,9 @@ package mediaservices
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ChangeMediaWorkflowConfigurationCompartmentDetails The details of the compartment to which the MediaWorkflowConfiguration will be moved.
@@ -35,7 +36,7 @@ func (m ChangeMediaWorkflowConfigurationCompartmentDetails) ValidateEnumValue() 
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

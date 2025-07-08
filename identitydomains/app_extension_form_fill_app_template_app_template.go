@@ -13,8 +13,9 @@ package identitydomains
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // AppExtensionFormFillAppTemplateAppTemplate This extension provides attributes for Form-Fill facet of AppTemplate
@@ -144,7 +145,7 @@ func (m AppExtensionFormFillAppTemplateAppTemplate) ValidateEnumValue() (bool, e
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for FormCredMethod: %s. Supported values are: %s.", m.FormCredMethod, strings.Join(GetAppExtensionFormFillAppTemplateAppTemplateFormCredMethodEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

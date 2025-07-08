@@ -11,8 +11,9 @@ package loganalytics
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GenericConditionBlock A condition block. This could represent a single condition, or have nested condition blocks under it.
@@ -53,7 +54,7 @@ func (m GenericConditionBlock) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ConditionBlocksOperator: %s. Supported values are: %s.", m.ConditionBlocksOperator, strings.Join(GetGenericConditionBlockConditionBlocksOperatorEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

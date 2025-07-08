@@ -14,8 +14,9 @@ package opsi
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // MacsManagedCloudExadataInsightSummary Summary of a Cloud MACS-managed Exadata insight resource (ExaCC).
@@ -172,7 +173,7 @@ func (m MacsManagedCloudExadataInsightSummary) ValidateEnumValue() (bool, error)
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ExadataInfraResourceType: %s. Supported values are: %s.", m.ExadataInfraResourceType, strings.Join(GetExadataResourceTypeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

@@ -11,8 +11,9 @@ package apmsynthetics
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // NetworkConfiguration Details of the network configuration. For NETWORK monitor type, NetworkConfiguration is mandatory.
@@ -51,7 +52,7 @@ func (m NetworkConfiguration) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ProbeMode: %s. Supported values are: %s.", m.ProbeMode, strings.Join(GetProbeModeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

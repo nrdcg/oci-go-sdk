@@ -12,8 +12,9 @@ package aidocument
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // ModelMetrics Trained Model Metrics.
@@ -53,12 +54,32 @@ func (m *modelmetrics) UnmarshalPolymorphicJSON(data []byte) (interface{}, error
 
 	var err error
 	switch m.ModelType {
+	case "PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION":
+		mm := PreTrainedDocumentElementsExtractionModelDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "DOCUMENT_CLASSIFICATION":
 		mm := DocumentClassificationModelMetrics{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "PRE_TRAINED_DOCUMENT_CLASSIFICATION":
+		mm := PretrainedDocumentClassificationModelDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
+	case "PRE_TRAINED_TABLE_EXTRACTION":
+		mm := PretrainedTableExtractionModelDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "KEY_VALUE_EXTRACTION":
 		mm := KeyValueDetectionModelMetrics{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
+	case "PRE_TRAINED_KEY_VALUE_EXTRACTION":
+		mm := PretrainedKeyValueExtractionModelDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
+	case "PRE_TRAINED_TEXT_EXTRACTION":
+		mm := PretrainedTextExtractionModelDetails{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
 	default:
@@ -83,7 +104,7 @@ func (m modelmetrics) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }
@@ -93,18 +114,33 @@ type ModelMetricsModelTypeEnum string
 
 // Set of constants representing the allowable values for ModelMetricsModelTypeEnum
 const (
-	ModelMetricsModelTypeKeyValueExtraction     ModelMetricsModelTypeEnum = "KEY_VALUE_EXTRACTION"
-	ModelMetricsModelTypeDocumentClassification ModelMetricsModelTypeEnum = "DOCUMENT_CLASSIFICATION"
+	ModelMetricsModelTypeKeyValueExtraction                   ModelMetricsModelTypeEnum = "KEY_VALUE_EXTRACTION"
+	ModelMetricsModelTypeDocumentClassification               ModelMetricsModelTypeEnum = "DOCUMENT_CLASSIFICATION"
+	ModelMetricsModelTypePreTrainedTextExtraction             ModelMetricsModelTypeEnum = "PRE_TRAINED_TEXT_EXTRACTION"
+	ModelMetricsModelTypePreTrainedTableExtraction            ModelMetricsModelTypeEnum = "PRE_TRAINED_TABLE_EXTRACTION"
+	ModelMetricsModelTypePreTrainedKeyValueExtraction         ModelMetricsModelTypeEnum = "PRE_TRAINED_KEY_VALUE_EXTRACTION"
+	ModelMetricsModelTypePreTrainedDocumentClassification     ModelMetricsModelTypeEnum = "PRE_TRAINED_DOCUMENT_CLASSIFICATION"
+	ModelMetricsModelTypePreTrainedDocumentElementsExtraction ModelMetricsModelTypeEnum = "PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION"
 )
 
 var mappingModelMetricsModelTypeEnum = map[string]ModelMetricsModelTypeEnum{
-	"KEY_VALUE_EXTRACTION":    ModelMetricsModelTypeKeyValueExtraction,
-	"DOCUMENT_CLASSIFICATION": ModelMetricsModelTypeDocumentClassification,
+	"KEY_VALUE_EXTRACTION":                     ModelMetricsModelTypeKeyValueExtraction,
+	"DOCUMENT_CLASSIFICATION":                  ModelMetricsModelTypeDocumentClassification,
+	"PRE_TRAINED_TEXT_EXTRACTION":              ModelMetricsModelTypePreTrainedTextExtraction,
+	"PRE_TRAINED_TABLE_EXTRACTION":             ModelMetricsModelTypePreTrainedTableExtraction,
+	"PRE_TRAINED_KEY_VALUE_EXTRACTION":         ModelMetricsModelTypePreTrainedKeyValueExtraction,
+	"PRE_TRAINED_DOCUMENT_CLASSIFICATION":      ModelMetricsModelTypePreTrainedDocumentClassification,
+	"PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION": ModelMetricsModelTypePreTrainedDocumentElementsExtraction,
 }
 
 var mappingModelMetricsModelTypeEnumLowerCase = map[string]ModelMetricsModelTypeEnum{
-	"key_value_extraction":    ModelMetricsModelTypeKeyValueExtraction,
-	"document_classification": ModelMetricsModelTypeDocumentClassification,
+	"key_value_extraction":                     ModelMetricsModelTypeKeyValueExtraction,
+	"document_classification":                  ModelMetricsModelTypeDocumentClassification,
+	"pre_trained_text_extraction":              ModelMetricsModelTypePreTrainedTextExtraction,
+	"pre_trained_table_extraction":             ModelMetricsModelTypePreTrainedTableExtraction,
+	"pre_trained_key_value_extraction":         ModelMetricsModelTypePreTrainedKeyValueExtraction,
+	"pre_trained_document_classification":      ModelMetricsModelTypePreTrainedDocumentClassification,
+	"pre_trained_document_elements_extraction": ModelMetricsModelTypePreTrainedDocumentElementsExtraction,
 }
 
 // GetModelMetricsModelTypeEnumValues Enumerates the set of values for ModelMetricsModelTypeEnum
@@ -121,6 +157,11 @@ func GetModelMetricsModelTypeEnumStringValues() []string {
 	return []string{
 		"KEY_VALUE_EXTRACTION",
 		"DOCUMENT_CLASSIFICATION",
+		"PRE_TRAINED_TEXT_EXTRACTION",
+		"PRE_TRAINED_TABLE_EXTRACTION",
+		"PRE_TRAINED_KEY_VALUE_EXTRACTION",
+		"PRE_TRAINED_DOCUMENT_CLASSIFICATION",
+		"PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION",
 	}
 }
 

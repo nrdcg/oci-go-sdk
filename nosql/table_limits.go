@@ -14,8 +14,9 @@ package nosql
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // TableLimits Throughput and storage limits configuration of a table.
@@ -50,7 +51,7 @@ func (m TableLimits) ValidateEnumValue() (bool, error) {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for CapacityMode: %s. Supported values are: %s.", m.CapacityMode, strings.Join(GetTableLimitsCapacityModeEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

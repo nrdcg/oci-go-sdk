@@ -15,8 +15,9 @@ package resourcemanager
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // UpdateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails Update details for a configuration source provider of the type `BITBUCKET_CLOUD_USERNAME_APPPASSWORD`.
@@ -88,7 +89,7 @@ func (m UpdateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetail
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

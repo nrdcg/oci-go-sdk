@@ -12,8 +12,9 @@ package databasetools
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // DatabaseToolsConnectionOracleDatabaseProxyClientUserName Proxy client information for user name based proxy authentication.
@@ -39,7 +40,7 @@ func (m DatabaseToolsConnectionOracleDatabaseProxyClientUserName) ValidateEnumVa
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }

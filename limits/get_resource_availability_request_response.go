@@ -6,9 +6,10 @@ package limits
 
 import (
 	"fmt"
-	"github.com/nrdcg/oci-go-sdk/common/v1065"
 	"net/http"
 	"strings"
+
+	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
 // GetResourceAvailabilityRequest wrapper for the GetResourceAvailability operation
@@ -76,7 +77,7 @@ func (request GetResourceAvailabilityRequest) RetryPolicy() *common.RetryPolicy 
 func (request GetResourceAvailabilityRequest) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 	if len(errMessage) > 0 {
-		return true, fmt.Errorf(strings.Join(errMessage, "\n"))
+		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
 }
