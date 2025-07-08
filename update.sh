@@ -5,7 +5,7 @@
 ORG=nrdcg
 
 BASE_MAJOR_VERSION=65
-BASE_OCI_VERSION=${BASE_MAJOR_VERSION}.95.0
+BASE_OCI_VERSION=${BASE_MAJOR_VERSION}.95.1
 
 OLD_MAJOR_VERSION=v${BASE_MAJOR_VERSION}
 
@@ -101,6 +101,7 @@ cd common
 go mod init github.com/${ORG}/oci-go-sdk/common/${NEW_MAJOR_VERSION}
 go mod edit -go ${CUR_GO} -toolchain=none
 go mod tidy
+go mod edit -toolchain=none
 
 cd ..
 
@@ -153,6 +154,7 @@ for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'); do
     cd ${row}
 
     go mod tidy
+    go mod edit -toolchain=none
 
     cd ..
 done
