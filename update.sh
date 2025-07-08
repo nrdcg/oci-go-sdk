@@ -52,6 +52,8 @@ EOF
 go mod edit -go 1.24.0 -toolchain=none
 go mod tidy
 
+command -v golangci-lint >/dev/null 2>&1 || { echo "It requires golangci-lint but it's not installed. Aborting." >&2; exit 1; }
+
 golangci-lint fmt
 golangci-lint run --fix
 
@@ -65,6 +67,8 @@ git checkout HEAD go.mod go.sum
 ## Move helpers from examples package
 
 #go install github.com/vikstrous/mvpkg@latest
+command -v mvpkg >/dev/null 2>&1 || { echo "It requires github.com/vikstrous/mvpkg but it's not installed. Aborting." >&2; exit 1; }
+
 mvpkg ./example/helpers ./helpers
 
 ## Format existing code
