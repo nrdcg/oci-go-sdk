@@ -218,6 +218,8 @@ done
 #git tag ${VERSION}
 #git push origin ${VERSION}
 
+find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} v${NEW_MAJOR_VERSION}\`" \; | grep -v example | sort > modules.md
+
 cd -
 
 rm -rf ${SOURCE}
