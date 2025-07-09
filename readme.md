@@ -19,6 +19,7 @@ With the official repository:
 ```go
 import (
 	"github.com/oracle/oci-go-sdk/v65/common"
+	"github.com/oracle/oci-go-sdk/v65/common/auth"
 	"github.com/oracle/oci-go-sdk/v65/dns"
 ```
 
@@ -26,6 +27,7 @@ With the fork:
 ```go
 import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
+	"github.com/nrdcg/oci-go-sdk/common/v1065/auth"
 	"github.com/nrdcg/oci-go-sdk/dns/v1065"
 )
 ```
