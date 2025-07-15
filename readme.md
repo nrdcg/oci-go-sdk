@@ -201,7 +201,7 @@ import (
 
 ## Extra Scripts
 
-The script
+The extra scripts:
 - `modules.sh`: (not used) It allows converting the original repository to a modular repository
 - `tags.sh`: (not used) It allows tagging the original repository to a modular repository
 
