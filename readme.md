@@ -6,6 +6,8 @@ This fork is special: all the packages are modules.
 
 The code of the modules are inside the branch [`modules`](https://github.com/nrdcg/oci-go-sdk/tree/modules).
 
+Note: The minimum Go version is go1.21.0 and direct dependencies are up to date.
+
 The script to update the fork is `update.sh`.
 The env vars `BASE_MAJOR_VERSION` and `BASE_OCI_VERSION` must be updated to reference the targeted version.
 
