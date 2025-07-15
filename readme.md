@@ -8,8 +8,13 @@ The code of the modules are inside the branch [`modules`](https://github.com/nrd
 
 Note: The minimum Go version is go1.21.0 and direct dependencies are up to date.
 
+## Maintenance
+
 The script to update the fork is `update.sh`.
+
 The env vars `BASE_MAJOR_VERSION` and `BASE_OCI_VERSION` must be updated to reference the targeted version.
+
+I update the branch "manually" by calling the script for each release of `github.com/oracle/oci-go-sdk`.
 
 ## Usage
 
