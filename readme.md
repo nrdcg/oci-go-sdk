@@ -12,7 +12,7 @@ Note: The minimum Go version is go1.21.0 and direct dependencies are up to date.
 
 The script to update the fork is `update.sh`.
 
-The env vars `BASE_MAJOR_VERSION` and `BASE_OCI_VERSION` must be updated to reference the targeted version.
+The env vars `SRC_BASE_MAJOR_VERSION` and `SRC_BASE_VERSION` must be updated to reference the targeted version.
 
 I update the branch "manually" by calling the script for each release of `github.com/oracle/oci-go-sdk`.
 
