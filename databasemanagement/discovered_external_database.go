@@ -64,6 +64,9 @@ type DiscoveredExternalDatabase struct {
 	// The list of Pluggable Databases.
 	PluggableDatabases []DiscoveredExternalPluggableDatabase `mandatory:"false" json:"pluggableDatabases"`
 
+	// The list of database instances.
+	DbInstances []DiscoveredExternalDbInstance `mandatory:"false" json:"dbInstances"`
+
 	Connector ExternalDbSystemDiscoveryConnector `mandatory:"false" json:"connector"`
 
 	// Indicates whether Diagnostics & Management should be enabled for all the current pluggable databases in the container database.
@@ -172,6 +175,7 @@ func (m *DiscoveredExternalDatabase) UnmarshalJSON(data []byte) (e error) {
 		DbRole                        DiscoveredExternalDatabaseDbRoleEnum          `json:"dbRole"`
 		DbVersion                     *string                                       `json:"dbVersion"`
 		PluggableDatabases            []DiscoveredExternalPluggableDatabase         `json:"pluggableDatabases"`
+		DbInstances                   []DiscoveredExternalDbInstance                `json:"dbInstances"`
 		Connector                     externaldbsystemdiscoveryconnector            `json:"connector"`
 		CanEnableAllCurrentPdbs       *bool                                         `json:"canEnableAllCurrentPdbs"`
 		IsAutoEnablePluggableDatabase *bool                                         `json:"isAutoEnablePluggableDatabase"`
@@ -211,6 +215,8 @@ func (m *DiscoveredExternalDatabase) UnmarshalJSON(data []byte) (e error) {
 
 	m.PluggableDatabases = make([]DiscoveredExternalPluggableDatabase, len(model.PluggableDatabases))
 	copy(m.PluggableDatabases, model.PluggableDatabases)
+	m.DbInstances = make([]DiscoveredExternalDbInstance, len(model.DbInstances))
+	copy(m.DbInstances, model.DbInstances)
 	nn, e = model.Connector.UnmarshalPolymorphicJSON(model.Connector.JsonData)
 	if e != nil {
 		return

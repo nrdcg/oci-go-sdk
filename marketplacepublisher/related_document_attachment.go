@@ -168,7 +168,8 @@ const (
 	RelatedDocumentAttachmentDocumentCategoryPressRelease         RelatedDocumentAttachmentDocumentCategoryEnum = "PRESS_RELEASE"
 	RelatedDocumentAttachmentDocumentCategoryProductDocumentation RelatedDocumentAttachmentDocumentCategoryEnum = "PRODUCT_DOCUMENTATION"
 	RelatedDocumentAttachmentDocumentCategoryUserGuides           RelatedDocumentAttachmentDocumentCategoryEnum = "USER_GUIDES"
-	RelatedDocumentAttachmentDocumentCategoryWebinar              RelatedDocumentAttachmentDocumentCategoryEnum = "WEBINAR"
+	RelatedDocumentAttachmentDocumentCategoryWebinars             RelatedDocumentAttachmentDocumentCategoryEnum = "WEBINARS"
+	RelatedDocumentAttachmentDocumentCategoryWhitepapers          RelatedDocumentAttachmentDocumentCategoryEnum = "WHITEPAPERS"
 )
 
 var mappingRelatedDocumentAttachmentDocumentCategoryEnum = map[string]RelatedDocumentAttachmentDocumentCategoryEnum{
@@ -178,7 +179,8 @@ var mappingRelatedDocumentAttachmentDocumentCategoryEnum = map[string]RelatedDoc
 	"PRESS_RELEASE":         RelatedDocumentAttachmentDocumentCategoryPressRelease,
 	"PRODUCT_DOCUMENTATION": RelatedDocumentAttachmentDocumentCategoryProductDocumentation,
 	"USER_GUIDES":           RelatedDocumentAttachmentDocumentCategoryUserGuides,
-	"WEBINAR":               RelatedDocumentAttachmentDocumentCategoryWebinar,
+	"WEBINARS":              RelatedDocumentAttachmentDocumentCategoryWebinars,
+	"WHITEPAPERS":           RelatedDocumentAttachmentDocumentCategoryWhitepapers,
 }
 
 var mappingRelatedDocumentAttachmentDocumentCategoryEnumLowerCase = map[string]RelatedDocumentAttachmentDocumentCategoryEnum{
@@ -188,7 +190,8 @@ var mappingRelatedDocumentAttachmentDocumentCategoryEnumLowerCase = map[string]R
 	"press_release":         RelatedDocumentAttachmentDocumentCategoryPressRelease,
 	"product_documentation": RelatedDocumentAttachmentDocumentCategoryProductDocumentation,
 	"user_guides":           RelatedDocumentAttachmentDocumentCategoryUserGuides,
-	"webinar":               RelatedDocumentAttachmentDocumentCategoryWebinar,
+	"webinars":              RelatedDocumentAttachmentDocumentCategoryWebinars,
+	"whitepapers":           RelatedDocumentAttachmentDocumentCategoryWhitepapers,
 }
 
 // GetRelatedDocumentAttachmentDocumentCategoryEnumValues Enumerates the set of values for RelatedDocumentAttachmentDocumentCategoryEnum
@@ -209,7 +212,8 @@ func GetRelatedDocumentAttachmentDocumentCategoryEnumStringValues() []string {
 		"PRESS_RELEASE",
 		"PRODUCT_DOCUMENTATION",
 		"USER_GUIDES",
-		"WEBINAR",
+		"WEBINARS",
+		"WHITEPAPERS",
 	}
 }
 

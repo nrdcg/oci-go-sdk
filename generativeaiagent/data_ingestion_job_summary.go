@@ -32,6 +32,10 @@ type DataIngestionJobSummary struct {
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the parent DataSource.
 	DataSourceId *string `mandatory:"true" json:"dataSourceId"`
 
+	DataIngestionJobType *DataIngestionJobType `mandatory:"true" json:"dataIngestionJobType"`
+
+	DataIngestionJobStatistics *DataIngestionJobStatistics `mandatory:"true" json:"dataIngestionJobStatistics"`
+
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
 	CompartmentId *string `mandatory:"true" json:"compartmentId"`
 

@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlFetchError Error from fetch operation of a MySQL server replication channel.
+// MySqlFetchError Error from the fetch operation of a MySQL server replication channel.
 type MySqlFetchError struct {
 
 	// The error number of the most recent error that caused the I/O thread to stop.

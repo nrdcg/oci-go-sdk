@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ManagedMySqlDatabaseOutboundReplicationSummary An outbound replication record of a MySQL Server.
+// ManagedMySqlDatabaseOutboundReplicationSummary An outbound replication record of a MySQL server.
 type ManagedMySqlDatabaseOutboundReplicationSummary struct {
 
 	// The Universally Unique Identifier (UUID) value of the replica server.

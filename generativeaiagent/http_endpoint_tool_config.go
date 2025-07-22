@@ -28,7 +28,7 @@ type HttpEndpointToolConfig struct {
 	// The subnet ID from agent developer tenancy through which the egress is going to be routed.
 	SubnetId *string `mandatory:"true" json:"subnetId"`
 
-	HttpEndpointAuthConfig HttpEndpointAuthConfig `mandatory:"true" json:"httpEndpointAuthConfig"`
+	HttpEndpointAuthConfig *HttpEndpointAuthConfig `mandatory:"true" json:"httpEndpointAuthConfig"`
 }
 
 func (m HttpEndpointToolConfig) String() string {
@@ -64,9 +64,9 @@ func (m HttpEndpointToolConfig) MarshalJSON() (buff []byte, e error) {
 // UnmarshalJSON unmarshals from json
 func (m *HttpEndpointToolConfig) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
-		ApiSchema              apischemainputlocation `json:"apiSchema"`
-		SubnetId               *string                `json:"subnetId"`
-		HttpEndpointAuthConfig httpendpointauthconfig `json:"httpEndpointAuthConfig"`
+		ApiSchema              apischemainputlocation  `json:"apiSchema"`
+		SubnetId               *string                 `json:"subnetId"`
+		HttpEndpointAuthConfig *HttpEndpointAuthConfig `json:"httpEndpointAuthConfig"`
 	}{}
 
 	e = json.Unmarshal(data, &model)
@@ -86,15 +86,7 @@ func (m *HttpEndpointToolConfig) UnmarshalJSON(data []byte) (e error) {
 
 	m.SubnetId = model.SubnetId
 
-	nn, e = model.HttpEndpointAuthConfig.UnmarshalPolymorphicJSON(model.HttpEndpointAuthConfig.JsonData)
-	if e != nil {
-		return
-	}
-	if nn != nil {
-		m.HttpEndpointAuthConfig = nn.(HttpEndpointAuthConfig)
-	} else {
-		m.HttpEndpointAuthConfig = nil
-	}
+	m.HttpEndpointAuthConfig = model.HttpEndpointAuthConfig
 
 	return
 }

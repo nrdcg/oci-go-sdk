@@ -23,9 +23,9 @@ import (
 
 // SqlToolConfig The configuration for SQL Tool.
 type SqlToolConfig struct {
-	DatabaseSchema InputLocation `mandatory:"true" json:"databaseSchema"`
-
 	IclExamples InputLocation `mandatory:"false" json:"iclExamples"`
+
+	DatabaseSchema InputLocation `mandatory:"false" json:"databaseSchema"`
 
 	// To enable/disable SQL execution.
 	ShouldEnableSqlExecution *bool `mandatory:"false" json:"shouldEnableSqlExecution"`
@@ -86,13 +86,13 @@ func (m SqlToolConfig) MarshalJSON() (buff []byte, e error) {
 func (m *SqlToolConfig) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
 		IclExamples                inputlocation              `json:"iclExamples"`
+		DatabaseSchema             inputlocation              `json:"databaseSchema"`
 		ShouldEnableSqlExecution   *bool                      `json:"shouldEnableSqlExecution"`
 		ModelSize                  SqlToolConfigModelSizeEnum `json:"modelSize"`
 		ShouldEnableSelfCorrection *bool                      `json:"shouldEnableSelfCorrection"`
 		TableAndColumnDescription  inputlocation              `json:"tableAndColumnDescription"`
 		GenerationLlmCustomization *LlmCustomization          `json:"generationLlmCustomization"`
 		DatabaseConnection         databaseconnection         `json:"databaseConnection"`
-		DatabaseSchema             inputlocation              `json:"databaseSchema"`
 		Dialect                    SqlToolConfigDialectEnum   `json:"dialect"`
 	}{}
 
@@ -109,6 +109,16 @@ func (m *SqlToolConfig) UnmarshalJSON(data []byte) (e error) {
 		m.IclExamples = nn.(InputLocation)
 	} else {
 		m.IclExamples = nil
+	}
+
+	nn, e = model.DatabaseSchema.UnmarshalPolymorphicJSON(model.DatabaseSchema.JsonData)
+	if e != nil {
+		return
+	}
+	if nn != nil {
+		m.DatabaseSchema = nn.(InputLocation)
+	} else {
+		m.DatabaseSchema = nil
 	}
 
 	m.ShouldEnableSqlExecution = model.ShouldEnableSqlExecution
@@ -137,16 +147,6 @@ func (m *SqlToolConfig) UnmarshalJSON(data []byte) (e error) {
 		m.DatabaseConnection = nn.(DatabaseConnection)
 	} else {
 		m.DatabaseConnection = nil
-	}
-
-	nn, e = model.DatabaseSchema.UnmarshalPolymorphicJSON(model.DatabaseSchema.JsonData)
-	if e != nil {
-		return
-	}
-	if nn != nil {
-		m.DatabaseSchema = nn.(InputLocation)
-	} else {
-		m.DatabaseSchema = nil
 	}
 
 	m.Dialect = model.Dialect

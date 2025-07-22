@@ -4,11 +4,9 @@
 
 // Autoscaling API
 //
-// APIs for dynamically scaling Compute resources to meet application requirements. For more information about
+// Use the Autoscaling API to dynamically scale compute resources to meet application requirements. For more information about
 // autoscaling, see Autoscaling (https://docs.oracle.com/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm). For information about the
-// Compute service, see Overview of the Compute Service (https://docs.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm).
-// **Note:** Autoscaling is not available in US Government Cloud tenancies. For more information, see
-// Oracle Cloud Infrastructure US Government Cloud (https://docs.oracle.com/iaas/Content/General/Concepts/govoverview.htm).
+// Compute service, see Compute (https://docs.oracle.com/iaas/Content/Compute/home.htm).
 //
 
 package autoscaling
@@ -21,7 +19,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ResourcePowerAction A power action against a resource.
+// ResourcePowerAction An action that starts, stops, or resets a resource.
 type ResourcePowerAction struct {
 	Action ResourcePowerActionActionEnum `mandatory:"true" json:"action"`
 }
@@ -64,6 +62,7 @@ type ResourcePowerActionActionEnum string
 
 // Set of constants representing the allowable values for ResourcePowerActionActionEnum
 const (
+	ResourcePowerActionActionSoftstop  ResourcePowerActionActionEnum = "SOFTSTOP"
 	ResourcePowerActionActionStop      ResourcePowerActionActionEnum = "STOP"
 	ResourcePowerActionActionStart     ResourcePowerActionActionEnum = "START"
 	ResourcePowerActionActionSoftreset ResourcePowerActionActionEnum = "SOFTRESET"
@@ -71,6 +70,7 @@ const (
 )
 
 var mappingResourcePowerActionActionEnum = map[string]ResourcePowerActionActionEnum{
+	"SOFTSTOP":  ResourcePowerActionActionSoftstop,
 	"STOP":      ResourcePowerActionActionStop,
 	"START":     ResourcePowerActionActionStart,
 	"SOFTRESET": ResourcePowerActionActionSoftreset,
@@ -78,6 +78,7 @@ var mappingResourcePowerActionActionEnum = map[string]ResourcePowerActionActionE
 }
 
 var mappingResourcePowerActionActionEnumLowerCase = map[string]ResourcePowerActionActionEnum{
+	"softstop":  ResourcePowerActionActionSoftstop,
 	"stop":      ResourcePowerActionActionStop,
 	"start":     ResourcePowerActionActionStart,
 	"softreset": ResourcePowerActionActionSoftreset,
@@ -96,6 +97,7 @@ func GetResourcePowerActionActionEnumValues() []ResourcePowerActionActionEnum {
 // GetResourcePowerActionActionEnumStringValues Enumerates the set of values in String for ResourcePowerActionActionEnum
 func GetResourcePowerActionActionEnumStringValues() []string {
 	return []string{
+		"SOFTSTOP",
 		"STOP",
 		"START",
 		"SOFTRESET",
