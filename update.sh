@@ -8,7 +8,7 @@ DEST_ORG=nrdcg
 REPO_NAME=oci-go-sdk
 
 SRC_BASE_MAJOR_VERSION=65
-SRC_BASE_VERSION=${SRC_BASE_MAJOR_VERSION}.95.2
+SRC_BASE_VERSION=${SRC_BASE_MAJOR_VERSION}.96.0
 
 SRC_MAJOR_VERSION=v${SRC_BASE_MAJOR_VERSION}
 DEST_MAJOR_VERSION=v10${SRC_BASE_MAJOR_VERSION}
@@ -167,8 +167,8 @@ for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'); do
     find . -type f -name "*.go" \
       -exec grep -l "${src_import}" {} + \
       | xargs -r -d '\n' -I{} sed -i \
-        -e "s|${src_import}\"|github.com/${dest_import}\"|g" \
-        -e "s|${src_import}/|github.com/${dest_import}/|g" {}
+        -e "s|${src_import}\"|${dest_import}\"|g" \
+        -e "s|${src_import}/|${dest_import}/|g" {}
 
 done
 
