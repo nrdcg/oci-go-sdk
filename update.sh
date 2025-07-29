@@ -8,7 +8,7 @@ DEST_ORG=nrdcg
 REPO_NAME=oci-go-sdk
 
 SRC_BASE_MAJOR_VERSION=65
-SRC_BASE_VERSION=${SRC_BASE_MAJOR_VERSION}.96.0
+SRC_BASE_VERSION=${SRC_BASE_MAJOR_VERSION}.97.0
 
 SRC_MAJOR_VERSION=v${SRC_BASE_MAJOR_VERSION}
 DEST_MAJOR_VERSION=v10${SRC_BASE_MAJOR_VERSION}
@@ -236,7 +236,7 @@ done
 #git tag ${VERSION}
 #git push origin ${VERSION}
 
-find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} v${DEST_MAJOR_VERSION}\`" \; | grep -v example | sort > ../modules.md
+find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > ../modules.md
 
 cd -
 
