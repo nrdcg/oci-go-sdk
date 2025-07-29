@@ -16,10 +16,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CustomizationModelDetails Customization details.
+// CustomizationModelDetails Details of the base ASR model to train a Customization for.
 type CustomizationModelDetails struct {
 
-	// Customization Domain
+	// Domain of the ASR model
 	Domain CustomizationModelDetailsDomainEnum `mandatory:"false" json:"domain,omitempty"`
 
 	// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646].

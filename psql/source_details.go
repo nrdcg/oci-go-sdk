@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// SourceDetails The source used to restore the database system.
+// SourceDetails The source of the database system.
 type SourceDetails interface {
 }
 

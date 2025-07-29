@@ -45,6 +45,8 @@ type UpdateSecretDetails struct {
 
 	SecretContent SecretContentDetails `mandatory:"false" json:"secretContent"`
 
+	ReplicationConfig *ReplicationConfig `mandatory:"false" json:"replicationConfig"`
+
 	RotationConfig *RotationConfig `mandatory:"false" json:"rotationConfig"`
 
 	// A list of rules to control how the secret is used and managed.
@@ -81,6 +83,7 @@ func (m *UpdateSecretDetails) UnmarshalJSON(data []byte) (e error) {
 		FreeformTags            map[string]string                 `json:"freeformTags"`
 		Metadata                map[string]interface{}            `json:"metadata"`
 		SecretContent           secretcontentdetails              `json:"secretContent"`
+		ReplicationConfig       *ReplicationConfig                `json:"replicationConfig"`
 		RotationConfig          *RotationConfig                   `json:"rotationConfig"`
 		SecretRules             []secretrule                      `json:"secretRules"`
 		SecretGenerationContext secretgenerationcontext           `json:"secretGenerationContext"`
@@ -111,6 +114,8 @@ func (m *UpdateSecretDetails) UnmarshalJSON(data []byte) (e error) {
 	} else {
 		m.SecretContent = nil
 	}
+
+	m.ReplicationConfig = model.ReplicationConfig
 
 	m.RotationConfig = model.RotationConfig
 

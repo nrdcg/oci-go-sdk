@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// InstanceConfiguration The model deployment instance configuration
+// InstanceConfiguration The model deployment instance configuration.
 type InstanceConfiguration struct {
 
 	// The shape used to launch the model deployment instances.
