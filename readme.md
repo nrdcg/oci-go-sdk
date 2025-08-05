@@ -41,6 +41,8 @@ import (
 
 ## Modules
 
+The modules exist since v65.95.0 (v1065.95.0).
+
 - `github.com/nrdcg/oci-go-sdk/accessgovernancecp/v1065 v1065.97.1`
 - `github.com/nrdcg/oci-go-sdk/adm/v1065 v1065.97.1`
 - `github.com/nrdcg/oci-go-sdk/aianomalydetection/v1065 v1065.97.1`
