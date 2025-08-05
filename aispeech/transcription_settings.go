@@ -19,6 +19,9 @@ import (
 // TranscriptionSettings Processes to perform on the generated transcription.
 type TranscriptionSettings struct {
 	Diarization *Diarization `mandatory:"false" json:"diarization"`
+
+	// Simple key-value pair for setting model specific properties. For more details, refer the documentation.
+	AdditionalSettings map[string]string `mandatory:"false" json:"additionalSettings"`
 }
 
 func (m TranscriptionSettings) String() string {
