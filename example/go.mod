@@ -90,6 +90,6 @@ require (
 	github.com/gofrs/flock v0.12.1 // indirect
 	github.com/sony/gobreaker v1.0.0 // indirect
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
-	golang.org/x/crypto v0.22.0 // indirect
-	golang.org/x/sys v0.22.0 // indirect
+	golang.org/x/crypto v0.33.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
 )
