@@ -7,7 +7,7 @@ DEST_ORG=nrdcg
 
 REPO_NAME=oci-go-sdk
 
-LIB_VERSION=$(curl -s https://api.github.com/repos/oracle/oci-go-sdk/releases/latest | jq -r '.tag_name')
+LIB_VERSION=$(curl -s https://api.github.com/repos/${SRC_ORG}/${REPO_NAME}/releases/latest | jq -r '.tag_name')
 
 TRIMMED_VERSION="${LIB_VERSION#[vV]}"
 
