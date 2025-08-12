@@ -46,6 +46,8 @@ DEST_REMOTE="git@github.com:${DEST_ORG}/${REPO_NAME}.git"
 
 ################
 
+echo "Update to ${LIB_VERSION}"
+
 ## Clone original repository
 
 rm -rf ${SRC_DIR}
@@ -234,6 +236,7 @@ git push -q origin ${DEST_BRANCH}
 # https://go.dev/wiki/Modules#publishing-a-release
 
 for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'| grep -v 'example'); do
+    echo "tag: ${row}/${DEST_TAG}"
     git tag ${row}/${DEST_TAG}
     git push -q origin ${row}/${DEST_TAG}
 done
