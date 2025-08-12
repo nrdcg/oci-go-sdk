@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// Category Details about the service category associated with the support ticket.
+// Category Details about the service category associated with the support request.
 type Category struct {
 
 	// Unique identifier for the service category.

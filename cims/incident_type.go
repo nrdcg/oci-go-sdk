@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// IncidentType Details about the incident type associated with the support ticket.
+// IncidentType Details about the incident type associated with the support request.
 type IncidentType struct {
 
 	// Unique identifier for the incident type.

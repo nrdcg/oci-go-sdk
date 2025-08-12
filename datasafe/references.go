@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// References References to the sections of STIG, CIS, GDPR and/or OBP relevant to the current finding.
+// References References to the sections of STIG, CIS, GDPR and/or ORP relevant to the current finding.
 type References struct {
 
 	// Relevant section from STIG.
@@ -30,6 +30,9 @@ type References struct {
 
 	// Relevant section from OBP.
 	Obp *string `mandatory:"false" json:"obp"`
+
+	// Relevant section from ORP.
+	Orp *string `mandatory:"false" json:"orp"`
 }
 
 func (m References) String() string {

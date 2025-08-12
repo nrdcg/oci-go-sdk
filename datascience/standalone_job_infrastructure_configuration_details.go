@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// StandaloneJobInfrastructureConfigurationDetails The standalone job infrastructure configuration.
+// StandaloneJobInfrastructureConfigurationDetails This type should only be used at the top level infrastructure configuration field for configuring single-node jobs.
 type StandaloneJobInfrastructureConfigurationDetails struct {
 
 	// The shape used to launch the job run instances.

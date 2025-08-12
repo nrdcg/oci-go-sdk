@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateIssueTypeDetails Details for creating the issue type of the support ticket.
+// CreateIssueTypeDetails Details for creating the issue type of the support request.
 type CreateIssueTypeDetails struct {
 
 	// Unique identifier for the issue type.

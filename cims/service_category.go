@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ServiceCategory Information about the support ticket classifier.
+// ServiceCategory Information about the support request classifier.
 type ServiceCategory struct {
 
 	// The unique ID that identifies a classifier.

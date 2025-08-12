@@ -24,7 +24,7 @@ import (
 // ActivityItem Details about the ActivityItem object.
 type ActivityItem struct {
 
-	// Comments added with the activity on the support ticket.
+	// Comments or file attachments added with the activity on the support request.
 	Comments *string `mandatory:"true" json:"comments"`
 
 	// The time when the activity was created, in seconds since epoch time.
@@ -45,17 +45,20 @@ type ActivityItem struct {
 
 	IssueType *IssueType `mandatory:"false" json:"issueType"`
 
+	// Identifier of the activity on the support request.
+	Id *string `mandatory:"false" json:"id"`
+
 	// attachmentID for the ItemType Attachments only for Alloy realm.
 	AttachmentID *string `mandatory:"false" json:"attachmentID"`
 
-	// The type of activity occuring on the support ticket.
+	// The type of activity occuring on the support request.
 	ActivityType ActivityItemActivityTypeEnum `mandatory:"true" json:"activityType"`
 
 	ActivityAuthor ActivityItemActivityAuthorEnum `mandatory:"true" json:"activityAuthor"`
 
 	ItemType ActivityItemItemTypeEnum `mandatory:"false" json:"itemType,omitempty"`
 
-	// Who updates the activity on the support ticket.
+	// Who updates the activity on the support request.
 	ItemStatus ActivityItemItemStatusEnum `mandatory:"false" json:"itemStatus,omitempty"`
 }
 
@@ -273,6 +276,8 @@ const (
 	ActivityItemItemStatusAttached   ActivityItemItemStatusEnum = "ATTACHED"
 	ActivityItemItemStatusRemoved    ActivityItemItemStatusEnum = "REMOVED"
 	ActivityItemItemStatusFailed     ActivityItemItemStatusEnum = "FAILED"
+	ActivityItemItemStatusRejected   ActivityItemItemStatusEnum = "REJECTED"
+	ActivityItemItemStatusReceived   ActivityItemItemStatusEnum = "RECEIVED"
 )
 
 var mappingActivityItemItemStatusEnum = map[string]ActivityItemItemStatusEnum{
@@ -280,6 +285,8 @@ var mappingActivityItemItemStatusEnum = map[string]ActivityItemItemStatusEnum{
 	"ATTACHED":   ActivityItemItemStatusAttached,
 	"REMOVED":    ActivityItemItemStatusRemoved,
 	"FAILED":     ActivityItemItemStatusFailed,
+	"REJECTED":   ActivityItemItemStatusRejected,
+	"RECEIVED":   ActivityItemItemStatusReceived,
 }
 
 var mappingActivityItemItemStatusEnumLowerCase = map[string]ActivityItemItemStatusEnum{
@@ -287,6 +294,8 @@ var mappingActivityItemItemStatusEnumLowerCase = map[string]ActivityItemItemStat
 	"attached":   ActivityItemItemStatusAttached,
 	"removed":    ActivityItemItemStatusRemoved,
 	"failed":     ActivityItemItemStatusFailed,
+	"rejected":   ActivityItemItemStatusRejected,
+	"received":   ActivityItemItemStatusReceived,
 }
 
 // GetActivityItemItemStatusEnumValues Enumerates the set of values for ActivityItemItemStatusEnum
@@ -305,6 +314,8 @@ func GetActivityItemItemStatusEnumStringValues() []string {
 		"ATTACHED",
 		"REMOVED",
 		"FAILED",
+		"REJECTED",
+		"RECEIVED",
 	}
 }
 

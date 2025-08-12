@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateSubCategoryDetails Details for creating the service subcategory of the support ticket.
+// CreateSubCategoryDetails Details for creating the service subcategory of the support request.
 type CreateSubCategoryDetails struct {
 
 	// Unique identifier for the service subcategory.

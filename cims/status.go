@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// Status Details about the status of the support ticket.
+// Status Details about the status of the support request.
 type Status struct {
 
 	// The code unique to this ticket status.

@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ChangeSecurityPolicyCompartmentDetails Details for which compartment to move the resource to.
+// ChangeSecurityPolicyCompartmentDetails Details of the compartment the security policy will be moved to.
 type ChangeSecurityPolicyCompartmentDetails struct {
 
 	// The OCID of the compartment where you want to move the security policy.

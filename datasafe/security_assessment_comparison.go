@@ -62,18 +62,24 @@ const (
 	SecurityAssessmentComparisonLifecycleStateCreating  SecurityAssessmentComparisonLifecycleStateEnum = "CREATING"
 	SecurityAssessmentComparisonLifecycleStateSucceeded SecurityAssessmentComparisonLifecycleStateEnum = "SUCCEEDED"
 	SecurityAssessmentComparisonLifecycleStateFailed    SecurityAssessmentComparisonLifecycleStateEnum = "FAILED"
+	SecurityAssessmentComparisonLifecycleStateDeleted   SecurityAssessmentComparisonLifecycleStateEnum = "DELETED"
+	SecurityAssessmentComparisonLifecycleStateDeleting  SecurityAssessmentComparisonLifecycleStateEnum = "DELETING"
 )
 
 var mappingSecurityAssessmentComparisonLifecycleStateEnum = map[string]SecurityAssessmentComparisonLifecycleStateEnum{
 	"CREATING":  SecurityAssessmentComparisonLifecycleStateCreating,
 	"SUCCEEDED": SecurityAssessmentComparisonLifecycleStateSucceeded,
 	"FAILED":    SecurityAssessmentComparisonLifecycleStateFailed,
+	"DELETED":   SecurityAssessmentComparisonLifecycleStateDeleted,
+	"DELETING":  SecurityAssessmentComparisonLifecycleStateDeleting,
 }
 
 var mappingSecurityAssessmentComparisonLifecycleStateEnumLowerCase = map[string]SecurityAssessmentComparisonLifecycleStateEnum{
 	"creating":  SecurityAssessmentComparisonLifecycleStateCreating,
 	"succeeded": SecurityAssessmentComparisonLifecycleStateSucceeded,
 	"failed":    SecurityAssessmentComparisonLifecycleStateFailed,
+	"deleted":   SecurityAssessmentComparisonLifecycleStateDeleted,
+	"deleting":  SecurityAssessmentComparisonLifecycleStateDeleting,
 }
 
 // GetSecurityAssessmentComparisonLifecycleStateEnumValues Enumerates the set of values for SecurityAssessmentComparisonLifecycleStateEnum
@@ -91,6 +97,8 @@ func GetSecurityAssessmentComparisonLifecycleStateEnumStringValues() []string {
 		"CREATING",
 		"SUCCEEDED",
 		"FAILED",
+		"DELETED",
+		"DELETING",
 	}
 }
 
