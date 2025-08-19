@@ -20,7 +20,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ToolChoiceFunction The tool choice for a function.
+// ToolChoiceFunction The tool choice for a function. The model will generate the parameters for user to call the function.
 type ToolChoiceFunction struct {
 
 	// The function name.

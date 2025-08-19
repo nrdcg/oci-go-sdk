@@ -33,6 +33,8 @@ type ChatChoice struct {
 	FinishReason *string `mandatory:"true" json:"finishReason"`
 
 	Logprobs *Logprobs `mandatory:"false" json:"logprobs"`
+
+	Usage *Usage `mandatory:"false" json:"usage"`
 }
 
 func (m ChatChoice) String() string {
@@ -55,6 +57,7 @@ func (m ChatChoice) ValidateEnumValue() (bool, error) {
 func (m *ChatChoice) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
 		Logprobs     *Logprobs `json:"logprobs"`
+		Usage        *Usage    `json:"usage"`
 		Index        *int      `json:"index"`
 		Message      message   `json:"message"`
 		FinishReason *string   `json:"finishReason"`
@@ -66,6 +69,8 @@ func (m *ChatChoice) UnmarshalJSON(data []byte) (e error) {
 	}
 	var nn interface{}
 	m.Logprobs = model.Logprobs
+
+	m.Usage = model.Usage
 
 	m.Index = model.Index
 
