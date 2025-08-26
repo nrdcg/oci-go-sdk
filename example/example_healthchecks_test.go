@@ -130,7 +130,7 @@ func exampleDeleteHttpMonitor(ctx context.Context, client healthchecks.HealthChe
 	helpers.FatalIfError(err)
 }
 
-func ExampleHealthChecksHttpSamples() {
+func Example_healthChecksHttpSamples() {
 	ctx := context.Background()
 
 	// Initialize default config provider
@@ -261,7 +261,7 @@ func exampleDeletePingMonitor(ctx context.Context, client healthchecks.HealthChe
 	helpers.FatalIfError(err)
 }
 
-func ExampleHealthChecksPingSamples() {
+func Example_healthChecksPingSamples() {
 	ctx := context.Background()
 
 	// Initialize default config provider
@@ -303,9 +303,9 @@ func ExampleHealthChecksPingSamples() {
 }
 
 func TestHealthChecks(t *testing.T) {
-	ExampleHealthChecksHttpSamples()
+	Example_healthChecksHttpSamples()
 
-	ExampleHealthChecksPingSamples()
+	Example_healthChecksPingSamples()
 
 	// Output:
 	// List Vantage Points

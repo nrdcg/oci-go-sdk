@@ -33,7 +33,7 @@ type TtsOracleTts2NaturalModelDetails struct {
 	// - fr-FR: French - France
 	// - it-IT: Italian - Italy
 	// - ja-JP: Japanese - Japan
-	// - zh-CN: Mandarin - China
+	// - cmn-CN: Mandarin - China
 	LanguageCode *string `mandatory:"false" json:"languageCode"`
 }
 

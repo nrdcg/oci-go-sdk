@@ -56,6 +56,8 @@ type CreateStandbyDetails struct {
 	// Specifies a prefix for the `Oracle SID` of the database to be created.
 	SidPrefix *string `mandatory:"false" json:"sidPrefix"`
 
+	StorageSizeDetails *DatabaseStorageSizeDetails `mandatory:"false" json:"storageSizeDetails"`
+
 	// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
 	// Example: `{"Department": "Finance"}`
@@ -95,6 +97,7 @@ func (m *CreateStandbyDetails) UnmarshalJSON(data []byte) (e error) {
 		IsActiveDataGuardEnabled           *bool                                  `json:"isActiveDataGuardEnabled"`
 		DbUniqueName                       *string                                `json:"dbUniqueName"`
 		SidPrefix                          *string                                `json:"sidPrefix"`
+		StorageSizeDetails                 *DatabaseStorageSizeDetails            `json:"storageSizeDetails"`
 		FreeformTags                       map[string]string                      `json:"freeformTags"`
 		DefinedTags                        map[string]map[string]interface{}      `json:"definedTags"`
 		SourceDatabaseId                   *string                                `json:"sourceDatabaseId"`
@@ -124,6 +127,8 @@ func (m *CreateStandbyDetails) UnmarshalJSON(data []byte) (e error) {
 	m.DbUniqueName = model.DbUniqueName
 
 	m.SidPrefix = model.SidPrefix
+
+	m.StorageSizeDetails = model.StorageSizeDetails
 
 	m.FreeformTags = model.FreeformTags
 

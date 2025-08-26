@@ -15,8 +15,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/helpers/v1065"
 )
 
-// ExampleListShapes_Pagination demostrate how to use page parameter
-func ExampleListShapes_Pagination() {
+// Example_listShapes_Pagination demostrate how to use page parameter
+func Example_listShapes_Pagination() {
 	c, err := core.NewComputeClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(err)
 

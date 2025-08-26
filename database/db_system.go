@@ -54,9 +54,6 @@ type DbSystem struct {
 	// The domain name for the DB system.
 	Domain *string `mandatory:"true" json:"domain"`
 
-	// The number of CPU cores enabled on the DB system.
-	CpuCoreCount *int `mandatory:"true" json:"cpuCoreCount"`
-
 	// The Oracle Database Edition that applies to all the databases on the DB system.
 	// Exadata DB systems and 2-node RAC DB systems require ENTERPRISE_EDITION_EXTREME_PERFORMANCE.
 	DatabaseEdition DbSystemDatabaseEditionEnum `mandatory:"true" json:"databaseEdition"`
@@ -101,6 +98,9 @@ type DbSystem struct {
 
 	// The most recent OS Patch Version applied on the DB system.
 	OsVersion *string `mandatory:"false" json:"osVersion"`
+
+	// The number of CPU cores enabled on the DB system.
+	CpuCoreCount *int `mandatory:"false" json:"cpuCoreCount"`
 
 	// The cluster name for Exadata and 2-node RAC virtual machine DB systems. The cluster name must begin with an alphabetic character, and may contain hyphens (-). Underscores (_) are not permitted. The cluster name can be no longer than 11 characters and is not case sensitive.
 	ClusterName *string `mandatory:"false" json:"clusterName"`
@@ -208,6 +208,12 @@ type DbSystem struct {
 
 	DataCollectionOptions *DataCollectionOptions `mandatory:"false" json:"dataCollectionOptions"`
 
+	// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+	ComputeModel DbSystemComputeModelEnum `mandatory:"false" json:"computeModel,omitempty"`
+
+	// The number of compute servers for the DB system.
+	ComputeCount *int `mandatory:"false" json:"computeCount"`
+
 	IormConfigCache *ExadataIormConfig `mandatory:"false" json:"iormConfigCache"`
 }
 
@@ -235,6 +241,9 @@ func (m DbSystem) ValidateEnumValue() (bool, error) {
 	}
 	if _, ok := GetMappingDbSystemLicenseModelEnum(string(m.LicenseModel)); !ok && m.LicenseModel != "" {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for LicenseModel: %s. Supported values are: %s.", m.LicenseModel, strings.Join(GetDbSystemLicenseModelEnumStringValues(), ",")))
+	}
+	if _, ok := GetMappingDbSystemComputeModelEnum(string(m.ComputeModel)); !ok && m.ComputeModel != "" {
+		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for ComputeModel: %s. Supported values are: %s.", m.ComputeModel, strings.Join(GetDbSystemComputeModelEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
@@ -493,5 +502,47 @@ func GetDbSystemLicenseModelEnumStringValues() []string {
 // GetMappingDbSystemLicenseModelEnum performs case Insensitive comparison on enum value and return the desired enum
 func GetMappingDbSystemLicenseModelEnum(val string) (DbSystemLicenseModelEnum, bool) {
 	enum, ok := mappingDbSystemLicenseModelEnumLowerCase[strings.ToLower(val)]
+	return enum, ok
+}
+
+// DbSystemComputeModelEnum Enum with underlying type: string
+type DbSystemComputeModelEnum string
+
+// Set of constants representing the allowable values for DbSystemComputeModelEnum
+const (
+	DbSystemComputeModelEcpu DbSystemComputeModelEnum = "ECPU"
+	DbSystemComputeModelOcpu DbSystemComputeModelEnum = "OCPU"
+)
+
+var mappingDbSystemComputeModelEnum = map[string]DbSystemComputeModelEnum{
+	"ECPU": DbSystemComputeModelEcpu,
+	"OCPU": DbSystemComputeModelOcpu,
+}
+
+var mappingDbSystemComputeModelEnumLowerCase = map[string]DbSystemComputeModelEnum{
+	"ecpu": DbSystemComputeModelEcpu,
+	"ocpu": DbSystemComputeModelOcpu,
+}
+
+// GetDbSystemComputeModelEnumValues Enumerates the set of values for DbSystemComputeModelEnum
+func GetDbSystemComputeModelEnumValues() []DbSystemComputeModelEnum {
+	values := make([]DbSystemComputeModelEnum, 0)
+	for _, v := range mappingDbSystemComputeModelEnum {
+		values = append(values, v)
+	}
+	return values
+}
+
+// GetDbSystemComputeModelEnumStringValues Enumerates the set of values in String for DbSystemComputeModelEnum
+func GetDbSystemComputeModelEnumStringValues() []string {
+	return []string{
+		"ECPU",
+		"OCPU",
+	}
+}
+
+// GetMappingDbSystemComputeModelEnum performs case Insensitive comparison on enum value and return the desired enum
+func GetMappingDbSystemComputeModelEnum(val string) (DbSystemComputeModelEnum, bool) {
+	enum, ok := mappingDbSystemComputeModelEnumLowerCase[strings.ToLower(val)]
 	return enum, ok
 }

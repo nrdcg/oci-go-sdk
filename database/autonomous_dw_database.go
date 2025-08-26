@@ -131,7 +131,7 @@ type AutonomousDwDatabase struct {
 	// An array of CPU values that an Autonomous Database can be scaled to.
 	ProvisionableCpus []float32 `mandatory:"false" json:"provisionableCpus"`
 
-	// The amount of memory (in GBs) enabled per ECPU or OCPU.
+	// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
 	MemoryPerOracleComputeUnitInGBs *int `mandatory:"false" json:"memoryPerOracleComputeUnitInGBs"`
 
 	// The quantity of data in the database, in gigabytes.

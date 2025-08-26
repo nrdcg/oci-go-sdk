@@ -17,13 +17,13 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateAutonomousContainerDatabaseFromBackupDetails Details to create an Oracle Autonomous Container Database by cloning from a backup of an existing Autonomous Container Database.
+// CreateAutonomousContainerDatabaseFromBackupDetails Details to create an Autonomous Container Database (ACD) by cloning a backup of an existing ACD.
 type CreateAutonomousContainerDatabaseFromBackupDetails struct {
 
 	// The display name for the Autonomous Container Database.
 	DisplayName *string `mandatory:"true" json:"displayName"`
 
-	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the source Autonomous Container Database Backup that you will clone to create a new Autonomous Container Database.
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the source ACD backup that you will clone to create a new ACD.
 	AutonomousContainerDatabaseBackupId *string `mandatory:"true" json:"autonomousContainerDatabaseBackupId"`
 
 	// Customer Contacts. Setting this to an empty list removes all customer contacts.

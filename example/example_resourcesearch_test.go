@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/resourcesearch/v1065"
 )
 
-func Example_ResourceSearch() {
+func Example_resourceSearch() {
 	client, err := resourcesearch.NewResourceSearchClientWithConfigurationProvider(common.DefaultConfigProvider())
 	ctx := context.Background()
 	helpers.FatalIfError(err)

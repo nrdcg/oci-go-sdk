@@ -15,7 +15,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/helpers/v1065"
 )
 
-func ExampleListEvents() {
+func Example_listEvents() {
 	c, clerr := audit.NewAuditClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(clerr)
 

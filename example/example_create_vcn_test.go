@@ -15,7 +15,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/helpers/v1065"
 )
 
-func ExampleCreateVcn() {
+func Example_createVcn() {
 	displayName := "OCI-GOSDK-CreateVcn-Example"
 	compartmentID := os.Getenv("OCI_COMPARTMENT_ID") // OCI_COMPARTMENT_ID env variable must be defined
 

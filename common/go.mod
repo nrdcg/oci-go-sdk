@@ -5,7 +5,7 @@ go 1.21.0
 require (
 	github.com/gofrs/flock v0.12.1
 	github.com/sony/gobreaker v1.0.0
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.0
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78
 )
 

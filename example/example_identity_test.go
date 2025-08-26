@@ -16,10 +16,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/identity/v1065"
 )
 
-// ExampleListAvailabilityDomains Lists the Availability Domains in your tenancy.
+// Example_listAvailabilityDomains Lists the Availability Domains in your tenancy.
 // Specify the OCID of either the tenancy or another of your compartments as
 // the value for the compartment ID (remember that the tenancy is simply the root compartment).
-func ExampleListAvailabilityDomains() {
+func Example_listAvailabilityDomains() {
 	c, err := identity.NewIdentityClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(err)
 
@@ -41,8 +41,8 @@ func ExampleListAvailabilityDomains() {
 	// list available domains completed
 }
 
-// ExampleListGroupsWithCustomSignedHeader Lists groups by passing a custom signed header in the request
-func ExampleListGroupsWithCustomSignedHeader() {
+// Example_listGroupsWithCustomSignedHeader Lists groups by passing a custom signed header in the request
+func Example_listGroupsWithCustomSignedHeader() {
 	provider := common.DefaultConfigProvider()
 	c, err := identity.NewIdentityClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(err)

@@ -19,7 +19,7 @@ import (
 
 // Example for how to do CRUD on cluster, how to get kubernets config and
 // how to work with WorkRequest
-func ExampleClusterCRUD() {
+func Example_clusterCRUD() {
 	ctx := context.Background()
 	c, clerr := containerengine.NewContainerEngineClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(clerr)
@@ -85,7 +85,7 @@ func ExampleClusterCRUD() {
 }
 
 // Example for NodePool
-func ExampleNodePoolCRUD() {
+func Example_nodePoolCRUD() {
 	ctx := context.Background()
 	c, clerr := containerengine.NewContainerEngineClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(clerr)
@@ -178,7 +178,7 @@ func ExampleNodePoolCRUD() {
 	// deleting cluster
 }
 
-func ExampleKubeConfig() {
+func Example_kubeConfig() {
 	ctx := context.Background()
 	c, clerr := containerengine.NewContainerEngineClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(clerr)
@@ -197,7 +197,7 @@ func ExampleKubeConfig() {
 }
 
 // Example for work request query
-func ExampleWorkRequestQuery() {
+func Example_workRequestQuery() {
 	ctx := context.Background()
 	c, clerr := containerengine.NewContainerEngineClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(clerr)

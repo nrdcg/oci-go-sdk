@@ -18,8 +18,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/objectstorage/v1065"
 )
 
-// ExampleMultipartDownload shows how to use get object API to perform multi-part download operation
-func ExampleMultipartDownload() {
+// Example_multipartDownload shows how to use get object API to perform multi-part download operation
+func Example_multipartDownload() {
 	c, err := objectstorage.NewObjectStorageClientWithConfigurationProvider(common.DefaultConfigProvider())
 	helpers.FatalIfError(err)
 
