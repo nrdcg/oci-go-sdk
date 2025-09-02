@@ -55,6 +55,10 @@ func (m *encryptionkeylocationdetails) UnmarshalPolymorphicJSON(data []byte) (in
 		mm := ExternalHsmEncryptionDetails{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "GCP":
+		mm := GoogleCloudProviderEncryptionKeyDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "AZURE":
 		mm := AzureEncryptionKeyDetails{}
 		err = json.Unmarshal(data, &mm)
@@ -88,16 +92,19 @@ type EncryptionKeyLocationDetailsProviderTypeEnum string
 const (
 	EncryptionKeyLocationDetailsProviderTypeExternal EncryptionKeyLocationDetailsProviderTypeEnum = "EXTERNAL"
 	EncryptionKeyLocationDetailsProviderTypeAzure    EncryptionKeyLocationDetailsProviderTypeEnum = "AZURE"
+	EncryptionKeyLocationDetailsProviderTypeGcp      EncryptionKeyLocationDetailsProviderTypeEnum = "GCP"
 )
 
 var mappingEncryptionKeyLocationDetailsProviderTypeEnum = map[string]EncryptionKeyLocationDetailsProviderTypeEnum{
 	"EXTERNAL": EncryptionKeyLocationDetailsProviderTypeExternal,
 	"AZURE":    EncryptionKeyLocationDetailsProviderTypeAzure,
+	"GCP":      EncryptionKeyLocationDetailsProviderTypeGcp,
 }
 
 var mappingEncryptionKeyLocationDetailsProviderTypeEnumLowerCase = map[string]EncryptionKeyLocationDetailsProviderTypeEnum{
 	"external": EncryptionKeyLocationDetailsProviderTypeExternal,
 	"azure":    EncryptionKeyLocationDetailsProviderTypeAzure,
+	"gcp":      EncryptionKeyLocationDetailsProviderTypeGcp,
 }
 
 // GetEncryptionKeyLocationDetailsProviderTypeEnumValues Enumerates the set of values for EncryptionKeyLocationDetailsProviderTypeEnum
@@ -114,6 +121,7 @@ func GetEncryptionKeyLocationDetailsProviderTypeEnumStringValues() []string {
 	return []string{
 		"EXTERNAL",
 		"AZURE",
+		"GCP",
 	}
 }
 

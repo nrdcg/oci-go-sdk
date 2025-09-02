@@ -230,6 +230,8 @@ const (
 	ListManagedListsListTypeGeneric              ListManagedListsListTypeEnum = "GENERIC"
 	ListManagedListsListTypeFusionAppsRole       ListManagedListsListTypeEnum = "FUSION_APPS_ROLE"
 	ListManagedListsListTypeFusionAppsPermission ListManagedListsListTypeEnum = "FUSION_APPS_PERMISSION"
+	ListManagedListsListTypeNamespaceSelector    ListManagedListsListTypeEnum = "NAMESPACE_SELECTOR"
+	ListManagedListsListTypePodResourceSelector  ListManagedListsListTypeEnum = "POD_RESOURCE_SELECTOR"
 )
 
 var mappingListManagedListsListTypeEnum = map[string]ListManagedListsListTypeEnum{
@@ -247,6 +249,8 @@ var mappingListManagedListsListTypeEnum = map[string]ListManagedListsListTypeEnu
 	"GENERIC":                ListManagedListsListTypeGeneric,
 	"FUSION_APPS_ROLE":       ListManagedListsListTypeFusionAppsRole,
 	"FUSION_APPS_PERMISSION": ListManagedListsListTypeFusionAppsPermission,
+	"NAMESPACE_SELECTOR":     ListManagedListsListTypeNamespaceSelector,
+	"POD_RESOURCE_SELECTOR":  ListManagedListsListTypePodResourceSelector,
 }
 
 var mappingListManagedListsListTypeEnumLowerCase = map[string]ListManagedListsListTypeEnum{
@@ -264,6 +268,8 @@ var mappingListManagedListsListTypeEnumLowerCase = map[string]ListManagedListsLi
 	"generic":                ListManagedListsListTypeGeneric,
 	"fusion_apps_role":       ListManagedListsListTypeFusionAppsRole,
 	"fusion_apps_permission": ListManagedListsListTypeFusionAppsPermission,
+	"namespace_selector":     ListManagedListsListTypeNamespaceSelector,
+	"pod_resource_selector":  ListManagedListsListTypePodResourceSelector,
 }
 
 // GetListManagedListsListTypeEnumValues Enumerates the set of values for ListManagedListsListTypeEnum
@@ -292,6 +298,8 @@ func GetListManagedListsListTypeEnumStringValues() []string {
 		"GENERIC",
 		"FUSION_APPS_ROLE",
 		"FUSION_APPS_PERMISSION",
+		"NAMESPACE_SELECTOR",
+		"POD_RESOURCE_SELECTOR",
 	}
 }
 
