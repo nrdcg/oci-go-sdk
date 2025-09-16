@@ -164,7 +164,7 @@ func (client DbMulticloudGCPProviderClient) changeOracleDbGcpIdentityConnectorCo
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/ChangeOracleDbGcpIdentityConnectorCompartment"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "ChangeOracleDbGcpIdentityConnectorCompartment", apiReferenceLink)
 		return response, err
 	}
@@ -227,7 +227,7 @@ func (client DbMulticloudGCPProviderClient) changeOracleDbGcpKeyRingCompartment(
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/ChangeOracleDbGcpKeyRingCompartment"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "ChangeOracleDbGcpKeyRingCompartment", apiReferenceLink)
 		return response, err
 	}
@@ -290,7 +290,7 @@ func (client DbMulticloudGCPProviderClient) createOracleDbGcpIdentityConnector(c
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/CreateOracleDbGcpIdentityConnector"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "CreateOracleDbGcpIdentityConnector", apiReferenceLink)
 		return response, err
 	}
@@ -353,7 +353,7 @@ func (client DbMulticloudGCPProviderClient) createOracleDbGcpKeyRing(ctx context
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/CreateOracleDbGcpKeyRing"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "CreateOracleDbGcpKeyRing", apiReferenceLink)
 		return response, err
 	}
@@ -411,7 +411,7 @@ func (client DbMulticloudGCPProviderClient) deleteOracleDbGcpIdentityConnector(c
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/DeleteOracleDbGcpIdentityConnector"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "DeleteOracleDbGcpIdentityConnector", apiReferenceLink)
 		return response, err
 	}
@@ -469,7 +469,7 @@ func (client DbMulticloudGCPProviderClient) deleteOracleDbGcpKeyRing(ctx context
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/DeleteOracleDbGcpKeyRing"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "DeleteOracleDbGcpKeyRing", apiReferenceLink)
 		return response, err
 	}
@@ -527,7 +527,7 @@ func (client DbMulticloudGCPProviderClient) getOracleDbGcpIdentityConnector(ctx 
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/GetOracleDbGcpIdentityConnector"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "GetOracleDbGcpIdentityConnector", apiReferenceLink)
 		return response, err
 	}
@@ -585,7 +585,7 @@ func (client DbMulticloudGCPProviderClient) getOracleDbGcpKey(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKey/GetOracleDbGcpKey"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "GetOracleDbGcpKey", apiReferenceLink)
 		return response, err
 	}
@@ -643,7 +643,7 @@ func (client DbMulticloudGCPProviderClient) getOracleDbGcpKeyRing(ctx context.Co
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/GetOracleDbGcpKeyRing"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "GetOracleDbGcpKeyRing", apiReferenceLink)
 		return response, err
 	}
@@ -701,7 +701,7 @@ func (client DbMulticloudGCPProviderClient) listOracleDbGcpIdentityConnectors(ct
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/ListOracleDbGcpIdentityConnectors"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "ListOracleDbGcpIdentityConnectors", apiReferenceLink)
 		return response, err
 	}
@@ -759,7 +759,7 @@ func (client DbMulticloudGCPProviderClient) listOracleDbGcpKeyRings(ctx context.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/ListOracleDbGcpKeyRings"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "ListOracleDbGcpKeyRings", apiReferenceLink)
 		return response, err
 	}
@@ -817,7 +817,7 @@ func (client DbMulticloudGCPProviderClient) listOracleDbGcpKeys(ctx context.Cont
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKey/ListOracleDbGcpKeys"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "ListOracleDbGcpKeys", apiReferenceLink)
 		return response, err
 	}
@@ -880,7 +880,7 @@ func (client DbMulticloudGCPProviderClient) refreshOracleDbGcpIdentityConnector(
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/RefreshOracleDbGcpIdentityConnector"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "RefreshOracleDbGcpIdentityConnector", apiReferenceLink)
 		return response, err
 	}
@@ -943,7 +943,7 @@ func (client DbMulticloudGCPProviderClient) refreshOracleDbGcpKeyRing(ctx contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/RefreshOracleDbGcpKeyRing"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "RefreshOracleDbGcpKeyRing", apiReferenceLink)
 		return response, err
 	}
@@ -1001,7 +1001,7 @@ func (client DbMulticloudGCPProviderClient) updateOracleDbGcpIdentityConnector(c
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/UpdateOracleDbGcpIdentityConnector"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "UpdateOracleDbGcpIdentityConnector", apiReferenceLink)
 		return response, err
 	}
@@ -1059,7 +1059,7 @@ func (client DbMulticloudGCPProviderClient) updateOracleDbGcpKeyRing(ctx context
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/UpdateOracleDbGcpKeyRing"
 		err = common.PostProcessServiceError(err, "DbMulticloudGCPProvider", "UpdateOracleDbGcpKeyRing", apiReferenceLink)
 		return response, err
 	}
