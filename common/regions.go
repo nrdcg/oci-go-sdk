@@ -108,6 +108,8 @@ const (
 	RegionAPIbaraki1 Region = "ap-ibaraki-1"
 	//RegionMEDccMuscat1 region Muscat
 	RegionMEDccMuscat1 Region = "me-dcc-muscat-1"
+	//RegionMEIbri1 region Ibri
+	RegionMEIbri1 Region = "me-ibri-1"
 	//RegionAPDccCanberra1 region Canberra
 	RegionAPDccCanberra1 Region = "ap-dcc-canberra-1"
 	//RegionEUDccMilan1 region Milan
@@ -215,6 +217,7 @@ var shortNameRegion = map[string]Region{
 	"nja": RegionAPChiyoda1,
 	"ukb": RegionAPIbaraki1,
 	"mct": RegionMEDccMuscat1,
+	"ibr": RegionMEIbri1,
 	"wga": RegionAPDccCanberra1,
 	"bgy": RegionEUDccMilan1,
 	"mxp": RegionEUDccMilan2,
@@ -323,6 +326,7 @@ var regionRealm = map[Region]string{
 	RegionAPIbaraki1: "oc8",
 
 	RegionMEDccMuscat1: "oc9",
+	RegionMEIbri1:      "oc9",
 
 	RegionAPDccCanberra1: "oc10",
 
