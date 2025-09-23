@@ -245,7 +245,7 @@ done
 #git tag ${VERSION}
 #git push origin ${VERSION}
 
-find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > ../modules.md
+find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > ../modules-${DEST_TAG}.md
 
 cd -
 
