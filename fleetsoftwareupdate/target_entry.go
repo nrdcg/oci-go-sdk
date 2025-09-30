@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// TargetEntry Details to specify a target to add or remove from a Exadata Fleet Update Collection.
+// TargetEntry Details to specify a target to add or remove from an Exadata Fleet Update Collection.
 type TargetEntry struct {
 
 	// Resource entity type

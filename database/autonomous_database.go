@@ -490,6 +490,10 @@ type AutonomousDatabase struct {
 
 	// The Autonomous Database clone type.
 	CloneType AutonomousDatabaseCloneTypeEnum `mandatory:"false" json:"cloneType,omitempty"`
+
+	// Additional attributes for this resource. Each attribute is a simple key-value pair with no predefined name, type, or namespace.
+	// Example: `{ "gcpAccountName": "gcpName" }`
+	AdditionalAttributes map[string]string `mandatory:"false" json:"additionalAttributes"`
 }
 
 func (m AutonomousDatabase) String() string {
@@ -697,6 +701,7 @@ func (m *AutonomousDatabase) UnmarshalJSON(data []byte) (e error) {
 		ClusterPlacementGroupId                 *string                                                 `json:"clusterPlacementGroupId"`
 		CloneTableSpaceList                     []int                                                   `json:"cloneTableSpaceList"`
 		CloneType                               AutonomousDatabaseCloneTypeEnum                         `json:"cloneType"`
+		AdditionalAttributes                    map[string]string                                       `json:"additionalAttributes"`
 		Id                                      *string                                                 `json:"id"`
 		CompartmentId                           *string                                                 `json:"compartmentId"`
 		LifecycleState                          AutonomousDatabaseLifecycleStateEnum                    `json:"lifecycleState"`
@@ -968,6 +973,8 @@ func (m *AutonomousDatabase) UnmarshalJSON(data []byte) (e error) {
 	m.CloneTableSpaceList = make([]int, len(model.CloneTableSpaceList))
 	copy(m.CloneTableSpaceList, model.CloneTableSpaceList)
 	m.CloneType = model.CloneType
+
+	m.AdditionalAttributes = model.AdditionalAttributes
 
 	m.Id = model.Id
 

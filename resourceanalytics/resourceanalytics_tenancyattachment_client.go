@@ -146,7 +146,7 @@ func (client TenancyAttachmentClient) createTenancyAttachment(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/resource-analytics/20241031/TenancyAttachment/CreateTenancyAttachment"
 		err = common.PostProcessServiceError(err, "TenancyAttachment", "CreateTenancyAttachment", apiReferenceLink)
 		return response, err
 	}
@@ -204,7 +204,7 @@ func (client TenancyAttachmentClient) deleteTenancyAttachment(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/resource-analytics/20241031/TenancyAttachment/DeleteTenancyAttachment"
 		err = common.PostProcessServiceError(err, "TenancyAttachment", "DeleteTenancyAttachment", apiReferenceLink)
 		return response, err
 	}
@@ -262,7 +262,7 @@ func (client TenancyAttachmentClient) getTenancyAttachment(ctx context.Context, 
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/resource-analytics/20241031/TenancyAttachment/GetTenancyAttachment"
 		err = common.PostProcessServiceError(err, "TenancyAttachment", "GetTenancyAttachment", apiReferenceLink)
 		return response, err
 	}
@@ -320,7 +320,7 @@ func (client TenancyAttachmentClient) listTenancyAttachments(ctx context.Context
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/resource-analytics/20241031/TenancyAttachmentCollection/ListTenancyAttachments"
 		err = common.PostProcessServiceError(err, "TenancyAttachment", "ListTenancyAttachments", apiReferenceLink)
 		return response, err
 	}
@@ -378,7 +378,7 @@ func (client TenancyAttachmentClient) updateTenancyAttachment(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/resource-analytics/20241031/TenancyAttachment/UpdateTenancyAttachment"
 		err = common.PostProcessServiceError(err, "TenancyAttachment", "UpdateTenancyAttachment", apiReferenceLink)
 		return response, err
 	}

@@ -17,7 +17,9 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AddFsuCollectionTargetsDetails Add Targets to a Exadata Fleet Update Collection.
+// AddFsuCollectionTargetsDetails Add Targets to an Exadata Fleet Update Collection.
+// Targets belonging to another Exadata Fleet Update Collection of the same type will be rejected.
+// If automated maintenance is enabled for the Exadata Fleet Update Collection, then ensure that the scheduling policy and window can accommodate the targets being added.
 type AddFsuCollectionTargetsDetails struct {
 
 	// List of Targets to add into the Exadata Fleet Update Collection.

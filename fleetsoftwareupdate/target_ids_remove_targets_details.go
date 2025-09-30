@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// TargetIdsRemoveTargetsDetails Remove a list of targets from a Exadata Fleet Update Collection.
+// TargetIdsRemoveTargetsDetails Remove a list of targets from an Exadata Fleet Update Collection.
 type TargetIdsRemoveTargetsDetails struct {
 
 	// List of target entries to remove from the Exadata Fleet Update Collection.

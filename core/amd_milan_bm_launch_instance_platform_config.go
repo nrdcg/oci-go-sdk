@@ -135,6 +135,7 @@ const (
 	AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps1 AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum = "NPS1"
 	AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps2 AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum = "NPS2"
 	AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps4 AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum = "NPS4"
+	AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps6 AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum = "NPS6"
 )
 
 var mappingAmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum = map[string]AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum{
@@ -142,6 +143,7 @@ var mappingAmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum = map[st
 	"NPS1": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps1,
 	"NPS2": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps2,
 	"NPS4": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps4,
+	"NPS6": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps6,
 }
 
 var mappingAmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnumLowerCase = map[string]AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum{
@@ -149,6 +151,7 @@ var mappingAmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnumLowerCase
 	"nps1": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps1,
 	"nps2": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps2,
 	"nps4": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps4,
+	"nps6": AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketNps6,
 }
 
 // GetAmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnumValues Enumerates the set of values for AmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnum
@@ -167,6 +170,7 @@ func GetAmdMilanBmLaunchInstancePlatformConfigNumaNodesPerSocketEnumStringValues
 		"NPS1",
 		"NPS2",
 		"NPS4",
+		"NPS6",
 	}
 }
 
