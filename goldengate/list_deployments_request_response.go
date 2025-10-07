@@ -173,6 +173,7 @@ const (
 	ListDeploymentsSupportedConnectionTypeSnowflake             ListDeploymentsSupportedConnectionTypeEnum = "SNOWFLAKE"
 	ListDeploymentsSupportedConnectionTypeAmazonS3              ListDeploymentsSupportedConnectionTypeEnum = "AMAZON_S3"
 	ListDeploymentsSupportedConnectionTypeHdfs                  ListDeploymentsSupportedConnectionTypeEnum = "HDFS"
+	ListDeploymentsSupportedConnectionTypeOracleAiDataPlatform  ListDeploymentsSupportedConnectionTypeEnum = "ORACLE_AI_DATA_PLATFORM"
 	ListDeploymentsSupportedConnectionTypeOracleNosql           ListDeploymentsSupportedConnectionTypeEnum = "ORACLE_NOSQL"
 	ListDeploymentsSupportedConnectionTypeMongodb               ListDeploymentsSupportedConnectionTypeEnum = "MONGODB"
 	ListDeploymentsSupportedConnectionTypeAmazonKinesis         ListDeploymentsSupportedConnectionTypeEnum = "AMAZON_KINESIS"
@@ -204,6 +205,7 @@ var mappingListDeploymentsSupportedConnectionTypeEnum = map[string]ListDeploymen
 	"SNOWFLAKE":               ListDeploymentsSupportedConnectionTypeSnowflake,
 	"AMAZON_S3":               ListDeploymentsSupportedConnectionTypeAmazonS3,
 	"HDFS":                    ListDeploymentsSupportedConnectionTypeHdfs,
+	"ORACLE_AI_DATA_PLATFORM": ListDeploymentsSupportedConnectionTypeOracleAiDataPlatform,
 	"ORACLE_NOSQL":            ListDeploymentsSupportedConnectionTypeOracleNosql,
 	"MONGODB":                 ListDeploymentsSupportedConnectionTypeMongodb,
 	"AMAZON_KINESIS":          ListDeploymentsSupportedConnectionTypeAmazonKinesis,
@@ -235,6 +237,7 @@ var mappingListDeploymentsSupportedConnectionTypeEnumLowerCase = map[string]List
 	"snowflake":               ListDeploymentsSupportedConnectionTypeSnowflake,
 	"amazon_s3":               ListDeploymentsSupportedConnectionTypeAmazonS3,
 	"hdfs":                    ListDeploymentsSupportedConnectionTypeHdfs,
+	"oracle_ai_data_platform": ListDeploymentsSupportedConnectionTypeOracleAiDataPlatform,
 	"oracle_nosql":            ListDeploymentsSupportedConnectionTypeOracleNosql,
 	"mongodb":                 ListDeploymentsSupportedConnectionTypeMongodb,
 	"amazon_kinesis":          ListDeploymentsSupportedConnectionTypeAmazonKinesis,
@@ -277,6 +280,7 @@ func GetListDeploymentsSupportedConnectionTypeEnumStringValues() []string {
 		"SNOWFLAKE",
 		"AMAZON_S3",
 		"HDFS",
+		"ORACLE_AI_DATA_PLATFORM",
 		"ORACLE_NOSQL",
 		"MONGODB",
 		"AMAZON_KINESIS",

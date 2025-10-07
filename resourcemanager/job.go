@@ -37,7 +37,7 @@ type Job struct {
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which the job's associated stack resides.
 	CompartmentId *string `mandatory:"false" json:"compartmentId"`
 
-	// The job's display name.
+	// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
 	DisplayName *string `mandatory:"false" json:"displayName"`
 
 	// The type of job executing.
@@ -98,7 +98,7 @@ type Job struct {
 
 	ConfigSource ConfigSourceRecord `mandatory:"false" json:"configSource"`
 
-	// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
+	// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
 	// Example: `{"Department": "Finance"}`
 	FreeformTags map[string]string `mandatory:"false" json:"freeformTags"`
@@ -107,6 +107,11 @@ type Job struct {
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
 	// Example: `{"Operations": {"CostCenter": "42"}}`
 	DefinedTags map[string]map[string]interface{} `mandatory:"false" json:"definedTags"`
+
+	// The system tags associated with this resource, if any. The system tags are set by Oracle cloud infrastructure services. Each key is predefined and scoped to namespaces.
+	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+	// Example: `{orcl-cloud: {free-tier-retain: true}}`
+	SystemTags map[string]map[string]interface{} `mandatory:"false" json:"systemTags"`
 }
 
 func (m Job) String() string {
@@ -154,6 +159,7 @@ func (m *Job) UnmarshalJSON(data []byte) (e error) {
 		ConfigSource                          configsourcerecord                `json:"configSource"`
 		FreeformTags                          map[string]string                 `json:"freeformTags"`
 		DefinedTags                           map[string]map[string]interface{} `json:"definedTags"`
+		SystemTags                            map[string]map[string]interface{} `json:"systemTags"`
 	}{}
 
 	e = json.Unmarshal(data, &model)
@@ -216,6 +222,8 @@ func (m *Job) UnmarshalJSON(data []byte) (e error) {
 	m.FreeformTags = model.FreeformTags
 
 	m.DefinedTags = model.DefinedTags
+
+	m.SystemTags = model.SystemTags
 
 	return
 }

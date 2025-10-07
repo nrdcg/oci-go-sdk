@@ -17,10 +17,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// DatabaseToolsConnectionPostgresqlSummary DatabaseToolsConnectionSummary of a PostgreSQL Server.
+// DatabaseToolsConnectionPostgresqlSummary Database Tools connection summary of a PostgreSQL Server.
 type DatabaseToolsConnectionPostgresqlSummary struct {
 
-	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `DatabaseToolsConnection`.
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Tools connection.
 	Id *string `mandatory:"true" json:"id"`
 
 	// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
@@ -58,7 +58,7 @@ type DatabaseToolsConnectionPostgresqlSummary struct {
 
 	RelatedResource *DatabaseToolsRelatedResourcePostgresql `mandatory:"false" json:"relatedResource"`
 
-	// The user name.
+	// The database user name.
 	UserName *string `mandatory:"false" json:"userName"`
 
 	UserPassword DatabaseToolsUserPasswordSummary `mandatory:"false" json:"userPassword"`
@@ -70,7 +70,7 @@ type DatabaseToolsConnectionPostgresqlSummary struct {
 	// the client private key and associated certificate required for client authentication.
 	KeyStores []DatabaseToolsKeyStorePostgresqlSummary `mandatory:"false" json:"keyStores"`
 
-	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `DatabaseToolsPrivateEndpoint` used to access the database in the customer VCN.
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Tools private endpoint used to access the database in the customer VCN.
 	PrivateEndpointId *string `mandatory:"false" json:"privateEndpointId"`
 
 	// The current state of the Database Tools connection.

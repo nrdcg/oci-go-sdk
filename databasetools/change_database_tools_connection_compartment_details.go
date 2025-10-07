@@ -16,10 +16,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ChangeDatabaseToolsConnectionCompartmentDetails Contains the details for the compartment to move the `DatabaseToolsConnection` to.
+// ChangeDatabaseToolsConnectionCompartmentDetails Contains the details for the compartment to move the Database Tools connection to.
 type ChangeDatabaseToolsConnectionCompartmentDetails struct {
 
-	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to move the `DatabaseToolsConnection` to.
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to move the Database Tools connection to.
 	CompartmentId *string `mandatory:"true" json:"compartmentId"`
 }
 

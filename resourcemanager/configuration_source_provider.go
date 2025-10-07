@@ -31,7 +31,7 @@ type ConfigurationSourceProvider interface {
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where the configuration source provider is located.
 	GetCompartmentId() *string
 
-	// Human-readable display name for the configuration source provider.
+	// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
 	GetDisplayName() *string
 
 	// Description of the configuration source provider.
@@ -55,7 +55,7 @@ type ConfigurationSourceProvider interface {
 	// Secret ocid which is used to authorize the user.
 	GetSecretId() *string
 
-	// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
+	// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
 	// Example: `{"Department": "Finance"}`
 	GetFreeformTags() map[string]string
@@ -64,6 +64,11 @@ type ConfigurationSourceProvider interface {
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
 	// Example: `{"Operations": {"CostCenter": "42"}}`
 	GetDefinedTags() map[string]map[string]interface{}
+
+	// The system tags associated with this resource, if any. The system tags are set by Oracle cloud infrastructure services. Each key is predefined and scoped to namespaces.
+	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+	// Example: `{orcl-cloud: {free-tier-retain: true}}`
+	GetSystemTags() map[string]map[string]interface{}
 }
 
 type configurationsourceprovider struct {
@@ -79,6 +84,7 @@ type configurationsourceprovider struct {
 	SecretId                   *string                                       `mandatory:"false" json:"secretId"`
 	FreeformTags               map[string]string                             `mandatory:"false" json:"freeformTags"`
 	DefinedTags                map[string]map[string]interface{}             `mandatory:"false" json:"definedTags"`
+	SystemTags                 map[string]map[string]interface{}             `mandatory:"false" json:"systemTags"`
 	ConfigSourceProviderType   string                                        `json:"configSourceProviderType"`
 }
 
@@ -104,6 +110,7 @@ func (m *configurationsourceprovider) UnmarshalJSON(data []byte) error {
 	m.SecretId = s.Model.SecretId
 	m.FreeformTags = s.Model.FreeformTags
 	m.DefinedTags = s.Model.DefinedTags
+	m.SystemTags = s.Model.SystemTags
 	m.ConfigSourceProviderType = s.Model.ConfigSourceProviderType
 
 	return err
@@ -193,6 +200,11 @@ func (m configurationsourceprovider) GetFreeformTags() map[string]string {
 // GetDefinedTags returns DefinedTags
 func (m configurationsourceprovider) GetDefinedTags() map[string]map[string]interface{} {
 	return m.DefinedTags
+}
+
+// GetSystemTags returns SystemTags
+func (m configurationsourceprovider) GetSystemTags() map[string]map[string]interface{} {
+	return m.SystemTags
 }
 
 func (m configurationsourceprovider) String() string {

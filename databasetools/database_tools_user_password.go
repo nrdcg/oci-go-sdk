@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// DatabaseToolsUserPassword The user password.
+// DatabaseToolsUserPassword The database user password.
 type DatabaseToolsUserPassword interface {
 }
 

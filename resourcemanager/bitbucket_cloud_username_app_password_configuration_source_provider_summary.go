@@ -30,7 +30,7 @@ type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where the configuration source provider is located.
 	CompartmentId *string `mandatory:"false" json:"compartmentId"`
 
-	// Human-readable display name for the configuration source provider.
+	// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
 	DisplayName *string `mandatory:"false" json:"displayName"`
 
 	// General description of the configuration source provider.
@@ -43,7 +43,7 @@ type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct 
 
 	PrivateServerConfigDetails *PrivateServerConfigDetails `mandatory:"false" json:"privateServerConfigDetails"`
 
-	// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
+	// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
 	// Example: `{"Department": "Finance"}`
 	FreeformTags map[string]string `mandatory:"false" json:"freeformTags"`
@@ -53,6 +53,11 @@ type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct 
 	// Example: `{"Operations": {"CostCenter": "42"}}`
 	DefinedTags map[string]map[string]interface{} `mandatory:"false" json:"definedTags"`
 
+	// The system tags associated with this resource, if any. The system tags are set by Oracle cloud infrastructure services. Each key is predefined and scoped to namespaces.
+	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+	// Example: `{orcl-cloud: {free-tier-retain: true}}`
+	SystemTags map[string]map[string]interface{} `mandatory:"false" json:"systemTags"`
+
 	// The Bitbucket cloud service endpoint.
 	// Example: `https://bitbucket.org/`
 	ApiEndpoint *string `mandatory:"false" json:"apiEndpoint"`
@@ -60,8 +65,6 @@ type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct 
 	// Current state of the specified configuration source provider.
 	// For more information about configuration source provider lifecycle states in Resource Manager, see
 	// Key Concepts (https://docs.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__CSPStates).
-	// Allowable values:
-	// - ACTIVE
 	LifecycleState ConfigurationSourceProviderLifecycleStateEnum `mandatory:"false" json:"lifecycleState,omitempty"`
 }
 
@@ -108,6 +111,11 @@ func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) Get
 // GetDefinedTags returns DefinedTags
 func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetDefinedTags() map[string]map[string]interface{} {
 	return m.DefinedTags
+}
+
+// GetSystemTags returns SystemTags
+func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetSystemTags() map[string]map[string]interface{} {
+	return m.SystemTags
 }
 
 func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) String() string {

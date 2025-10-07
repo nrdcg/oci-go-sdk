@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// DatabaseToolsUserPasswordSecretId The user password.
+// DatabaseToolsUserPasswordSecretId The database user password.
 type DatabaseToolsUserPasswordSecretId struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the secret containing the user password.
