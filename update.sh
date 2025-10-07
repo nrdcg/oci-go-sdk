@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+INITIAL_PATH=$(pwd)
+
 ## Modules options
 
 SRC_ORG=oracle
@@ -245,7 +247,7 @@ done
 #git tag ${VERSION}
 #git push origin ${VERSION}
 
-find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > ../modules-${DEST_TAG}.md
+find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > ${INITIAL_PATH}/modules.md
 
 cd -
 
