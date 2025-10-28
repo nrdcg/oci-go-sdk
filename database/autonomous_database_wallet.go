@@ -16,10 +16,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AutonomousDatabaseWallet The Autonomous Database wallet details.
+// AutonomousDatabaseWallet The Autonomous AI Database wallet details.
 type AutonomousDatabaseWallet struct {
 
-	// The current lifecycle state of the Autonomous Database wallet.
+	// The current lifecycle state of the Autonomous AI Database wallet.
 	LifecycleState AutonomousDatabaseWalletLifecycleStateEnum `mandatory:"false" json:"lifecycleState,omitempty"`
 
 	// The date and time the wallet was last rotated.

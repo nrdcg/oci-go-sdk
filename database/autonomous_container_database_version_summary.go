@@ -16,10 +16,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AutonomousContainerDatabaseVersionSummary The supported Autonomous Database version.
+// AutonomousContainerDatabaseVersionSummary The supported Autonomous AI Database version.
 type AutonomousContainerDatabaseVersionSummary struct {
 
-	// A valid Oracle Database version for provisioning an Autonomous Container Database.
+	// A valid Oracle AI Database version for provisioning an Autonomous Container Database.
 	Version *string `mandatory:"true" json:"version"`
 
 	// The list of applications supported for the given version.

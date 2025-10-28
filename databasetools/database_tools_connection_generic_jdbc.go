@@ -35,6 +35,9 @@ type DatabaseToolsConnectionGenericJdbc struct {
 	// The time the Database Tools connection was updated. An RFC3339 formatted datetime string.
 	TimeUpdated *common.SDKTime `mandatory:"true" json:"timeUpdated"`
 
+	// Specifies the Database Tools Runtime endpoint.
+	RuntimeEndpoint *string `mandatory:"true" json:"runtimeEndpoint"`
+
 	// The JDBC URL used to connect to the Generic JDBC database system.
 	Url *string `mandatory:"true" json:"url"`
 
@@ -73,6 +76,9 @@ type DatabaseToolsConnectionGenericJdbc struct {
 
 	// Specifies whether this connection is supported by the Database Tools Runtime.
 	RuntimeSupport RuntimeSupportEnum `mandatory:"true" json:"runtimeSupport"`
+
+	// Specifies the identity used by the Database Tools service to issue requests to other OCI services (e.g., Secrets in Vault).
+	RuntimeIdentity RuntimeIdentityEnum `mandatory:"true" json:"runtimeIdentity"`
 }
 
 // GetId returns Id
@@ -135,6 +141,16 @@ func (m DatabaseToolsConnectionGenericJdbc) GetRuntimeSupport() RuntimeSupportEn
 	return m.RuntimeSupport
 }
 
+// GetRuntimeEndpoint returns RuntimeEndpoint
+func (m DatabaseToolsConnectionGenericJdbc) GetRuntimeEndpoint() *string {
+	return m.RuntimeEndpoint
+}
+
+// GetRuntimeIdentity returns RuntimeIdentity
+func (m DatabaseToolsConnectionGenericJdbc) GetRuntimeIdentity() RuntimeIdentityEnum {
+	return m.RuntimeIdentity
+}
+
 func (m DatabaseToolsConnectionGenericJdbc) String() string {
 	return common.PointerString(m)
 }
@@ -150,6 +166,9 @@ func (m DatabaseToolsConnectionGenericJdbc) ValidateEnumValue() (bool, error) {
 	}
 	if _, ok := GetMappingRuntimeSupportEnum(string(m.RuntimeSupport)); !ok && m.RuntimeSupport != "" {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RuntimeSupport: %s. Supported values are: %s.", m.RuntimeSupport, strings.Join(GetRuntimeSupportEnumStringValues(), ",")))
+	}
+	if _, ok := GetMappingRuntimeIdentityEnum(string(m.RuntimeIdentity)); !ok && m.RuntimeIdentity != "" {
+		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RuntimeIdentity: %s. Supported values are: %s.", m.RuntimeIdentity, strings.Join(GetRuntimeIdentityEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
@@ -190,6 +209,8 @@ func (m *DatabaseToolsConnectionGenericJdbc) UnmarshalJSON(data []byte) (e error
 		TimeCreated        *common.SDKTime                    `json:"timeCreated"`
 		TimeUpdated        *common.SDKTime                    `json:"timeUpdated"`
 		RuntimeSupport     RuntimeSupportEnum                 `json:"runtimeSupport"`
+		RuntimeEndpoint    *string                            `json:"runtimeEndpoint"`
+		RuntimeIdentity    RuntimeIdentityEnum                `json:"runtimeIdentity"`
 		Url                *string                            `json:"url"`
 	}{}
 
@@ -237,6 +258,10 @@ func (m *DatabaseToolsConnectionGenericJdbc) UnmarshalJSON(data []byte) (e error
 	m.TimeUpdated = model.TimeUpdated
 
 	m.RuntimeSupport = model.RuntimeSupport
+
+	m.RuntimeEndpoint = model.RuntimeEndpoint
+
+	m.RuntimeIdentity = model.RuntimeIdentity
 
 	m.Url = model.Url
 

@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateAutonomousDatabaseWalletDetails Details to update an Autonomous Database wallet.
+// UpdateAutonomousDatabaseWalletDetails Details to update an Autonomous AI Database wallet.
 type UpdateAutonomousDatabaseWalletDetails struct {
 
 	// Indicates whether to rotate the wallet or not. If `false`, the wallet will not be rotated. The default is `false`.

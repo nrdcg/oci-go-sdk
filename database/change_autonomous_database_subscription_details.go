@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ChangeAutonomousDatabaseSubscriptionDetails The configuration details for associating the Autonomous Database with a different subscription.
+// ChangeAutonomousDatabaseSubscriptionDetails The configuration details for associating the Autonomous AI Database with a different subscription.
 type ChangeAutonomousDatabaseSubscriptionDetails struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.

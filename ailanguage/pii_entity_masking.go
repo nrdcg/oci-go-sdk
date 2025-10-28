@@ -63,6 +63,10 @@ func (m *piientitymasking) UnmarshalPolymorphicJSON(data []byte) (interface{}, e
 
 	var err error
 	switch m.Mode {
+	case "RELEXIFY":
+		mm := PiiEntityRelexify{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "REPLACE":
 		mm := PiiEntityReplace{}
 		err = json.Unmarshal(data, &mm)
@@ -112,21 +116,24 @@ type PiiEntityMaskingModeEnum string
 
 // Set of constants representing the allowable values for PiiEntityMaskingModeEnum
 const (
-	PiiEntityMaskingModeReplace PiiEntityMaskingModeEnum = "REPLACE"
-	PiiEntityMaskingModeMask    PiiEntityMaskingModeEnum = "MASK"
-	PiiEntityMaskingModeRemove  PiiEntityMaskingModeEnum = "REMOVE"
+	PiiEntityMaskingModeReplace  PiiEntityMaskingModeEnum = "REPLACE"
+	PiiEntityMaskingModeMask     PiiEntityMaskingModeEnum = "MASK"
+	PiiEntityMaskingModeRemove   PiiEntityMaskingModeEnum = "REMOVE"
+	PiiEntityMaskingModeRelexify PiiEntityMaskingModeEnum = "RELEXIFY"
 )
 
 var mappingPiiEntityMaskingModeEnum = map[string]PiiEntityMaskingModeEnum{
-	"REPLACE": PiiEntityMaskingModeReplace,
-	"MASK":    PiiEntityMaskingModeMask,
-	"REMOVE":  PiiEntityMaskingModeRemove,
+	"REPLACE":  PiiEntityMaskingModeReplace,
+	"MASK":     PiiEntityMaskingModeMask,
+	"REMOVE":   PiiEntityMaskingModeRemove,
+	"RELEXIFY": PiiEntityMaskingModeRelexify,
 }
 
 var mappingPiiEntityMaskingModeEnumLowerCase = map[string]PiiEntityMaskingModeEnum{
-	"replace": PiiEntityMaskingModeReplace,
-	"mask":    PiiEntityMaskingModeMask,
-	"remove":  PiiEntityMaskingModeRemove,
+	"replace":  PiiEntityMaskingModeReplace,
+	"mask":     PiiEntityMaskingModeMask,
+	"remove":   PiiEntityMaskingModeRemove,
+	"relexify": PiiEntityMaskingModeRelexify,
 }
 
 // GetPiiEntityMaskingModeEnumValues Enumerates the set of values for PiiEntityMaskingModeEnum
@@ -144,6 +151,7 @@ func GetPiiEntityMaskingModeEnumStringValues() []string {
 		"REPLACE",
 		"MASK",
 		"REMOVE",
+		"RELEXIFY",
 	}
 }
 

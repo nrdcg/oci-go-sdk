@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ConfigureAutonomousDatabaseVaultKeyDetails Configuration details for the Autonomous Database vault (https://docs.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm#concepts) key.
+// ConfigureAutonomousDatabaseVaultKeyDetails Configuration details for the Autonomous AI Database vault (https://docs.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm#concepts) key.
 type ConfigureAutonomousDatabaseVaultKeyDetails struct {
 
 	// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.

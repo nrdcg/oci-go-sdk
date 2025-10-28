@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// DatabaseTool Summary of database tools of autonomous database.
+// DatabaseTool Summary of database tools of Autonomous AI Database.
 type DatabaseTool struct {
 
 	// Name of database tool.

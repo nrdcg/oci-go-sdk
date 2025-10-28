@@ -59,6 +59,9 @@ type CreateDatabaseToolsConnectionPostgresqlDetails struct {
 
 	// Specifies whether this connection is supported by the Database Tools Runtime.
 	RuntimeSupport RuntimeSupportEnum `mandatory:"false" json:"runtimeSupport,omitempty"`
+
+	// Specifies the identity used by the Database Tools service to issue requests to other OCI services (e.g., Secrets in Vault).
+	RuntimeIdentity RuntimeIdentityEnum `mandatory:"false" json:"runtimeIdentity,omitempty"`
 }
 
 // GetDisplayName returns DisplayName
@@ -91,6 +94,11 @@ func (m CreateDatabaseToolsConnectionPostgresqlDetails) GetRuntimeSupport() Runt
 	return m.RuntimeSupport
 }
 
+// GetRuntimeIdentity returns RuntimeIdentity
+func (m CreateDatabaseToolsConnectionPostgresqlDetails) GetRuntimeIdentity() RuntimeIdentityEnum {
+	return m.RuntimeIdentity
+}
+
 func (m CreateDatabaseToolsConnectionPostgresqlDetails) String() string {
 	return common.PointerString(m)
 }
@@ -103,6 +111,9 @@ func (m CreateDatabaseToolsConnectionPostgresqlDetails) ValidateEnumValue() (boo
 
 	if _, ok := GetMappingRuntimeSupportEnum(string(m.RuntimeSupport)); !ok && m.RuntimeSupport != "" {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RuntimeSupport: %s. Supported values are: %s.", m.RuntimeSupport, strings.Join(GetRuntimeSupportEnumStringValues(), ",")))
+	}
+	if _, ok := GetMappingRuntimeIdentityEnum(string(m.RuntimeIdentity)); !ok && m.RuntimeIdentity != "" {
+		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RuntimeIdentity: %s. Supported values are: %s.", m.RuntimeIdentity, strings.Join(GetRuntimeIdentityEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
@@ -131,6 +142,7 @@ func (m *CreateDatabaseToolsConnectionPostgresqlDetails) UnmarshalJSON(data []by
 		FreeformTags       map[string]string                                    `json:"freeformTags"`
 		Locks              []ResourceLock                                       `json:"locks"`
 		RuntimeSupport     RuntimeSupportEnum                                   `json:"runtimeSupport"`
+		RuntimeIdentity    RuntimeIdentityEnum                                  `json:"runtimeIdentity"`
 		RelatedResource    *CreateDatabaseToolsRelatedResourcePostgresqlDetails `json:"relatedResource"`
 		AdvancedProperties map[string]string                                    `json:"advancedProperties"`
 		KeyStores          []DatabaseToolsKeyStorePostgresqlDetails             `json:"keyStores"`
@@ -154,6 +166,8 @@ func (m *CreateDatabaseToolsConnectionPostgresqlDetails) UnmarshalJSON(data []by
 	m.Locks = make([]ResourceLock, len(model.Locks))
 	copy(m.Locks, model.Locks)
 	m.RuntimeSupport = model.RuntimeSupport
+
+	m.RuntimeIdentity = model.RuntimeIdentity
 
 	m.RelatedResource = model.RelatedResource
 

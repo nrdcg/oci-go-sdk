@@ -12039,7 +12039,7 @@ func (client IdentityDomainsClient) listSocialIdentityProviders(ctx context.Cont
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/SocialIdentityProviders/ListSocialIdentityProviders"
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/SocialIdentityProvider/ListSocialIdentityProviders"
 		err = common.PostProcessServiceError(err, "IdentityDomains", "ListSocialIdentityProviders", apiReferenceLink)
 		return response, err
 	}
@@ -19169,7 +19169,7 @@ func (client IdentityDomainsClient) searchSocialIdentityProviders(ctx context.Co
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/SocialIdentityProviders/SearchSocialIdentityProviders"
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/SocialIdentityProvider/SearchSocialIdentityProviders"
 		err = common.PostProcessServiceError(err, "IdentityDomains", "SearchSocialIdentityProviders", apiReferenceLink)
 		return response, err
 	}

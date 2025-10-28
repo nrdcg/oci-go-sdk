@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// RefreshableCloneCollection A list of Autonomous Database RefreshableClone containing RefreshableCloneSummary items.
+// RefreshableCloneCollection A list of Autonomous AI Database RefreshableClone containing RefreshableCloneSummary items.
 type RefreshableCloneCollection struct {
 	Items []RefreshableCloneSummary `mandatory:"true" json:"items"`
 }

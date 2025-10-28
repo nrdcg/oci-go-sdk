@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AutonomousDatabaseEncryptionKeyHistoryEntry The Autonomous Database encryption key history entry.
+// AutonomousDatabaseEncryptionKeyHistoryEntry The Autonomous AI Database encryption key history entry.
 type AutonomousDatabaseEncryptionKeyHistoryEntry struct {
 	EncryptionKey AutonomousDatabaseEncryptionKeyDetails `mandatory:"false" json:"encryptionKey"`
 

@@ -35,6 +35,9 @@ type DatabaseToolsConnectionOracleDatabaseSummary struct {
 	// The time the Database Tools connection was updated. An RFC3339 formatted datetime string.
 	TimeUpdated *common.SDKTime `mandatory:"true" json:"timeUpdated"`
 
+	// Specifies the Database Tools Runtime endpoint.
+	RuntimeEndpoint *string `mandatory:"true" json:"runtimeEndpoint"`
+
 	// The connect descriptor or Easy Connect Naming method used to connect to the database.
 	ConnectionString *string `mandatory:"true" json:"connectionString"`
 
@@ -80,6 +83,9 @@ type DatabaseToolsConnectionOracleDatabaseSummary struct {
 
 	// Specifies whether this connection is supported by the Database Tools Runtime.
 	RuntimeSupport RuntimeSupportEnum `mandatory:"true" json:"runtimeSupport"`
+
+	// Specifies the identity used by the Database Tools service to issue requests to other OCI services (e.g., Secrets in Vault).
+	RuntimeIdentity RuntimeIdentityEnum `mandatory:"true" json:"runtimeIdentity"`
 }
 
 // GetId returns Id
@@ -142,6 +148,16 @@ func (m DatabaseToolsConnectionOracleDatabaseSummary) GetRuntimeSupport() Runtim
 	return m.RuntimeSupport
 }
 
+// GetRuntimeEndpoint returns RuntimeEndpoint
+func (m DatabaseToolsConnectionOracleDatabaseSummary) GetRuntimeEndpoint() *string {
+	return m.RuntimeEndpoint
+}
+
+// GetRuntimeIdentity returns RuntimeIdentity
+func (m DatabaseToolsConnectionOracleDatabaseSummary) GetRuntimeIdentity() RuntimeIdentityEnum {
+	return m.RuntimeIdentity
+}
+
 func (m DatabaseToolsConnectionOracleDatabaseSummary) String() string {
 	return common.PointerString(m)
 }
@@ -157,6 +173,9 @@ func (m DatabaseToolsConnectionOracleDatabaseSummary) ValidateEnumValue() (bool,
 	}
 	if _, ok := GetMappingRuntimeSupportEnum(string(m.RuntimeSupport)); !ok && m.RuntimeSupport != "" {
 		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RuntimeSupport: %s. Supported values are: %s.", m.RuntimeSupport, strings.Join(GetRuntimeSupportEnumStringValues(), ",")))
+	}
+	if _, ok := GetMappingRuntimeIdentityEnum(string(m.RuntimeIdentity)); !ok && m.RuntimeIdentity != "" {
+		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for RuntimeIdentity: %s. Supported values are: %s.", m.RuntimeIdentity, strings.Join(GetRuntimeIdentityEnumStringValues(), ",")))
 	}
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
@@ -200,6 +219,8 @@ func (m *DatabaseToolsConnectionOracleDatabaseSummary) UnmarshalJSON(data []byte
 		TimeCreated        *common.SDKTime                                         `json:"timeCreated"`
 		TimeUpdated        *common.SDKTime                                         `json:"timeUpdated"`
 		RuntimeSupport     RuntimeSupportEnum                                      `json:"runtimeSupport"`
+		RuntimeEndpoint    *string                                                 `json:"runtimeEndpoint"`
+		RuntimeIdentity    RuntimeIdentityEnum                                     `json:"runtimeIdentity"`
 		ConnectionString   *string                                                 `json:"connectionString"`
 	}{}
 
@@ -261,6 +282,10 @@ func (m *DatabaseToolsConnectionOracleDatabaseSummary) UnmarshalJSON(data []byte
 	m.TimeUpdated = model.TimeUpdated
 
 	m.RuntimeSupport = model.RuntimeSupport
+
+	m.RuntimeEndpoint = model.RuntimeEndpoint
+
+	m.RuntimeIdentity = model.RuntimeIdentity
 
 	m.ConnectionString = model.ConnectionString
 

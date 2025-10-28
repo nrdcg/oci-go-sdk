@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AutonomousDatabaseEncryptionKeyDetails Details of the Autonomous Database encryption key.
+// AutonomousDatabaseEncryptionKeyDetails Details of the Autonomous AI Database encryption key.
 type AutonomousDatabaseEncryptionKeyDetails interface {
 }
 

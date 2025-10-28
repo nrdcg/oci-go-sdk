@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateAutonomousDatabaseBackupDetails Details for updating the Autonomous Database backup.
+// UpdateAutonomousDatabaseBackupDetails Details for updating the Autonomous AI Database backup.
 // **Warning:** Oracle recommends avoiding using confidential information when you supply string values using the API.
 type UpdateAutonomousDatabaseBackupDetails struct {
 
