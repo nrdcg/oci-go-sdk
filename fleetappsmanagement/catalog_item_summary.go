@@ -75,6 +75,9 @@ type CatalogItemSummary struct {
 
 	CatalogResultPayload CatalogResultPayload `mandatory:"false" json:"catalogResultPayload"`
 
+	// Indicates if the CatalogItem is immutable or not.
+	IsItemLocked *bool `mandatory:"false" json:"isItemLocked"`
+
 	// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
 	// Example: `{"bar-key": "value"}`
 	FreeformTags map[string]string `mandatory:"false" json:"freeformTags"`
@@ -118,6 +121,7 @@ func (m *CatalogItemSummary) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
 		CatalogSourcePayload catalogsourcepayload              `json:"catalogSourcePayload"`
 		CatalogResultPayload catalogresultpayload              `json:"catalogResultPayload"`
+		IsItemLocked         *bool                             `json:"isItemLocked"`
 		FreeformTags         map[string]string                 `json:"freeformTags"`
 		DefinedTags          map[string]map[string]interface{} `json:"definedTags"`
 		SystemTags           map[string]map[string]interface{} `json:"systemTags"`
@@ -162,6 +166,8 @@ func (m *CatalogItemSummary) UnmarshalJSON(data []byte) (e error) {
 	} else {
 		m.CatalogResultPayload = nil
 	}
+
+	m.IsItemLocked = model.IsItemLocked
 
 	m.FreeformTags = model.FreeformTags
 

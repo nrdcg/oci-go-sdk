@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// Task The details of the task
+// Task The details of the task.
 type Task struct {
 
 	// The name of the task step.

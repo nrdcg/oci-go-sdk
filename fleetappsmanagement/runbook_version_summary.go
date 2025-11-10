@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// RunbookVersionSummary Summary of the FleetResource.
+// RunbookVersionSummary Summary of the runbook version.
 type RunbookVersionSummary struct {
 
 	// A set of tasks to execute in the runbook.
@@ -44,7 +44,7 @@ type RunbookVersionSummary struct {
 	// Is the latest version for the runbook?
 	IsLatest *bool `mandatory:"false" json:"isLatest"`
 
-	// The current state of the Runbook.
+	// The current state of the Runbook version.
 	LifecycleState RunbookVersionLifecycleStateEnum `mandatory:"false" json:"lifecycleState,omitempty"`
 
 	// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.

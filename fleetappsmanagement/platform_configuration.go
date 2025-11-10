@@ -206,6 +206,7 @@ const (
 	PlatformConfigurationLifecycleStateDeleting PlatformConfigurationLifecycleStateEnum = "DELETING"
 	PlatformConfigurationLifecycleStateUpdating PlatformConfigurationLifecycleStateEnum = "UPDATING"
 	PlatformConfigurationLifecycleStateCreating PlatformConfigurationLifecycleStateEnum = "CREATING"
+	PlatformConfigurationLifecycleStateInactive PlatformConfigurationLifecycleStateEnum = "INACTIVE"
 )
 
 var mappingPlatformConfigurationLifecycleStateEnum = map[string]PlatformConfigurationLifecycleStateEnum{
@@ -215,6 +216,7 @@ var mappingPlatformConfigurationLifecycleStateEnum = map[string]PlatformConfigur
 	"DELETING": PlatformConfigurationLifecycleStateDeleting,
 	"UPDATING": PlatformConfigurationLifecycleStateUpdating,
 	"CREATING": PlatformConfigurationLifecycleStateCreating,
+	"INACTIVE": PlatformConfigurationLifecycleStateInactive,
 }
 
 var mappingPlatformConfigurationLifecycleStateEnumLowerCase = map[string]PlatformConfigurationLifecycleStateEnum{
@@ -224,6 +226,7 @@ var mappingPlatformConfigurationLifecycleStateEnumLowerCase = map[string]Platfor
 	"deleting": PlatformConfigurationLifecycleStateDeleting,
 	"updating": PlatformConfigurationLifecycleStateUpdating,
 	"creating": PlatformConfigurationLifecycleStateCreating,
+	"inactive": PlatformConfigurationLifecycleStateInactive,
 }
 
 // GetPlatformConfigurationLifecycleStateEnumValues Enumerates the set of values for PlatformConfigurationLifecycleStateEnum
@@ -244,6 +247,7 @@ func GetPlatformConfigurationLifecycleStateEnumStringValues() []string {
 		"DELETING",
 		"UPDATING",
 		"CREATING",
+		"INACTIVE",
 	}
 }
 
