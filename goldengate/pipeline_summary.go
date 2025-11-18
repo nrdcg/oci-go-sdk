@@ -80,6 +80,10 @@ type PipelineSummary interface {
 	// Describes the object's current state in detail. For example, it can be used to provide
 	// actionable information for a resource in a Failed state.
 	GetLifecycleDetails() *string
+
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet of the pipeline's private endpoint.
+	// The subnet must be a private subnet.
+	GetSubnetId() *string
 }
 
 type pipelinesummary struct {
@@ -91,6 +95,7 @@ type pipelinesummary struct {
 	Locks                   []ResourceLock                    `mandatory:"false" json:"locks"`
 	LifecycleSubState       PipelineLifecycleSubStateEnum     `mandatory:"false" json:"lifecycleSubState,omitempty"`
 	LifecycleDetails        *string                           `mandatory:"false" json:"lifecycleDetails"`
+	SubnetId                *string                           `mandatory:"false" json:"subnetId"`
 	Id                      *string                           `mandatory:"true" json:"id"`
 	DisplayName             *string                           `mandatory:"true" json:"displayName"`
 	CompartmentId           *string                           `mandatory:"true" json:"compartmentId"`
@@ -134,6 +139,7 @@ func (m *pipelinesummary) UnmarshalJSON(data []byte) error {
 	m.Locks = s.Model.Locks
 	m.LifecycleSubState = s.Model.LifecycleSubState
 	m.LifecycleDetails = s.Model.LifecycleDetails
+	m.SubnetId = s.Model.SubnetId
 	m.RecipeType = s.Model.RecipeType
 
 	return err
@@ -191,6 +197,11 @@ func (m pipelinesummary) GetLifecycleSubState() PipelineLifecycleSubStateEnum {
 // GetLifecycleDetails returns LifecycleDetails
 func (m pipelinesummary) GetLifecycleDetails() *string {
 	return m.LifecycleDetails
+}
+
+// GetSubnetId returns SubnetId
+func (m pipelinesummary) GetSubnetId() *string {
+	return m.SubnetId
 }
 
 // GetId returns Id

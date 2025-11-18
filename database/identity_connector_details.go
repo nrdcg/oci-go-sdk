@@ -52,16 +52,19 @@ type IdentityConnectorDetailsCloudProviderEnum string
 const (
 	IdentityConnectorDetailsCloudProviderAzure IdentityConnectorDetailsCloudProviderEnum = "AZURE"
 	IdentityConnectorDetailsCloudProviderGcp   IdentityConnectorDetailsCloudProviderEnum = "GCP"
+	IdentityConnectorDetailsCloudProviderAws   IdentityConnectorDetailsCloudProviderEnum = "AWS"
 )
 
 var mappingIdentityConnectorDetailsCloudProviderEnum = map[string]IdentityConnectorDetailsCloudProviderEnum{
 	"AZURE": IdentityConnectorDetailsCloudProviderAzure,
 	"GCP":   IdentityConnectorDetailsCloudProviderGcp,
+	"AWS":   IdentityConnectorDetailsCloudProviderAws,
 }
 
 var mappingIdentityConnectorDetailsCloudProviderEnumLowerCase = map[string]IdentityConnectorDetailsCloudProviderEnum{
 	"azure": IdentityConnectorDetailsCloudProviderAzure,
 	"gcp":   IdentityConnectorDetailsCloudProviderGcp,
+	"aws":   IdentityConnectorDetailsCloudProviderAws,
 }
 
 // GetIdentityConnectorDetailsCloudProviderEnumValues Enumerates the set of values for IdentityConnectorDetailsCloudProviderEnum
@@ -78,6 +81,7 @@ func GetIdentityConnectorDetailsCloudProviderEnumStringValues() []string {
 	return []string{
 		"AZURE",
 		"GCP",
+		"AWS",
 	}
 }
 

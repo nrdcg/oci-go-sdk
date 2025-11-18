@@ -47,6 +47,10 @@ type CreatePipelineDetails interface {
 
 	// Locks associated with this resource.
 	GetLocks() []ResourceLock
+
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet of the pipeline's private endpoint.
+	// The subnet must be a private subnet.
+	GetSubnetId() *string
 }
 
 type createpipelinedetails struct {
@@ -55,6 +59,7 @@ type createpipelinedetails struct {
 	FreeformTags            map[string]string                 `mandatory:"false" json:"freeformTags"`
 	DefinedTags             map[string]map[string]interface{} `mandatory:"false" json:"definedTags"`
 	Locks                   []ResourceLock                    `mandatory:"false" json:"locks"`
+	SubnetId                *string                           `mandatory:"false" json:"subnetId"`
 	DisplayName             *string                           `mandatory:"true" json:"displayName"`
 	CompartmentId           *string                           `mandatory:"true" json:"compartmentId"`
 	LicenseModel            LicenseModelEnum                  `mandatory:"true" json:"licenseModel"`
@@ -83,6 +88,7 @@ func (m *createpipelinedetails) UnmarshalJSON(data []byte) error {
 	m.FreeformTags = s.Model.FreeformTags
 	m.DefinedTags = s.Model.DefinedTags
 	m.Locks = s.Model.Locks
+	m.SubnetId = s.Model.SubnetId
 	m.RecipeType = s.Model.RecipeType
 
 	return err
@@ -125,6 +131,11 @@ func (m createpipelinedetails) GetDefinedTags() map[string]map[string]interface{
 // GetLocks returns Locks
 func (m createpipelinedetails) GetLocks() []ResourceLock {
 	return m.Locks
+}
+
+// GetSubnetId returns SubnetId
+func (m createpipelinedetails) GetSubnetId() *string {
+	return m.SubnetId
 }
 
 // GetDisplayName returns DisplayName

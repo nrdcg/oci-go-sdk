@@ -50,18 +50,21 @@ const (
 	UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeAzure UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum = "AZURE"
 	UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeOci   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum = "OCI"
 	UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeGcp   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum = "GCP"
+	UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeAws   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum = "AWS"
 )
 
 var mappingUnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum = map[string]UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum{
 	"AZURE": UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeAzure,
 	"OCI":   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeOci,
 	"GCP":   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeGcp,
+	"AWS":   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeAws,
 }
 
 var mappingUnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnumLowerCase = map[string]UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum{
 	"azure": UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeAzure,
 	"oci":   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeOci,
 	"gcp":   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeGcp,
+	"aws":   UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeAws,
 }
 
 // GetUnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnumValues Enumerates the set of values for UnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnum
@@ -79,6 +82,7 @@ func GetUnregisterCloudVmClusterPkcsDetailsTdeKeyStoreTypeEnumStringValues() []s
 		"AZURE",
 		"OCI",
 		"GCP",
+		"AWS",
 	}
 }
 
