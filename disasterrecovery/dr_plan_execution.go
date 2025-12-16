@@ -71,6 +71,8 @@ type DrPlanExecution struct {
 	// A list of groups executed in this DR plan execution.
 	GroupExecutions []DrPlanGroupExecution `mandatory:"true" json:"groupExecutions"`
 
+	StepStatusCounts *DrPlanExecutionStepStatusCounts `mandatory:"true" json:"stepStatusCounts"`
+
 	// The current state of the DR plan execution.
 	LifecycleState DrPlanExecutionLifecycleStateEnum `mandatory:"true" json:"lifecycleState"`
 
@@ -155,6 +157,7 @@ func (m *DrPlanExecution) UnmarshalJSON(data []byte) (e error) {
 		TimeCreated               *common.SDKTime                   `json:"timeCreated"`
 		TimeUpdated               *common.SDKTime                   `json:"timeUpdated"`
 		GroupExecutions           []DrPlanGroupExecution            `json:"groupExecutions"`
+		StepStatusCounts          *DrPlanExecutionStepStatusCounts  `json:"stepStatusCounts"`
 		LifecycleState            DrPlanExecutionLifecycleStateEnum `json:"lifecycleState"`
 		IsAutomatic               *bool                             `json:"isAutomatic"`
 	}{}
@@ -214,6 +217,8 @@ func (m *DrPlanExecution) UnmarshalJSON(data []byte) (e error) {
 
 	m.GroupExecutions = make([]DrPlanGroupExecution, len(model.GroupExecutions))
 	copy(m.GroupExecutions, model.GroupExecutions)
+	m.StepStatusCounts = model.StepStatusCounts
+
 	m.LifecycleState = model.LifecycleState
 
 	m.IsAutomatic = model.IsAutomatic
