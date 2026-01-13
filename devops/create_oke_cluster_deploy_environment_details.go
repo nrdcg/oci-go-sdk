@@ -1,4 +1,4 @@
-// Copyright (c) 2016, 2018, 2025, Oracle and/or its affiliates.  All rights reserved.
+// Copyright (c) 2016, 2018, 2026, Oracle and/or its affiliates.  All rights reserved.
 // This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 // Code generated. DO NOT EDIT.
 
@@ -38,6 +38,11 @@ type CreateOkeClusterDeployEnvironmentDetails struct {
 	// Defined tags for this resource. Each key is predefined and scoped to a namespace. See Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm). Example: `{"foo-namespace": {"bar-key": "value"}}`
 	DefinedTags map[string]map[string]interface{} `mandatory:"false" json:"definedTags"`
 
+	// Security attributes for this resource. Each key is predefined and scoped to a namespace.
+	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+	// Example: `{"Oracle-ZPR": {"MaxEgressCount": {"value": "42", "mode": "enforce"}}}`
+	SecurityAttributes map[string]map[string]interface{} `mandatory:"false" json:"securityAttributes"`
+
 	NetworkChannel NetworkChannel `mandatory:"false" json:"networkChannel"`
 }
 
@@ -64,6 +69,11 @@ func (m CreateOkeClusterDeployEnvironmentDetails) GetFreeformTags() map[string]s
 // GetDefinedTags returns DefinedTags
 func (m CreateOkeClusterDeployEnvironmentDetails) GetDefinedTags() map[string]map[string]interface{} {
 	return m.DefinedTags
+}
+
+// GetSecurityAttributes returns SecurityAttributes
+func (m CreateOkeClusterDeployEnvironmentDetails) GetSecurityAttributes() map[string]map[string]interface{} {
+	return m.SecurityAttributes
 }
 
 func (m CreateOkeClusterDeployEnvironmentDetails) String() string {
@@ -99,13 +109,14 @@ func (m CreateOkeClusterDeployEnvironmentDetails) MarshalJSON() (buff []byte, e 
 // UnmarshalJSON unmarshals from json
 func (m *CreateOkeClusterDeployEnvironmentDetails) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
-		Description    *string                           `json:"description"`
-		DisplayName    *string                           `json:"displayName"`
-		FreeformTags   map[string]string                 `json:"freeformTags"`
-		DefinedTags    map[string]map[string]interface{} `json:"definedTags"`
-		NetworkChannel networkchannel                    `json:"networkChannel"`
-		ProjectId      *string                           `json:"projectId"`
-		ClusterId      *string                           `json:"clusterId"`
+		Description        *string                           `json:"description"`
+		DisplayName        *string                           `json:"displayName"`
+		FreeformTags       map[string]string                 `json:"freeformTags"`
+		DefinedTags        map[string]map[string]interface{} `json:"definedTags"`
+		SecurityAttributes map[string]map[string]interface{} `json:"securityAttributes"`
+		NetworkChannel     networkchannel                    `json:"networkChannel"`
+		ProjectId          *string                           `json:"projectId"`
+		ClusterId          *string                           `json:"clusterId"`
 	}{}
 
 	e = json.Unmarshal(data, &model)
@@ -120,6 +131,8 @@ func (m *CreateOkeClusterDeployEnvironmentDetails) UnmarshalJSON(data []byte) (e
 	m.FreeformTags = model.FreeformTags
 
 	m.DefinedTags = model.DefinedTags
+
+	m.SecurityAttributes = model.SecurityAttributes
 
 	nn, e = model.NetworkChannel.UnmarshalPolymorphicJSON(model.NetworkChannel.JsonData)
 	if e != nil {

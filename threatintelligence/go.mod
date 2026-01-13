@@ -4,7 +4,7 @@ go 1.24.0
 
 replace github.com/nrdcg/oci-go-sdk/common/v1065 => ../common
 
-require github.com/nrdcg/oci-go-sdk/common/v1065 v1065.105.2
+require github.com/nrdcg/oci-go-sdk/common/v1065 v1065.106.0
 
 require (
 	github.com/gofrs/flock v0.13.0 // indirect
