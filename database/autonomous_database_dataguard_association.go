@@ -308,6 +308,7 @@ const (
 	AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateUpgrading               AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum = "UPGRADING"
 	AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateInaccessible            AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum = "INACCESSIBLE"
 	AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateStandby                 AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum = "STANDBY"
+	AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateTransporting            AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum = "TRANSPORTING"
 )
 
 var mappingAutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum = map[string]AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum{
@@ -332,6 +333,7 @@ var mappingAutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycle
 	"UPGRADING":                 AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateUpgrading,
 	"INACCESSIBLE":              AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateInaccessible,
 	"STANDBY":                   AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateStandby,
+	"TRANSPORTING":              AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateTransporting,
 }
 
 var mappingAutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnumLowerCase = map[string]AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum{
@@ -356,6 +358,7 @@ var mappingAutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycle
 	"upgrading":                 AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateUpgrading,
 	"inaccessible":              AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateInaccessible,
 	"standby":                   AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateStandby,
+	"transporting":              AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateTransporting,
 }
 
 // GetAutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnumValues Enumerates the set of values for AutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleStateEnum
@@ -391,6 +394,7 @@ func GetAutonomousDatabaseDataguardAssociationPeerAutonomousDatabaseLifeCycleSta
 		"UPGRADING",
 		"INACCESSIBLE",
 		"STANDBY",
+		"TRANSPORTING",
 	}
 }
 

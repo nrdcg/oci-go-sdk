@@ -42,6 +42,9 @@ type RerankTextDetails struct {
 
 	// The maximum number of chunks to produce internally from a document.
 	MaxChunksPerDocument *int `mandatory:"false" json:"maxChunksPerDocument"`
+
+	// Used to truncate the long documents with the specified no of tokens.
+	MaxTokensPerDocument *int `mandatory:"false" json:"maxTokensPerDocument"`
 }
 
 func (m RerankTextDetails) String() string {
@@ -66,6 +69,7 @@ func (m *RerankTextDetails) UnmarshalJSON(data []byte) (e error) {
 		TopN                 *int        `json:"topN"`
 		IsEcho               *bool       `json:"isEcho"`
 		MaxChunksPerDocument *int        `json:"maxChunksPerDocument"`
+		MaxTokensPerDocument *int        `json:"maxTokensPerDocument"`
 		Input                *string     `json:"input"`
 		CompartmentId        *string     `json:"compartmentId"`
 		ServingMode          servingmode `json:"servingMode"`
@@ -82,6 +86,8 @@ func (m *RerankTextDetails) UnmarshalJSON(data []byte) (e error) {
 	m.IsEcho = model.IsEcho
 
 	m.MaxChunksPerDocument = model.MaxChunksPerDocument
+
+	m.MaxTokensPerDocument = model.MaxTokensPerDocument
 
 	m.Input = model.Input
 

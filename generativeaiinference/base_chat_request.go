@@ -54,6 +54,10 @@ func (m *basechatrequest) UnmarshalPolymorphicJSON(data []byte) (interface{}, er
 
 	var err error
 	switch m.ApiFormat {
+	case "COHEREV2":
+		mm := CohereChatRequestV2{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "GENERIC":
 		mm := GenericChatRequest{}
 		err = json.Unmarshal(data, &mm)
@@ -89,18 +93,21 @@ type BaseChatRequestApiFormatEnum string
 
 // Set of constants representing the allowable values for BaseChatRequestApiFormatEnum
 const (
-	BaseChatRequestApiFormatCohere  BaseChatRequestApiFormatEnum = "COHERE"
-	BaseChatRequestApiFormatGeneric BaseChatRequestApiFormatEnum = "GENERIC"
+	BaseChatRequestApiFormatCohere   BaseChatRequestApiFormatEnum = "COHERE"
+	BaseChatRequestApiFormatCoherev2 BaseChatRequestApiFormatEnum = "COHEREV2"
+	BaseChatRequestApiFormatGeneric  BaseChatRequestApiFormatEnum = "GENERIC"
 )
 
 var mappingBaseChatRequestApiFormatEnum = map[string]BaseChatRequestApiFormatEnum{
-	"COHERE":  BaseChatRequestApiFormatCohere,
-	"GENERIC": BaseChatRequestApiFormatGeneric,
+	"COHERE":   BaseChatRequestApiFormatCohere,
+	"COHEREV2": BaseChatRequestApiFormatCoherev2,
+	"GENERIC":  BaseChatRequestApiFormatGeneric,
 }
 
 var mappingBaseChatRequestApiFormatEnumLowerCase = map[string]BaseChatRequestApiFormatEnum{
-	"cohere":  BaseChatRequestApiFormatCohere,
-	"generic": BaseChatRequestApiFormatGeneric,
+	"cohere":   BaseChatRequestApiFormatCohere,
+	"coherev2": BaseChatRequestApiFormatCoherev2,
+	"generic":  BaseChatRequestApiFormatGeneric,
 }
 
 // GetBaseChatRequestApiFormatEnumValues Enumerates the set of values for BaseChatRequestApiFormatEnum
@@ -116,6 +123,7 @@ func GetBaseChatRequestApiFormatEnumValues() []BaseChatRequestApiFormatEnum {
 func GetBaseChatRequestApiFormatEnumStringValues() []string {
 	return []string{
 		"COHERE",
+		"COHEREV2",
 		"GENERIC",
 	}
 }

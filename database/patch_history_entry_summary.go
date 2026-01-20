@@ -43,6 +43,8 @@ type PatchHistoryEntrySummary struct {
 
 	// The type of Patch operation.
 	PatchType PatchHistoryEntrySummaryPatchTypeEnum `mandatory:"false" json:"patchType,omitempty"`
+
+	PatchOptions *PatchOptions `mandatory:"false" json:"patchOptions"`
 }
 
 func (m PatchHistoryEntrySummary) String() string {

@@ -41,6 +41,9 @@ type ExecutionWindowSummary struct {
 	// Duration window allows user to set a duration they plan to allocate for Scheduling window. The duration is in minutes.
 	WindowDurationInMins *int `mandatory:"true" json:"windowDurationInMins"`
 
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the new execution window created as part of reschedule for the execution window failure.
+	DeferredExecutionWindowId *string `mandatory:"false" json:"deferredExecutionWindowId"`
+
 	// Description of the execution window.
 	Description *string `mandatory:"false" json:"description"`
 
@@ -200,6 +203,7 @@ const (
 	ExecutionWindowSummaryLifecycleSubstateMaintenanceInProgress ExecutionWindowSummaryLifecycleSubstateEnum = "MAINTENANCE_IN_PROGRESS"
 	ExecutionWindowSummaryLifecycleSubstateWaiting               ExecutionWindowSummaryLifecycleSubstateEnum = "WAITING"
 	ExecutionWindowSummaryLifecycleSubstateRescheduled           ExecutionWindowSummaryLifecycleSubstateEnum = "RESCHEDULED"
+	ExecutionWindowSummaryLifecycleSubstateCanceledByOps         ExecutionWindowSummaryLifecycleSubstateEnum = "CANCELED_BY_OPS"
 )
 
 var mappingExecutionWindowSummaryLifecycleSubstateEnum = map[string]ExecutionWindowSummaryLifecycleSubstateEnum{
@@ -207,6 +211,7 @@ var mappingExecutionWindowSummaryLifecycleSubstateEnum = map[string]ExecutionWin
 	"MAINTENANCE_IN_PROGRESS": ExecutionWindowSummaryLifecycleSubstateMaintenanceInProgress,
 	"WAITING":                 ExecutionWindowSummaryLifecycleSubstateWaiting,
 	"RESCHEDULED":             ExecutionWindowSummaryLifecycleSubstateRescheduled,
+	"CANCELED_BY_OPS":         ExecutionWindowSummaryLifecycleSubstateCanceledByOps,
 }
 
 var mappingExecutionWindowSummaryLifecycleSubstateEnumLowerCase = map[string]ExecutionWindowSummaryLifecycleSubstateEnum{
@@ -214,6 +219,7 @@ var mappingExecutionWindowSummaryLifecycleSubstateEnumLowerCase = map[string]Exe
 	"maintenance_in_progress": ExecutionWindowSummaryLifecycleSubstateMaintenanceInProgress,
 	"waiting":                 ExecutionWindowSummaryLifecycleSubstateWaiting,
 	"rescheduled":             ExecutionWindowSummaryLifecycleSubstateRescheduled,
+	"canceled_by_ops":         ExecutionWindowSummaryLifecycleSubstateCanceledByOps,
 }
 
 // GetExecutionWindowSummaryLifecycleSubstateEnumValues Enumerates the set of values for ExecutionWindowSummaryLifecycleSubstateEnum
@@ -232,6 +238,7 @@ func GetExecutionWindowSummaryLifecycleSubstateEnumStringValues() []string {
 		"MAINTENANCE_IN_PROGRESS",
 		"WAITING",
 		"RESCHEDULED",
+		"CANCELED_BY_OPS",
 	}
 }
 
