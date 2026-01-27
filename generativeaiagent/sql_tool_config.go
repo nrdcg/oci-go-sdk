@@ -39,6 +39,9 @@ type SqlToolConfig struct {
 
 	DatabaseConnection DatabaseConnection `mandatory:"false" json:"databaseConnection"`
 
+	// The runtimeVersion of the system prompt.
+	RuntimeVersion *string `mandatory:"false" json:"runtimeVersion"`
+
 	// Dialect to be used for SQL generation.
 	Dialect SqlToolConfigDialectEnum `mandatory:"true" json:"dialect"`
 
@@ -93,6 +96,7 @@ func (m *SqlToolConfig) UnmarshalJSON(data []byte) (e error) {
 		TableAndColumnDescription  inputlocation              `json:"tableAndColumnDescription"`
 		GenerationLlmCustomization *LlmCustomization          `json:"generationLlmCustomization"`
 		DatabaseConnection         databaseconnection         `json:"databaseConnection"`
+		RuntimeVersion             *string                    `json:"runtimeVersion"`
 		Dialect                    SqlToolConfigDialectEnum   `json:"dialect"`
 	}{}
 
@@ -148,6 +152,8 @@ func (m *SqlToolConfig) UnmarshalJSON(data []byte) (e error) {
 	} else {
 		m.DatabaseConnection = nil
 	}
+
+	m.RuntimeVersion = model.RuntimeVersion
 
 	m.Dialect = model.Dialect
 

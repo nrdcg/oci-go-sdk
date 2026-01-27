@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateSubordinateCaIssuedByInternalCaConfigDetails The details for updating a private subordinate certificate authority (CA) which is issued by a private CA.
+// UpdateSubordinateCaIssuedByInternalCaConfigDetails The configuration details for updating a private subordinate certificate authority (CA) which is issued by a private, internal CA.
 // Note: This operation automatically rotates the private key.
 type UpdateSubordinateCaIssuedByInternalCaConfigDetails struct {
 

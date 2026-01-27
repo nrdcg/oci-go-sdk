@@ -148,6 +148,7 @@ const (
 	ListCertificateAuthoritiesLifecycleStatePendingDeletion    ListCertificateAuthoritiesLifecycleStateEnum = "PENDING_DELETION"
 	ListCertificateAuthoritiesLifecycleStateCancellingDeletion ListCertificateAuthoritiesLifecycleStateEnum = "CANCELLING_DELETION"
 	ListCertificateAuthoritiesLifecycleStateFailed             ListCertificateAuthoritiesLifecycleStateEnum = "FAILED"
+	ListCertificateAuthoritiesLifecycleStatePendingActivation  ListCertificateAuthoritiesLifecycleStateEnum = "PENDING_ACTIVATION"
 )
 
 var mappingListCertificateAuthoritiesLifecycleStateEnum = map[string]ListCertificateAuthoritiesLifecycleStateEnum{
@@ -160,6 +161,7 @@ var mappingListCertificateAuthoritiesLifecycleStateEnum = map[string]ListCertifi
 	"PENDING_DELETION":    ListCertificateAuthoritiesLifecycleStatePendingDeletion,
 	"CANCELLING_DELETION": ListCertificateAuthoritiesLifecycleStateCancellingDeletion,
 	"FAILED":              ListCertificateAuthoritiesLifecycleStateFailed,
+	"PENDING_ACTIVATION":  ListCertificateAuthoritiesLifecycleStatePendingActivation,
 }
 
 var mappingListCertificateAuthoritiesLifecycleStateEnumLowerCase = map[string]ListCertificateAuthoritiesLifecycleStateEnum{
@@ -172,6 +174,7 @@ var mappingListCertificateAuthoritiesLifecycleStateEnumLowerCase = map[string]Li
 	"pending_deletion":    ListCertificateAuthoritiesLifecycleStatePendingDeletion,
 	"cancelling_deletion": ListCertificateAuthoritiesLifecycleStateCancellingDeletion,
 	"failed":              ListCertificateAuthoritiesLifecycleStateFailed,
+	"pending_activation":  ListCertificateAuthoritiesLifecycleStatePendingActivation,
 }
 
 // GetListCertificateAuthoritiesLifecycleStateEnumValues Enumerates the set of values for ListCertificateAuthoritiesLifecycleStateEnum
@@ -195,6 +198,7 @@ func GetListCertificateAuthoritiesLifecycleStateEnumStringValues() []string {
 		"PENDING_DELETION",
 		"CANCELLING_DELETION",
 		"FAILED",
+		"PENDING_ACTIVATION",
 	}
 }
 
