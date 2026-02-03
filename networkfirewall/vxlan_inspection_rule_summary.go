@@ -31,6 +31,9 @@ type VxlanInspectionRuleSummary struct {
 
 	Profile *VxlanInspectionRuleProfile `mandatory:"true" json:"profile"`
 
+	// The description of the tunnel inspect rule. This field can be used to add additional info.
+	Description *string `mandatory:"false" json:"description"`
+
 	Condition *VxlanInspectionRuleMatchCriteria `mandatory:"false" json:"condition"`
 
 	// Types of Inspect Action on the Traffic flow.
@@ -57,6 +60,11 @@ func (m VxlanInspectionRuleSummary) GetPriorityOrder() *int64 {
 // GetParentResourceId returns ParentResourceId
 func (m VxlanInspectionRuleSummary) GetParentResourceId() *string {
 	return m.ParentResourceId
+}
+
+// GetDescription returns Description
+func (m VxlanInspectionRuleSummary) GetDescription() *string {
+	return m.Description
 }
 
 func (m VxlanInspectionRuleSummary) String() string {

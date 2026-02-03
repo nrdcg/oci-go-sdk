@@ -23,6 +23,9 @@ type CreateSslInboundInspectionProfileDetails struct {
 	// Name of the decryption profile.
 	Name *string `mandatory:"true" json:"name"`
 
+	// The description of the decryption profile. This field can be used to add additional info.
+	Description *string `mandatory:"false" json:"description"`
+
 	// Whether to block sessions if SSL version is not supported.
 	IsUnsupportedVersionBlocked *bool `mandatory:"false" json:"isUnsupportedVersionBlocked"`
 
@@ -36,6 +39,11 @@ type CreateSslInboundInspectionProfileDetails struct {
 // GetName returns Name
 func (m CreateSslInboundInspectionProfileDetails) GetName() *string {
 	return m.Name
+}
+
+// GetDescription returns Description
+func (m CreateSslInboundInspectionProfileDetails) GetDescription() *string {
+	return m.Description
 }
 
 func (m CreateSslInboundInspectionProfileDetails) String() string {

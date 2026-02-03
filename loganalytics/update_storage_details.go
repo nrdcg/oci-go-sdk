@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateStorageDetails This is the input to update storage configuration of a tenancy in Logging Analytics application
+// UpdateStorageDetails This is the input to update storage configuration of a tenancy in Log Analytics application
 type UpdateStorageDetails struct {
 	ArchivingConfiguration *ArchivingConfiguration `mandatory:"true" json:"archivingConfiguration"`
 }

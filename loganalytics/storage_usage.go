@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// StorageUsage This is the storage usage information of a tenancy in Logging Analytics application
+// StorageUsage This is the storage usage information of a tenancy in Log Analytics application
 type StorageUsage struct {
 
 	// This is the number of bytes of active data (non-archived)

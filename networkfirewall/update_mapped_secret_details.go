@@ -24,12 +24,16 @@ type UpdateMappedSecretDetails interface {
 	//  * `SSL_INBOUND_INSPECTION`: For Inbound inspection of SSL traffic.
 	//  * `SSL_FORWARD_PROXY`: For forward proxy certificates for SSL inspection.
 	GetType() InspectionTypeEnum
+
+	// The description of the mapped secret. This field can be used to add additional info.
+	GetDescription() *string
 }
 
 type updatemappedsecretdetails struct {
-	JsonData []byte
-	Type     InspectionTypeEnum `mandatory:"true" json:"type"`
-	Source   string             `json:"source"`
+	JsonData    []byte
+	Description *string            `mandatory:"false" json:"description"`
+	Type        InspectionTypeEnum `mandatory:"true" json:"type"`
+	Source      string             `json:"source"`
 }
 
 // UnmarshalJSON unmarshals json
@@ -44,6 +48,7 @@ func (m *updatemappedsecretdetails) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	m.Type = s.Model.Type
+	m.Description = s.Model.Description
 	m.Source = s.Model.Source
 
 	return err
@@ -66,6 +71,11 @@ func (m *updatemappedsecretdetails) UnmarshalPolymorphicJSON(data []byte) (inter
 		common.Logf("Received unsupported enum value for UpdateMappedSecretDetails: %s.", m.Source)
 		return *m, nil
 	}
+}
+
+// GetDescription returns Description
+func (m updatemappedsecretdetails) GetDescription() *string {
+	return m.Description
 }
 
 // GetType returns Type

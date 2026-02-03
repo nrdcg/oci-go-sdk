@@ -19,7 +19,7 @@ import (
 // Click https://docs.oracle.com/en-us/iaas/tools/go-sdk-examples/latest/loganalytics/ExtractStructuredLogHeaderPaths.go.html to see an example of how to use ExtractStructuredLogHeaderPathsRequest.
 type ExtractStructuredLogHeaderPathsRequest struct {
 
-	// The Logging Analytics namespace used for the request.
+	// The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 	NamespaceName *string `mandatory:"true" contributesTo:"path" name:"namespaceName"`
 
 	// parser definition
@@ -113,18 +113,21 @@ const (
 	ExtractStructuredLogHeaderPathsParserTypeXml       ExtractStructuredLogHeaderPathsParserTypeEnum = "XML"
 	ExtractStructuredLogHeaderPathsParserTypeJson      ExtractStructuredLogHeaderPathsParserTypeEnum = "JSON"
 	ExtractStructuredLogHeaderPathsParserTypeDelimited ExtractStructuredLogHeaderPathsParserTypeEnum = "DELIMITED"
+	ExtractStructuredLogHeaderPathsParserTypeRegex     ExtractStructuredLogHeaderPathsParserTypeEnum = "REGEX"
 )
 
 var mappingExtractStructuredLogHeaderPathsParserTypeEnum = map[string]ExtractStructuredLogHeaderPathsParserTypeEnum{
 	"XML":       ExtractStructuredLogHeaderPathsParserTypeXml,
 	"JSON":      ExtractStructuredLogHeaderPathsParserTypeJson,
 	"DELIMITED": ExtractStructuredLogHeaderPathsParserTypeDelimited,
+	"REGEX":     ExtractStructuredLogHeaderPathsParserTypeRegex,
 }
 
 var mappingExtractStructuredLogHeaderPathsParserTypeEnumLowerCase = map[string]ExtractStructuredLogHeaderPathsParserTypeEnum{
 	"xml":       ExtractStructuredLogHeaderPathsParserTypeXml,
 	"json":      ExtractStructuredLogHeaderPathsParserTypeJson,
 	"delimited": ExtractStructuredLogHeaderPathsParserTypeDelimited,
+	"regex":     ExtractStructuredLogHeaderPathsParserTypeRegex,
 }
 
 // GetExtractStructuredLogHeaderPathsParserTypeEnumValues Enumerates the set of values for ExtractStructuredLogHeaderPathsParserTypeEnum
@@ -142,6 +145,7 @@ func GetExtractStructuredLogHeaderPathsParserTypeEnumStringValues() []string {
 		"XML",
 		"JSON",
 		"DELIMITED",
+		"REGEX",
 	}
 }
 

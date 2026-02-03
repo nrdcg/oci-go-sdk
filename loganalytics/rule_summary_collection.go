@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// RuleSummaryCollection A collection of Logging Analytics rules.
+// RuleSummaryCollection A collection of Log Analytics rules.
 type RuleSummaryCollection struct {
 
 	// An array of rule summary objects.

@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// NatRuleMatchCriteria Match criteria used in NAT Rule used on the firewall policy.
+// NatRuleMatchCriteria Match criteria used in NAT rule used on the firewall policy.
 type NatRuleMatchCriteria struct {
 
 	// An array of IP address list names to be evaluated against the traffic source address.

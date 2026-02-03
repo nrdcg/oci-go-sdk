@@ -19,11 +19,15 @@ import (
 
 // UpdateServiceDetails Request for updating an existing service in context to the network firewall policy.
 type UpdateServiceDetails interface {
+
+	// The description of the service. This field can be used to add additional info.
+	GetDescription() *string
 }
 
 type updateservicedetails struct {
-	JsonData []byte
-	Type     string `json:"type"`
+	JsonData    []byte
+	Description *string `mandatory:"false" json:"description"`
+	Type        string  `json:"type"`
 }
 
 // UnmarshalJSON unmarshals json
@@ -37,6 +41,7 @@ func (m *updateservicedetails) UnmarshalJSON(data []byte) error {
 	if err != nil {
 		return err
 	}
+	m.Description = s.Model.Description
 	m.Type = s.Model.Type
 
 	return err
@@ -63,6 +68,11 @@ func (m *updateservicedetails) UnmarshalPolymorphicJSON(data []byte) (interface{
 		common.Logf("Received unsupported enum value for UpdateServiceDetails: %s.", m.Type)
 		return *m, nil
 	}
+}
+
+// GetDescription returns Description
+func (m updateservicedetails) GetDescription() *string {
+	return m.Description
 }
 
 func (m updateservicedetails) String() string {
