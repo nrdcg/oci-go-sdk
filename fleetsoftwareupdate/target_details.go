@@ -62,6 +62,10 @@ func (m *targetdetails) UnmarshalPolymorphicJSON(data []byte) (interface{}, erro
 
 	var err error
 	switch m.EntityType {
+	case "EXADBVMCLUSTER":
+		mm := ExadbVmClusterTargetSummary{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "VMCLUSTER":
 		mm := VmClusterTargetSummary{}
 		err = json.Unmarshal(data, &mm)
@@ -114,18 +118,21 @@ const (
 	TargetDetailsEntityTypeDatabase       TargetDetailsEntityTypeEnum = "DATABASE"
 	TargetDetailsEntityTypeVmcluster      TargetDetailsEntityTypeEnum = "VMCLUSTER"
 	TargetDetailsEntityTypeCloudvmcluster TargetDetailsEntityTypeEnum = "CLOUDVMCLUSTER"
+	TargetDetailsEntityTypeExadbvmcluster TargetDetailsEntityTypeEnum = "EXADBVMCLUSTER"
 )
 
 var mappingTargetDetailsEntityTypeEnum = map[string]TargetDetailsEntityTypeEnum{
 	"DATABASE":       TargetDetailsEntityTypeDatabase,
 	"VMCLUSTER":      TargetDetailsEntityTypeVmcluster,
 	"CLOUDVMCLUSTER": TargetDetailsEntityTypeCloudvmcluster,
+	"EXADBVMCLUSTER": TargetDetailsEntityTypeExadbvmcluster,
 }
 
 var mappingTargetDetailsEntityTypeEnumLowerCase = map[string]TargetDetailsEntityTypeEnum{
 	"database":       TargetDetailsEntityTypeDatabase,
 	"vmcluster":      TargetDetailsEntityTypeVmcluster,
 	"cloudvmcluster": TargetDetailsEntityTypeCloudvmcluster,
+	"exadbvmcluster": TargetDetailsEntityTypeExadbvmcluster,
 }
 
 // GetTargetDetailsEntityTypeEnumValues Enumerates the set of values for TargetDetailsEntityTypeEnum
@@ -143,6 +150,7 @@ func GetTargetDetailsEntityTypeEnumStringValues() []string {
 		"DATABASE",
 		"VMCLUSTER",
 		"CLOUDVMCLUSTER",
+		"EXADBVMCLUSTER",
 	}
 }
 

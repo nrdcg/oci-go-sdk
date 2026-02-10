@@ -16,7 +16,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ConfigurationVariables User-defined service variables.
+// ConfigurationVariables DEPRECATED -- please use the `options` field instead.
+// User-defined service variables.
 type ConfigurationVariables struct {
 
 	// ("completion_type")

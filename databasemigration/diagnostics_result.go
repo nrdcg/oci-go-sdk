@@ -23,6 +23,8 @@ type DiagnosticsResult struct {
 	ResultType ResultTypeEnum `mandatory:"true" json:"resultType"`
 
 	Error *ResultError `mandatory:"false" json:"error"`
+
+	DatabaseInformation *DatabaseInformation `mandatory:"false" json:"databaseInformation"`
 }
 
 func (m DiagnosticsResult) String() string {

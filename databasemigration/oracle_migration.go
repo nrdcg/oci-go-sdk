@@ -46,6 +46,9 @@ type OracleMigration struct {
 	// The OCID of the resource being referenced.
 	ExecutingJobId *string `mandatory:"false" json:"executingJobId"`
 
+	// The OCID of the resource being referenced.
+	AssessmentId *string `mandatory:"false" json:"assessmentId"`
+
 	// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
 	TimeUpdated *common.SDKTime `mandatory:"false" json:"timeUpdated"`
 
@@ -143,6 +146,11 @@ func (m OracleMigration) GetExecutingJobId() *string {
 	return m.ExecutingJobId
 }
 
+// GetAssessmentId returns AssessmentId
+func (m OracleMigration) GetAssessmentId() *string {
+	return m.AssessmentId
+}
+
 // GetTimeCreated returns TimeCreated
 func (m OracleMigration) GetTimeCreated() *common.SDKTime {
 	return m.TimeCreated
@@ -231,6 +239,7 @@ func (m *OracleMigration) UnmarshalJSON(data []byte) (e error) {
 		Description                         *string                           `json:"description"`
 		WaitAfter                           OdmsJobPhasesEnum                 `json:"waitAfter"`
 		ExecutingJobId                      *string                           `json:"executingJobId"`
+		AssessmentId                        *string                           `json:"assessmentId"`
 		TimeUpdated                         *common.SDKTime                   `json:"timeUpdated"`
 		TimeLastMigration                   *common.SDKTime                   `json:"timeLastMigration"`
 		LifecycleDetails                    MigrationStatusEnum               `json:"lifecycleDetails"`
@@ -265,6 +274,8 @@ func (m *OracleMigration) UnmarshalJSON(data []byte) (e error) {
 	m.WaitAfter = model.WaitAfter
 
 	m.ExecutingJobId = model.ExecutingJobId
+
+	m.AssessmentId = model.AssessmentId
 
 	m.TimeUpdated = model.TimeUpdated
 

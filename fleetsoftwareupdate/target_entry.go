@@ -54,18 +54,21 @@ const (
 	TargetEntryEntityTypeDatabase       TargetEntryEntityTypeEnum = "DATABASE"
 	TargetEntryEntityTypeVmcluster      TargetEntryEntityTypeEnum = "VMCLUSTER"
 	TargetEntryEntityTypeCloudvmcluster TargetEntryEntityTypeEnum = "CLOUDVMCLUSTER"
+	TargetEntryEntityTypeExadbvmcluster TargetEntryEntityTypeEnum = "EXADBVMCLUSTER"
 )
 
 var mappingTargetEntryEntityTypeEnum = map[string]TargetEntryEntityTypeEnum{
 	"DATABASE":       TargetEntryEntityTypeDatabase,
 	"VMCLUSTER":      TargetEntryEntityTypeVmcluster,
 	"CLOUDVMCLUSTER": TargetEntryEntityTypeCloudvmcluster,
+	"EXADBVMCLUSTER": TargetEntryEntityTypeExadbvmcluster,
 }
 
 var mappingTargetEntryEntityTypeEnumLowerCase = map[string]TargetEntryEntityTypeEnum{
 	"database":       TargetEntryEntityTypeDatabase,
 	"vmcluster":      TargetEntryEntityTypeVmcluster,
 	"cloudvmcluster": TargetEntryEntityTypeCloudvmcluster,
+	"exadbvmcluster": TargetEntryEntityTypeExadbvmcluster,
 }
 
 // GetTargetEntryEntityTypeEnumValues Enumerates the set of values for TargetEntryEntityTypeEnum
@@ -83,6 +86,7 @@ func GetTargetEntryEntityTypeEnumStringValues() []string {
 		"DATABASE",
 		"VMCLUSTER",
 		"CLOUDVMCLUSTER",
+		"EXADBVMCLUSTER",
 	}
 }
 
