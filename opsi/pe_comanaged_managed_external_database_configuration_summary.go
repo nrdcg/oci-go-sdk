@@ -40,6 +40,9 @@ type PeComanagedManagedExternalDatabaseConfigurationSummary struct {
 	// The version of the database.
 	DatabaseVersion *string `mandatory:"true" json:"databaseVersion"`
 
+	// Flag is to identify if advanced features for autonomous database is enabled or not
+	IsAdvancedFeaturesEnabled *bool `mandatory:"true" json:"isAdvancedFeaturesEnabled"`
+
 	// Name of the CDB.Only applies to PDB.
 	CdbName *string `mandatory:"true" json:"cdbName"`
 
@@ -97,6 +100,11 @@ func (m PeComanagedManagedExternalDatabaseConfigurationSummary) GetDatabaseType(
 // GetDatabaseVersion returns DatabaseVersion
 func (m PeComanagedManagedExternalDatabaseConfigurationSummary) GetDatabaseVersion() *string {
 	return m.DatabaseVersion
+}
+
+// GetIsAdvancedFeaturesEnabled returns IsAdvancedFeaturesEnabled
+func (m PeComanagedManagedExternalDatabaseConfigurationSummary) GetIsAdvancedFeaturesEnabled() *bool {
+	return m.IsAdvancedFeaturesEnabled
 }
 
 // GetCdbName returns CdbName

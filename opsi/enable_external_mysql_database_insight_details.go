@@ -19,7 +19,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// EnableExternalMysqlDatabaseInsightDetails The information about database to be analyzed.
+// EnableExternalMysqlDatabaseInsightDetails MySQL support within the OCI Ops Insights service has been deprecated as of January 29, 2026.
+// The information about database to be analyzed.
 type EnableExternalMysqlDatabaseInsightDetails struct {
 
 	// The DBM owned database connector OCID (https://docs.oracle.com/iaas/database-management/doc/view-connector-details.html) mapping to the database credentials and connection details.

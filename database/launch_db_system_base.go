@@ -270,6 +270,10 @@ func (m *launchdbsystembase) UnmarshalPolymorphicJSON(data []byte) (interface{},
 		mm := LaunchDbSystemDetails{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "DATAGUARD":
+		mm := LaunchStandbyDbSystemDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "DB_SYSTEM":
 		mm := LaunchDbSystemFromDbSystemDetails{}
 		err = json.Unmarshal(data, &mm)
@@ -564,10 +568,11 @@ type LaunchDbSystemBaseSourceEnum string
 
 // Set of constants representing the allowable values for LaunchDbSystemBaseSourceEnum
 const (
-	LaunchDbSystemBaseSourceNone     LaunchDbSystemBaseSourceEnum = "NONE"
-	LaunchDbSystemBaseSourceDbBackup LaunchDbSystemBaseSourceEnum = "DB_BACKUP"
-	LaunchDbSystemBaseSourceDatabase LaunchDbSystemBaseSourceEnum = "DATABASE"
-	LaunchDbSystemBaseSourceDbSystem LaunchDbSystemBaseSourceEnum = "DB_SYSTEM"
+	LaunchDbSystemBaseSourceNone      LaunchDbSystemBaseSourceEnum = "NONE"
+	LaunchDbSystemBaseSourceDbBackup  LaunchDbSystemBaseSourceEnum = "DB_BACKUP"
+	LaunchDbSystemBaseSourceDatabase  LaunchDbSystemBaseSourceEnum = "DATABASE"
+	LaunchDbSystemBaseSourceDbSystem  LaunchDbSystemBaseSourceEnum = "DB_SYSTEM"
+	LaunchDbSystemBaseSourceDataguard LaunchDbSystemBaseSourceEnum = "DATAGUARD"
 )
 
 var mappingLaunchDbSystemBaseSourceEnum = map[string]LaunchDbSystemBaseSourceEnum{
@@ -575,6 +580,7 @@ var mappingLaunchDbSystemBaseSourceEnum = map[string]LaunchDbSystemBaseSourceEnu
 	"DB_BACKUP": LaunchDbSystemBaseSourceDbBackup,
 	"DATABASE":  LaunchDbSystemBaseSourceDatabase,
 	"DB_SYSTEM": LaunchDbSystemBaseSourceDbSystem,
+	"DATAGUARD": LaunchDbSystemBaseSourceDataguard,
 }
 
 var mappingLaunchDbSystemBaseSourceEnumLowerCase = map[string]LaunchDbSystemBaseSourceEnum{
@@ -582,6 +588,7 @@ var mappingLaunchDbSystemBaseSourceEnumLowerCase = map[string]LaunchDbSystemBase
 	"db_backup": LaunchDbSystemBaseSourceDbBackup,
 	"database":  LaunchDbSystemBaseSourceDatabase,
 	"db_system": LaunchDbSystemBaseSourceDbSystem,
+	"dataguard": LaunchDbSystemBaseSourceDataguard,
 }
 
 // GetLaunchDbSystemBaseSourceEnumValues Enumerates the set of values for LaunchDbSystemBaseSourceEnum
@@ -600,6 +607,7 @@ func GetLaunchDbSystemBaseSourceEnumStringValues() []string {
 		"DB_BACKUP",
 		"DATABASE",
 		"DB_SYSTEM",
+		"DATAGUARD",
 	}
 }
 

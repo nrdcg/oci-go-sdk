@@ -19,7 +19,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ExternalMysqlDatabaseInsight Database insight resource.
+// ExternalMysqlDatabaseInsight MySQL support within the OCI Ops Insights service has been deprecated as of January 29, 2026.
+// Database insight resource.
 type ExternalMysqlDatabaseInsight struct {
 
 	// Database insight identifier

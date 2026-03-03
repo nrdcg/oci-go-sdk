@@ -19,7 +19,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateMdsMySqlDatabaseInsightDetails The information about database to be analyzed.
+// CreateMdsMySqlDatabaseInsightDetails MySQL support within the OCI Ops Insights service has been deprecated as of January 29, 2026.
+// The information about database to be analyzed.
 type CreateMdsMySqlDatabaseInsightDetails struct {
 
 	// Compartment Identifier of database
