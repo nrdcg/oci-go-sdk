@@ -51,6 +51,10 @@ func (m *createdistributeddatabasesharddetails) UnmarshalPolymorphicJSON(data []
 
 	var err error
 	switch m.Source {
+	case "NEW_VAULT_AND_CLUSTER":
+		mm := CreateDistributedDatabaseShardWithExadbXsNewVaultAndClusterDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "EXADB_XS":
 		mm := CreateDistributedDatabaseShardWithExadbXsDetails{}
 		err = json.Unmarshal(data, &mm)
@@ -82,15 +86,21 @@ type CreateDistributedDatabaseShardDetailsSourceEnum string
 
 // Set of constants representing the allowable values for CreateDistributedDatabaseShardDetailsSourceEnum
 const (
-	CreateDistributedDatabaseShardDetailsSourceExadbXs CreateDistributedDatabaseShardDetailsSourceEnum = "EXADB_XS"
+	CreateDistributedDatabaseShardDetailsSourceExadbXs            CreateDistributedDatabaseShardDetailsSourceEnum = "EXADB_XS"
+	CreateDistributedDatabaseShardDetailsSourceNewVaultAndCluster CreateDistributedDatabaseShardDetailsSourceEnum = "NEW_VAULT_AND_CLUSTER"
+	CreateDistributedDatabaseShardDetailsSourceExistingCluster    CreateDistributedDatabaseShardDetailsSourceEnum = "EXISTING_CLUSTER"
 )
 
 var mappingCreateDistributedDatabaseShardDetailsSourceEnum = map[string]CreateDistributedDatabaseShardDetailsSourceEnum{
-	"EXADB_XS": CreateDistributedDatabaseShardDetailsSourceExadbXs,
+	"EXADB_XS":              CreateDistributedDatabaseShardDetailsSourceExadbXs,
+	"NEW_VAULT_AND_CLUSTER": CreateDistributedDatabaseShardDetailsSourceNewVaultAndCluster,
+	"EXISTING_CLUSTER":      CreateDistributedDatabaseShardDetailsSourceExistingCluster,
 }
 
 var mappingCreateDistributedDatabaseShardDetailsSourceEnumLowerCase = map[string]CreateDistributedDatabaseShardDetailsSourceEnum{
-	"exadb_xs": CreateDistributedDatabaseShardDetailsSourceExadbXs,
+	"exadb_xs":              CreateDistributedDatabaseShardDetailsSourceExadbXs,
+	"new_vault_and_cluster": CreateDistributedDatabaseShardDetailsSourceNewVaultAndCluster,
+	"existing_cluster":      CreateDistributedDatabaseShardDetailsSourceExistingCluster,
 }
 
 // GetCreateDistributedDatabaseShardDetailsSourceEnumValues Enumerates the set of values for CreateDistributedDatabaseShardDetailsSourceEnum
@@ -106,6 +116,8 @@ func GetCreateDistributedDatabaseShardDetailsSourceEnumValues() []CreateDistribu
 func GetCreateDistributedDatabaseShardDetailsSourceEnumStringValues() []string {
 	return []string{
 		"EXADB_XS",
+		"NEW_VAULT_AND_CLUSTER",
+		"EXISTING_CLUSTER",
 	}
 }
 

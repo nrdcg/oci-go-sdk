@@ -66,6 +66,10 @@ func (m *distributeddatabaseshard) UnmarshalPolymorphicJSON(data []byte) (interf
 
 	var err error
 	switch m.Source {
+	case "NEW_VAULT_AND_CLUSTER":
+		mm := DistributedDatabaseShardWithExadbXsNewVaultAndCluster{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "EXADB_XS":
 		mm := DistributedDatabaseShardWithExadbXs{}
 		err = json.Unmarshal(data, &mm)
@@ -112,15 +116,21 @@ type DistributedDatabaseShardSourceEnum string
 
 // Set of constants representing the allowable values for DistributedDatabaseShardSourceEnum
 const (
-	DistributedDatabaseShardSourceExadbXs DistributedDatabaseShardSourceEnum = "EXADB_XS"
+	DistributedDatabaseShardSourceExadbXs            DistributedDatabaseShardSourceEnum = "EXADB_XS"
+	DistributedDatabaseShardSourceNewVaultAndCluster DistributedDatabaseShardSourceEnum = "NEW_VAULT_AND_CLUSTER"
+	DistributedDatabaseShardSourceExistingCluster    DistributedDatabaseShardSourceEnum = "EXISTING_CLUSTER"
 )
 
 var mappingDistributedDatabaseShardSourceEnum = map[string]DistributedDatabaseShardSourceEnum{
-	"EXADB_XS": DistributedDatabaseShardSourceExadbXs,
+	"EXADB_XS":              DistributedDatabaseShardSourceExadbXs,
+	"NEW_VAULT_AND_CLUSTER": DistributedDatabaseShardSourceNewVaultAndCluster,
+	"EXISTING_CLUSTER":      DistributedDatabaseShardSourceExistingCluster,
 }
 
 var mappingDistributedDatabaseShardSourceEnumLowerCase = map[string]DistributedDatabaseShardSourceEnum{
-	"exadb_xs": DistributedDatabaseShardSourceExadbXs,
+	"exadb_xs":              DistributedDatabaseShardSourceExadbXs,
+	"new_vault_and_cluster": DistributedDatabaseShardSourceNewVaultAndCluster,
+	"existing_cluster":      DistributedDatabaseShardSourceExistingCluster,
 }
 
 // GetDistributedDatabaseShardSourceEnumValues Enumerates the set of values for DistributedDatabaseShardSourceEnum
@@ -136,6 +146,8 @@ func GetDistributedDatabaseShardSourceEnumValues() []DistributedDatabaseShardSou
 func GetDistributedDatabaseShardSourceEnumStringValues() []string {
 	return []string{
 		"EXADB_XS",
+		"NEW_VAULT_AND_CLUSTER",
+		"EXISTING_CLUSTER",
 	}
 }
 
