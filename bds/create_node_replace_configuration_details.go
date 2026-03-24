@@ -21,9 +21,6 @@ import (
 type CreateNodeReplaceConfigurationDetails struct {
 	LevelTypeDetails LevelTypeDetails `mandatory:"true" json:"levelTypeDetails"`
 
-	// Base-64 encoded password for the cluster admin user.
-	ClusterAdminPassword *string `mandatory:"true" json:"clusterAdminPassword"`
-
 	// Type of compute instance health metric to use for node replacement
 	MetricType NodeReplaceConfigurationMetricTypeEnum `mandatory:"true" json:"metricType"`
 
@@ -32,6 +29,12 @@ type CreateNodeReplaceConfigurationDetails struct {
 
 	// A user-friendly name. Only ASCII alphanumeric characters with no spaces allowed. The name does not have to be unique, and it may be changed. Avoid entering confidential information.
 	DisplayName *string `mandatory:"false" json:"displayName"`
+
+	// Base-64 encoded password for the cluster admin user.
+	ClusterAdminPassword *string `mandatory:"false" json:"clusterAdminPassword"`
+
+	// The secretId for the clusterAdminPassword.
+	SecretId *string `mandatory:"false" json:"secretId"`
 }
 
 func (m CreateNodeReplaceConfigurationDetails) String() string {
@@ -57,8 +60,9 @@ func (m CreateNodeReplaceConfigurationDetails) ValidateEnumValue() (bool, error)
 func (m *CreateNodeReplaceConfigurationDetails) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
 		DisplayName          *string                                `json:"displayName"`
-		LevelTypeDetails     leveltypedetails                       `json:"levelTypeDetails"`
 		ClusterAdminPassword *string                                `json:"clusterAdminPassword"`
+		SecretId             *string                                `json:"secretId"`
+		LevelTypeDetails     leveltypedetails                       `json:"levelTypeDetails"`
 		MetricType           NodeReplaceConfigurationMetricTypeEnum `json:"metricType"`
 		DurationInMinutes    *int                                   `json:"durationInMinutes"`
 	}{}
@@ -70,6 +74,10 @@ func (m *CreateNodeReplaceConfigurationDetails) UnmarshalJSON(data []byte) (e er
 	var nn interface{}
 	m.DisplayName = model.DisplayName
 
+	m.ClusterAdminPassword = model.ClusterAdminPassword
+
+	m.SecretId = model.SecretId
+
 	nn, e = model.LevelTypeDetails.UnmarshalPolymorphicJSON(model.LevelTypeDetails.JsonData)
 	if e != nil {
 		return
@@ -79,8 +87,6 @@ func (m *CreateNodeReplaceConfigurationDetails) UnmarshalJSON(data []byte) (e er
 	} else {
 		m.LevelTypeDetails = nil
 	}
-
-	m.ClusterAdminPassword = model.ClusterAdminPassword
 
 	m.MetricType = model.MetricType
 

@@ -29,6 +29,9 @@ type UpdateAutoScalingConfigurationDetails struct {
 	// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
 	ClusterAdminPassword *string `mandatory:"false" json:"clusterAdminPassword"`
 
+	// The secretId for the clusterAdminPassword.
+	SecretId *string `mandatory:"false" json:"secretId"`
+
 	Policy *AutoScalePolicy `mandatory:"false" json:"policy"`
 
 	PolicyDetails UpdateAutoScalePolicyDetails `mandatory:"false" json:"policyDetails"`
@@ -56,6 +59,7 @@ func (m *UpdateAutoScalingConfigurationDetails) UnmarshalJSON(data []byte) (e er
 		DisplayName          *string                      `json:"displayName"`
 		IsEnabled            *bool                        `json:"isEnabled"`
 		ClusterAdminPassword *string                      `json:"clusterAdminPassword"`
+		SecretId             *string                      `json:"secretId"`
 		Policy               *AutoScalePolicy             `json:"policy"`
 		PolicyDetails        updateautoscalepolicydetails `json:"policyDetails"`
 	}{}
@@ -70,6 +74,8 @@ func (m *UpdateAutoScalingConfigurationDetails) UnmarshalJSON(data []byte) (e er
 	m.IsEnabled = model.IsEnabled
 
 	m.ClusterAdminPassword = model.ClusterAdminPassword
+
+	m.SecretId = model.SecretId
 
 	m.Policy = model.Policy
 

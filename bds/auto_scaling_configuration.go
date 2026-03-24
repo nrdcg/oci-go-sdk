@@ -40,6 +40,9 @@ type AutoScalingConfiguration struct {
 
 	Policy *AutoScalePolicy `mandatory:"true" json:"policy"`
 
+	// The secretId for the clusterAdminPassword.
+	SecretId *string `mandatory:"false" json:"secretId"`
+
 	PolicyDetails AutoScalePolicyDetails `mandatory:"false" json:"policyDetails"`
 }
 
@@ -68,6 +71,7 @@ func (m AutoScalingConfiguration) ValidateEnumValue() (bool, error) {
 // UnmarshalJSON unmarshals from json
 func (m *AutoScalingConfiguration) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
+		SecretId       *string                                    `json:"secretId"`
 		PolicyDetails  autoscalepolicydetails                     `json:"policyDetails"`
 		Id             *string                                    `json:"id"`
 		DisplayName    *string                                    `json:"displayName"`
@@ -83,6 +87,8 @@ func (m *AutoScalingConfiguration) UnmarshalJSON(data []byte) (e error) {
 		return
 	}
 	var nn interface{}
+	m.SecretId = model.SecretId
+
 	nn, e = model.PolicyDetails.UnmarshalPolymorphicJSON(model.PolicyDetails.JsonData)
 	if e != nil {
 		return

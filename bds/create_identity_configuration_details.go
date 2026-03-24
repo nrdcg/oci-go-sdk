@@ -19,9 +19,6 @@ import (
 // CreateIdentityConfigurationDetails Details for creating the identity configuration.
 type CreateIdentityConfigurationDetails struct {
 
-	// Base-64 encoded password for the cluster admin user.
-	ClusterAdminPassword *string `mandatory:"true" json:"clusterAdminPassword"`
-
 	// Display name of the identity configuration, required for creating identity configuration.
 	DisplayName *string `mandatory:"true" json:"displayName"`
 
@@ -30,6 +27,12 @@ type CreateIdentityConfigurationDetails struct {
 
 	// Identity domain confidential application ID for the identity config, required for creating identity configuration
 	ConfidentialApplicationId *string `mandatory:"true" json:"confidentialApplicationId"`
+
+	// Base-64 encoded password for the cluster admin user.
+	ClusterAdminPassword *string `mandatory:"false" json:"clusterAdminPassword"`
+
+	// The secretId for the clusterAdminPassword.
+	SecretId *string `mandatory:"false" json:"secretId"`
 
 	UpstConfigurationDetails *UpstConfigurationDetails `mandatory:"false" json:"upstConfigurationDetails"`
 

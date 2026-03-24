@@ -24,7 +24,10 @@ type InstallPatchDetails struct {
 	Version *string `mandatory:"true" json:"version"`
 
 	// Base-64 encoded password for the cluster admin user.
-	ClusterAdminPassword *string `mandatory:"true" json:"clusterAdminPassword"`
+	ClusterAdminPassword *string `mandatory:"false" json:"clusterAdminPassword"`
+
+	// The secretId for the clusterAdminPassword.
+	SecretId *string `mandatory:"false" json:"secretId"`
 
 	PatchingConfig OdhPatchingConfig `mandatory:"false" json:"patchingConfig"`
 }
@@ -48,9 +51,10 @@ func (m InstallPatchDetails) ValidateEnumValue() (bool, error) {
 // UnmarshalJSON unmarshals from json
 func (m *InstallPatchDetails) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
+		ClusterAdminPassword *string           `json:"clusterAdminPassword"`
+		SecretId             *string           `json:"secretId"`
 		PatchingConfig       odhpatchingconfig `json:"patchingConfig"`
 		Version              *string           `json:"version"`
-		ClusterAdminPassword *string           `json:"clusterAdminPassword"`
 	}{}
 
 	e = json.Unmarshal(data, &model)
@@ -58,6 +62,10 @@ func (m *InstallPatchDetails) UnmarshalJSON(data []byte) (e error) {
 		return
 	}
 	var nn interface{}
+	m.ClusterAdminPassword = model.ClusterAdminPassword
+
+	m.SecretId = model.SecretId
+
 	nn, e = model.PatchingConfig.UnmarshalPolymorphicJSON(model.PatchingConfig.JsonData)
 	if e != nil {
 		return
@@ -69,8 +77,6 @@ func (m *InstallPatchDetails) UnmarshalJSON(data []byte) (e error) {
 	}
 
 	m.Version = model.Version
-
-	m.ClusterAdminPassword = model.ClusterAdminPassword
 
 	return
 }
