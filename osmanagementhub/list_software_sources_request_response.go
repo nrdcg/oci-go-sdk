@@ -209,16 +209,19 @@ type ListSoftwareSourcesVendorNameEnum string
 const (
 	ListSoftwareSourcesVendorNameOracle    ListSoftwareSourcesVendorNameEnum = "ORACLE"
 	ListSoftwareSourcesVendorNameMicrosoft ListSoftwareSourcesVendorNameEnum = "MICROSOFT"
+	ListSoftwareSourcesVendorNameCanonical ListSoftwareSourcesVendorNameEnum = "CANONICAL"
 )
 
 var mappingListSoftwareSourcesVendorNameEnum = map[string]ListSoftwareSourcesVendorNameEnum{
 	"ORACLE":    ListSoftwareSourcesVendorNameOracle,
 	"MICROSOFT": ListSoftwareSourcesVendorNameMicrosoft,
+	"CANONICAL": ListSoftwareSourcesVendorNameCanonical,
 }
 
 var mappingListSoftwareSourcesVendorNameEnumLowerCase = map[string]ListSoftwareSourcesVendorNameEnum{
 	"oracle":    ListSoftwareSourcesVendorNameOracle,
 	"microsoft": ListSoftwareSourcesVendorNameMicrosoft,
+	"canonical": ListSoftwareSourcesVendorNameCanonical,
 }
 
 // GetListSoftwareSourcesVendorNameEnumValues Enumerates the set of values for ListSoftwareSourcesVendorNameEnum
@@ -235,6 +238,7 @@ func GetListSoftwareSourcesVendorNameEnumStringValues() []string {
 	return []string{
 		"ORACLE",
 		"MICROSOFT",
+		"CANONICAL",
 	}
 }
 

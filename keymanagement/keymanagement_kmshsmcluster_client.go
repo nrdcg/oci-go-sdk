@@ -141,7 +141,7 @@ func (client KmsHsmClusterClient) cancelHsmClusterDeletion(ctx context.Context, 
 
 	var response CancelHsmClusterDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "CancelHsmClusterDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -203,7 +203,7 @@ func (client KmsHsmClusterClient) changeHsmClusterCompartment(ctx context.Contex
 
 	var response ChangeHsmClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "ChangeHsmClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client KmsHsmClusterClient) createHsmCluster(ctx context.Context, request 
 
 	var response CreateHsmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "CreateHsmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -327,7 +327,7 @@ func (client KmsHsmClusterClient) downloadCertificateSigningRequest(ctx context.
 
 	var response DownloadCertificateSigningRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "DownloadCertificateSigningRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -388,7 +388,7 @@ func (client KmsHsmClusterClient) getHsmCluster(ctx context.Context, request com
 
 	var response GetHsmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "GetHsmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -450,7 +450,7 @@ func (client KmsHsmClusterClient) getHsmPartition(ctx context.Context, request c
 
 	var response GetHsmPartitionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "GetHsmPartition")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -512,7 +512,7 @@ func (client KmsHsmClusterClient) getPreCoUserCredentials(ctx context.Context, r
 
 	var response GetPreCoUserCredentialsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "GetPreCoUserCredentials")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -573,7 +573,7 @@ func (client KmsHsmClusterClient) listHsmClusters(ctx context.Context, request c
 
 	var response ListHsmClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "ListHsmClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -630,7 +630,7 @@ func (client KmsHsmClusterClient) listHsmPartitions(ctx context.Context, request
 
 	var response ListHsmPartitionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "ListHsmPartitions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -693,7 +693,7 @@ func (client KmsHsmClusterClient) scheduleHsmClusterDeletion(ctx context.Context
 
 	var response ScheduleHsmClusterDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "ScheduleHsmClusterDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -754,7 +754,7 @@ func (client KmsHsmClusterClient) updateHsmCluster(ctx context.Context, request 
 
 	var response UpdateHsmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "UpdateHsmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -816,7 +816,7 @@ func (client KmsHsmClusterClient) uploadPartitionCertificates(ctx context.Contex
 
 	var response UploadPartitionCertificatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsHsmCluster", "UploadPartitionCertificates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

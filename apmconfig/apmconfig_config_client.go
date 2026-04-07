@@ -143,7 +143,7 @@ func (client ConfigClient) copyConfiguration(ctx context.Context, request common
 
 	var response CopyConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "CopyConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client ConfigClient) createConfig(ctx context.Context, request common.OCIR
 
 	var response CreateConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "CreateConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -264,7 +264,7 @@ func (client ConfigClient) deleteConfig(ctx context.Context, request common.OCIR
 
 	var response DeleteConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "DeleteConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -327,7 +327,7 @@ func (client ConfigClient) exportConfiguration(ctx context.Context, request comm
 
 	var response ExportConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "ExportConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -385,7 +385,7 @@ func (client ConfigClient) getConfig(ctx context.Context, request common.OCIRequ
 
 	var response GetConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "GetConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -443,7 +443,7 @@ func (client ConfigClient) getMatchAgentsWithAttributeKey(ctx context.Context, r
 
 	var response GetMatchAgentsWithAttributeKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "GetMatchAgentsWithAttributeKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -506,7 +506,7 @@ func (client ConfigClient) importConfiguration(ctx context.Context, request comm
 
 	var response ImportConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "ImportConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -564,7 +564,7 @@ func (client ConfigClient) listConfigs(ctx context.Context, request common.OCIRe
 
 	var response ListConfigsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "ListConfigs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -622,7 +622,7 @@ func (client ConfigClient) retrieveNamespaceMetrics(ctx context.Context, request
 
 	var response RetrieveNamespaceMetricsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "RetrieveNamespaceMetrics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -680,7 +680,7 @@ func (client ConfigClient) retrieveNamespaces(ctx context.Context, request commo
 
 	var response RetrieveNamespacesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "RetrieveNamespaces")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -739,7 +739,7 @@ func (client ConfigClient) test(ctx context.Context, request common.OCIRequest, 
 
 	var response TestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "Test")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -797,7 +797,7 @@ func (client ConfigClient) updateConfig(ctx context.Context, request common.OCIR
 
 	var response UpdateConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "UpdateConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -855,7 +855,7 @@ func (client ConfigClient) updateMatchAgentsWithAttributeKey(ctx context.Context
 
 	var response UpdateMatchAgentsWithAttributeKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "UpdateMatchAgentsWithAttributeKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -914,7 +914,7 @@ func (client ConfigClient) validateSpanFilterPattern(ctx context.Context, reques
 
 	var response ValidateSpanFilterPatternResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "config", "ValidateSpanFilterPattern")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

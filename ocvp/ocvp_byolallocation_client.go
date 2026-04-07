@@ -140,7 +140,7 @@ func (client ByolAllocationClient) changeByolAllocationCompartment(ctx context.C
 
 	var response ChangeByolAllocationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byolAllocation", "ChangeByolAllocationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client ByolAllocationClient) createByolAllocation(ctx context.Context, req
 
 	var response CreateByolAllocationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byolAllocation", "CreateByolAllocation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client ByolAllocationClient) deleteByolAllocation(ctx context.Context, req
 
 	var response DeleteByolAllocationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byolAllocation", "DeleteByolAllocation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -321,7 +321,7 @@ func (client ByolAllocationClient) getByolAllocation(ctx context.Context, reques
 
 	var response GetByolAllocationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byolAllocation", "GetByolAllocation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -380,7 +380,7 @@ func (client ByolAllocationClient) listByolAllocations(ctx context.Context, requ
 
 	var response ListByolAllocationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byolAllocation", "ListByolAllocations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -438,7 +438,7 @@ func (client ByolAllocationClient) updateByolAllocation(ctx context.Context, req
 
 	var response UpdateByolAllocationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byolAllocation", "UpdateByolAllocation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

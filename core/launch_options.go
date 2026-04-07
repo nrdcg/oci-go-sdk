@@ -48,6 +48,7 @@ type LaunchOptions struct {
 	// * `VFIO` - Direct attached Virtual Function network controller. This is the networking type
 	// when you launch an instance using hardware-assisted (SR-IOV) networking.
 	// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
+	// * `ACCELERATEDPV` - VM instances launch with accelerated paravirtualized networking type.
 	NetworkType LaunchOptionsNetworkTypeEnum `mandatory:"false" json:"networkType,omitempty"`
 
 	// Emulation type for volume.
@@ -200,18 +201,21 @@ const (
 	LaunchOptionsNetworkTypeE1000           LaunchOptionsNetworkTypeEnum = "E1000"
 	LaunchOptionsNetworkTypeVfio            LaunchOptionsNetworkTypeEnum = "VFIO"
 	LaunchOptionsNetworkTypeParavirtualized LaunchOptionsNetworkTypeEnum = "PARAVIRTUALIZED"
+	LaunchOptionsNetworkTypeAcceleratedpv   LaunchOptionsNetworkTypeEnum = "ACCELERATEDPV"
 )
 
 var mappingLaunchOptionsNetworkTypeEnum = map[string]LaunchOptionsNetworkTypeEnum{
 	"E1000":           LaunchOptionsNetworkTypeE1000,
 	"VFIO":            LaunchOptionsNetworkTypeVfio,
 	"PARAVIRTUALIZED": LaunchOptionsNetworkTypeParavirtualized,
+	"ACCELERATEDPV":   LaunchOptionsNetworkTypeAcceleratedpv,
 }
 
 var mappingLaunchOptionsNetworkTypeEnumLowerCase = map[string]LaunchOptionsNetworkTypeEnum{
 	"e1000":           LaunchOptionsNetworkTypeE1000,
 	"vfio":            LaunchOptionsNetworkTypeVfio,
 	"paravirtualized": LaunchOptionsNetworkTypeParavirtualized,
+	"acceleratedpv":   LaunchOptionsNetworkTypeAcceleratedpv,
 }
 
 // GetLaunchOptionsNetworkTypeEnumValues Enumerates the set of values for LaunchOptionsNetworkTypeEnum
@@ -229,6 +233,7 @@ func GetLaunchOptionsNetworkTypeEnumStringValues() []string {
 		"E1000",
 		"VFIO",
 		"PARAVIRTUALIZED",
+		"ACCELERATEDPV",
 	}
 }
 

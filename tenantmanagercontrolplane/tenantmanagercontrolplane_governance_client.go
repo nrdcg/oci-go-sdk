@@ -141,7 +141,7 @@ func (client GovernanceClient) addGovernance(ctx context.Context, request common
 
 	var response AddGovernanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governance", "AddGovernance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -203,7 +203,7 @@ func (client GovernanceClient) removeGovernance(ctx context.Context, request com
 
 	var response RemoveGovernanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governance", "RemoveGovernance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

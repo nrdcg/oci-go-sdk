@@ -138,7 +138,7 @@ func (client EmailDPClient) submitEmail(ctx context.Context, request common.OCIR
 
 	var response SubmitEmailResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "emailDP", "SubmitEmail")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -196,7 +196,7 @@ func (client EmailDPClient) submitRawEmail(ctx context.Context, request common.O
 
 	var response SubmitRawEmailResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "emailDP", "SubmitRawEmail")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

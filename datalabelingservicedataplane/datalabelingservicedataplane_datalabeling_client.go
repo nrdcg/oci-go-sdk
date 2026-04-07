@@ -142,7 +142,7 @@ func (client DataLabelingClient) createAnnotation(ctx context.Context, request c
 
 	var response CreateAnnotationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "CreateAnnotation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client DataLabelingClient) createRecord(ctx context.Context, request commo
 
 	var response CreateRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "CreateRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client DataLabelingClient) deleteAnnotation(ctx context.Context, request c
 
 	var response DeleteAnnotationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "DeleteAnnotation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -321,7 +321,7 @@ func (client DataLabelingClient) deleteRecord(ctx context.Context, request commo
 
 	var response DeleteRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "DeleteRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -379,7 +379,7 @@ func (client DataLabelingClient) getAnnotation(ctx context.Context, request comm
 
 	var response GetAnnotationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "GetAnnotation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -437,7 +437,7 @@ func (client DataLabelingClient) getDataset(ctx context.Context, request common.
 
 	var response GetDatasetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "GetDataset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -495,7 +495,7 @@ func (client DataLabelingClient) getRecord(ctx context.Context, request common.O
 
 	var response GetRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "GetRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -553,7 +553,7 @@ func (client DataLabelingClient) getRecordContent(ctx context.Context, request c
 
 	var response GetRecordContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "GetRecordContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/datalabeling-dp/20211001/Record/GetRecordContent"
@@ -610,7 +610,7 @@ func (client DataLabelingClient) getRecordPreviewContent(ctx context.Context, re
 
 	var response GetRecordPreviewContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "GetRecordPreviewContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/datalabeling-dp/20211001/Record/GetRecordPreviewContent"
@@ -667,7 +667,7 @@ func (client DataLabelingClient) listAnnotations(ctx context.Context, request co
 
 	var response ListAnnotationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "ListAnnotations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -725,7 +725,7 @@ func (client DataLabelingClient) listRecords(ctx context.Context, request common
 
 	var response ListRecordsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "ListRecords")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -783,7 +783,7 @@ func (client DataLabelingClient) summarizeAnnotationAnalytics(ctx context.Contex
 
 	var response SummarizeAnnotationAnalyticsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "SummarizeAnnotationAnalytics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -841,7 +841,7 @@ func (client DataLabelingClient) summarizeRecordAnalytics(ctx context.Context, r
 
 	var response SummarizeRecordAnalyticsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "SummarizeRecordAnalytics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -899,7 +899,7 @@ func (client DataLabelingClient) updateAnnotation(ctx context.Context, request c
 
 	var response UpdateAnnotationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "UpdateAnnotation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -957,7 +957,7 @@ func (client DataLabelingClient) updateRecord(ctx context.Context, request commo
 
 	var response UpdateRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabeling", "UpdateRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

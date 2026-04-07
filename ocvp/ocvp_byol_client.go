@@ -140,7 +140,7 @@ func (client ByolClient) changeByolCompartment(ctx context.Context, request comm
 
 	var response ChangeByolCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "ChangeByolCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client ByolClient) createByol(ctx context.Context, request common.OCIReque
 
 	var response CreateByolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "CreateByol")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client ByolClient) deleteByol(ctx context.Context, request common.OCIReque
 
 	var response DeleteByolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "DeleteByol")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -321,7 +321,7 @@ func (client ByolClient) getByol(ctx context.Context, request common.OCIRequest,
 
 	var response GetByolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "GetByol")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -380,7 +380,7 @@ func (client ByolClient) listByols(ctx context.Context, request common.OCIReques
 
 	var response ListByolsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "ListByols")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -438,7 +438,7 @@ func (client ByolClient) retrieveByolRealmAllocations(ctx context.Context, reque
 
 	var response RetrieveByolRealmAllocationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "RetrieveByolRealmAllocations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -496,7 +496,7 @@ func (client ByolClient) updateByol(ctx context.Context, request common.OCIReque
 
 	var response UpdateByolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "byol", "UpdateByol")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

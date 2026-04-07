@@ -143,7 +143,7 @@ func (client AnalyticsClient) changeAnalyticsInstanceCompartment(ctx context.Con
 
 	var response ChangeAnalyticsInstanceCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ChangeAnalyticsInstanceCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -207,7 +207,7 @@ func (client AnalyticsClient) changeAnalyticsInstanceNetworkEndpoint(ctx context
 
 	var response ChangeAnalyticsInstanceNetworkEndpointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ChangeAnalyticsInstanceNetworkEndpoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -271,7 +271,7 @@ func (client AnalyticsClient) createAnalyticsInstance(ctx context.Context, reque
 
 	var response CreateAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "CreateAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -335,7 +335,7 @@ func (client AnalyticsClient) createPrivateAccessChannel(ctx context.Context, re
 
 	var response CreatePrivateAccessChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "CreatePrivateAccessChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -399,7 +399,7 @@ func (client AnalyticsClient) createVanityUrl(ctx context.Context, request commo
 
 	var response CreateVanityUrlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "CreateVanityUrl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -463,7 +463,7 @@ func (client AnalyticsClient) deleteAnalyticsInstance(ctx context.Context, reque
 
 	var response DeleteAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "DeleteAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -526,7 +526,7 @@ func (client AnalyticsClient) deletePrivateAccessChannel(ctx context.Context, re
 
 	var response DeletePrivateAccessChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "DeletePrivateAccessChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -589,7 +589,7 @@ func (client AnalyticsClient) deleteVanityUrl(ctx context.Context, request commo
 
 	var response DeleteVanityUrlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "DeleteVanityUrl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -646,7 +646,7 @@ func (client AnalyticsClient) deleteWorkRequest(ctx context.Context, request com
 
 	var response DeleteWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "DeleteWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -704,7 +704,7 @@ func (client AnalyticsClient) getAnalyticsInstance(ctx context.Context, request 
 
 	var response GetAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "GetAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -762,7 +762,7 @@ func (client AnalyticsClient) getPrivateAccessChannel(ctx context.Context, reque
 
 	var response GetPrivateAccessChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "GetPrivateAccessChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -820,7 +820,7 @@ func (client AnalyticsClient) getWorkRequest(ctx context.Context, request common
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -878,7 +878,7 @@ func (client AnalyticsClient) listAnalyticsInstances(ctx context.Context, reques
 
 	var response ListAnalyticsInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ListAnalyticsInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -936,7 +936,7 @@ func (client AnalyticsClient) listWorkRequestErrors(ctx context.Context, request
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -994,7 +994,7 @@ func (client AnalyticsClient) listWorkRequestLogs(ctx context.Context, request c
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1052,7 +1052,7 @@ func (client AnalyticsClient) listWorkRequests(ctx context.Context, request comm
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1116,7 +1116,7 @@ func (client AnalyticsClient) scaleAnalyticsInstance(ctx context.Context, reques
 
 	var response ScaleAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "ScaleAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1179,7 +1179,7 @@ func (client AnalyticsClient) setFeatureBundle(ctx context.Context, request comm
 
 	var response SetFeatureBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "SetFeatureBundle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1242,7 +1242,7 @@ func (client AnalyticsClient) setKmsKey(ctx context.Context, request common.OCIR
 
 	var response SetKmsKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "SetKmsKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1306,7 +1306,7 @@ func (client AnalyticsClient) startAnalyticsInstance(ctx context.Context, reques
 
 	var response StartAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "StartAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1370,7 +1370,7 @@ func (client AnalyticsClient) stopAnalyticsInstance(ctx context.Context, request
 
 	var response StopAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "StopAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1428,7 +1428,7 @@ func (client AnalyticsClient) updateAnalyticsInstance(ctx context.Context, reque
 
 	var response UpdateAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "UpdateAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1491,7 +1491,7 @@ func (client AnalyticsClient) updatePrivateAccessChannel(ctx context.Context, re
 
 	var response UpdatePrivateAccessChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "UpdatePrivateAccessChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1554,7 +1554,7 @@ func (client AnalyticsClient) updateVanityUrl(ctx context.Context, request commo
 
 	var response UpdateVanityUrlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "analytics", "UpdateVanityUrl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

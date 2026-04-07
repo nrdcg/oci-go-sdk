@@ -164,7 +164,7 @@ func (client OracleDbAzureVaultClient) changeOracleDbAzureVaultCompartment(ctx c
 
 	var response ChangeOracleDbAzureVaultCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "ChangeOracleDbAzureVaultCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -227,7 +227,7 @@ func (client OracleDbAzureVaultClient) createOracleDbAzureVault(ctx context.Cont
 
 	var response CreateOracleDbAzureVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "CreateOracleDbAzureVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -285,7 +285,7 @@ func (client OracleDbAzureVaultClient) deleteOracleDbAzureVault(ctx context.Cont
 
 	var response DeleteOracleDbAzureVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "DeleteOracleDbAzureVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -343,7 +343,7 @@ func (client OracleDbAzureVaultClient) getOracleDbAzureVault(ctx context.Context
 
 	var response GetOracleDbAzureVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "GetOracleDbAzureVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client OracleDbAzureVaultClient) listOracleDbAzureVaults(ctx context.Conte
 
 	var response ListOracleDbAzureVaultsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "ListOracleDbAzureVaults")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -464,7 +464,7 @@ func (client OracleDbAzureVaultClient) refreshOracleDbAzureVault(ctx context.Con
 
 	var response RefreshOracleDbAzureVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "RefreshOracleDbAzureVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -522,7 +522,7 @@ func (client OracleDbAzureVaultClient) updateOracleDbAzureVault(ctx context.Cont
 
 	var response UpdateOracleDbAzureVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDbAzureVault", "UpdateOracleDbAzureVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

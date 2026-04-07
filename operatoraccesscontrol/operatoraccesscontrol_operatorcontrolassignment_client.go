@@ -144,7 +144,7 @@ func (client OperatorControlAssignmentClient) changeOperatorControlAssignmentCom
 
 	var response ChangeOperatorControlAssignmentCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "ChangeOperatorControlAssignmentCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -207,7 +207,7 @@ func (client OperatorControlAssignmentClient) createOperatorControlAssignment(ct
 
 	var response CreateOperatorControlAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "CreateOperatorControlAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client OperatorControlAssignmentClient) deleteOperatorControlAssignment(ct
 
 	var response DeleteOperatorControlAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "DeleteOperatorControlAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -323,7 +323,7 @@ func (client OperatorControlAssignmentClient) getAssignmentValidationStatus(ctx 
 
 	var response GetAssignmentValidationStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "GetAssignmentValidationStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -381,7 +381,7 @@ func (client OperatorControlAssignmentClient) getOperatorControlAssignment(ctx c
 
 	var response GetOperatorControlAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "GetOperatorControlAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -439,7 +439,7 @@ func (client OperatorControlAssignmentClient) listOperatorControlAssignments(ctx
 
 	var response ListOperatorControlAssignmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "ListOperatorControlAssignments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -497,7 +497,7 @@ func (client OperatorControlAssignmentClient) updateOperatorControlAssignment(ct
 
 	var response UpdateOperatorControlAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "UpdateOperatorControlAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -560,7 +560,7 @@ func (client OperatorControlAssignmentClient) validateOperatorAssignment(ctx con
 
 	var response ValidateOperatorAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "operatorControlAssignment", "ValidateOperatorAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

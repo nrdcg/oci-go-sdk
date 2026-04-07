@@ -138,7 +138,7 @@ func (client AppmgmtControlClient) activateMonitoringPlugin(ctx context.Context,
 
 	var response ActivateMonitoringPluginResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "ActivateMonitoringPlugin")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -196,7 +196,7 @@ func (client AppmgmtControlClient) getMonitoredInstance(ctx context.Context, req
 
 	var response GetMonitoredInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "GetMonitoredInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -254,7 +254,7 @@ func (client AppmgmtControlClient) getWorkRequest(ctx context.Context, request c
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -312,7 +312,7 @@ func (client AppmgmtControlClient) listMonitoredInstances(ctx context.Context, r
 
 	var response ListMonitoredInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "ListMonitoredInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -370,7 +370,7 @@ func (client AppmgmtControlClient) listWorkRequestErrors(ctx context.Context, re
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -428,7 +428,7 @@ func (client AppmgmtControlClient) listWorkRequestLogs(ctx context.Context, requ
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -486,7 +486,7 @@ func (client AppmgmtControlClient) listWorkRequests(ctx context.Context, request
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -548,7 +548,7 @@ func (client AppmgmtControlClient) publishTopProcessesMetrics(ctx context.Contex
 
 	var response PublishTopProcessesMetricsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "appmgmtControl", "PublishTopProcessesMetrics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -137,7 +137,7 @@ func (client MacDeviceClient) getMacDevice(ctx context.Context, request common.O
 
 	var response GetMacDeviceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "macDevice", "GetMacDevice")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -195,7 +195,7 @@ func (client MacDeviceClient) listMacDevices(ctx context.Context, request common
 
 	var response ListMacDevicesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "macDevice", "ListMacDevices")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -258,7 +258,7 @@ func (client MacDeviceClient) terminateMacDevice(ctx context.Context, request co
 
 	var response TerminateMacDeviceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "macDevice", "TerminateMacDevice")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -143,7 +143,7 @@ func (client MediaServicesClient) addMediaAssetLock(ctx context.Context, request
 
 	var response AddMediaAssetLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddMediaAssetLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client MediaServicesClient) addMediaWorkflowConfigurationLock(ctx context.
 
 	var response AddMediaWorkflowConfigurationLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddMediaWorkflowConfigurationLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -269,7 +269,7 @@ func (client MediaServicesClient) addMediaWorkflowJobLock(ctx context.Context, r
 
 	var response AddMediaWorkflowJobLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddMediaWorkflowJobLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -332,7 +332,7 @@ func (client MediaServicesClient) addMediaWorkflowLock(ctx context.Context, requ
 
 	var response AddMediaWorkflowLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddMediaWorkflowLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -395,7 +395,7 @@ func (client MediaServicesClient) addStreamCdnConfigLock(ctx context.Context, re
 
 	var response AddStreamCdnConfigLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddStreamCdnConfigLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -458,7 +458,7 @@ func (client MediaServicesClient) addStreamDistributionChannelLock(ctx context.C
 
 	var response AddStreamDistributionChannelLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddStreamDistributionChannelLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -521,7 +521,7 @@ func (client MediaServicesClient) addStreamPackagingConfigLock(ctx context.Conte
 
 	var response AddStreamPackagingConfigLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "AddStreamPackagingConfigLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -584,7 +584,7 @@ func (client MediaServicesClient) changeMediaAssetCompartment(ctx context.Contex
 
 	var response ChangeMediaAssetCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ChangeMediaAssetCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -647,7 +647,7 @@ func (client MediaServicesClient) changeMediaWorkflowCompartment(ctx context.Con
 
 	var response ChangeMediaWorkflowCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ChangeMediaWorkflowCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -710,7 +710,7 @@ func (client MediaServicesClient) changeMediaWorkflowConfigurationCompartment(ct
 
 	var response ChangeMediaWorkflowConfigurationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ChangeMediaWorkflowConfigurationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -773,7 +773,7 @@ func (client MediaServicesClient) changeMediaWorkflowJobCompartment(ctx context.
 
 	var response ChangeMediaWorkflowJobCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ChangeMediaWorkflowJobCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -836,7 +836,7 @@ func (client MediaServicesClient) changeStreamDistributionChannelCompartment(ctx
 
 	var response ChangeStreamDistributionChannelCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ChangeStreamDistributionChannelCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -899,7 +899,7 @@ func (client MediaServicesClient) createMediaAsset(ctx context.Context, request 
 
 	var response CreateMediaAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateMediaAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -962,7 +962,7 @@ func (client MediaServicesClient) createMediaWorkflow(ctx context.Context, reque
 
 	var response CreateMediaWorkflowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateMediaWorkflow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1025,7 +1025,7 @@ func (client MediaServicesClient) createMediaWorkflowConfiguration(ctx context.C
 
 	var response CreateMediaWorkflowConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateMediaWorkflowConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1088,7 +1088,7 @@ func (client MediaServicesClient) createMediaWorkflowJob(ctx context.Context, re
 
 	var response CreateMediaWorkflowJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateMediaWorkflowJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1151,7 +1151,7 @@ func (client MediaServicesClient) createStreamCdnConfig(ctx context.Context, req
 
 	var response CreateStreamCdnConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateStreamCdnConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1214,7 +1214,7 @@ func (client MediaServicesClient) createStreamDistributionChannel(ctx context.Co
 
 	var response CreateStreamDistributionChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateStreamDistributionChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1277,7 +1277,7 @@ func (client MediaServicesClient) createStreamPackagingConfig(ctx context.Contex
 
 	var response CreateStreamPackagingConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "CreateStreamPackagingConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1335,7 +1335,7 @@ func (client MediaServicesClient) deleteMediaAsset(ctx context.Context, request 
 
 	var response DeleteMediaAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteMediaAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1393,7 +1393,7 @@ func (client MediaServicesClient) deleteMediaAssetDistributionChannelAttachment(
 
 	var response DeleteMediaAssetDistributionChannelAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteMediaAssetDistributionChannelAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1451,7 +1451,7 @@ func (client MediaServicesClient) deleteMediaWorkflow(ctx context.Context, reque
 
 	var response DeleteMediaWorkflowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteMediaWorkflow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1509,7 +1509,7 @@ func (client MediaServicesClient) deleteMediaWorkflowConfiguration(ctx context.C
 
 	var response DeleteMediaWorkflowConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteMediaWorkflowConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1567,7 +1567,7 @@ func (client MediaServicesClient) deleteMediaWorkflowJob(ctx context.Context, re
 
 	var response DeleteMediaWorkflowJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteMediaWorkflowJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1625,7 +1625,7 @@ func (client MediaServicesClient) deleteStreamCdnConfig(ctx context.Context, req
 
 	var response DeleteStreamCdnConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteStreamCdnConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1683,7 +1683,7 @@ func (client MediaServicesClient) deleteStreamDistributionChannel(ctx context.Co
 
 	var response DeleteStreamDistributionChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteStreamDistributionChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1741,7 +1741,7 @@ func (client MediaServicesClient) deleteStreamPackagingConfig(ctx context.Contex
 
 	var response DeleteStreamPackagingConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "DeleteStreamPackagingConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1799,7 +1799,7 @@ func (client MediaServicesClient) getMediaAsset(ctx context.Context, request com
 
 	var response GetMediaAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetMediaAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1857,7 +1857,7 @@ func (client MediaServicesClient) getMediaAssetDistributionChannelAttachment(ctx
 
 	var response GetMediaAssetDistributionChannelAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetMediaAssetDistributionChannelAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1915,7 +1915,7 @@ func (client MediaServicesClient) getMediaWorkflow(ctx context.Context, request 
 
 	var response GetMediaWorkflowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetMediaWorkflow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1973,7 +1973,7 @@ func (client MediaServicesClient) getMediaWorkflowConfiguration(ctx context.Cont
 
 	var response GetMediaWorkflowConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetMediaWorkflowConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2031,7 +2031,7 @@ func (client MediaServicesClient) getMediaWorkflowJob(ctx context.Context, reque
 
 	var response GetMediaWorkflowJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetMediaWorkflowJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2089,7 +2089,7 @@ func (client MediaServicesClient) getStreamCdnConfig(ctx context.Context, reques
 
 	var response GetStreamCdnConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetStreamCdnConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2147,7 +2147,7 @@ func (client MediaServicesClient) getStreamDistributionChannel(ctx context.Conte
 
 	var response GetStreamDistributionChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetStreamDistributionChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2205,7 +2205,7 @@ func (client MediaServicesClient) getStreamPackagingConfig(ctx context.Context, 
 
 	var response GetStreamPackagingConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "GetStreamPackagingConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2268,7 +2268,7 @@ func (client MediaServicesClient) ingestStreamDistributionChannel(ctx context.Co
 
 	var response IngestStreamDistributionChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "IngestStreamDistributionChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2326,7 +2326,7 @@ func (client MediaServicesClient) listMediaAssetDistributionChannelAttachments(c
 
 	var response ListMediaAssetDistributionChannelAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListMediaAssetDistributionChannelAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2384,7 +2384,7 @@ func (client MediaServicesClient) listMediaAssets(ctx context.Context, request c
 
 	var response ListMediaAssetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListMediaAssets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2442,7 +2442,7 @@ func (client MediaServicesClient) listMediaWorkflowConfigurations(ctx context.Co
 
 	var response ListMediaWorkflowConfigurationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListMediaWorkflowConfigurations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2500,7 +2500,7 @@ func (client MediaServicesClient) listMediaWorkflowJobs(ctx context.Context, req
 
 	var response ListMediaWorkflowJobsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListMediaWorkflowJobs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2558,7 +2558,7 @@ func (client MediaServicesClient) listMediaWorkflowTaskDeclarations(ctx context.
 
 	var response ListMediaWorkflowTaskDeclarationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListMediaWorkflowTaskDeclarations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2616,7 +2616,7 @@ func (client MediaServicesClient) listMediaWorkflows(ctx context.Context, reques
 
 	var response ListMediaWorkflowsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListMediaWorkflows")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2674,7 +2674,7 @@ func (client MediaServicesClient) listStreamCdnConfigs(ctx context.Context, requ
 
 	var response ListStreamCdnConfigsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListStreamCdnConfigs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2732,7 +2732,7 @@ func (client MediaServicesClient) listStreamDistributionChannels(ctx context.Con
 
 	var response ListStreamDistributionChannelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListStreamDistributionChannels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2790,7 +2790,7 @@ func (client MediaServicesClient) listStreamPackagingConfigs(ctx context.Context
 
 	var response ListStreamPackagingConfigsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListStreamPackagingConfigs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2848,7 +2848,7 @@ func (client MediaServicesClient) listSystemMediaWorkflows(ctx context.Context, 
 
 	var response ListSystemMediaWorkflowsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "ListSystemMediaWorkflows")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2911,7 +2911,7 @@ func (client MediaServicesClient) removeMediaAssetLock(ctx context.Context, requ
 
 	var response RemoveMediaAssetLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveMediaAssetLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2974,7 +2974,7 @@ func (client MediaServicesClient) removeMediaWorkflowConfigurationLock(ctx conte
 
 	var response RemoveMediaWorkflowConfigurationLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveMediaWorkflowConfigurationLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3037,7 +3037,7 @@ func (client MediaServicesClient) removeMediaWorkflowJobLock(ctx context.Context
 
 	var response RemoveMediaWorkflowJobLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveMediaWorkflowJobLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3100,7 +3100,7 @@ func (client MediaServicesClient) removeMediaWorkflowLock(ctx context.Context, r
 
 	var response RemoveMediaWorkflowLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveMediaWorkflowLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3163,7 +3163,7 @@ func (client MediaServicesClient) removeStreamCdnConfigLock(ctx context.Context,
 
 	var response RemoveStreamCdnConfigLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveStreamCdnConfigLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3226,7 +3226,7 @@ func (client MediaServicesClient) removeStreamDistributionChannelLock(ctx contex
 
 	var response RemoveStreamDistributionChannelLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveStreamDistributionChannelLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3289,7 +3289,7 @@ func (client MediaServicesClient) removeStreamPackagingConfigLock(ctx context.Co
 
 	var response RemoveStreamPackagingConfigLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "RemoveStreamPackagingConfigLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3347,7 +3347,7 @@ func (client MediaServicesClient) updateMediaAsset(ctx context.Context, request 
 
 	var response UpdateMediaAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateMediaAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3405,7 +3405,7 @@ func (client MediaServicesClient) updateMediaWorkflow(ctx context.Context, reque
 
 	var response UpdateMediaWorkflowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateMediaWorkflow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3463,7 +3463,7 @@ func (client MediaServicesClient) updateMediaWorkflowConfiguration(ctx context.C
 
 	var response UpdateMediaWorkflowConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateMediaWorkflowConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3521,7 +3521,7 @@ func (client MediaServicesClient) updateMediaWorkflowJob(ctx context.Context, re
 
 	var response UpdateMediaWorkflowJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateMediaWorkflowJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3579,7 +3579,7 @@ func (client MediaServicesClient) updateStreamCdnConfig(ctx context.Context, req
 
 	var response UpdateStreamCdnConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateStreamCdnConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3637,7 +3637,7 @@ func (client MediaServicesClient) updateStreamDistributionChannel(ctx context.Co
 
 	var response UpdateStreamDistributionChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateStreamDistributionChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3695,7 +3695,7 @@ func (client MediaServicesClient) updateStreamPackagingConfig(ctx context.Contex
 
 	var response UpdateStreamPackagingConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "mediaServices", "UpdateStreamPackagingConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

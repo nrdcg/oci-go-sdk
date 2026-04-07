@@ -143,7 +143,7 @@ func (client FleetSoftwareUpdateClient) abortFsuDiscovery(ctx context.Context, r
 
 	var response AbortFsuDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "AbortFsuDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -209,7 +209,7 @@ func (client FleetSoftwareUpdateClient) addFsuCollectionTargets(ctx context.Cont
 
 	var response AddFsuCollectionTargetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "AddFsuCollectionTargets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -272,7 +272,7 @@ func (client FleetSoftwareUpdateClient) cancelFsuAction(ctx context.Context, req
 
 	var response CancelFsuActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CancelFsuAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -336,7 +336,7 @@ func (client FleetSoftwareUpdateClient) changeFsuActionCompartment(ctx context.C
 
 	var response ChangeFsuActionCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ChangeFsuActionCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -400,7 +400,7 @@ func (client FleetSoftwareUpdateClient) changeFsuCollectionCompartment(ctx conte
 
 	var response ChangeFsuCollectionCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ChangeFsuCollectionCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -464,7 +464,7 @@ func (client FleetSoftwareUpdateClient) changeFsuCycleCompartment(ctx context.Co
 
 	var response ChangeFsuCycleCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ChangeFsuCycleCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -528,7 +528,7 @@ func (client FleetSoftwareUpdateClient) changeFsuDiscoveryCompartment(ctx contex
 
 	var response ChangeFsuDiscoveryCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ChangeFsuDiscoveryCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -592,7 +592,7 @@ func (client FleetSoftwareUpdateClient) changeFsuReadinessCheckCompartment(ctx c
 
 	var response ChangeFsuReadinessCheckCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ChangeFsuReadinessCheckCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -655,7 +655,7 @@ func (client FleetSoftwareUpdateClient) cloneFsuCycle(ctx context.Context, reque
 
 	var response CloneFsuCycleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CloneFsuCycle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -718,7 +718,7 @@ func (client FleetSoftwareUpdateClient) createFsuAction(ctx context.Context, req
 
 	var response CreateFsuActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CreateFsuAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -781,7 +781,7 @@ func (client FleetSoftwareUpdateClient) createFsuCollection(ctx context.Context,
 
 	var response CreateFsuCollectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CreateFsuCollection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -844,7 +844,7 @@ func (client FleetSoftwareUpdateClient) createFsuCycle(ctx context.Context, requ
 
 	var response CreateFsuCycleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CreateFsuCycle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -907,7 +907,7 @@ func (client FleetSoftwareUpdateClient) createFsuDiscovery(ctx context.Context, 
 
 	var response CreateFsuDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CreateFsuDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -970,7 +970,7 @@ func (client FleetSoftwareUpdateClient) createFsuReadinessCheck(ctx context.Cont
 
 	var response CreateFsuReadinessCheckResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "CreateFsuReadinessCheck")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1028,7 +1028,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuAction(ctx context.Context, req
 
 	var response DeleteFsuActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1086,7 +1086,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuCollection(ctx context.Context,
 
 	var response DeleteFsuCollectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuCollection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1146,7 +1146,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuCollectionTarget(ctx context.Co
 
 	var response DeleteFsuCollectionTargetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuCollectionTarget")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1204,7 +1204,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuCycle(ctx context.Context, requ
 
 	var response DeleteFsuCycleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuCycle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1262,7 +1262,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuDiscovery(ctx context.Context, 
 
 	var response DeleteFsuDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1320,7 +1320,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuJob(ctx context.Context, reques
 
 	var response DeleteFsuJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1378,7 +1378,7 @@ func (client FleetSoftwareUpdateClient) deleteFsuReadinessCheck(ctx context.Cont
 
 	var response DeleteFsuReadinessCheckResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "DeleteFsuReadinessCheck")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1436,7 +1436,7 @@ func (client FleetSoftwareUpdateClient) getFsuAction(ctx context.Context, reques
 
 	var response GetFsuActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1495,7 +1495,7 @@ func (client FleetSoftwareUpdateClient) getFsuActionOutputContent(ctx context.Co
 
 	var response GetFsuActionOutputContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuActionOutputContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/edsfu/20220528/FsuAction/GetFsuActionOutputContent"
@@ -1552,7 +1552,7 @@ func (client FleetSoftwareUpdateClient) getFsuCollection(ctx context.Context, re
 
 	var response GetFsuCollectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuCollection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1610,7 +1610,7 @@ func (client FleetSoftwareUpdateClient) getFsuCollectionTarget(ctx context.Conte
 
 	var response GetFsuCollectionTargetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuCollectionTarget")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1668,7 +1668,7 @@ func (client FleetSoftwareUpdateClient) getFsuCycle(ctx context.Context, request
 
 	var response GetFsuCycleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuCycle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1726,7 +1726,7 @@ func (client FleetSoftwareUpdateClient) getFsuDiscovery(ctx context.Context, req
 
 	var response GetFsuDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1784,7 +1784,7 @@ func (client FleetSoftwareUpdateClient) getFsuJob(ctx context.Context, request c
 
 	var response GetFsuJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1842,7 +1842,7 @@ func (client FleetSoftwareUpdateClient) getFsuJobOutputContent(ctx context.Conte
 
 	var response GetFsuJobOutputContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuJobOutputContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/edsfu/20220528/FsuJob/GetFsuJobOutputContent"
@@ -1899,7 +1899,7 @@ func (client FleetSoftwareUpdateClient) getFsuReadinessCheck(ctx context.Context
 
 	var response GetFsuReadinessCheckResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetFsuReadinessCheck")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1957,7 +1957,7 @@ func (client FleetSoftwareUpdateClient) getWorkRequest(ctx context.Context, requ
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2015,7 +2015,7 @@ func (client FleetSoftwareUpdateClient) listFsuActions(ctx context.Context, requ
 
 	var response ListFsuActionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuActions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2073,7 +2073,7 @@ func (client FleetSoftwareUpdateClient) listFsuCollectionTargets(ctx context.Con
 
 	var response ListFsuCollectionTargetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuCollectionTargets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2131,7 +2131,7 @@ func (client FleetSoftwareUpdateClient) listFsuCollections(ctx context.Context, 
 
 	var response ListFsuCollectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuCollections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2189,7 +2189,7 @@ func (client FleetSoftwareUpdateClient) listFsuCycles(ctx context.Context, reque
 
 	var response ListFsuCyclesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuCycles")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2247,7 +2247,7 @@ func (client FleetSoftwareUpdateClient) listFsuDiscoveries(ctx context.Context, 
 
 	var response ListFsuDiscoveriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuDiscoveries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2305,7 +2305,7 @@ func (client FleetSoftwareUpdateClient) listFsuDiscoveryTargets(ctx context.Cont
 
 	var response ListFsuDiscoveryTargetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuDiscoveryTargets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2363,7 +2363,7 @@ func (client FleetSoftwareUpdateClient) listFsuJobOutputs(ctx context.Context, r
 
 	var response ListFsuJobOutputsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuJobOutputs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2421,7 +2421,7 @@ func (client FleetSoftwareUpdateClient) listFsuJobs(ctx context.Context, request
 
 	var response ListFsuJobsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuJobs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2479,7 +2479,7 @@ func (client FleetSoftwareUpdateClient) listFsuReadinessChecks(ctx context.Conte
 
 	var response ListFsuReadinessChecksResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListFsuReadinessChecks")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2537,7 +2537,7 @@ func (client FleetSoftwareUpdateClient) listWorkRequestErrors(ctx context.Contex
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2595,7 +2595,7 @@ func (client FleetSoftwareUpdateClient) listWorkRequestLogs(ctx context.Context,
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2653,7 +2653,7 @@ func (client FleetSoftwareUpdateClient) listWorkRequests(ctx context.Context, re
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2718,7 +2718,7 @@ func (client FleetSoftwareUpdateClient) removeFsuCollectionTargets(ctx context.C
 
 	var response RemoveFsuCollectionTargetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "RemoveFsuCollectionTargets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2781,7 +2781,7 @@ func (client FleetSoftwareUpdateClient) resumeFsuAction(ctx context.Context, req
 
 	var response ResumeFsuActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "ResumeFsuAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2845,7 +2845,7 @@ func (client FleetSoftwareUpdateClient) retryFsuJob(ctx context.Context, request
 
 	var response RetryFsuJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "RetryFsuJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2903,7 +2903,7 @@ func (client FleetSoftwareUpdateClient) updateFsuAction(ctx context.Context, req
 
 	var response UpdateFsuActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "UpdateFsuAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2961,7 +2961,7 @@ func (client FleetSoftwareUpdateClient) updateFsuCollection(ctx context.Context,
 
 	var response UpdateFsuCollectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "UpdateFsuCollection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3019,7 +3019,7 @@ func (client FleetSoftwareUpdateClient) updateFsuCycle(ctx context.Context, requ
 
 	var response UpdateFsuCycleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "UpdateFsuCycle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3077,7 +3077,7 @@ func (client FleetSoftwareUpdateClient) updateFsuDiscovery(ctx context.Context, 
 
 	var response UpdateFsuDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "UpdateFsuDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3135,7 +3135,7 @@ func (client FleetSoftwareUpdateClient) updateFsuJob(ctx context.Context, reques
 
 	var response UpdateFsuJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "UpdateFsuJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3193,7 +3193,7 @@ func (client FleetSoftwareUpdateClient) updateFsuReadinessCheck(ctx context.Cont
 
 	var response UpdateFsuReadinessCheckResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetSoftwareUpdate", "UpdateFsuReadinessCheck")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

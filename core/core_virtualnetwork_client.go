@@ -142,7 +142,7 @@ func (client VirtualNetworkClient) addDrgRouteDistributionStatements(ctx context
 
 	var response AddDrgRouteDistributionStatementsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddDrgRouteDistributionStatements")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -204,7 +204,7 @@ func (client VirtualNetworkClient) addDrgRouteRules(ctx context.Context, request
 
 	var response AddDrgRouteRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddDrgRouteRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -267,7 +267,7 @@ func (client VirtualNetworkClient) addIpv4SubnetCidr(ctx context.Context, reques
 
 	var response AddIpv4SubnetCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddIpv4SubnetCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -329,7 +329,7 @@ func (client VirtualNetworkClient) addIpv6SubnetCidr(ctx context.Context, reques
 
 	var response AddIpv6SubnetCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddIpv6SubnetCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -392,7 +392,7 @@ func (client VirtualNetworkClient) addIpv6VcnCidr(ctx context.Context, request c
 
 	var response AddIpv6VcnCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddIpv6VcnCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -449,7 +449,7 @@ func (client VirtualNetworkClient) addNetworkSecurityGroupSecurityRules(ctx cont
 
 	var response AddNetworkSecurityGroupSecurityRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddNetworkSecurityGroupSecurityRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -512,7 +512,7 @@ func (client VirtualNetworkClient) addPublicIpPoolCapacity(ctx context.Context, 
 
 	var response AddPublicIpPoolCapacityResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddPublicIpPoolCapacity")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -578,7 +578,7 @@ func (client VirtualNetworkClient) addVcnCidr(ctx context.Context, request commo
 
 	var response AddVcnCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AddVcnCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -636,7 +636,7 @@ func (client VirtualNetworkClient) advertiseByoipRange(ctx context.Context, requ
 
 	var response AdvertiseByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AdvertiseByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -701,7 +701,7 @@ func (client VirtualNetworkClient) attachServiceId(ctx context.Context, request 
 
 	var response AttachServiceIdResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "AttachServiceId")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -757,7 +757,7 @@ func (client VirtualNetworkClient) bulkAddVirtualCircuitPublicPrefixes(ctx conte
 
 	var response BulkAddVirtualCircuitPublicPrefixesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkAddVirtualCircuitPublicPrefixes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -820,7 +820,7 @@ func (client VirtualNetworkClient) bulkCreateIpv6s(ctx context.Context, request 
 
 	var response BulkCreateIpv6sResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkCreateIpv6s")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -883,7 +883,7 @@ func (client VirtualNetworkClient) bulkCreatePrivateIps(ctx context.Context, req
 
 	var response BulkCreatePrivateIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkCreatePrivateIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -946,7 +946,7 @@ func (client VirtualNetworkClient) bulkDeleteIpv6s(ctx context.Context, request 
 
 	var response BulkDeleteIpv6sResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkDeleteIpv6s")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1009,7 +1009,7 @@ func (client VirtualNetworkClient) bulkDeletePrivateIps(ctx context.Context, req
 
 	var response BulkDeletePrivateIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkDeletePrivateIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1065,7 +1065,7 @@ func (client VirtualNetworkClient) bulkDeleteVirtualCircuitPublicPrefixes(ctx co
 
 	var response BulkDeleteVirtualCircuitPublicPrefixesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkDeleteVirtualCircuitPublicPrefixes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1128,7 +1128,7 @@ func (client VirtualNetworkClient) bulkDetachIpv6s(ctx context.Context, request 
 
 	var response BulkDetachIpv6sResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkDetachIpv6s")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1191,7 +1191,7 @@ func (client VirtualNetworkClient) bulkDetachPrivateIps(ctx context.Context, req
 
 	var response BulkDetachPrivateIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkDetachPrivateIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1254,7 +1254,7 @@ func (client VirtualNetworkClient) bulkUpdateIpv6s(ctx context.Context, request 
 
 	var response BulkUpdateIpv6sResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkUpdateIpv6s")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1317,7 +1317,7 @@ func (client VirtualNetworkClient) bulkUpdatePrivateIps(ctx context.Context, req
 
 	var response BulkUpdatePrivateIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "BulkUpdatePrivateIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1382,7 +1382,7 @@ func (client VirtualNetworkClient) changeByoasnCompartment(ctx context.Context, 
 
 	var response ChangeByoasnCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeByoasnCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1446,7 +1446,7 @@ func (client VirtualNetworkClient) changeByoipRangeCompartment(ctx context.Conte
 
 	var response ChangeByoipRangeCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeByoipRangeCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1510,7 +1510,7 @@ func (client VirtualNetworkClient) changeCaptureFilterCompartment(ctx context.Co
 
 	var response ChangeCaptureFilterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeCaptureFilterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1575,7 +1575,7 @@ func (client VirtualNetworkClient) changeCpeCompartment(ctx context.Context, req
 
 	var response ChangeCpeCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeCpeCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1640,7 +1640,7 @@ func (client VirtualNetworkClient) changeCrossConnectCompartment(ctx context.Con
 
 	var response ChangeCrossConnectCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeCrossConnectCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1705,7 +1705,7 @@ func (client VirtualNetworkClient) changeCrossConnectGroupCompartment(ctx contex
 
 	var response ChangeCrossConnectGroupCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeCrossConnectGroupCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1769,7 +1769,7 @@ func (client VirtualNetworkClient) changeDhcpOptionsCompartment(ctx context.Cont
 
 	var response ChangeDhcpOptionsCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeDhcpOptionsCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1833,7 +1833,7 @@ func (client VirtualNetworkClient) changeDrgCompartment(ctx context.Context, req
 
 	var response ChangeDrgCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeDrgCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1898,7 +1898,7 @@ func (client VirtualNetworkClient) changeIPSecConnectionCompartment(ctx context.
 
 	var response ChangeIPSecConnectionCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeIPSecConnectionCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1962,7 +1962,7 @@ func (client VirtualNetworkClient) changeInternetGatewayCompartment(ctx context.
 
 	var response ChangeInternetGatewayCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeInternetGatewayCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2026,7 +2026,7 @@ func (client VirtualNetworkClient) changeLocalPeeringGatewayCompartment(ctx cont
 
 	var response ChangeLocalPeeringGatewayCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeLocalPeeringGatewayCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2090,7 +2090,7 @@ func (client VirtualNetworkClient) changeNatGatewayCompartment(ctx context.Conte
 
 	var response ChangeNatGatewayCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeNatGatewayCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2153,7 +2153,7 @@ func (client VirtualNetworkClient) changeNetworkSecurityGroupCompartment(ctx con
 
 	var response ChangeNetworkSecurityGroupCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeNetworkSecurityGroupCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2219,7 +2219,7 @@ func (client VirtualNetworkClient) changePublicIpCompartment(ctx context.Context
 
 	var response ChangePublicIpCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangePublicIpCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2283,7 +2283,7 @@ func (client VirtualNetworkClient) changePublicIpPoolCompartment(ctx context.Con
 
 	var response ChangePublicIpPoolCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangePublicIpPoolCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2348,7 +2348,7 @@ func (client VirtualNetworkClient) changeRemotePeeringConnectionCompartment(ctx 
 
 	var response ChangeRemotePeeringConnectionCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeRemotePeeringConnectionCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2412,7 +2412,7 @@ func (client VirtualNetworkClient) changeRouteTableCompartment(ctx context.Conte
 
 	var response ChangeRouteTableCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeRouteTableCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2476,7 +2476,7 @@ func (client VirtualNetworkClient) changeSecurityListCompartment(ctx context.Con
 
 	var response ChangeSecurityListCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeSecurityListCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2540,7 +2540,7 @@ func (client VirtualNetworkClient) changeServiceGatewayCompartment(ctx context.C
 
 	var response ChangeServiceGatewayCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeServiceGatewayCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2604,7 +2604,7 @@ func (client VirtualNetworkClient) changeSubnetCompartment(ctx context.Context, 
 
 	var response ChangeSubnetCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeSubnetCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2668,7 +2668,7 @@ func (client VirtualNetworkClient) changeVcnCompartment(ctx context.Context, req
 
 	var response ChangeVcnCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeVcnCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2733,7 +2733,7 @@ func (client VirtualNetworkClient) changeVirtualCircuitCompartment(ctx context.C
 
 	var response ChangeVirtualCircuitCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeVirtualCircuitCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2797,7 +2797,7 @@ func (client VirtualNetworkClient) changeVlanCompartment(ctx context.Context, re
 
 	var response ChangeVlanCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeVlanCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2861,7 +2861,7 @@ func (client VirtualNetworkClient) changeVtapCompartment(ctx context.Context, re
 
 	var response ChangeVtapCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ChangeVtapCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2924,7 +2924,7 @@ func (client VirtualNetworkClient) connectLocalPeeringGateways(ctx context.Conte
 
 	var response ConnectLocalPeeringGatewaysResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ConnectLocalPeeringGateways")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2988,7 +2988,7 @@ func (client VirtualNetworkClient) connectRemotePeeringConnections(ctx context.C
 
 	var response ConnectRemotePeeringConnectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ConnectRemotePeeringConnections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3051,7 +3051,7 @@ func (client VirtualNetworkClient) createByoasn(ctx context.Context, request com
 
 	var response CreateByoasnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateByoasn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3113,7 +3113,7 @@ func (client VirtualNetworkClient) createByoipRange(ctx context.Context, request
 
 	var response CreateByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3181,7 +3181,7 @@ func (client VirtualNetworkClient) createCaptureFilter(ctx context.Context, requ
 
 	var response CreateCaptureFilterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateCaptureFilter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3255,7 +3255,7 @@ func (client VirtualNetworkClient) createCpe(ctx context.Context, request common
 
 	var response CreateCpeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateCpe")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3333,7 +3333,7 @@ func (client VirtualNetworkClient) createCrossConnect(ctx context.Context, reque
 
 	var response CreateCrossConnectResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateCrossConnect")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3408,7 +3408,7 @@ func (client VirtualNetworkClient) createCrossConnectGroup(ctx context.Context, 
 
 	var response CreateCrossConnectGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateCrossConnectGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3479,7 +3479,7 @@ func (client VirtualNetworkClient) createDhcpOptions(ctx context.Context, reques
 
 	var response CreateDhcpOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateDhcpOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3550,7 +3550,7 @@ func (client VirtualNetworkClient) createDrg(ctx context.Context, request common
 
 	var response CreateDrgResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateDrg")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3620,7 +3620,7 @@ func (client VirtualNetworkClient) createDrgAttachment(ctx context.Context, requ
 
 	var response CreateDrgAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateDrgAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3685,7 +3685,7 @@ func (client VirtualNetworkClient) createDrgRouteDistribution(ctx context.Contex
 
 	var response CreateDrgRouteDistributionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateDrgRouteDistribution")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3748,7 +3748,7 @@ func (client VirtualNetworkClient) createDrgRouteTable(ctx context.Context, requ
 
 	var response CreateDrgRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateDrgRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3833,7 +3833,7 @@ func (client VirtualNetworkClient) createIPSecConnection(ctx context.Context, re
 
 	var response CreateIPSecConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateIPSecConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3910,7 +3910,7 @@ func (client VirtualNetworkClient) createInternetGateway(ctx context.Context, re
 
 	var response CreateInternetGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateInternetGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3972,7 +3972,7 @@ func (client VirtualNetworkClient) createIpv6(ctx context.Context, request commo
 
 	var response CreateIpv6Response
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateIpv6")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4034,7 +4034,7 @@ func (client VirtualNetworkClient) createLocalPeeringGateway(ctx context.Context
 
 	var response CreateLocalPeeringGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateLocalPeeringGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4097,7 +4097,7 @@ func (client VirtualNetworkClient) createNatGateway(ctx context.Context, request
 
 	var response CreateNatGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateNatGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4159,7 +4159,7 @@ func (client VirtualNetworkClient) createNetworkSecurityGroup(ctx context.Contex
 
 	var response CreateNetworkSecurityGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateNetworkSecurityGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4223,7 +4223,7 @@ func (client VirtualNetworkClient) createPrivateIp(ctx context.Context, request 
 
 	var response CreatePrivateIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreatePrivateIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4301,7 +4301,7 @@ func (client VirtualNetworkClient) createPublicIp(ctx context.Context, request c
 
 	var response CreatePublicIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreatePublicIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4363,7 +4363,7 @@ func (client VirtualNetworkClient) createPublicIpPool(ctx context.Context, reque
 
 	var response CreatePublicIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreatePublicIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4426,7 +4426,7 @@ func (client VirtualNetworkClient) createRemotePeeringConnection(ctx context.Con
 
 	var response CreateRemotePeeringConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateRemotePeeringConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4500,7 +4500,7 @@ func (client VirtualNetworkClient) createRouteTable(ctx context.Context, request
 
 	var response CreateRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4573,7 +4573,7 @@ func (client VirtualNetworkClient) createSecurityList(ctx context.Context, reque
 
 	var response CreateSecurityListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateSecurityList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4643,7 +4643,7 @@ func (client VirtualNetworkClient) createServiceGateway(ctx context.Context, req
 
 	var response CreateServiceGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateServiceGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4729,7 +4729,7 @@ func (client VirtualNetworkClient) createSubnet(ctx context.Context, request com
 
 	var response CreateSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4815,7 +4815,7 @@ func (client VirtualNetworkClient) createVcn(ctx context.Context, request common
 
 	var response CreateVcnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateVcn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4895,7 +4895,7 @@ func (client VirtualNetworkClient) createVirtualCircuit(ctx context.Context, req
 
 	var response CreateVirtualCircuitResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateVirtualCircuit")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4957,7 +4957,7 @@ func (client VirtualNetworkClient) createVlan(ctx context.Context, request commo
 
 	var response CreateVlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateVlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5025,7 +5025,7 @@ func (client VirtualNetworkClient) createVtap(ctx context.Context, request commo
 
 	var response CreateVtapResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "CreateVtap")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5085,7 +5085,7 @@ func (client VirtualNetworkClient) deleteByoasn(ctx context.Context, request com
 
 	var response DeleteByoasnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteByoasn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5146,7 +5146,7 @@ func (client VirtualNetworkClient) deleteByoipRange(ctx context.Context, request
 
 	var response DeleteByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5204,7 +5204,7 @@ func (client VirtualNetworkClient) deleteCaptureFilter(ctx context.Context, requ
 
 	var response DeleteCaptureFilterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteCaptureFilter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5264,7 +5264,7 @@ func (client VirtualNetworkClient) deleteCpe(ctx context.Context, request common
 
 	var response DeleteCpeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteCpe")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5323,7 +5323,7 @@ func (client VirtualNetworkClient) deleteCrossConnect(ctx context.Context, reque
 
 	var response DeleteCrossConnectResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteCrossConnect")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5383,7 +5383,7 @@ func (client VirtualNetworkClient) deleteCrossConnectGroup(ctx context.Context, 
 
 	var response DeleteCrossConnectGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteCrossConnectGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5443,7 +5443,7 @@ func (client VirtualNetworkClient) deleteDhcpOptions(ctx context.Context, reques
 
 	var response DeleteDhcpOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteDhcpOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5503,7 +5503,7 @@ func (client VirtualNetworkClient) deleteDrg(ctx context.Context, request common
 
 	var response DeleteDrgResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteDrg")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5562,7 +5562,7 @@ func (client VirtualNetworkClient) deleteDrgAttachment(ctx context.Context, requ
 
 	var response DeleteDrgAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteDrgAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5620,7 +5620,7 @@ func (client VirtualNetworkClient) deleteDrgRouteDistribution(ctx context.Contex
 
 	var response DeleteDrgRouteDistributionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteDrgRouteDistribution")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5677,7 +5677,7 @@ func (client VirtualNetworkClient) deleteDrgRouteTable(ctx context.Context, requ
 
 	var response DeleteDrgRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteDrgRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5741,7 +5741,7 @@ func (client VirtualNetworkClient) deleteIPSecConnection(ctx context.Context, re
 
 	var response DeleteIPSecConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteIPSecConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5801,7 +5801,7 @@ func (client VirtualNetworkClient) deleteInternetGateway(ctx context.Context, re
 
 	var response DeleteInternetGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteInternetGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5859,7 +5859,7 @@ func (client VirtualNetworkClient) deleteIpv6(ctx context.Context, request commo
 
 	var response DeleteIpv6Response
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteIpv6")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5918,7 +5918,7 @@ func (client VirtualNetworkClient) deleteLocalPeeringGateway(ctx context.Context
 
 	var response DeleteLocalPeeringGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteLocalPeeringGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5978,7 +5978,7 @@ func (client VirtualNetworkClient) deleteNatGateway(ctx context.Context, request
 
 	var response DeleteNatGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteNatGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6040,7 +6040,7 @@ func (client VirtualNetworkClient) deleteNetworkSecurityGroup(ctx context.Contex
 
 	var response DeleteNetworkSecurityGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteNetworkSecurityGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6105,7 +6105,7 @@ func (client VirtualNetworkClient) deletePrivateIp(ctx context.Context, request 
 
 	var response DeletePrivateIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeletePrivateIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6173,7 +6173,7 @@ func (client VirtualNetworkClient) deletePublicIp(ctx context.Context, request c
 
 	var response DeletePublicIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeletePublicIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6232,7 +6232,7 @@ func (client VirtualNetworkClient) deletePublicIpPool(ctx context.Context, reque
 
 	var response DeletePublicIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeletePublicIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6292,7 +6292,7 @@ func (client VirtualNetworkClient) deleteRemotePeeringConnection(ctx context.Con
 
 	var response DeleteRemotePeeringConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteRemotePeeringConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6352,7 +6352,7 @@ func (client VirtualNetworkClient) deleteRouteTable(ctx context.Context, request
 
 	var response DeleteRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6412,7 +6412,7 @@ func (client VirtualNetworkClient) deleteSecurityList(ctx context.Context, reque
 
 	var response DeleteSecurityListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteSecurityList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6470,7 +6470,7 @@ func (client VirtualNetworkClient) deleteServiceGateway(ctx context.Context, req
 
 	var response DeleteServiceGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteServiceGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6529,7 +6529,7 @@ func (client VirtualNetworkClient) deleteSubnet(ctx context.Context, request com
 
 	var response DeleteSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6590,7 +6590,7 @@ func (client VirtualNetworkClient) deleteVcn(ctx context.Context, request common
 
 	var response DeleteVcnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteVcn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6651,7 +6651,7 @@ func (client VirtualNetworkClient) deleteVirtualCircuit(ctx context.Context, req
 
 	var response DeleteVirtualCircuitResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteVirtualCircuit")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6708,7 +6708,7 @@ func (client VirtualNetworkClient) deleteVlan(ctx context.Context, request commo
 
 	var response DeleteVlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteVlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6766,7 +6766,7 @@ func (client VirtualNetworkClient) deleteVtap(ctx context.Context, request commo
 
 	var response DeleteVtapResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DeleteVtap")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6833,7 +6833,7 @@ func (client VirtualNetworkClient) detachServiceId(ctx context.Context, request 
 
 	var response DetachServiceIdResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "DetachServiceId")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6890,7 +6890,7 @@ func (client VirtualNetworkClient) getAllDrgAttachments(ctx context.Context, req
 
 	var response GetAllDrgAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetAllDrgAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6948,7 +6948,7 @@ func (client VirtualNetworkClient) getAllowedIkeIPSecParameters(ctx context.Cont
 
 	var response GetAllowedIkeIPSecParametersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetAllowedIkeIPSecParameters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7006,7 +7006,7 @@ func (client VirtualNetworkClient) getByoasn(ctx context.Context, request common
 
 	var response GetByoasnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetByoasn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7063,7 +7063,7 @@ func (client VirtualNetworkClient) getByoipRange(ctx context.Context, request co
 
 	var response GetByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7120,7 +7120,7 @@ func (client VirtualNetworkClient) getCaptureFilter(ctx context.Context, request
 
 	var response GetCaptureFilterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCaptureFilter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7178,7 +7178,7 @@ func (client VirtualNetworkClient) getCpe(ctx context.Context, request common.OC
 
 	var response GetCpeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCpe")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7250,7 +7250,7 @@ func (client VirtualNetworkClient) getCpeDeviceConfigContent(ctx context.Context
 
 	var response GetCpeDeviceConfigContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCpeDeviceConfigContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Cpe/GetCpeDeviceConfigContent"
@@ -7314,7 +7314,7 @@ func (client VirtualNetworkClient) getCpeDeviceShape(ctx context.Context, reques
 
 	var response GetCpeDeviceShapeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCpeDeviceShape")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7372,7 +7372,7 @@ func (client VirtualNetworkClient) getCrossConnect(ctx context.Context, request 
 
 	var response GetCrossConnectResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCrossConnect")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7430,7 +7430,7 @@ func (client VirtualNetworkClient) getCrossConnectGroup(ctx context.Context, req
 
 	var response GetCrossConnectGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCrossConnectGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7488,7 +7488,7 @@ func (client VirtualNetworkClient) getCrossConnectLetterOfAuthority(ctx context.
 
 	var response GetCrossConnectLetterOfAuthorityResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCrossConnectLetterOfAuthority")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7546,7 +7546,7 @@ func (client VirtualNetworkClient) getCrossConnectStatus(ctx context.Context, re
 
 	var response GetCrossConnectStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetCrossConnectStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7603,7 +7603,7 @@ func (client VirtualNetworkClient) getDhcpOptions(ctx context.Context, request c
 
 	var response GetDhcpOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetDhcpOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7660,7 +7660,7 @@ func (client VirtualNetworkClient) getDrg(ctx context.Context, request common.OC
 
 	var response GetDrgResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetDrg")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7717,7 +7717,7 @@ func (client VirtualNetworkClient) getDrgAttachment(ctx context.Context, request
 
 	var response GetDrgAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetDrgAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7776,7 +7776,7 @@ func (client VirtualNetworkClient) getDrgRedundancyStatus(ctx context.Context, r
 
 	var response GetDrgRedundancyStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetDrgRedundancyStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7833,7 +7833,7 @@ func (client VirtualNetworkClient) getDrgRouteDistribution(ctx context.Context, 
 
 	var response GetDrgRouteDistributionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetDrgRouteDistribution")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7890,7 +7890,7 @@ func (client VirtualNetworkClient) getDrgRouteTable(ctx context.Context, request
 
 	var response GetDrgRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetDrgRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7949,7 +7949,7 @@ func (client VirtualNetworkClient) getFastConnectProviderService(ctx context.Con
 
 	var response GetFastConnectProviderServiceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetFastConnectProviderService")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8008,7 +8008,7 @@ func (client VirtualNetworkClient) getFastConnectProviderServiceKey(ctx context.
 
 	var response GetFastConnectProviderServiceKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetFastConnectProviderServiceKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8068,7 +8068,7 @@ func (client VirtualNetworkClient) getIPSecConnection(ctx context.Context, reque
 
 	var response GetIPSecConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIPSecConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8128,7 +8128,7 @@ func (client VirtualNetworkClient) getIPSecConnectionDeviceConfig(ctx context.Co
 
 	var response GetIPSecConnectionDeviceConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIPSecConnectionDeviceConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8187,7 +8187,7 @@ func (client VirtualNetworkClient) getIPSecConnectionDeviceStatus(ctx context.Co
 
 	var response GetIPSecConnectionDeviceStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIPSecConnectionDeviceStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8247,7 +8247,7 @@ func (client VirtualNetworkClient) getIPSecConnectionTunnel(ctx context.Context,
 
 	var response GetIPSecConnectionTunnelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIPSecConnectionTunnel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8305,7 +8305,7 @@ func (client VirtualNetworkClient) getIPSecConnectionTunnelError(ctx context.Con
 
 	var response GetIPSecConnectionTunnelErrorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIPSecConnectionTunnelError")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8364,7 +8364,7 @@ func (client VirtualNetworkClient) getIPSecConnectionTunnelSharedSecret(ctx cont
 
 	var response GetIPSecConnectionTunnelSharedSecretResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIPSecConnectionTunnelSharedSecret")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8421,7 +8421,7 @@ func (client VirtualNetworkClient) getInternetGateway(ctx context.Context, reque
 
 	var response GetInternetGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetInternetGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8494,7 +8494,7 @@ func (client VirtualNetworkClient) getIpsecCpeDeviceConfigContent(ctx context.Co
 
 	var response GetIpsecCpeDeviceConfigContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIpsecCpeDeviceConfigContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/IPSecConnection/GetIpsecCpeDeviceConfigContent"
@@ -8553,7 +8553,7 @@ func (client VirtualNetworkClient) getIpv6(ctx context.Context, request common.O
 
 	var response GetIpv6Response
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetIpv6")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8610,7 +8610,7 @@ func (client VirtualNetworkClient) getLocalPeeringGateway(ctx context.Context, r
 
 	var response GetLocalPeeringGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetLocalPeeringGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8667,7 +8667,7 @@ func (client VirtualNetworkClient) getNatGateway(ctx context.Context, request co
 
 	var response GetNatGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetNatGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8728,7 +8728,7 @@ func (client VirtualNetworkClient) getNetworkSecurityGroup(ctx context.Context, 
 
 	var response GetNetworkSecurityGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetNetworkSecurityGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8785,7 +8785,7 @@ func (client VirtualNetworkClient) getNetworkingTopology(ctx context.Context, re
 
 	var response GetNetworkingTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetNetworkingTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8845,7 +8845,7 @@ func (client VirtualNetworkClient) getPrivateIp(ctx context.Context, request com
 
 	var response GetPrivateIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetPrivateIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8909,7 +8909,7 @@ func (client VirtualNetworkClient) getPublicIp(ctx context.Context, request comm
 
 	var response GetPublicIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetPublicIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8969,7 +8969,7 @@ func (client VirtualNetworkClient) getPublicIpByIpAddress(ctx context.Context, r
 
 	var response GetPublicIpByIpAddressResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetPublicIpByIpAddress")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9035,7 +9035,7 @@ func (client VirtualNetworkClient) getPublicIpByPrivateIpId(ctx context.Context,
 
 	var response GetPublicIpByPrivateIpIdResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetPublicIpByPrivateIpId")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9092,7 +9092,7 @@ func (client VirtualNetworkClient) getPublicIpPool(ctx context.Context, request 
 
 	var response GetPublicIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetPublicIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9150,7 +9150,7 @@ func (client VirtualNetworkClient) getRemotePeeringConnection(ctx context.Contex
 
 	var response GetRemotePeeringConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetRemotePeeringConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9207,7 +9207,7 @@ func (client VirtualNetworkClient) getResourceIpInventory(ctx context.Context, r
 
 	var response GetResourceIpInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetResourceIpInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9264,7 +9264,7 @@ func (client VirtualNetworkClient) getRouteTable(ctx context.Context, request co
 
 	var response GetRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9321,7 +9321,7 @@ func (client VirtualNetworkClient) getSecurityList(ctx context.Context, request 
 
 	var response GetSecurityListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetSecurityList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9378,7 +9378,7 @@ func (client VirtualNetworkClient) getService(ctx context.Context, request commo
 
 	var response GetServiceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetService")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9435,7 +9435,7 @@ func (client VirtualNetworkClient) getServiceGateway(ctx context.Context, reques
 
 	var response GetServiceGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetServiceGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9492,7 +9492,7 @@ func (client VirtualNetworkClient) getSubnet(ctx context.Context, request common
 
 	var response GetSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9549,7 +9549,7 @@ func (client VirtualNetworkClient) getSubnetCidrUtilization(ctx context.Context,
 
 	var response GetSubnetCidrUtilizationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetSubnetCidrUtilization")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9606,7 +9606,7 @@ func (client VirtualNetworkClient) getSubnetIpInventory(ctx context.Context, req
 
 	var response GetSubnetIpInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetSubnetIpInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9663,7 +9663,7 @@ func (client VirtualNetworkClient) getSubnetTopology(ctx context.Context, reques
 
 	var response GetSubnetTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetSubnetTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9725,7 +9725,7 @@ func (client VirtualNetworkClient) getTunnelCpeDeviceConfig(ctx context.Context,
 
 	var response GetTunnelCpeDeviceConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetTunnelCpeDeviceConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9797,7 +9797,7 @@ func (client VirtualNetworkClient) getTunnelCpeDeviceConfigContent(ctx context.C
 
 	var response GetTunnelCpeDeviceConfigContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetTunnelCpeDeviceConfigContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/TunnelCpeDeviceConfig/GetTunnelCpeDeviceConfigContent"
@@ -9853,7 +9853,7 @@ func (client VirtualNetworkClient) getUpgradeStatus(ctx context.Context, request
 
 	var response GetUpgradeStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetUpgradeStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9910,7 +9910,7 @@ func (client VirtualNetworkClient) getVcn(ctx context.Context, request common.OC
 
 	var response GetVcnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVcn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9967,7 +9967,7 @@ func (client VirtualNetworkClient) getVcnDnsResolverAssociation(ctx context.Cont
 
 	var response GetVcnDnsResolverAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVcnDnsResolverAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10029,7 +10029,7 @@ func (client VirtualNetworkClient) getVcnOverlap(ctx context.Context, request co
 
 	var response GetVcnOverlapResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVcnOverlap")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10086,7 +10086,7 @@ func (client VirtualNetworkClient) getVcnTopology(ctx context.Context, request c
 
 	var response GetVcnTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVcnTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10144,7 +10144,7 @@ func (client VirtualNetworkClient) getVirtualCircuit(ctx context.Context, reques
 
 	var response GetVirtualCircuitResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVirtualCircuit")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10201,7 +10201,7 @@ func (client VirtualNetworkClient) getVlan(ctx context.Context, request common.O
 
 	var response GetVlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10261,7 +10261,7 @@ func (client VirtualNetworkClient) getVnic(ctx context.Context, request common.O
 
 	var response GetVnicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVnic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10318,7 +10318,7 @@ func (client VirtualNetworkClient) getVtap(ctx context.Context, request common.O
 
 	var response GetVtapResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "GetVtap")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10380,7 +10380,7 @@ func (client VirtualNetworkClient) ipv6VnicDetach(ctx context.Context, request c
 
 	var response Ipv6VnicDetachResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "Ipv6VnicDetach")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10439,7 +10439,7 @@ func (client VirtualNetworkClient) listAllowedPeerRegionsForRemotePeering(ctx co
 
 	var response ListAllowedPeerRegionsForRemotePeeringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListAllowedPeerRegionsForRemotePeering")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10498,7 +10498,7 @@ func (client VirtualNetworkClient) listByoasns(ctx context.Context, request comm
 
 	var response ListByoasnsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListByoasns")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10556,7 +10556,7 @@ func (client VirtualNetworkClient) listByoipAllocatedRanges(ctx context.Context,
 
 	var response ListByoipAllocatedRangesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListByoipAllocatedRanges")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10614,7 +10614,7 @@ func (client VirtualNetworkClient) listByoipRanges(ctx context.Context, request 
 
 	var response ListByoipRangesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListByoipRanges")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10671,7 +10671,7 @@ func (client VirtualNetworkClient) listCaptureFilters(ctx context.Context, reque
 
 	var response ListCaptureFiltersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCaptureFilters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10738,7 +10738,7 @@ func (client VirtualNetworkClient) listCpeDeviceShapes(ctx context.Context, requ
 
 	var response ListCpeDeviceShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCpeDeviceShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10796,7 +10796,7 @@ func (client VirtualNetworkClient) listCpes(ctx context.Context, request common.
 
 	var response ListCpesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCpes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10854,7 +10854,7 @@ func (client VirtualNetworkClient) listCrossConnectGroups(ctx context.Context, r
 
 	var response ListCrossConnectGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCrossConnectGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10913,7 +10913,7 @@ func (client VirtualNetworkClient) listCrossConnectLocations(ctx context.Context
 
 	var response ListCrossConnectLocationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCrossConnectLocations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10972,7 +10972,7 @@ func (client VirtualNetworkClient) listCrossConnectMappings(ctx context.Context,
 
 	var response ListCrossConnectMappingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCrossConnectMappings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11031,7 +11031,7 @@ func (client VirtualNetworkClient) listCrossConnects(ctx context.Context, reques
 
 	var response ListCrossConnectsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCrossConnects")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11091,7 +11091,7 @@ func (client VirtualNetworkClient) listCrossconnectPortSpeedShapes(ctx context.C
 
 	var response ListCrossconnectPortSpeedShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListCrossconnectPortSpeedShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11151,7 +11151,7 @@ func (client VirtualNetworkClient) listDhcpOptions(ctx context.Context, request 
 
 	var response ListDhcpOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDhcpOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11212,7 +11212,7 @@ func (client VirtualNetworkClient) listDrgAttachments(ctx context.Context, reque
 
 	var response ListDrgAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDrgAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11269,7 +11269,7 @@ func (client VirtualNetworkClient) listDrgRouteDistributionStatements(ctx contex
 
 	var response ListDrgRouteDistributionStatementsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDrgRouteDistributionStatements")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11328,7 +11328,7 @@ func (client VirtualNetworkClient) listDrgRouteDistributions(ctx context.Context
 
 	var response ListDrgRouteDistributionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDrgRouteDistributions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11385,7 +11385,7 @@ func (client VirtualNetworkClient) listDrgRouteRules(ctx context.Context, reques
 
 	var response ListDrgRouteRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDrgRouteRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11443,7 +11443,7 @@ func (client VirtualNetworkClient) listDrgRouteTables(ctx context.Context, reque
 
 	var response ListDrgRouteTablesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDrgRouteTables")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11500,7 +11500,7 @@ func (client VirtualNetworkClient) listDrgs(ctx context.Context, request common.
 
 	var response ListDrgsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListDrgs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11562,7 +11562,7 @@ func (client VirtualNetworkClient) listFastConnectProviderServices(ctx context.C
 
 	var response ListFastConnectProviderServicesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListFastConnectProviderServices")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11622,7 +11622,7 @@ func (client VirtualNetworkClient) listFastConnectProviderVirtualCircuitBandwidt
 
 	var response ListFastConnectProviderVirtualCircuitBandwidthShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListFastConnectProviderVirtualCircuitBandwidthShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11680,7 +11680,7 @@ func (client VirtualNetworkClient) listIPSecConnectionTunnelRoutes(ctx context.C
 
 	var response ListIPSecConnectionTunnelRoutesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListIPSecConnectionTunnelRoutes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11738,7 +11738,7 @@ func (client VirtualNetworkClient) listIPSecConnectionTunnelSecurityAssociations
 
 	var response ListIPSecConnectionTunnelSecurityAssociationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListIPSecConnectionTunnelSecurityAssociations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11796,7 +11796,7 @@ func (client VirtualNetworkClient) listIPSecConnectionTunnels(ctx context.Contex
 
 	var response ListIPSecConnectionTunnelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListIPSecConnectionTunnels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11855,7 +11855,7 @@ func (client VirtualNetworkClient) listIPSecConnections(ctx context.Context, req
 
 	var response ListIPSecConnectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListIPSecConnections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11913,7 +11913,7 @@ func (client VirtualNetworkClient) listInternetGateways(ctx context.Context, req
 
 	var response ListInternetGatewaysResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListInternetGateways")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11970,7 +11970,7 @@ func (client VirtualNetworkClient) listIpInventory(ctx context.Context, request 
 
 	var response ListIpInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListIpInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12033,7 +12033,7 @@ func (client VirtualNetworkClient) listIpv6s(ctx context.Context, request common
 
 	var response ListIpv6sResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListIpv6s")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12091,7 +12091,7 @@ func (client VirtualNetworkClient) listLocalPeeringGateways(ctx context.Context,
 
 	var response ListLocalPeeringGatewaysResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListLocalPeeringGateways")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12149,7 +12149,7 @@ func (client VirtualNetworkClient) listNatGateways(ctx context.Context, request 
 
 	var response ListNatGatewaysResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListNatGateways")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12206,7 +12206,7 @@ func (client VirtualNetworkClient) listNetworkSecurityGroupSecurityRules(ctx con
 
 	var response ListNetworkSecurityGroupSecurityRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListNetworkSecurityGroupSecurityRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12263,7 +12263,7 @@ func (client VirtualNetworkClient) listNetworkSecurityGroupVnics(ctx context.Con
 
 	var response ListNetworkSecurityGroupVnicsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListNetworkSecurityGroupVnics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12321,7 +12321,7 @@ func (client VirtualNetworkClient) listNetworkSecurityGroups(ctx context.Context
 
 	var response ListNetworkSecurityGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListNetworkSecurityGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12391,7 +12391,7 @@ func (client VirtualNetworkClient) listPrivateIps(ctx context.Context, request c
 
 	var response ListPrivateIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListPrivateIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12449,7 +12449,7 @@ func (client VirtualNetworkClient) listPublicIpPools(ctx context.Context, reques
 
 	var response ListPublicIpPoolsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListPublicIpPools")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12524,7 +12524,7 @@ func (client VirtualNetworkClient) listPublicIps(ctx context.Context, request co
 
 	var response ListPublicIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListPublicIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12583,7 +12583,7 @@ func (client VirtualNetworkClient) listRemotePeeringConnections(ctx context.Cont
 
 	var response ListRemotePeeringConnectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListRemotePeeringConnections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12643,7 +12643,7 @@ func (client VirtualNetworkClient) listRouteTables(ctx context.Context, request 
 
 	var response ListRouteTablesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListRouteTables")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12701,7 +12701,7 @@ func (client VirtualNetworkClient) listSecurityLists(ctx context.Context, reques
 
 	var response ListSecurityListsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListSecurityLists")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12759,7 +12759,7 @@ func (client VirtualNetworkClient) listServiceGateways(ctx context.Context, requ
 
 	var response ListServiceGatewaysResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListServiceGateways")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12817,7 +12817,7 @@ func (client VirtualNetworkClient) listServices(ctx context.Context, request com
 
 	var response ListServicesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListServices")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12875,7 +12875,7 @@ func (client VirtualNetworkClient) listSubnets(ctx context.Context, request comm
 
 	var response ListSubnetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListSubnets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12932,7 +12932,7 @@ func (client VirtualNetworkClient) listVcns(ctx context.Context, request common.
 
 	var response ListVcnsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVcns")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12990,7 +12990,7 @@ func (client VirtualNetworkClient) listVirtualCircuitAssociatedTunnels(ctx conte
 
 	var response ListVirtualCircuitAssociatedTunnelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVirtualCircuitAssociatedTunnels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13048,7 +13048,7 @@ func (client VirtualNetworkClient) listVirtualCircuitBandwidthShapes(ctx context
 
 	var response ListVirtualCircuitBandwidthShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVirtualCircuitBandwidthShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13107,7 +13107,7 @@ func (client VirtualNetworkClient) listVirtualCircuitPublicPrefixes(ctx context.
 
 	var response ListVirtualCircuitPublicPrefixesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVirtualCircuitPublicPrefixes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13165,7 +13165,7 @@ func (client VirtualNetworkClient) listVirtualCircuits(ctx context.Context, requ
 
 	var response ListVirtualCircuitsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVirtualCircuits")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13222,7 +13222,7 @@ func (client VirtualNetworkClient) listVlans(ctx context.Context, request common
 
 	var response ListVlansResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVlans")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13279,7 +13279,7 @@ func (client VirtualNetworkClient) listVtaps(ctx context.Context, request common
 
 	var response ListVtapsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ListVtaps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13347,7 +13347,7 @@ func (client VirtualNetworkClient) modifyIpv4SubnetCidr(ctx context.Context, req
 
 	var response ModifyIpv4SubnetCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ModifyIpv4SubnetCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13415,7 +13415,7 @@ func (client VirtualNetworkClient) modifyVcnCidr(ctx context.Context, request co
 
 	var response ModifyVcnCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ModifyVcnCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13477,7 +13477,7 @@ func (client VirtualNetworkClient) privateIpVnicDetach(ctx context.Context, requ
 
 	var response PrivateIpVnicDetachResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "PrivateIpVnicDetach")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13534,7 +13534,7 @@ func (client VirtualNetworkClient) removeDrgRouteDistributionStatements(ctx cont
 
 	var response RemoveDrgRouteDistributionStatementsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveDrgRouteDistributionStatements")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13591,7 +13591,7 @@ func (client VirtualNetworkClient) removeDrgRouteRules(ctx context.Context, requ
 
 	var response RemoveDrgRouteRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveDrgRouteRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13648,7 +13648,7 @@ func (client VirtualNetworkClient) removeExportDrgRouteDistribution(ctx context.
 
 	var response RemoveExportDrgRouteDistributionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveExportDrgRouteDistribution")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13706,7 +13706,7 @@ func (client VirtualNetworkClient) removeImportDrgRouteDistribution(ctx context.
 
 	var response RemoveImportDrgRouteDistributionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveImportDrgRouteDistribution")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13769,7 +13769,7 @@ func (client VirtualNetworkClient) removeIpv4SubnetCidr(ctx context.Context, req
 
 	var response RemoveIpv4SubnetCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveIpv4SubnetCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13831,7 +13831,7 @@ func (client VirtualNetworkClient) removeIpv6SubnetCidr(ctx context.Context, req
 
 	var response RemoveIpv6SubnetCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveIpv6SubnetCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13893,7 +13893,7 @@ func (client VirtualNetworkClient) removeIpv6VcnCidr(ctx context.Context, reques
 
 	var response RemoveIpv6VcnCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveIpv6VcnCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13950,7 +13950,7 @@ func (client VirtualNetworkClient) removeNetworkSecurityGroupSecurityRules(ctx c
 
 	var response RemoveNetworkSecurityGroupSecurityRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveNetworkSecurityGroupSecurityRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14012,7 +14012,7 @@ func (client VirtualNetworkClient) removePublicIpPoolCapacity(ctx context.Contex
 
 	var response RemovePublicIpPoolCapacityResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemovePublicIpPoolCapacity")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14077,7 +14077,7 @@ func (client VirtualNetworkClient) removeVcnCidr(ctx context.Context, request co
 
 	var response RemoveVcnCidrResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "RemoveVcnCidr")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14140,7 +14140,7 @@ func (client VirtualNetworkClient) setOriginAsn(ctx context.Context, request com
 
 	var response SetOriginAsnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "SetOriginAsn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14197,7 +14197,7 @@ func (client VirtualNetworkClient) setOriginAsnToOracle(ctx context.Context, req
 
 	var response SetOriginAsnToOracleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "SetOriginAsnToOracle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14254,7 +14254,7 @@ func (client VirtualNetworkClient) updateByoasn(ctx context.Context, request com
 
 	var response UpdateByoasnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateByoasn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14311,7 +14311,7 @@ func (client VirtualNetworkClient) updateByoipRange(ctx context.Context, request
 
 	var response UpdateByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14368,7 +14368,7 @@ func (client VirtualNetworkClient) updateCaptureFilter(ctx context.Context, requ
 
 	var response UpdateCaptureFilterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateCaptureFilter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14427,7 +14427,7 @@ func (client VirtualNetworkClient) updateCpe(ctx context.Context, request common
 
 	var response UpdateCpeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateCpe")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14485,7 +14485,7 @@ func (client VirtualNetworkClient) updateCrossConnect(ctx context.Context, reque
 
 	var response UpdateCrossConnectResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateCrossConnect")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14544,7 +14544,7 @@ func (client VirtualNetworkClient) updateCrossConnectGroup(ctx context.Context, 
 
 	var response UpdateCrossConnectGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateCrossConnectGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14603,7 +14603,7 @@ func (client VirtualNetworkClient) updateDhcpOptions(ctx context.Context, reques
 
 	var response UpdateDhcpOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDhcpOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14660,7 +14660,7 @@ func (client VirtualNetworkClient) updateDrg(ctx context.Context, request common
 
 	var response UpdateDrgResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDrg")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14718,7 +14718,7 @@ func (client VirtualNetworkClient) updateDrgAttachment(ctx context.Context, requ
 
 	var response UpdateDrgAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDrgAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14775,7 +14775,7 @@ func (client VirtualNetworkClient) updateDrgRouteDistribution(ctx context.Contex
 
 	var response UpdateDrgRouteDistributionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDrgRouteDistribution")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14832,7 +14832,7 @@ func (client VirtualNetworkClient) updateDrgRouteDistributionStatements(ctx cont
 
 	var response UpdateDrgRouteDistributionStatementsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDrgRouteDistributionStatements")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14889,7 +14889,7 @@ func (client VirtualNetworkClient) updateDrgRouteRules(ctx context.Context, requ
 
 	var response UpdateDrgRouteRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDrgRouteRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14946,7 +14946,7 @@ func (client VirtualNetworkClient) updateDrgRouteTable(ctx context.Context, requ
 
 	var response UpdateDrgRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateDrgRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15006,7 +15006,7 @@ func (client VirtualNetworkClient) updateIPSecConnection(ctx context.Context, re
 
 	var response UpdateIPSecConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateIPSecConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15072,7 +15072,7 @@ func (client VirtualNetworkClient) updateIPSecConnectionTunnel(ctx context.Conte
 
 	var response UpdateIPSecConnectionTunnelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateIPSecConnectionTunnel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15131,7 +15131,7 @@ func (client VirtualNetworkClient) updateIPSecConnectionTunnelSharedSecret(ctx c
 
 	var response UpdateIPSecConnectionTunnelSharedSecretResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateIPSecConnectionTunnelSharedSecret")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15191,7 +15191,7 @@ func (client VirtualNetworkClient) updateInternetGateway(ctx context.Context, re
 
 	var response UpdateInternetGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateInternetGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15253,7 +15253,7 @@ func (client VirtualNetworkClient) updateIpv6(ctx context.Context, request commo
 
 	var response UpdateIpv6Response
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateIpv6")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15310,7 +15310,7 @@ func (client VirtualNetworkClient) updateLocalPeeringGateway(ctx context.Context
 
 	var response UpdateLocalPeeringGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateLocalPeeringGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15367,7 +15367,7 @@ func (client VirtualNetworkClient) updateNatGateway(ctx context.Context, request
 
 	var response UpdateNatGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateNatGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15434,7 +15434,7 @@ func (client VirtualNetworkClient) updateNetworkSecurityGroup(ctx context.Contex
 
 	var response UpdateNetworkSecurityGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateNetworkSecurityGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15491,7 +15491,7 @@ func (client VirtualNetworkClient) updateNetworkSecurityGroupSecurityRules(ctx c
 
 	var response UpdateNetworkSecurityGroupSecurityRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateNetworkSecurityGroupSecurityRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15556,7 +15556,7 @@ func (client VirtualNetworkClient) updatePrivateIp(ctx context.Context, request 
 
 	var response UpdatePrivateIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdatePrivateIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15644,7 +15644,7 @@ func (client VirtualNetworkClient) updatePublicIp(ctx context.Context, request c
 
 	var response UpdatePublicIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdatePublicIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15701,7 +15701,7 @@ func (client VirtualNetworkClient) updatePublicIpPool(ctx context.Context, reque
 
 	var response UpdatePublicIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdatePublicIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15759,7 +15759,7 @@ func (client VirtualNetworkClient) updateRemotePeeringConnection(ctx context.Con
 
 	var response UpdateRemotePeeringConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateRemotePeeringConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15818,7 +15818,7 @@ func (client VirtualNetworkClient) updateRouteTable(ctx context.Context, request
 
 	var response UpdateRouteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateRouteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15878,7 +15878,7 @@ func (client VirtualNetworkClient) updateSecurityList(ctx context.Context, reque
 
 	var response UpdateSecurityListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateSecurityList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15936,7 +15936,7 @@ func (client VirtualNetworkClient) updateServiceGateway(ctx context.Context, req
 
 	var response UpdateServiceGatewayResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateServiceGateway")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15993,7 +15993,7 @@ func (client VirtualNetworkClient) updateSubnet(ctx context.Context, request com
 
 	var response UpdateSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16058,7 +16058,7 @@ func (client VirtualNetworkClient) updateTunnelCpeDeviceConfig(ctx context.Conte
 
 	var response UpdateTunnelCpeDeviceConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateTunnelCpeDeviceConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16115,7 +16115,7 @@ func (client VirtualNetworkClient) updateVcn(ctx context.Context, request common
 
 	var response UpdateVcnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateVcn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16194,7 +16194,7 @@ func (client VirtualNetworkClient) updateVirtualCircuit(ctx context.Context, req
 
 	var response UpdateVirtualCircuitResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateVirtualCircuit")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16252,7 +16252,7 @@ func (client VirtualNetworkClient) updateVlan(ctx context.Context, request commo
 
 	var response UpdateVlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateVlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16309,7 +16309,7 @@ func (client VirtualNetworkClient) updateVnic(ctx context.Context, request commo
 
 	var response UpdateVnicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateVnic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16366,7 +16366,7 @@ func (client VirtualNetworkClient) updateVtap(ctx context.Context, request commo
 
 	var response UpdateVtapResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpdateVtap")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16429,7 +16429,7 @@ func (client VirtualNetworkClient) upgradeDrg(ctx context.Context, request commo
 
 	var response UpgradeDrgResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "UpgradeDrg")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16493,7 +16493,7 @@ func (client VirtualNetworkClient) validateByoasn(ctx context.Context, request c
 
 	var response ValidateByoasnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ValidateByoasn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16551,7 +16551,7 @@ func (client VirtualNetworkClient) validateByoipRange(ctx context.Context, reque
 
 	var response ValidateByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "ValidateByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16608,7 +16608,7 @@ func (client VirtualNetworkClient) withdrawByoipRange(ctx context.Context, reque
 
 	var response WithdrawByoipRangeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "virtualNetwork", "WithdrawByoipRange")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

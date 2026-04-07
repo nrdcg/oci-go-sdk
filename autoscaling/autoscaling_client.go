@@ -148,7 +148,7 @@ func (client AutoScalingClient) changeAutoScalingConfigurationCompartment(ctx co
 
 	var response ChangeAutoScalingConfigurationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "ChangeAutoScalingConfigurationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -211,7 +211,7 @@ func (client AutoScalingClient) createAutoScalingConfiguration(ctx context.Conte
 
 	var response CreateAutoScalingConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "CreateAutoScalingConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -279,7 +279,7 @@ func (client AutoScalingClient) createAutoScalingPolicy(ctx context.Context, req
 
 	var response CreateAutoScalingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "CreateAutoScalingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -337,7 +337,7 @@ func (client AutoScalingClient) deleteAutoScalingConfiguration(ctx context.Conte
 
 	var response DeleteAutoScalingConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "DeleteAutoScalingConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -395,7 +395,7 @@ func (client AutoScalingClient) deleteAutoScalingPolicy(ctx context.Context, req
 
 	var response DeleteAutoScalingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "DeleteAutoScalingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -453,7 +453,7 @@ func (client AutoScalingClient) getAutoScalingConfiguration(ctx context.Context,
 
 	var response GetAutoScalingConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "GetAutoScalingConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -511,7 +511,7 @@ func (client AutoScalingClient) getAutoScalingPolicy(ctx context.Context, reques
 
 	var response GetAutoScalingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "GetAutoScalingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -569,7 +569,7 @@ func (client AutoScalingClient) listAutoScalingConfigurations(ctx context.Contex
 
 	var response ListAutoScalingConfigurationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "ListAutoScalingConfigurations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -627,7 +627,7 @@ func (client AutoScalingClient) listAutoScalingPolicies(ctx context.Context, req
 
 	var response ListAutoScalingPoliciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "ListAutoScalingPolicies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -691,7 +691,7 @@ func (client AutoScalingClient) updateAutoScalingConfiguration(ctx context.Conte
 
 	var response UpdateAutoScalingConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "UpdateAutoScalingConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -754,7 +754,7 @@ func (client AutoScalingClient) updateAutoScalingPolicy(ctx context.Context, req
 
 	var response UpdateAutoScalingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "autoScaling", "UpdateAutoScalingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

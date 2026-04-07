@@ -137,7 +137,7 @@ func (client DatabaseRecoveryClient) cancelProtectedDatabaseDeletion(ctx context
 
 	var response CancelProtectedDatabaseDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "CancelProtectedDatabaseDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -195,7 +195,7 @@ func (client DatabaseRecoveryClient) changeProtectedDatabaseCompartment(ctx cont
 
 	var response ChangeProtectedDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ChangeProtectedDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -253,7 +253,7 @@ func (client DatabaseRecoveryClient) changeProtectedDatabaseSubscription(ctx con
 
 	var response ChangeProtectedDatabaseSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ChangeProtectedDatabaseSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -311,7 +311,7 @@ func (client DatabaseRecoveryClient) changeProtectionPolicyCompartment(ctx conte
 
 	var response ChangeProtectionPolicyCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ChangeProtectionPolicyCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -369,7 +369,7 @@ func (client DatabaseRecoveryClient) changeRecoveryServiceSubnetCompartment(ctx 
 
 	var response ChangeRecoveryServiceSubnetCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ChangeRecoveryServiceSubnetCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -432,7 +432,7 @@ func (client DatabaseRecoveryClient) createProtectedDatabase(ctx context.Context
 
 	var response CreateProtectedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "CreateProtectedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -495,7 +495,7 @@ func (client DatabaseRecoveryClient) createProtectionPolicy(ctx context.Context,
 
 	var response CreateProtectionPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "CreateProtectionPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -558,7 +558,7 @@ func (client DatabaseRecoveryClient) createRecoveryServiceSubnet(ctx context.Con
 
 	var response CreateRecoveryServiceSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "CreateRecoveryServiceSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -616,7 +616,7 @@ func (client DatabaseRecoveryClient) deleteProtectedDatabase(ctx context.Context
 
 	var response DeleteProtectedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "DeleteProtectedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -675,7 +675,7 @@ func (client DatabaseRecoveryClient) deleteProtectionPolicy(ctx context.Context,
 
 	var response DeleteProtectionPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "DeleteProtectionPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -733,7 +733,7 @@ func (client DatabaseRecoveryClient) deleteRecoveryServiceSubnet(ctx context.Con
 
 	var response DeleteRecoveryServiceSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "DeleteRecoveryServiceSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -791,7 +791,7 @@ func (client DatabaseRecoveryClient) fetchProtectedDatabaseConfiguration(ctx con
 
 	var response FetchProtectedDatabaseConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "FetchProtectedDatabaseConfiguration")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/FetchProtectedDatabaseConfiguration"
@@ -848,7 +848,7 @@ func (client DatabaseRecoveryClient) getProtectedDatabase(ctx context.Context, r
 
 	var response GetProtectedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "GetProtectedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -906,7 +906,7 @@ func (client DatabaseRecoveryClient) getProtectionPolicy(ctx context.Context, re
 
 	var response GetProtectionPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "GetProtectionPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -964,7 +964,7 @@ func (client DatabaseRecoveryClient) getRecoveryServiceSubnet(ctx context.Contex
 
 	var response GetRecoveryServiceSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "GetRecoveryServiceSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1022,7 +1022,7 @@ func (client DatabaseRecoveryClient) getWorkRequest(ctx context.Context, request
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1080,7 +1080,7 @@ func (client DatabaseRecoveryClient) listProtectedDatabases(ctx context.Context,
 
 	var response ListProtectedDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ListProtectedDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1138,7 +1138,7 @@ func (client DatabaseRecoveryClient) listProtectionPolicies(ctx context.Context,
 
 	var response ListProtectionPoliciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ListProtectionPolicies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1196,7 +1196,7 @@ func (client DatabaseRecoveryClient) listRecoveryServiceSubnets(ctx context.Cont
 
 	var response ListRecoveryServiceSubnetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ListRecoveryServiceSubnets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1254,7 +1254,7 @@ func (client DatabaseRecoveryClient) listWorkRequestErrors(ctx context.Context, 
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1312,7 +1312,7 @@ func (client DatabaseRecoveryClient) listWorkRequestLogs(ctx context.Context, re
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1370,7 +1370,7 @@ func (client DatabaseRecoveryClient) listWorkRequests(ctx context.Context, reque
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1430,7 +1430,7 @@ func (client DatabaseRecoveryClient) scheduleProtectedDatabaseDeletion(ctx conte
 
 	var response ScheduleProtectedDatabaseDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "ScheduleProtectedDatabaseDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1488,7 +1488,7 @@ func (client DatabaseRecoveryClient) updateProtectedDatabase(ctx context.Context
 
 	var response UpdateProtectedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "UpdateProtectedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1546,7 +1546,7 @@ func (client DatabaseRecoveryClient) updateProtectionPolicy(ctx context.Context,
 
 	var response UpdateProtectionPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "UpdateProtectionPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1604,7 +1604,7 @@ func (client DatabaseRecoveryClient) updateRecoveryServiceSubnet(ctx context.Con
 
 	var response UpdateRecoveryServiceSubnetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "databaseRecovery", "UpdateRecoveryServiceSubnet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

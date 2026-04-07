@@ -141,7 +141,7 @@ func (client OpensearchClusterPipelineClient) createOpensearchClusterPipeline(ct
 
 	var response CreateOpensearchClusterPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "opensearchClusterPipeline", "CreateOpensearchClusterPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -198,7 +198,7 @@ func (client OpensearchClusterPipelineClient) deleteOpensearchClusterPipeline(ct
 
 	var response DeleteOpensearchClusterPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "opensearchClusterPipeline", "DeleteOpensearchClusterPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -255,7 +255,7 @@ func (client OpensearchClusterPipelineClient) getOpensearchClusterPipeline(ctx c
 
 	var response GetOpensearchClusterPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "opensearchClusterPipeline", "GetOpensearchClusterPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -312,7 +312,7 @@ func (client OpensearchClusterPipelineClient) listOpensearchClusterPipelines(ctx
 
 	var response ListOpensearchClusterPipelinesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "opensearchClusterPipeline", "ListOpensearchClusterPipelines")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -369,7 +369,7 @@ func (client OpensearchClusterPipelineClient) updateOpensearchClusterPipeline(ct
 
 	var response UpdateOpensearchClusterPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "opensearchClusterPipeline", "UpdateOpensearchClusterPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

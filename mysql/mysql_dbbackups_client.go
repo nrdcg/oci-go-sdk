@@ -142,7 +142,7 @@ func (client DbBackupsClient) cancelBackupDeletion(ctx context.Context, request 
 
 	var response CancelBackupDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "CancelBackupDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client DbBackupsClient) changeBackupCompartment(ctx context.Context, reque
 
 	var response ChangeBackupCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "ChangeBackupCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client DbBackupsClient) copyBackup(ctx context.Context, request common.OCI
 
 	var response CopyBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "CopyBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client DbBackupsClient) createBackup(ctx context.Context, request common.O
 
 	var response CreateBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "CreateBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -389,7 +389,7 @@ func (client DbBackupsClient) deleteBackup(ctx context.Context, request common.O
 
 	var response DeleteBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "DeleteBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -452,7 +452,7 @@ func (client DbBackupsClient) exportBackup(ctx context.Context, request common.O
 
 	var response ExportBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "ExportBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -510,7 +510,7 @@ func (client DbBackupsClient) getBackup(ctx context.Context, request common.OCIR
 
 	var response GetBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "GetBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -568,7 +568,7 @@ func (client DbBackupsClient) listBackups(ctx context.Context, request common.OC
 
 	var response ListBackupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "ListBackups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -626,7 +626,7 @@ func (client DbBackupsClient) updateBackup(ctx context.Context, request common.O
 
 	var response UpdateBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "UpdateBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -689,7 +689,7 @@ func (client DbBackupsClient) validateBackup(ctx context.Context, request common
 
 	var response ValidateBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dbBackups", "ValidateBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

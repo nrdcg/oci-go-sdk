@@ -148,7 +148,7 @@ func (client PrivilegedApiControlClient) changePrivilegedApiControlCompartment(c
 
 	var response ChangePrivilegedApiControlCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiControl", "ChangePrivilegedApiControlCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -211,7 +211,7 @@ func (client PrivilegedApiControlClient) createPrivilegedApiControl(ctx context.
 
 	var response CreatePrivilegedApiControlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiControl", "CreatePrivilegedApiControl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -269,7 +269,7 @@ func (client PrivilegedApiControlClient) deletePrivilegedApiControl(ctx context.
 
 	var response DeletePrivilegedApiControlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiControl", "DeletePrivilegedApiControl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -327,7 +327,7 @@ func (client PrivilegedApiControlClient) getPrivilegedApiControl(ctx context.Con
 
 	var response GetPrivilegedApiControlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiControl", "GetPrivilegedApiControl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -385,7 +385,7 @@ func (client PrivilegedApiControlClient) listPrivilegedApiControls(ctx context.C
 
 	var response ListPrivilegedApiControlsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiControl", "ListPrivilegedApiControls")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -443,7 +443,7 @@ func (client PrivilegedApiControlClient) updatePrivilegedApiControl(ctx context.
 
 	var response UpdatePrivilegedApiControlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiControl", "UpdatePrivilegedApiControl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

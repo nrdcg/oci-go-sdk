@@ -137,7 +137,7 @@ func (client JmsUtilsClient) cancelWorkRequest(ctx context.Context, request comm
 
 	var response CancelWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "CancelWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -195,7 +195,7 @@ func (client JmsUtilsClient) deleteJavaMigrationAnalysis(ctx context.Context, re
 
 	var response DeleteJavaMigrationAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "DeleteJavaMigrationAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -253,7 +253,7 @@ func (client JmsUtilsClient) deletePerformanceTuningAnalysis(ctx context.Context
 
 	var response DeletePerformanceTuningAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "DeletePerformanceTuningAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -311,7 +311,7 @@ func (client JmsUtilsClient) getAnalyzeApplicationsConfiguration(ctx context.Con
 
 	var response GetAnalyzeApplicationsConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "GetAnalyzeApplicationsConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -369,7 +369,7 @@ func (client JmsUtilsClient) getJavaMigrationAnalysis(ctx context.Context, reque
 
 	var response GetJavaMigrationAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "GetJavaMigrationAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -427,7 +427,7 @@ func (client JmsUtilsClient) getPerformanceTuningAnalysis(ctx context.Context, r
 
 	var response GetPerformanceTuningAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "GetPerformanceTuningAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -485,7 +485,7 @@ func (client JmsUtilsClient) getSubscriptionAcknowledgmentConfiguration(ctx cont
 
 	var response GetSubscriptionAcknowledgmentConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "GetSubscriptionAcknowledgmentConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -543,7 +543,7 @@ func (client JmsUtilsClient) getWorkRequest(ctx context.Context, request common.
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -601,7 +601,7 @@ func (client JmsUtilsClient) listJavaMigrationAnalysis(ctx context.Context, requ
 
 	var response ListJavaMigrationAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "ListJavaMigrationAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -659,7 +659,7 @@ func (client JmsUtilsClient) listPerformanceTuningAnalysis(ctx context.Context, 
 
 	var response ListPerformanceTuningAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "ListPerformanceTuningAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -717,7 +717,7 @@ func (client JmsUtilsClient) listWorkItems(ctx context.Context, request common.O
 
 	var response ListWorkItemsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "ListWorkItems")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -775,7 +775,7 @@ func (client JmsUtilsClient) listWorkRequestErrors(ctx context.Context, request 
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -833,7 +833,7 @@ func (client JmsUtilsClient) listWorkRequestLogs(ctx context.Context, request co
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -891,7 +891,7 @@ func (client JmsUtilsClient) listWorkRequests(ctx context.Context, request commo
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -954,7 +954,7 @@ func (client JmsUtilsClient) requestJavaMigrationAnalysis(ctx context.Context, r
 
 	var response RequestJavaMigrationAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "RequestJavaMigrationAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1017,7 +1017,7 @@ func (client JmsUtilsClient) requestPerformanceTuningAnalysis(ctx context.Contex
 
 	var response RequestPerformanceTuningAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "RequestPerformanceTuningAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1075,7 +1075,7 @@ func (client JmsUtilsClient) updateAnalyzeApplicationsConfiguration(ctx context.
 
 	var response UpdateAnalyzeApplicationsConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "UpdateAnalyzeApplicationsConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1133,7 +1133,7 @@ func (client JmsUtilsClient) updateSubscriptionAcknowledgmentConfiguration(ctx c
 
 	var response UpdateSubscriptionAcknowledgmentConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "jmsUtils", "UpdateSubscriptionAcknowledgmentConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -142,7 +142,7 @@ func (client AccessGovernanceCPClient) changeGovernanceInstanceCompartment(ctx c
 
 	var response ChangeGovernanceInstanceCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "ChangeGovernanceInstanceCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client AccessGovernanceCPClient) createGovernanceInstance(ctx context.Cont
 
 	var response CreateGovernanceInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "CreateGovernanceInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client AccessGovernanceCPClient) deleteGovernanceInstance(ctx context.Cont
 
 	var response DeleteGovernanceInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "DeleteGovernanceInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -326,7 +326,7 @@ func (client AccessGovernanceCPClient) getGovernanceInstance(ctx context.Context
 
 	var response GetGovernanceInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "GetGovernanceInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -384,7 +384,7 @@ func (client AccessGovernanceCPClient) getGovernanceInstanceConfiguration(ctx co
 
 	var response GetGovernanceInstanceConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "GetGovernanceInstanceConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -442,7 +442,7 @@ func (client AccessGovernanceCPClient) listGovernanceInstances(ctx context.Conte
 
 	var response ListGovernanceInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "ListGovernanceInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -500,7 +500,7 @@ func (client AccessGovernanceCPClient) updateGovernanceInstance(ctx context.Cont
 
 	var response UpdateGovernanceInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "UpdateGovernanceInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -558,7 +558,7 @@ func (client AccessGovernanceCPClient) updateGovernanceInstanceConfiguration(ctx
 
 	var response UpdateGovernanceInstanceConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "accessGovernanceCP", "UpdateGovernanceInstanceConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

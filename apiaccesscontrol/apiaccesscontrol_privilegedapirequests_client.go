@@ -147,7 +147,7 @@ func (client PrivilegedApiRequestsClient) approvePrivilegedApiRequest(ctx contex
 
 	var response ApprovePrivilegedApiRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "ApprovePrivilegedApiRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -210,7 +210,7 @@ func (client PrivilegedApiRequestsClient) closePrivilegedApiRequest(ctx context.
 
 	var response ClosePrivilegedApiRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "ClosePrivilegedApiRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -273,7 +273,7 @@ func (client PrivilegedApiRequestsClient) createPrivilegedApiRequest(ctx context
 
 	var response CreatePrivilegedApiRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "CreatePrivilegedApiRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client PrivilegedApiRequestsClient) getPrivilegedApiRequest(ctx context.Co
 
 	var response GetPrivilegedApiRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "GetPrivilegedApiRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -389,7 +389,7 @@ func (client PrivilegedApiRequestsClient) listPrivilegedApiRequests(ctx context.
 
 	var response ListPrivilegedApiRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "ListPrivilegedApiRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -452,7 +452,7 @@ func (client PrivilegedApiRequestsClient) rejectPrivilegedApiRequest(ctx context
 
 	var response RejectPrivilegedApiRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "RejectPrivilegedApiRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -515,7 +515,7 @@ func (client PrivilegedApiRequestsClient) revokePrivilegedApiRequest(ctx context
 
 	var response RevokePrivilegedApiRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privilegedApiRequests", "RevokePrivilegedApiRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

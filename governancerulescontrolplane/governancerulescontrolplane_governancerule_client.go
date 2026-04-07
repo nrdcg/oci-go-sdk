@@ -141,7 +141,7 @@ func (client GovernanceRuleClient) createGovernanceRule(ctx context.Context, req
 
 	var response CreateGovernanceRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "CreateGovernanceRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -203,7 +203,7 @@ func (client GovernanceRuleClient) createInclusionCriterion(ctx context.Context,
 
 	var response CreateInclusionCriterionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "CreateInclusionCriterion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -260,7 +260,7 @@ func (client GovernanceRuleClient) deleteGovernanceRule(ctx context.Context, req
 
 	var response DeleteGovernanceRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "DeleteGovernanceRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -317,7 +317,7 @@ func (client GovernanceRuleClient) deleteInclusionCriterion(ctx context.Context,
 
 	var response DeleteInclusionCriterionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "DeleteInclusionCriterion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -374,7 +374,7 @@ func (client GovernanceRuleClient) getEnforcedGovernanceRule(ctx context.Context
 
 	var response GetEnforcedGovernanceRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "GetEnforcedGovernanceRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -431,7 +431,7 @@ func (client GovernanceRuleClient) getGovernanceRule(ctx context.Context, reques
 
 	var response GetGovernanceRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "GetGovernanceRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -488,7 +488,7 @@ func (client GovernanceRuleClient) getInclusionCriterion(ctx context.Context, re
 
 	var response GetInclusionCriterionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "GetInclusionCriterion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -545,7 +545,7 @@ func (client GovernanceRuleClient) getTenancyAttachment(ctx context.Context, req
 
 	var response GetTenancyAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "GetTenancyAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -603,7 +603,7 @@ func (client GovernanceRuleClient) listEnforcedGovernanceRules(ctx context.Conte
 
 	var response ListEnforcedGovernanceRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "ListEnforcedGovernanceRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -661,7 +661,7 @@ func (client GovernanceRuleClient) listGovernanceRules(ctx context.Context, requ
 
 	var response ListGovernanceRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "ListGovernanceRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -719,7 +719,7 @@ func (client GovernanceRuleClient) listInclusionCriteria(ctx context.Context, re
 
 	var response ListInclusionCriteriaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "ListInclusionCriteria")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -777,7 +777,7 @@ func (client GovernanceRuleClient) listTenancyAttachments(ctx context.Context, r
 
 	var response ListTenancyAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "ListTenancyAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -841,7 +841,7 @@ func (client GovernanceRuleClient) retryGovernanceRule(ctx context.Context, requ
 
 	var response RetryGovernanceRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "RetryGovernanceRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -904,7 +904,7 @@ func (client GovernanceRuleClient) retryTenancyAttachment(ctx context.Context, r
 
 	var response RetryTenancyAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "RetryTenancyAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -961,7 +961,7 @@ func (client GovernanceRuleClient) updateGovernanceRule(ctx context.Context, req
 
 	var response UpdateGovernanceRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "governanceRule", "UpdateGovernanceRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

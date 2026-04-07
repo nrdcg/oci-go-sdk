@@ -142,7 +142,7 @@ func (client ChannelsClient) createChannel(ctx context.Context, request common.O
 
 	var response CreateChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "CreateChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -200,7 +200,7 @@ func (client ChannelsClient) deleteChannel(ctx context.Context, request common.O
 
 	var response DeleteChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "DeleteChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client ChannelsClient) generateChannelStatus(ctx context.Context, request 
 
 	var response GenerateChannelStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "GenerateChannelStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -323,7 +323,7 @@ func (client ChannelsClient) getChannel(ctx context.Context, request common.OCIR
 
 	var response GetChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "GetChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -381,7 +381,7 @@ func (client ChannelsClient) getChannelStatus(ctx context.Context, request commo
 
 	var response GetChannelStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "GetChannelStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -439,7 +439,7 @@ func (client ChannelsClient) listChannels(ctx context.Context, request common.OC
 
 	var response ListChannelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "ListChannels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -503,7 +503,7 @@ func (client ChannelsClient) resetChannel(ctx context.Context, request common.OC
 
 	var response ResetChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "ResetChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -568,7 +568,7 @@ func (client ChannelsClient) resumeChannel(ctx context.Context, request common.O
 
 	var response ResumeChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "ResumeChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -634,7 +634,7 @@ func (client ChannelsClient) updateChannel(ctx context.Context, request common.O
 
 	var response UpdateChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "channels", "UpdateChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

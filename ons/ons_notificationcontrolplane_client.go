@@ -145,7 +145,7 @@ func (client NotificationControlPlaneClient) changeTopicCompartment(ctx context.
 
 	var response ChangeTopicCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "notificationControlPlane", "ChangeTopicCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -216,7 +216,7 @@ func (client NotificationControlPlaneClient) createTopic(ctx context.Context, re
 
 	var response CreateTopicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "notificationControlPlane", "CreateTopic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -274,7 +274,7 @@ func (client NotificationControlPlaneClient) deleteTopic(ctx context.Context, re
 
 	var response DeleteTopicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "notificationControlPlane", "DeleteTopic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client NotificationControlPlaneClient) getTopic(ctx context.Context, reque
 
 	var response GetTopicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "notificationControlPlane", "GetTopic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -389,7 +389,7 @@ func (client NotificationControlPlaneClient) listTopics(ctx context.Context, req
 
 	var response ListTopicsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "notificationControlPlane", "ListTopics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -447,7 +447,7 @@ func (client NotificationControlPlaneClient) updateTopic(ctx context.Context, re
 
 	var response UpdateTopicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "notificationControlPlane", "UpdateTopic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

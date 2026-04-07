@@ -142,7 +142,7 @@ func (client TenancyAttachmentClient) createTenancyAttachment(ctx context.Contex
 
 	var response CreateTenancyAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "tenancyAttachment", "CreateTenancyAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -200,7 +200,7 @@ func (client TenancyAttachmentClient) deleteTenancyAttachment(ctx context.Contex
 
 	var response DeleteTenancyAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "tenancyAttachment", "DeleteTenancyAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -258,7 +258,7 @@ func (client TenancyAttachmentClient) getTenancyAttachment(ctx context.Context, 
 
 	var response GetTenancyAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "tenancyAttachment", "GetTenancyAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -316,7 +316,7 @@ func (client TenancyAttachmentClient) listTenancyAttachments(ctx context.Context
 
 	var response ListTenancyAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "tenancyAttachment", "ListTenancyAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -374,7 +374,7 @@ func (client TenancyAttachmentClient) updateTenancyAttachment(ctx context.Contex
 
 	var response UpdateTenancyAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "tenancyAttachment", "UpdateTenancyAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

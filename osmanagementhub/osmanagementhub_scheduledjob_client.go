@@ -143,7 +143,7 @@ func (client ScheduledJobClient) changeScheduledJobCompartment(ctx context.Conte
 
 	var response ChangeScheduledJobCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "ChangeScheduledJobCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client ScheduledJobClient) createScheduledJob(ctx context.Context, request
 
 	var response CreateScheduledJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "CreateScheduledJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -264,7 +264,7 @@ func (client ScheduledJobClient) deleteScheduledJob(ctx context.Context, request
 
 	var response DeleteScheduledJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "DeleteScheduledJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -322,7 +322,7 @@ func (client ScheduledJobClient) getScheduledJob(ctx context.Context, request co
 
 	var response GetScheduledJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "GetScheduledJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -380,7 +380,7 @@ func (client ScheduledJobClient) listScheduledJobs(ctx context.Context, request 
 
 	var response ListScheduledJobsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "ListScheduledJobs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -444,7 +444,7 @@ func (client ScheduledJobClient) runScheduledJobNow(ctx context.Context, request
 
 	var response RunScheduledJobNowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "RunScheduledJobNow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -502,7 +502,7 @@ func (client ScheduledJobClient) updateScheduledJob(ctx context.Context, request
 
 	var response UpdateScheduledJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "scheduledJob", "UpdateScheduledJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

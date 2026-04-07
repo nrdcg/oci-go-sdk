@@ -142,7 +142,7 @@ func (client DashboardGroupClient) changeDashboardGroupCompartment(ctx context.C
 
 	var response ChangeDashboardGroupCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashboardGroup", "ChangeDashboardGroupCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -208,7 +208,7 @@ func (client DashboardGroupClient) createDashboardGroup(ctx context.Context, req
 
 	var response CreateDashboardGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashboardGroup", "CreateDashboardGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client DashboardGroupClient) deleteDashboardGroup(ctx context.Context, req
 
 	var response DeleteDashboardGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashboardGroup", "DeleteDashboardGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -323,7 +323,7 @@ func (client DashboardGroupClient) getDashboardGroup(ctx context.Context, reques
 
 	var response GetDashboardGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashboardGroup", "GetDashboardGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -381,7 +381,7 @@ func (client DashboardGroupClient) listDashboardGroups(ctx context.Context, requ
 
 	var response ListDashboardGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashboardGroup", "ListDashboardGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -438,7 +438,7 @@ func (client DashboardGroupClient) updateDashboardGroup(ctx context.Context, req
 
 	var response UpdateDashboardGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashboardGroup", "UpdateDashboardGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

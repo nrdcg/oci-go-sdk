@@ -145,7 +145,7 @@ func (client NosqlClient) changeTableCompartment(ctx context.Context, request co
 
 	var response ChangeTableCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ChangeTableCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -208,7 +208,7 @@ func (client NosqlClient) createIndex(ctx context.Context, request common.OCIReq
 
 	var response CreateIndexResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "CreateIndex")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -271,7 +271,7 @@ func (client NosqlClient) createReplica(ctx context.Context, request common.OCIR
 
 	var response CreateReplicaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "CreateReplica")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -334,7 +334,7 @@ func (client NosqlClient) createTable(ctx context.Context, request common.OCIReq
 
 	var response CreateTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "CreateTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -391,7 +391,7 @@ func (client NosqlClient) deleteIndex(ctx context.Context, request common.OCIReq
 
 	var response DeleteIndexResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "DeleteIndex")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -448,7 +448,7 @@ func (client NosqlClient) deleteReplica(ctx context.Context, request common.OCIR
 
 	var response DeleteReplicaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "DeleteReplica")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -505,7 +505,7 @@ func (client NosqlClient) deleteRow(ctx context.Context, request common.OCIReque
 
 	var response DeleteRowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "DeleteRow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -562,7 +562,7 @@ func (client NosqlClient) deleteTable(ctx context.Context, request common.OCIReq
 
 	var response DeleteTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "DeleteTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -619,7 +619,7 @@ func (client NosqlClient) deleteWorkRequest(ctx context.Context, request common.
 
 	var response DeleteWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "DeleteWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -681,7 +681,7 @@ func (client NosqlClient) getConfiguration(ctx context.Context, request common.O
 
 	var response GetConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "GetConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -739,7 +739,7 @@ func (client NosqlClient) getIndex(ctx context.Context, request common.OCIReques
 
 	var response GetIndexResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "GetIndex")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -797,7 +797,7 @@ func (client NosqlClient) getRow(ctx context.Context, request common.OCIRequest,
 
 	var response GetRowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "GetRow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -855,7 +855,7 @@ func (client NosqlClient) getTable(ctx context.Context, request common.OCIReques
 
 	var response GetTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "GetTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -913,7 +913,7 @@ func (client NosqlClient) getWorkRequest(ctx context.Context, request common.OCI
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -971,7 +971,7 @@ func (client NosqlClient) listIndexes(ctx context.Context, request common.OCIReq
 
 	var response ListIndexesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ListIndexes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1029,7 +1029,7 @@ func (client NosqlClient) listTableUsage(ctx context.Context, request common.OCI
 
 	var response ListTableUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ListTableUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1087,7 +1087,7 @@ func (client NosqlClient) listTables(ctx context.Context, request common.OCIRequ
 
 	var response ListTablesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ListTables")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1145,7 +1145,7 @@ func (client NosqlClient) listWorkRequestErrors(ctx context.Context, request com
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1203,7 +1203,7 @@ func (client NosqlClient) listWorkRequestLogs(ctx context.Context, request commo
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1261,7 +1261,7 @@ func (client NosqlClient) listWorkRequests(ctx context.Context, request common.O
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1319,7 +1319,7 @@ func (client NosqlClient) prepareStatement(ctx context.Context, request common.O
 
 	var response PrepareStatementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "PrepareStatement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1376,7 +1376,7 @@ func (client NosqlClient) query(ctx context.Context, request common.OCIRequest, 
 
 	var response QueryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "Query")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1434,7 +1434,7 @@ func (client NosqlClient) summarizeStatement(ctx context.Context, request common
 
 	var response SummarizeStatementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "SummarizeStatement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1492,7 +1492,7 @@ func (client NosqlClient) unassignKmsKey(ctx context.Context, request common.OCI
 
 	var response UnassignKmsKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "UnassignKmsKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1551,7 +1551,7 @@ func (client NosqlClient) updateConfiguration(ctx context.Context, request commo
 
 	var response UpdateConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "UpdateConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1608,7 +1608,7 @@ func (client NosqlClient) updateRow(ctx context.Context, request common.OCIReque
 
 	var response UpdateRowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "UpdateRow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1666,7 +1666,7 @@ func (client NosqlClient) updateTable(ctx context.Context, request common.OCIReq
 
 	var response UpdateTableResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "nosql", "UpdateTable")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -141,7 +141,7 @@ func (client DatabaseClient) activateExadataInfrastructure(ctx context.Context, 
 
 	var response ActivateExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ActivateExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -203,7 +203,7 @@ func (client DatabaseClient) addDbnodeSnapshotsForExadbVmCluster(ctx context.Con
 
 	var response AddDbnodeSnapshotsForExadbVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AddDbnodeSnapshotsForExadbVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -266,7 +266,7 @@ func (client DatabaseClient) addStandbyAutonomousContainerDatabase(ctx context.C
 
 	var response AddStandbyAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AddStandbyAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -328,7 +328,7 @@ func (client DatabaseClient) addStorageCapacityCloudExadataInfrastructure(ctx co
 
 	var response AddStorageCapacityCloudExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AddStorageCapacityCloudExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -390,7 +390,7 @@ func (client DatabaseClient) addStorageCapacityExadataInfrastructure(ctx context
 
 	var response AddStorageCapacityExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AddStorageCapacityExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -452,7 +452,7 @@ func (client DatabaseClient) addVirtualMachineToCloudVmCluster(ctx context.Conte
 
 	var response AddVirtualMachineToCloudVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AddVirtualMachineToCloudVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -514,7 +514,7 @@ func (client DatabaseClient) addVirtualMachineToVmCluster(ctx context.Context, r
 
 	var response AddVirtualMachineToVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AddVirtualMachineToVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -576,7 +576,7 @@ func (client DatabaseClient) autonomousDatabaseManualRefresh(ctx context.Context
 
 	var response AutonomousDatabaseManualRefreshResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "AutonomousDatabaseManualRefresh")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -638,7 +638,7 @@ func (client DatabaseClient) cancelBackup(ctx context.Context, request common.OC
 
 	var response CancelBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CancelBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -700,7 +700,7 @@ func (client DatabaseClient) cancelExecutionWindow(ctx context.Context, request 
 
 	var response CancelExecutionWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CancelExecutionWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -762,7 +762,7 @@ func (client DatabaseClient) cascadingDeleteSchedulingPlan(ctx context.Context, 
 
 	var response CascadingDeleteSchedulingPlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CascadingDeleteSchedulingPlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -826,7 +826,7 @@ func (client DatabaseClient) changeAutonomousContainerDatabaseCompartment(ctx co
 
 	var response ChangeAutonomousContainerDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeAutonomousContainerDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -890,7 +890,7 @@ func (client DatabaseClient) changeAutonomousDatabaseCompartment(ctx context.Con
 
 	var response ChangeAutonomousDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeAutonomousDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -952,7 +952,7 @@ func (client DatabaseClient) changeAutonomousDatabaseSoftwareImageCompartment(ct
 
 	var response ChangeAutonomousDatabaseSoftwareImageCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeAutonomousDatabaseSoftwareImageCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1014,7 +1014,7 @@ func (client DatabaseClient) changeAutonomousDatabaseSubscription(ctx context.Co
 
 	var response ChangeAutonomousDatabaseSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeAutonomousDatabaseSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1078,7 +1078,7 @@ func (client DatabaseClient) changeAutonomousExadataInfrastructureCompartment(ct
 
 	var response ChangeAutonomousExadataInfrastructureCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeAutonomousExadataInfrastructureCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1140,7 +1140,7 @@ func (client DatabaseClient) changeAutonomousVmClusterCompartment(ctx context.Co
 
 	var response ChangeAutonomousVmClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeAutonomousVmClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1204,7 +1204,7 @@ func (client DatabaseClient) changeBackupDestinationCompartment(ctx context.Cont
 
 	var response ChangeBackupDestinationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeBackupDestinationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1266,7 +1266,7 @@ func (client DatabaseClient) changeCloudAutonomousVmClusterCompartment(ctx conte
 
 	var response ChangeCloudAutonomousVmClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudAutonomousVmClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1328,7 +1328,7 @@ func (client DatabaseClient) changeCloudAutonomousVmClusterSubscription(ctx cont
 
 	var response ChangeCloudAutonomousVmClusterSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudAutonomousVmClusterSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1390,7 +1390,7 @@ func (client DatabaseClient) changeCloudDbSystemSubscription(ctx context.Context
 
 	var response ChangeCloudDbSystemSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudDbSystemSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1452,7 +1452,7 @@ func (client DatabaseClient) changeCloudExadataInfrastructureCompartment(ctx con
 
 	var response ChangeCloudExadataInfrastructureCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudExadataInfrastructureCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1514,7 +1514,7 @@ func (client DatabaseClient) changeCloudExadataInfrastructureSubscription(ctx co
 
 	var response ChangeCloudExadataInfrastructureSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudExadataInfrastructureSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1576,7 +1576,7 @@ func (client DatabaseClient) changeCloudVmClusterCompartment(ctx context.Context
 
 	var response ChangeCloudVmClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudVmClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1638,7 +1638,7 @@ func (client DatabaseClient) changeCloudVmClusterSubscription(ctx context.Contex
 
 	var response ChangeCloudVmClusterSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeCloudVmClusterSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1702,7 +1702,7 @@ func (client DatabaseClient) changeDatabaseSoftwareImageCompartment(ctx context.
 
 	var response ChangeDatabaseSoftwareImageCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeDatabaseSoftwareImageCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1766,7 +1766,7 @@ func (client DatabaseClient) changeDataguardRole(ctx context.Context, request co
 
 	var response ChangeDataguardRoleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeDataguardRole")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1830,7 +1830,7 @@ func (client DatabaseClient) changeDbSystemCompartment(ctx context.Context, requ
 
 	var response ChangeDbSystemCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeDbSystemCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1887,7 +1887,7 @@ func (client DatabaseClient) changeDisasterRecoveryConfiguration(ctx context.Con
 
 	var response ChangeDisasterRecoveryConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeDisasterRecoveryConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1949,7 +1949,7 @@ func (client DatabaseClient) changeEncryptionKeyLocation(ctx context.Context, re
 
 	var response ChangeEncryptionKeyLocationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeEncryptionKeyLocation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2012,7 +2012,7 @@ func (client DatabaseClient) changeExadataInfrastructureCompartment(ctx context.
 
 	var response ChangeExadataInfrastructureCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExadataInfrastructureCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2074,7 +2074,7 @@ func (client DatabaseClient) changeExadbVmClusterCompartment(ctx context.Context
 
 	var response ChangeExadbVmClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExadbVmClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2136,7 +2136,7 @@ func (client DatabaseClient) changeExadbVmClusterSubscription(ctx context.Contex
 
 	var response ChangeExadbVmClusterSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExadbVmClusterSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2198,7 +2198,7 @@ func (client DatabaseClient) changeExascaleDbStorageVaultCompartment(ctx context
 
 	var response ChangeExascaleDbStorageVaultCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExascaleDbStorageVaultCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2260,7 +2260,7 @@ func (client DatabaseClient) changeExascaleDbStorageVaultSubscription(ctx contex
 
 	var response ChangeExascaleDbStorageVaultSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExascaleDbStorageVaultSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2325,7 +2325,7 @@ func (client DatabaseClient) changeExternalContainerDatabaseCompartment(ctx cont
 
 	var response ChangeExternalContainerDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExternalContainerDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2389,7 +2389,7 @@ func (client DatabaseClient) changeExternalNonContainerDatabaseCompartment(ctx c
 
 	var response ChangeExternalNonContainerDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExternalNonContainerDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2454,7 +2454,7 @@ func (client DatabaseClient) changeExternalPluggableDatabaseCompartment(ctx cont
 
 	var response ChangeExternalPluggableDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeExternalPluggableDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2518,7 +2518,7 @@ func (client DatabaseClient) changeKeyStoreCompartment(ctx context.Context, requ
 
 	var response ChangeKeyStoreCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeKeyStoreCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2580,7 +2580,7 @@ func (client DatabaseClient) changeKeyStoreType(ctx context.Context, request com
 
 	var response ChangeKeyStoreTypeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeKeyStoreType")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2642,7 +2642,7 @@ func (client DatabaseClient) changeOneoffPatchCompartment(ctx context.Context, r
 
 	var response ChangeOneoffPatchCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeOneoffPatchCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2704,7 +2704,7 @@ func (client DatabaseClient) changeSchedulingPlanCompartment(ctx context.Context
 
 	var response ChangeSchedulingPlanCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeSchedulingPlanCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2766,7 +2766,7 @@ func (client DatabaseClient) changeSchedulingPolicyCompartment(ctx context.Conte
 
 	var response ChangeSchedulingPolicyCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeSchedulingPolicyCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2829,7 +2829,7 @@ func (client DatabaseClient) changeVmClusterCompartment(ctx context.Context, req
 
 	var response ChangeVmClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ChangeVmClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2892,7 +2892,7 @@ func (client DatabaseClient) checkExternalDatabaseConnectorConnectionStatus(ctx 
 
 	var response CheckExternalDatabaseConnectorConnectionStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CheckExternalDatabaseConnectorConnectionStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2955,7 +2955,7 @@ func (client DatabaseClient) completeExternalBackupJob(ctx context.Context, requ
 
 	var response CompleteExternalBackupJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CompleteExternalBackupJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3017,7 +3017,7 @@ func (client DatabaseClient) configureAutonomousDatabaseVaultKey(ctx context.Con
 
 	var response ConfigureAutonomousDatabaseVaultKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConfigureAutonomousDatabaseVaultKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3079,7 +3079,7 @@ func (client DatabaseClient) configureExascaleCloudExadataInfrastructure(ctx con
 
 	var response ConfigureExascaleCloudExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConfigureExascaleCloudExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3141,7 +3141,7 @@ func (client DatabaseClient) configureExascaleExadataInfrastructure(ctx context.
 
 	var response ConfigureExascaleExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConfigureExascaleExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3198,7 +3198,7 @@ func (client DatabaseClient) configureSaasAdminUser(ctx context.Context, request
 
 	var response ConfigureSaasAdminUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConfigureSaasAdminUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3261,7 +3261,7 @@ func (client DatabaseClient) confirmKeyStoreDetailsAreCorrect(ctx context.Contex
 
 	var response ConfirmKeyStoreDetailsAreCorrectResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConfirmKeyStoreDetailsAreCorrect")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3324,7 +3324,7 @@ func (client DatabaseClient) convertStandbyAutonomousContainerDatabase(ctx conte
 
 	var response ConvertStandbyAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConvertStandbyAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3388,7 +3388,7 @@ func (client DatabaseClient) convertStandbyDatabaseType(ctx context.Context, req
 
 	var response ConvertStandbyDatabaseTypeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConvertStandbyDatabaseType")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3445,7 +3445,7 @@ func (client DatabaseClient) convertToPdb(ctx context.Context, request common.OC
 
 	var response ConvertToPdbResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConvertToPdb")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3508,7 +3508,7 @@ func (client DatabaseClient) convertToRegularPluggableDatabase(ctx context.Conte
 
 	var response ConvertToRegularPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConvertToRegularPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3572,7 +3572,7 @@ func (client DatabaseClient) convertToStandalone(ctx context.Context, request co
 
 	var response ConvertToStandaloneResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ConvertToStandalone")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3634,7 +3634,7 @@ func (client DatabaseClient) createAdvancedClusterFileSystem(ctx context.Context
 
 	var response CreateAdvancedClusterFileSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAdvancedClusterFileSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3696,7 +3696,7 @@ func (client DatabaseClient) createApplicationVip(ctx context.Context, request c
 
 	var response CreateApplicationVipResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateApplicationVip")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3758,7 +3758,7 @@ func (client DatabaseClient) createAutonomousContainerDatabase(ctx context.Conte
 
 	var response CreateAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3821,7 +3821,7 @@ func (client DatabaseClient) createAutonomousContainerDatabaseDataguardAssociati
 
 	var response CreateAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3883,7 +3883,7 @@ func (client DatabaseClient) createAutonomousDatabase(ctx context.Context, reque
 
 	var response CreateAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3945,7 +3945,7 @@ func (client DatabaseClient) createAutonomousDatabaseBackup(ctx context.Context,
 
 	var response CreateAutonomousDatabaseBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAutonomousDatabaseBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4007,7 +4007,7 @@ func (client DatabaseClient) createAutonomousDatabaseSoftwareImage(ctx context.C
 
 	var response CreateAutonomousDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAutonomousDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4069,7 +4069,7 @@ func (client DatabaseClient) createAutonomousVmCluster(ctx context.Context, requ
 
 	var response CreateAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4131,7 +4131,7 @@ func (client DatabaseClient) createBackup(ctx context.Context, request common.OC
 
 	var response CreateBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4193,7 +4193,7 @@ func (client DatabaseClient) createBackupDestination(ctx context.Context, reques
 
 	var response CreateBackupDestinationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateBackupDestination")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4255,7 +4255,7 @@ func (client DatabaseClient) createCloudAutonomousVmCluster(ctx context.Context,
 
 	var response CreateCloudAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateCloudAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4317,7 +4317,7 @@ func (client DatabaseClient) createCloudExadataInfrastructure(ctx context.Contex
 
 	var response CreateCloudExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateCloudExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4379,7 +4379,7 @@ func (client DatabaseClient) createCloudVmCluster(ctx context.Context, request c
 
 	var response CreateCloudVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateCloudVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4443,7 +4443,7 @@ func (client DatabaseClient) createConsoleConnection(ctx context.Context, reques
 
 	var response CreateConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4505,7 +4505,7 @@ func (client DatabaseClient) createConsoleHistory(ctx context.Context, request c
 
 	var response CreateConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4573,7 +4573,7 @@ func (client DatabaseClient) createDataGuardAssociation(ctx context.Context, req
 
 	var response CreateDataGuardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateDataGuardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4635,7 +4635,7 @@ func (client DatabaseClient) createDatabase(ctx context.Context, request common.
 
 	var response CreateDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4697,7 +4697,7 @@ func (client DatabaseClient) createDatabaseSoftwareImage(ctx context.Context, re
 
 	var response CreateDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4759,7 +4759,7 @@ func (client DatabaseClient) createDbHome(ctx context.Context, request common.OC
 
 	var response CreateDbHomeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateDbHome")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4822,7 +4822,7 @@ func (client DatabaseClient) createExadataInfrastructure(ctx context.Context, re
 
 	var response CreateExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4884,7 +4884,7 @@ func (client DatabaseClient) createExadbVmCluster(ctx context.Context, request c
 
 	var response CreateExadbVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExadbVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4946,7 +4946,7 @@ func (client DatabaseClient) createExascaleDbStorageVault(ctx context.Context, r
 
 	var response CreateExascaleDbStorageVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExascaleDbStorageVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5008,7 +5008,7 @@ func (client DatabaseClient) createExecutionAction(ctx context.Context, request 
 
 	var response CreateExecutionActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExecutionAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5070,7 +5070,7 @@ func (client DatabaseClient) createExecutionWindow(ctx context.Context, request 
 
 	var response CreateExecutionWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExecutionWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5133,7 +5133,7 @@ func (client DatabaseClient) createExternalBackupJob(ctx context.Context, reques
 
 	var response CreateExternalBackupJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExternalBackupJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5195,7 +5195,7 @@ func (client DatabaseClient) createExternalContainerDatabase(ctx context.Context
 
 	var response CreateExternalContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExternalContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5257,7 +5257,7 @@ func (client DatabaseClient) createExternalDatabaseConnector(ctx context.Context
 
 	var response CreateExternalDatabaseConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExternalDatabaseConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5319,7 +5319,7 @@ func (client DatabaseClient) createExternalNonContainerDatabase(ctx context.Cont
 
 	var response CreateExternalNonContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExternalNonContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5382,7 +5382,7 @@ func (client DatabaseClient) createExternalPluggableDatabase(ctx context.Context
 
 	var response CreateExternalPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateExternalPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5444,7 +5444,7 @@ func (client DatabaseClient) createKeyStore(ctx context.Context, request common.
 
 	var response CreateKeyStoreResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateKeyStore")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5509,7 +5509,7 @@ func (client DatabaseClient) createMaintenanceRun(ctx context.Context, request c
 
 	var response CreateMaintenanceRunResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateMaintenanceRun")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5571,7 +5571,7 @@ func (client DatabaseClient) createOneoffPatch(ctx context.Context, request comm
 
 	var response CreateOneoffPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateOneoffPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5635,7 +5635,7 @@ func (client DatabaseClient) createPluggableDatabase(ctx context.Context, reques
 
 	var response CreatePluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreatePluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5697,7 +5697,7 @@ func (client DatabaseClient) createPluggableDatabaseSnapshot(ctx context.Context
 
 	var response CreatePluggableDatabaseSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreatePluggableDatabaseSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5759,7 +5759,7 @@ func (client DatabaseClient) createScheduledAction(ctx context.Context, request 
 
 	var response CreateScheduledActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateScheduledAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5821,7 +5821,7 @@ func (client DatabaseClient) createSchedulingPlan(ctx context.Context, request c
 
 	var response CreateSchedulingPlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateSchedulingPlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5883,7 +5883,7 @@ func (client DatabaseClient) createSchedulingPolicy(ctx context.Context, request
 
 	var response CreateSchedulingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateSchedulingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5945,7 +5945,7 @@ func (client DatabaseClient) createSchedulingWindow(ctx context.Context, request
 
 	var response CreateSchedulingWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateSchedulingWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6007,7 +6007,7 @@ func (client DatabaseClient) createVmCluster(ctx context.Context, request common
 
 	var response CreateVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6070,7 +6070,7 @@ func (client DatabaseClient) createVmClusterNetwork(ctx context.Context, request
 
 	var response CreateVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "CreateVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6143,7 +6143,7 @@ func (client DatabaseClient) dbNodeAction(ctx context.Context, request common.OC
 
 	var response DbNodeActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DbNodeAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6200,7 +6200,7 @@ func (client DatabaseClient) deleteAdvancedClusterFileSystem(ctx context.Context
 
 	var response DeleteAdvancedClusterFileSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteAdvancedClusterFileSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6257,7 +6257,7 @@ func (client DatabaseClient) deleteApplicationVip(ctx context.Context, request c
 
 	var response DeleteApplicationVipResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteApplicationVip")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6314,7 +6314,7 @@ func (client DatabaseClient) deleteAutonomousDatabase(ctx context.Context, reque
 
 	var response DeleteAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6371,7 +6371,7 @@ func (client DatabaseClient) deleteAutonomousDatabaseBackup(ctx context.Context,
 
 	var response DeleteAutonomousDatabaseBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteAutonomousDatabaseBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6428,7 +6428,7 @@ func (client DatabaseClient) deleteAutonomousDatabaseSoftwareImage(ctx context.C
 
 	var response DeleteAutonomousDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteAutonomousDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6485,7 +6485,7 @@ func (client DatabaseClient) deleteAutonomousVmCluster(ctx context.Context, requ
 
 	var response DeleteAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6542,7 +6542,7 @@ func (client DatabaseClient) deleteBackup(ctx context.Context, request common.OC
 
 	var response DeleteBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6599,7 +6599,7 @@ func (client DatabaseClient) deleteBackupDestination(ctx context.Context, reques
 
 	var response DeleteBackupDestinationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteBackupDestination")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6656,7 +6656,7 @@ func (client DatabaseClient) deleteCloudAutonomousVmCluster(ctx context.Context,
 
 	var response DeleteCloudAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteCloudAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6713,7 +6713,7 @@ func (client DatabaseClient) deleteCloudExadataInfrastructure(ctx context.Contex
 
 	var response DeleteCloudExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteCloudExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6770,7 +6770,7 @@ func (client DatabaseClient) deleteCloudVmCluster(ctx context.Context, request c
 
 	var response DeleteCloudVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteCloudVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6827,7 +6827,7 @@ func (client DatabaseClient) deleteConsoleConnection(ctx context.Context, reques
 
 	var response DeleteConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6884,7 +6884,7 @@ func (client DatabaseClient) deleteConsoleHistory(ctx context.Context, request c
 
 	var response DeleteConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6942,7 +6942,7 @@ func (client DatabaseClient) deleteDatabase(ctx context.Context, request common.
 
 	var response DeleteDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6999,7 +6999,7 @@ func (client DatabaseClient) deleteDatabaseSoftwareImage(ctx context.Context, re
 
 	var response DeleteDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7057,7 +7057,7 @@ func (client DatabaseClient) deleteDbHome(ctx context.Context, request common.OC
 
 	var response DeleteDbHomeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteDbHome")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7114,7 +7114,7 @@ func (client DatabaseClient) deleteDbnodeSnapshot(ctx context.Context, request c
 
 	var response DeleteDbnodeSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteDbnodeSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7171,7 +7171,7 @@ func (client DatabaseClient) deleteExadataInfrastructure(ctx context.Context, re
 
 	var response DeleteExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7228,7 +7228,7 @@ func (client DatabaseClient) deleteExadbVmCluster(ctx context.Context, request c
 
 	var response DeleteExadbVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExadbVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7285,7 +7285,7 @@ func (client DatabaseClient) deleteExascaleDbStorageVault(ctx context.Context, r
 
 	var response DeleteExascaleDbStorageVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExascaleDbStorageVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7342,7 +7342,7 @@ func (client DatabaseClient) deleteExecutionAction(ctx context.Context, request 
 
 	var response DeleteExecutionActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExecutionAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7399,7 +7399,7 @@ func (client DatabaseClient) deleteExecutionWindow(ctx context.Context, request 
 
 	var response DeleteExecutionWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExecutionWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7458,7 +7458,7 @@ func (client DatabaseClient) deleteExternalContainerDatabase(ctx context.Context
 
 	var response DeleteExternalContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExternalContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7517,7 +7517,7 @@ func (client DatabaseClient) deleteExternalDatabaseConnector(ctx context.Context
 
 	var response DeleteExternalDatabaseConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExternalDatabaseConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7574,7 +7574,7 @@ func (client DatabaseClient) deleteExternalNonContainerDatabase(ctx context.Cont
 
 	var response DeleteExternalNonContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExternalNonContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7632,7 +7632,7 @@ func (client DatabaseClient) deleteExternalPluggableDatabase(ctx context.Context
 
 	var response DeleteExternalPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteExternalPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7689,7 +7689,7 @@ func (client DatabaseClient) deleteKeyStore(ctx context.Context, request common.
 
 	var response DeleteKeyStoreResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteKeyStore")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7746,7 +7746,7 @@ func (client DatabaseClient) deleteOneoffPatch(ctx context.Context, request comm
 
 	var response DeleteOneoffPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteOneoffPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7803,7 +7803,7 @@ func (client DatabaseClient) deletePluggableDatabase(ctx context.Context, reques
 
 	var response DeletePluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeletePluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7860,7 +7860,7 @@ func (client DatabaseClient) deletePluggableDatabaseSnapshot(ctx context.Context
 
 	var response DeletePluggableDatabaseSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeletePluggableDatabaseSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7917,7 +7917,7 @@ func (client DatabaseClient) deleteScheduledAction(ctx context.Context, request 
 
 	var response DeleteScheduledActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteScheduledAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7974,7 +7974,7 @@ func (client DatabaseClient) deleteSchedulingPlan(ctx context.Context, request c
 
 	var response DeleteSchedulingPlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteSchedulingPlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8031,7 +8031,7 @@ func (client DatabaseClient) deleteSchedulingPolicy(ctx context.Context, request
 
 	var response DeleteSchedulingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteSchedulingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8088,7 +8088,7 @@ func (client DatabaseClient) deleteSchedulingWindow(ctx context.Context, request
 
 	var response DeleteSchedulingWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteSchedulingWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8145,7 +8145,7 @@ func (client DatabaseClient) deleteVmCluster(ctx context.Context, request common
 
 	var response DeleteVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8203,7 +8203,7 @@ func (client DatabaseClient) deleteVmClusterNetwork(ctx context.Context, request
 
 	var response DeleteVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeleteVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8260,7 +8260,7 @@ func (client DatabaseClient) deregisterAutonomousDatabaseDataSafe(ctx context.Co
 
 	var response DeregisterAutonomousDatabaseDataSafeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DeregisterAutonomousDatabaseDataSafe")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8317,7 +8317,7 @@ func (client DatabaseClient) disableAutonomousDatabaseManagement(ctx context.Con
 
 	var response DisableAutonomousDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableAutonomousDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8374,7 +8374,7 @@ func (client DatabaseClient) disableAutonomousDatabaseOperationsInsights(ctx con
 
 	var response DisableAutonomousDatabaseOperationsInsightsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableAutonomousDatabaseOperationsInsights")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8436,7 +8436,7 @@ func (client DatabaseClient) disableDatabaseManagement(ctx context.Context, requ
 
 	var response DisableDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8498,7 +8498,7 @@ func (client DatabaseClient) disableExternalContainerDatabaseDatabaseManagement(
 
 	var response DisableExternalContainerDatabaseDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalContainerDatabaseDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8560,7 +8560,7 @@ func (client DatabaseClient) disableExternalContainerDatabaseStackMonitoring(ctx
 
 	var response DisableExternalContainerDatabaseStackMonitoringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalContainerDatabaseStackMonitoring")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8624,7 +8624,7 @@ func (client DatabaseClient) disableExternalNonContainerDatabaseDatabaseManageme
 
 	var response DisableExternalNonContainerDatabaseDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalNonContainerDatabaseDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8686,7 +8686,7 @@ func (client DatabaseClient) disableExternalNonContainerDatabaseOperationsInsigh
 
 	var response DisableExternalNonContainerDatabaseOperationsInsightsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalNonContainerDatabaseOperationsInsights")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8748,7 +8748,7 @@ func (client DatabaseClient) disableExternalNonContainerDatabaseStackMonitoring(
 
 	var response DisableExternalNonContainerDatabaseStackMonitoringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalNonContainerDatabaseStackMonitoring")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8812,7 +8812,7 @@ func (client DatabaseClient) disableExternalPluggableDatabaseDatabaseManagement(
 
 	var response DisableExternalPluggableDatabaseDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalPluggableDatabaseDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8874,7 +8874,7 @@ func (client DatabaseClient) disableExternalPluggableDatabaseOperationsInsights(
 
 	var response DisableExternalPluggableDatabaseOperationsInsightsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalPluggableDatabaseOperationsInsights")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8936,7 +8936,7 @@ func (client DatabaseClient) disableExternalPluggableDatabaseStackMonitoring(ctx
 
 	var response DisableExternalPluggableDatabaseStackMonitoringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisableExternalPluggableDatabaseStackMonitoring")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -8998,7 +8998,7 @@ func (client DatabaseClient) disablePluggableDatabaseManagement(ctx context.Cont
 
 	var response DisablePluggableDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DisablePluggableDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9061,7 +9061,7 @@ func (client DatabaseClient) downloadDbConnectionBundle(ctx context.Context, req
 
 	var response DownloadDbConnectionBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DownloadDbConnectionBundle")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database/20160918/DbConnectionBundle/DownloadDbConnectionBundle"
@@ -9122,7 +9122,7 @@ func (client DatabaseClient) downloadExadataInfrastructureConfigFile(ctx context
 
 	var response DownloadExadataInfrastructureConfigFileResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DownloadExadataInfrastructureConfigFile")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database/20160918/ExadataInfrastructure/DownloadExadataInfrastructureConfigFile"
@@ -9183,7 +9183,7 @@ func (client DatabaseClient) downloadOneoffPatch(ctx context.Context, request co
 
 	var response DownloadOneoffPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DownloadOneoffPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9245,7 +9245,7 @@ func (client DatabaseClient) downloadValidationReport(ctx context.Context, reque
 
 	var response DownloadValidationReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DownloadValidationReport")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database/20160918/VmClusterNetwork/DownloadValidationReport"
@@ -9306,7 +9306,7 @@ func (client DatabaseClient) downloadVmClusterNetworkConfigFile(ctx context.Cont
 
 	var response DownloadVmClusterNetworkConfigFileResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "DownloadVmClusterNetworkConfigFile")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database/20160918/VmClusterNetwork/DownloadVmClusterNetworkConfigFile"
@@ -9368,7 +9368,7 @@ func (client DatabaseClient) editAutonomousContainerDatabaseDataguard(ctx contex
 
 	var response EditAutonomousContainerDatabaseDataguardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EditAutonomousContainerDatabaseDataguard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9425,7 +9425,7 @@ func (client DatabaseClient) enableAutonomousDatabaseManagement(ctx context.Cont
 
 	var response EnableAutonomousDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableAutonomousDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9482,7 +9482,7 @@ func (client DatabaseClient) enableAutonomousDatabaseOperationsInsights(ctx cont
 
 	var response EnableAutonomousDatabaseOperationsInsightsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableAutonomousDatabaseOperationsInsights")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9544,7 +9544,7 @@ func (client DatabaseClient) enableDatabaseManagement(ctx context.Context, reque
 
 	var response EnableDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9608,7 +9608,7 @@ func (client DatabaseClient) enableExternalContainerDatabaseDatabaseManagement(c
 
 	var response EnableExternalContainerDatabaseDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalContainerDatabaseDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9670,7 +9670,7 @@ func (client DatabaseClient) enableExternalContainerDatabaseStackMonitoring(ctx 
 
 	var response EnableExternalContainerDatabaseStackMonitoringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalContainerDatabaseStackMonitoring")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9734,7 +9734,7 @@ func (client DatabaseClient) enableExternalNonContainerDatabaseDatabaseManagemen
 
 	var response EnableExternalNonContainerDatabaseDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalNonContainerDatabaseDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9796,7 +9796,7 @@ func (client DatabaseClient) enableExternalNonContainerDatabaseOperationsInsight
 
 	var response EnableExternalNonContainerDatabaseOperationsInsightsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalNonContainerDatabaseOperationsInsights")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9858,7 +9858,7 @@ func (client DatabaseClient) enableExternalNonContainerDatabaseStackMonitoring(c
 
 	var response EnableExternalNonContainerDatabaseStackMonitoringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalNonContainerDatabaseStackMonitoring")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9922,7 +9922,7 @@ func (client DatabaseClient) enableExternalPluggableDatabaseDatabaseManagement(c
 
 	var response EnableExternalPluggableDatabaseDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalPluggableDatabaseDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -9984,7 +9984,7 @@ func (client DatabaseClient) enableExternalPluggableDatabaseOperationsInsights(c
 
 	var response EnableExternalPluggableDatabaseOperationsInsightsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalPluggableDatabaseOperationsInsights")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10046,7 +10046,7 @@ func (client DatabaseClient) enableExternalPluggableDatabaseStackMonitoring(ctx 
 
 	var response EnableExternalPluggableDatabaseStackMonitoringResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnableExternalPluggableDatabaseStackMonitoring")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10108,7 +10108,7 @@ func (client DatabaseClient) enablePluggableDatabaseManagement(ctx context.Conte
 
 	var response EnablePluggableDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "EnablePluggableDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10170,7 +10170,7 @@ func (client DatabaseClient) executeDbSystemOsPatch(ctx context.Context, request
 
 	var response ExecuteDbSystemOsPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ExecuteDbSystemOsPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10237,7 +10237,7 @@ func (client DatabaseClient) failOverAutonomousDatabase(ctx context.Context, req
 
 	var response FailOverAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "FailOverAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10295,7 +10295,7 @@ func (client DatabaseClient) failoverAutonomousContainerDatabaseDataguard(ctx co
 
 	var response FailoverAutonomousContainerDatabaseDataguardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "FailoverAutonomousContainerDatabaseDataguard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10353,7 +10353,7 @@ func (client DatabaseClient) failoverAutonomousContainerDatabaseDataguardAssocia
 
 	var response FailoverAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "FailoverAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10419,7 +10419,7 @@ func (client DatabaseClient) failoverDataGuard(ctx context.Context, request comm
 
 	var response FailoverDataGuardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "FailoverDataGuard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10479,7 +10479,7 @@ func (client DatabaseClient) failoverDataGuardAssociation(ctx context.Context, r
 
 	var response FailoverDataGuardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "FailoverDataGuardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10541,7 +10541,7 @@ func (client DatabaseClient) generateAutonomousDatabaseWallet(ctx context.Contex
 
 	var response GenerateAutonomousDatabaseWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GenerateAutonomousDatabaseWallet")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database/20160918/AutonomousDatabase/GenerateAutonomousDatabaseWallet"
@@ -10602,7 +10602,7 @@ func (client DatabaseClient) generateRecommendedVmClusterNetwork(ctx context.Con
 
 	var response GenerateRecommendedVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GenerateRecommendedVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10659,7 +10659,7 @@ func (client DatabaseClient) getAdvancedClusterFileSystem(ctx context.Context, r
 
 	var response GetAdvancedClusterFileSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAdvancedClusterFileSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10716,7 +10716,7 @@ func (client DatabaseClient) getApplicationVip(ctx context.Context, request comm
 
 	var response GetApplicationVipResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetApplicationVip")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10773,7 +10773,7 @@ func (client DatabaseClient) getAutonomousContainerDatabase(ctx context.Context,
 
 	var response GetAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10830,7 +10830,7 @@ func (client DatabaseClient) getAutonomousContainerDatabaseDataguardAssociation(
 
 	var response GetAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10887,7 +10887,7 @@ func (client DatabaseClient) getAutonomousContainerDatabaseResourceUsage(ctx con
 
 	var response GetAutonomousContainerDatabaseResourceUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousContainerDatabaseResourceUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -10944,7 +10944,7 @@ func (client DatabaseClient) getAutonomousDatabase(ctx context.Context, request 
 
 	var response GetAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11001,7 +11001,7 @@ func (client DatabaseClient) getAutonomousDatabaseBackup(ctx context.Context, re
 
 	var response GetAutonomousDatabaseBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousDatabaseBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11058,7 +11058,7 @@ func (client DatabaseClient) getAutonomousDatabaseDataguardAssociation(ctx conte
 
 	var response GetAutonomousDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11115,7 +11115,7 @@ func (client DatabaseClient) getAutonomousDatabaseRegionalWallet(ctx context.Con
 
 	var response GetAutonomousDatabaseRegionalWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousDatabaseRegionalWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11172,7 +11172,7 @@ func (client DatabaseClient) getAutonomousDatabaseSoftwareImage(ctx context.Cont
 
 	var response GetAutonomousDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11229,7 +11229,7 @@ func (client DatabaseClient) getAutonomousDatabaseWallet(ctx context.Context, re
 
 	var response GetAutonomousDatabaseWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousDatabaseWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11286,7 +11286,7 @@ func (client DatabaseClient) getAutonomousExadataInfrastructure(ctx context.Cont
 
 	var response GetAutonomousExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11343,7 +11343,7 @@ func (client DatabaseClient) getAutonomousPatch(ctx context.Context, request com
 
 	var response GetAutonomousPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11400,7 +11400,7 @@ func (client DatabaseClient) getAutonomousVirtualMachine(ctx context.Context, re
 
 	var response GetAutonomousVirtualMachineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousVirtualMachine")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11457,7 +11457,7 @@ func (client DatabaseClient) getAutonomousVmCluster(ctx context.Context, request
 
 	var response GetAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11514,7 +11514,7 @@ func (client DatabaseClient) getAutonomousVmClusterResourceUsage(ctx context.Con
 
 	var response GetAutonomousVmClusterResourceUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetAutonomousVmClusterResourceUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11571,7 +11571,7 @@ func (client DatabaseClient) getBackup(ctx context.Context, request common.OCIRe
 
 	var response GetBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11628,7 +11628,7 @@ func (client DatabaseClient) getBackupDestination(ctx context.Context, request c
 
 	var response GetBackupDestinationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetBackupDestination")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11685,7 +11685,7 @@ func (client DatabaseClient) getCloudAutonomousVmCluster(ctx context.Context, re
 
 	var response GetCloudAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11742,7 +11742,7 @@ func (client DatabaseClient) getCloudAutonomousVmClusterResourceUsage(ctx contex
 
 	var response GetCloudAutonomousVmClusterResourceUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudAutonomousVmClusterResourceUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11799,7 +11799,7 @@ func (client DatabaseClient) getCloudExadataInfrastructure(ctx context.Context, 
 
 	var response GetCloudExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11856,7 +11856,7 @@ func (client DatabaseClient) getCloudExadataInfrastructureUnallocatedResources(c
 
 	var response GetCloudExadataInfrastructureUnallocatedResourcesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudExadataInfrastructureUnallocatedResources")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11913,7 +11913,7 @@ func (client DatabaseClient) getCloudVmCluster(ctx context.Context, request comm
 
 	var response GetCloudVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -11971,7 +11971,7 @@ func (client DatabaseClient) getCloudVmClusterIormConfig(ctx context.Context, re
 
 	var response GetCloudVmClusterIormConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudVmClusterIormConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12028,7 +12028,7 @@ func (client DatabaseClient) getCloudVmClusterUpdate(ctx context.Context, reques
 
 	var response GetCloudVmClusterUpdateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudVmClusterUpdate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12085,7 +12085,7 @@ func (client DatabaseClient) getCloudVmClusterUpdateHistoryEntry(ctx context.Con
 
 	var response GetCloudVmClusterUpdateHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetCloudVmClusterUpdateHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12142,7 +12142,7 @@ func (client DatabaseClient) getConsoleConnection(ctx context.Context, request c
 
 	var response GetConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12199,7 +12199,7 @@ func (client DatabaseClient) getConsoleHistory(ctx context.Context, request comm
 
 	var response GetConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12256,7 +12256,7 @@ func (client DatabaseClient) getConsoleHistoryContent(ctx context.Context, reque
 
 	var response GetConsoleHistoryContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetConsoleHistoryContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/database/20160918/ConsoleHistory/GetConsoleHistoryContent"
@@ -12312,7 +12312,7 @@ func (client DatabaseClient) getDataGuardAssociation(ctx context.Context, reques
 
 	var response GetDataGuardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDataGuardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12369,7 +12369,7 @@ func (client DatabaseClient) getDatabase(ctx context.Context, request common.OCI
 
 	var response GetDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12426,7 +12426,7 @@ func (client DatabaseClient) getDatabaseSoftwareImage(ctx context.Context, reque
 
 	var response GetDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12483,7 +12483,7 @@ func (client DatabaseClient) getDatabaseUpgradeHistoryEntry(ctx context.Context,
 
 	var response GetDatabaseUpgradeHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDatabaseUpgradeHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12540,7 +12540,7 @@ func (client DatabaseClient) getDbConnectionBundle(ctx context.Context, request 
 
 	var response GetDbConnectionBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbConnectionBundle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12597,7 +12597,7 @@ func (client DatabaseClient) getDbHome(ctx context.Context, request common.OCIRe
 
 	var response GetDbHomeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbHome")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12654,7 +12654,7 @@ func (client DatabaseClient) getDbHomePatch(ctx context.Context, request common.
 
 	var response GetDbHomePatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbHomePatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12711,7 +12711,7 @@ func (client DatabaseClient) getDbHomePatchHistoryEntry(ctx context.Context, req
 
 	var response GetDbHomePatchHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbHomePatchHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12768,7 +12768,7 @@ func (client DatabaseClient) getDbNode(ctx context.Context, request common.OCIRe
 
 	var response GetDbNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12825,7 +12825,7 @@ func (client DatabaseClient) getDbServer(ctx context.Context, request common.OCI
 
 	var response GetDbServerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbServer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12884,7 +12884,7 @@ func (client DatabaseClient) getDbSystem(ctx context.Context, request common.OCI
 
 	var response GetDbSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12941,7 +12941,7 @@ func (client DatabaseClient) getDbSystemOsPatchHistoryEntry(ctx context.Context,
 
 	var response GetDbSystemOsPatchHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbSystemOsPatchHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -12998,7 +12998,7 @@ func (client DatabaseClient) getDbSystemPatch(ctx context.Context, request commo
 
 	var response GetDbSystemPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbSystemPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13055,7 +13055,7 @@ func (client DatabaseClient) getDbSystemPatchHistoryEntry(ctx context.Context, r
 
 	var response GetDbSystemPatchHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbSystemPatchHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13112,7 +13112,7 @@ func (client DatabaseClient) getDbSystemUpgradeHistoryEntry(ctx context.Context,
 
 	var response GetDbSystemUpgradeHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbSystemUpgradeHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13169,7 +13169,7 @@ func (client DatabaseClient) getDbnodeSnapshot(ctx context.Context, request comm
 
 	var response GetDbnodeSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetDbnodeSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13227,7 +13227,7 @@ func (client DatabaseClient) getExadataInfrastructure(ctx context.Context, reque
 
 	var response GetExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13284,7 +13284,7 @@ func (client DatabaseClient) getExadataInfrastructureOcpus(ctx context.Context, 
 
 	var response GetExadataInfrastructureOcpusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadataInfrastructureOcpus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13341,7 +13341,7 @@ func (client DatabaseClient) getExadataInfrastructureUnAllocatedResources(ctx co
 
 	var response GetExadataInfrastructureUnAllocatedResourcesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadataInfrastructureUnAllocatedResources")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13403,7 +13403,7 @@ func (client DatabaseClient) getExadataIormConfig(ctx context.Context, request c
 
 	var response GetExadataIormConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadataIormConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13460,7 +13460,7 @@ func (client DatabaseClient) getExadbVmCluster(ctx context.Context, request comm
 
 	var response GetExadbVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadbVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13517,7 +13517,7 @@ func (client DatabaseClient) getExadbVmClusterUpdate(ctx context.Context, reques
 
 	var response GetExadbVmClusterUpdateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadbVmClusterUpdate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13574,7 +13574,7 @@ func (client DatabaseClient) getExadbVmClusterUpdateHistoryEntry(ctx context.Con
 
 	var response GetExadbVmClusterUpdateHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExadbVmClusterUpdateHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13631,7 +13631,7 @@ func (client DatabaseClient) getExascaleDbStorageVault(ctx context.Context, requ
 
 	var response GetExascaleDbStorageVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExascaleDbStorageVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13688,7 +13688,7 @@ func (client DatabaseClient) getExecutionAction(ctx context.Context, request com
 
 	var response GetExecutionActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExecutionAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13745,7 +13745,7 @@ func (client DatabaseClient) getExecutionWindow(ctx context.Context, request com
 
 	var response GetExecutionWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExecutionWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13803,7 +13803,7 @@ func (client DatabaseClient) getExternalBackupJob(ctx context.Context, request c
 
 	var response GetExternalBackupJobResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExternalBackupJob")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13860,7 +13860,7 @@ func (client DatabaseClient) getExternalContainerDatabase(ctx context.Context, r
 
 	var response GetExternalContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExternalContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13917,7 +13917,7 @@ func (client DatabaseClient) getExternalDatabaseConnector(ctx context.Context, r
 
 	var response GetExternalDatabaseConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExternalDatabaseConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -13974,7 +13974,7 @@ func (client DatabaseClient) getExternalNonContainerDatabase(ctx context.Context
 
 	var response GetExternalNonContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExternalNonContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14032,7 +14032,7 @@ func (client DatabaseClient) getExternalPluggableDatabase(ctx context.Context, r
 
 	var response GetExternalPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetExternalPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14090,7 +14090,7 @@ func (client DatabaseClient) getInfrastructureTargetVersions(ctx context.Context
 
 	var response GetInfrastructureTargetVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetInfrastructureTargetVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14147,7 +14147,7 @@ func (client DatabaseClient) getKeyStore(ctx context.Context, request common.OCI
 
 	var response GetKeyStoreResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetKeyStore")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14204,7 +14204,7 @@ func (client DatabaseClient) getMaintenanceRun(ctx context.Context, request comm
 
 	var response GetMaintenanceRunResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetMaintenanceRun")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14261,7 +14261,7 @@ func (client DatabaseClient) getMaintenanceRunHistory(ctx context.Context, reque
 
 	var response GetMaintenanceRunHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetMaintenanceRunHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14318,7 +14318,7 @@ func (client DatabaseClient) getOneoffPatch(ctx context.Context, request common.
 
 	var response GetOneoffPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetOneoffPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14375,7 +14375,7 @@ func (client DatabaseClient) getPdbConversionHistoryEntry(ctx context.Context, r
 
 	var response GetPdbConversionHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetPdbConversionHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14432,7 +14432,7 @@ func (client DatabaseClient) getPluggableDatabase(ctx context.Context, request c
 
 	var response GetPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14489,7 +14489,7 @@ func (client DatabaseClient) getPluggableDatabaseSnapshot(ctx context.Context, r
 
 	var response GetPluggableDatabaseSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetPluggableDatabaseSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14546,7 +14546,7 @@ func (client DatabaseClient) getScheduledAction(ctx context.Context, request com
 
 	var response GetScheduledActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetScheduledAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14603,7 +14603,7 @@ func (client DatabaseClient) getSchedulingPlan(ctx context.Context, request comm
 
 	var response GetSchedulingPlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetSchedulingPlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14660,7 +14660,7 @@ func (client DatabaseClient) getSchedulingPolicy(ctx context.Context, request co
 
 	var response GetSchedulingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetSchedulingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14717,7 +14717,7 @@ func (client DatabaseClient) getSchedulingWindow(ctx context.Context, request co
 
 	var response GetSchedulingWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetSchedulingWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14774,7 +14774,7 @@ func (client DatabaseClient) getVmCluster(ctx context.Context, request common.OC
 
 	var response GetVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14832,7 +14832,7 @@ func (client DatabaseClient) getVmClusterNetwork(ctx context.Context, request co
 
 	var response GetVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14889,7 +14889,7 @@ func (client DatabaseClient) getVmClusterPatch(ctx context.Context, request comm
 
 	var response GetVmClusterPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetVmClusterPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -14946,7 +14946,7 @@ func (client DatabaseClient) getVmClusterPatchHistoryEntry(ctx context.Context, 
 
 	var response GetVmClusterPatchHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetVmClusterPatchHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15003,7 +15003,7 @@ func (client DatabaseClient) getVmClusterUpdate(ctx context.Context, request com
 
 	var response GetVmClusterUpdateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetVmClusterUpdate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15060,7 +15060,7 @@ func (client DatabaseClient) getVmClusterUpdateHistoryEntry(ctx context.Context,
 
 	var response GetVmClusterUpdateHistoryEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "GetVmClusterUpdateHistoryEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15122,7 +15122,7 @@ func (client DatabaseClient) importTransportableTablespace(ctx context.Context, 
 
 	var response ImportTransportableTablespaceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ImportTransportableTablespace")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15184,7 +15184,7 @@ func (client DatabaseClient) launchAutonomousExadataInfrastructure(ctx context.C
 
 	var response LaunchAutonomousExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "LaunchAutonomousExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15252,7 +15252,7 @@ func (client DatabaseClient) launchDbSystem(ctx context.Context, request common.
 
 	var response LaunchDbSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "LaunchDbSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15309,7 +15309,7 @@ func (client DatabaseClient) listAdvancedClusterFileSystems(ctx context.Context,
 
 	var response ListAdvancedClusterFileSystemsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAdvancedClusterFileSystems")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15366,7 +15366,7 @@ func (client DatabaseClient) listApplicationVips(ctx context.Context, request co
 
 	var response ListApplicationVipsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListApplicationVips")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15423,7 +15423,7 @@ func (client DatabaseClient) listAutonomousContainerDatabaseBackups(ctx context.
 
 	var response ListAutonomousContainerDatabaseBackupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousContainerDatabaseBackups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15480,7 +15480,7 @@ func (client DatabaseClient) listAutonomousContainerDatabaseDataguardAssociation
 
 	var response ListAutonomousContainerDatabaseDataguardAssociationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousContainerDatabaseDataguardAssociations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15537,7 +15537,7 @@ func (client DatabaseClient) listAutonomousContainerDatabaseVersions(ctx context
 
 	var response ListAutonomousContainerDatabaseVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousContainerDatabaseVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15594,7 +15594,7 @@ func (client DatabaseClient) listAutonomousContainerDatabases(ctx context.Contex
 
 	var response ListAutonomousContainerDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousContainerDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15651,7 +15651,7 @@ func (client DatabaseClient) listAutonomousDatabaseBackups(ctx context.Context, 
 
 	var response ListAutonomousDatabaseBackupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabaseBackups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15708,7 +15708,7 @@ func (client DatabaseClient) listAutonomousDatabaseCharacterSets(ctx context.Con
 
 	var response ListAutonomousDatabaseCharacterSetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabaseCharacterSets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15765,7 +15765,7 @@ func (client DatabaseClient) listAutonomousDatabaseClones(ctx context.Context, r
 
 	var response ListAutonomousDatabaseClonesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabaseClones")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15822,7 +15822,7 @@ func (client DatabaseClient) listAutonomousDatabaseDataguardAssociations(ctx con
 
 	var response ListAutonomousDatabaseDataguardAssociationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabaseDataguardAssociations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15879,7 +15879,7 @@ func (client DatabaseClient) listAutonomousDatabasePeers(ctx context.Context, re
 
 	var response ListAutonomousDatabasePeersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabasePeers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15936,7 +15936,7 @@ func (client DatabaseClient) listAutonomousDatabaseRefreshableClones(ctx context
 
 	var response ListAutonomousDatabaseRefreshableClonesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabaseRefreshableClones")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -15993,7 +15993,7 @@ func (client DatabaseClient) listAutonomousDatabaseSoftwareImages(ctx context.Co
 
 	var response ListAutonomousDatabaseSoftwareImagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabaseSoftwareImages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16050,7 +16050,7 @@ func (client DatabaseClient) listAutonomousDatabases(ctx context.Context, reques
 
 	var response ListAutonomousDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16108,7 +16108,7 @@ func (client DatabaseClient) listAutonomousDbPreviewVersions(ctx context.Context
 
 	var response ListAutonomousDbPreviewVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDbPreviewVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16165,7 +16165,7 @@ func (client DatabaseClient) listAutonomousDbVersions(ctx context.Context, reque
 
 	var response ListAutonomousDbVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousDbVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16222,7 +16222,7 @@ func (client DatabaseClient) listAutonomousExadataInfrastructureShapes(ctx conte
 
 	var response ListAutonomousExadataInfrastructureShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousExadataInfrastructureShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16279,7 +16279,7 @@ func (client DatabaseClient) listAutonomousExadataInfrastructures(ctx context.Co
 
 	var response ListAutonomousExadataInfrastructuresResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousExadataInfrastructures")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16336,7 +16336,7 @@ func (client DatabaseClient) listAutonomousVirtualMachines(ctx context.Context, 
 
 	var response ListAutonomousVirtualMachinesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousVirtualMachines")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16393,7 +16393,7 @@ func (client DatabaseClient) listAutonomousVmClusterAcdResourceUsage(ctx context
 
 	var response ListAutonomousVmClusterAcdResourceUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousVmClusterAcdResourceUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16450,7 +16450,7 @@ func (client DatabaseClient) listAutonomousVmClusters(ctx context.Context, reque
 
 	var response ListAutonomousVmClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListAutonomousVmClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16507,7 +16507,7 @@ func (client DatabaseClient) listBackupDestination(ctx context.Context, request 
 
 	var response ListBackupDestinationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListBackupDestination")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16564,7 +16564,7 @@ func (client DatabaseClient) listBackups(ctx context.Context, request common.OCI
 
 	var response ListBackupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListBackups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16622,7 +16622,7 @@ func (client DatabaseClient) listCloudAutonomousVmClusterAcdResourceUsage(ctx co
 
 	var response ListCloudAutonomousVmClusterAcdResourceUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListCloudAutonomousVmClusterAcdResourceUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16679,7 +16679,7 @@ func (client DatabaseClient) listCloudAutonomousVmClusters(ctx context.Context, 
 
 	var response ListCloudAutonomousVmClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListCloudAutonomousVmClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16736,7 +16736,7 @@ func (client DatabaseClient) listCloudExadataInfrastructures(ctx context.Context
 
 	var response ListCloudExadataInfrastructuresResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListCloudExadataInfrastructures")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16793,7 +16793,7 @@ func (client DatabaseClient) listCloudVmClusterUpdateHistoryEntries(ctx context.
 
 	var response ListCloudVmClusterUpdateHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListCloudVmClusterUpdateHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16850,7 +16850,7 @@ func (client DatabaseClient) listCloudVmClusterUpdates(ctx context.Context, requ
 
 	var response ListCloudVmClusterUpdatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListCloudVmClusterUpdates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16907,7 +16907,7 @@ func (client DatabaseClient) listCloudVmClusters(ctx context.Context, request co
 
 	var response ListCloudVmClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListCloudVmClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -16964,7 +16964,7 @@ func (client DatabaseClient) listConsoleConnections(ctx context.Context, request
 
 	var response ListConsoleConnectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListConsoleConnections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17021,7 +17021,7 @@ func (client DatabaseClient) listConsoleHistories(ctx context.Context, request c
 
 	var response ListConsoleHistoriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListConsoleHistories")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17078,7 +17078,7 @@ func (client DatabaseClient) listContainerDatabasePatches(ctx context.Context, r
 
 	var response ListContainerDatabasePatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListContainerDatabasePatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17135,7 +17135,7 @@ func (client DatabaseClient) listDataGuardAssociations(ctx context.Context, requ
 
 	var response ListDataGuardAssociationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDataGuardAssociations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17192,7 +17192,7 @@ func (client DatabaseClient) listDatabaseSoftwareImages(ctx context.Context, req
 
 	var response ListDatabaseSoftwareImagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDatabaseSoftwareImages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17249,7 +17249,7 @@ func (client DatabaseClient) listDatabaseUpgradeHistoryEntries(ctx context.Conte
 
 	var response ListDatabaseUpgradeHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDatabaseUpgradeHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17306,7 +17306,7 @@ func (client DatabaseClient) listDatabases(ctx context.Context, request common.O
 
 	var response ListDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17363,7 +17363,7 @@ func (client DatabaseClient) listDbConnectionBundles(ctx context.Context, reques
 
 	var response ListDbConnectionBundlesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbConnectionBundles")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17420,7 +17420,7 @@ func (client DatabaseClient) listDbHomePatchHistoryEntries(ctx context.Context, 
 
 	var response ListDbHomePatchHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbHomePatchHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17477,7 +17477,7 @@ func (client DatabaseClient) listDbHomePatches(ctx context.Context, request comm
 
 	var response ListDbHomePatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbHomePatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17534,7 +17534,7 @@ func (client DatabaseClient) listDbHomes(ctx context.Context, request common.OCI
 
 	var response ListDbHomesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbHomes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17591,7 +17591,7 @@ func (client DatabaseClient) listDbNodes(ctx context.Context, request common.OCI
 
 	var response ListDbNodesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbNodes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17648,7 +17648,7 @@ func (client DatabaseClient) listDbServers(ctx context.Context, request common.O
 
 	var response ListDbServersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbServers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17705,7 +17705,7 @@ func (client DatabaseClient) listDbSystemComputePerformances(ctx context.Context
 
 	var response ListDbSystemComputePerformancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemComputePerformances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17762,7 +17762,7 @@ func (client DatabaseClient) listDbSystemOsPatchHistoryEntries(ctx context.Conte
 
 	var response ListDbSystemOsPatchHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemOsPatchHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17819,7 +17819,7 @@ func (client DatabaseClient) listDbSystemPatchHistoryEntries(ctx context.Context
 
 	var response ListDbSystemPatchHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemPatchHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17876,7 +17876,7 @@ func (client DatabaseClient) listDbSystemPatches(ctx context.Context, request co
 
 	var response ListDbSystemPatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemPatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17933,7 +17933,7 @@ func (client DatabaseClient) listDbSystemShapes(ctx context.Context, request com
 
 	var response ListDbSystemShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -17990,7 +17990,7 @@ func (client DatabaseClient) listDbSystemStoragePerformances(ctx context.Context
 
 	var response ListDbSystemStoragePerformancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemStoragePerformances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18047,7 +18047,7 @@ func (client DatabaseClient) listDbSystemUpgradeHistoryEntries(ctx context.Conte
 
 	var response ListDbSystemUpgradeHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemUpgradeHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18104,7 +18104,7 @@ func (client DatabaseClient) listDbSystemUpgrades(ctx context.Context, request c
 
 	var response ListDbSystemUpgradesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystemUpgrades")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18163,7 +18163,7 @@ func (client DatabaseClient) listDbSystems(ctx context.Context, request common.O
 
 	var response ListDbSystemsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbSystems")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18220,7 +18220,7 @@ func (client DatabaseClient) listDbVersions(ctx context.Context, request common.
 
 	var response ListDbVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18277,7 +18277,7 @@ func (client DatabaseClient) listDbnodeSnapshots(ctx context.Context, request co
 
 	var response ListDbnodeSnapshotsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListDbnodeSnapshots")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18334,7 +18334,7 @@ func (client DatabaseClient) listEstimateCostSavings(ctx context.Context, reques
 
 	var response ListEstimateCostSavingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListEstimateCostSavings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18392,7 +18392,7 @@ func (client DatabaseClient) listExadataInfrastructures(ctx context.Context, req
 
 	var response ListExadataInfrastructuresResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExadataInfrastructures")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18449,7 +18449,7 @@ func (client DatabaseClient) listExadbVmClusterUpdateHistoryEntries(ctx context.
 
 	var response ListExadbVmClusterUpdateHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExadbVmClusterUpdateHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18506,7 +18506,7 @@ func (client DatabaseClient) listExadbVmClusterUpdates(ctx context.Context, requ
 
 	var response ListExadbVmClusterUpdatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExadbVmClusterUpdates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18563,7 +18563,7 @@ func (client DatabaseClient) listExadbVmClusters(ctx context.Context, request co
 
 	var response ListExadbVmClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExadbVmClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18620,7 +18620,7 @@ func (client DatabaseClient) listExascaleDbStorageVaults(ctx context.Context, re
 
 	var response ListExascaleDbStorageVaultsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExascaleDbStorageVaults")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18677,7 +18677,7 @@ func (client DatabaseClient) listExecutionActions(ctx context.Context, request c
 
 	var response ListExecutionActionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExecutionActions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18734,7 +18734,7 @@ func (client DatabaseClient) listExecutionWindows(ctx context.Context, request c
 
 	var response ListExecutionWindowsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExecutionWindows")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18791,7 +18791,7 @@ func (client DatabaseClient) listExternalContainerDatabases(ctx context.Context,
 
 	var response ListExternalContainerDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExternalContainerDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18864,7 +18864,7 @@ func (client DatabaseClient) listExternalDatabaseConnectors(ctx context.Context,
 
 	var response ListExternalDatabaseConnectorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExternalDatabaseConnectors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18921,7 +18921,7 @@ func (client DatabaseClient) listExternalNonContainerDatabases(ctx context.Conte
 
 	var response ListExternalNonContainerDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExternalNonContainerDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -18979,7 +18979,7 @@ func (client DatabaseClient) listExternalPluggableDatabases(ctx context.Context,
 
 	var response ListExternalPluggableDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListExternalPluggableDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19036,7 +19036,7 @@ func (client DatabaseClient) listFlexComponents(ctx context.Context, request com
 
 	var response ListFlexComponentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListFlexComponents")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19093,7 +19093,7 @@ func (client DatabaseClient) listGiVersionMinorVersions(ctx context.Context, req
 
 	var response ListGiVersionMinorVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListGiVersionMinorVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19150,7 +19150,7 @@ func (client DatabaseClient) listGiVersions(ctx context.Context, request common.
 
 	var response ListGiVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListGiVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19207,7 +19207,7 @@ func (client DatabaseClient) listKeyStores(ctx context.Context, request common.O
 
 	var response ListKeyStoresResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListKeyStores")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19264,7 +19264,7 @@ func (client DatabaseClient) listMaintenanceRunHistory(ctx context.Context, requ
 
 	var response ListMaintenanceRunHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListMaintenanceRunHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19321,7 +19321,7 @@ func (client DatabaseClient) listMaintenanceRuns(ctx context.Context, request co
 
 	var response ListMaintenanceRunsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListMaintenanceRuns")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19378,7 +19378,7 @@ func (client DatabaseClient) listOneoffPatches(ctx context.Context, request comm
 
 	var response ListOneoffPatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListOneoffPatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19435,7 +19435,7 @@ func (client DatabaseClient) listParamsForActionType(ctx context.Context, reques
 
 	var response ListParamsForActionTypeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListParamsForActionType")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19492,7 +19492,7 @@ func (client DatabaseClient) listPdbConversionHistoryEntries(ctx context.Context
 
 	var response ListPdbConversionHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListPdbConversionHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19549,7 +19549,7 @@ func (client DatabaseClient) listPluggableDatabaseSnapshots(ctx context.Context,
 
 	var response ListPluggableDatabaseSnapshotsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListPluggableDatabaseSnapshots")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19606,7 +19606,7 @@ func (client DatabaseClient) listPluggableDatabases(ctx context.Context, request
 
 	var response ListPluggableDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListPluggableDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19663,7 +19663,7 @@ func (client DatabaseClient) listRecommendedScheduledActions(ctx context.Context
 
 	var response ListRecommendedScheduledActionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListRecommendedScheduledActions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19720,7 +19720,7 @@ func (client DatabaseClient) listResourcePoolMembers(ctx context.Context, reques
 
 	var response ListResourcePoolMembersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListResourcePoolMembers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19777,7 +19777,7 @@ func (client DatabaseClient) listScheduledActions(ctx context.Context, request c
 
 	var response ListScheduledActionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListScheduledActions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19834,7 +19834,7 @@ func (client DatabaseClient) listSchedulingPlans(ctx context.Context, request co
 
 	var response ListSchedulingPlansResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListSchedulingPlans")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19891,7 +19891,7 @@ func (client DatabaseClient) listSchedulingPolicies(ctx context.Context, request
 
 	var response ListSchedulingPoliciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListSchedulingPolicies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -19948,7 +19948,7 @@ func (client DatabaseClient) listSchedulingWindows(ctx context.Context, request 
 
 	var response ListSchedulingWindowsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListSchedulingWindows")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20005,7 +20005,7 @@ func (client DatabaseClient) listSystemVersionMinorVersions(ctx context.Context,
 
 	var response ListSystemVersionMinorVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListSystemVersionMinorVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20062,7 +20062,7 @@ func (client DatabaseClient) listSystemVersions(ctx context.Context, request com
 
 	var response ListSystemVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListSystemVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20119,7 +20119,7 @@ func (client DatabaseClient) listVmClusterNetworks(ctx context.Context, request 
 
 	var response ListVmClusterNetworksResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListVmClusterNetworks")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20176,7 +20176,7 @@ func (client DatabaseClient) listVmClusterPatchHistoryEntries(ctx context.Contex
 
 	var response ListVmClusterPatchHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListVmClusterPatchHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20233,7 +20233,7 @@ func (client DatabaseClient) listVmClusterPatches(ctx context.Context, request c
 
 	var response ListVmClusterPatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListVmClusterPatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20290,7 +20290,7 @@ func (client DatabaseClient) listVmClusterUpdateHistoryEntries(ctx context.Conte
 
 	var response ListVmClusterUpdateHistoryEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListVmClusterUpdateHistoryEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20347,7 +20347,7 @@ func (client DatabaseClient) listVmClusterUpdates(ctx context.Context, request c
 
 	var response ListVmClusterUpdatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListVmClusterUpdates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20405,7 +20405,7 @@ func (client DatabaseClient) listVmClusters(ctx context.Context, request common.
 
 	var response ListVmClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ListVmClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20468,7 +20468,7 @@ func (client DatabaseClient) localClonePluggableDatabase(ctx context.Context, re
 
 	var response LocalClonePluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "LocalClonePluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20525,7 +20525,7 @@ func (client DatabaseClient) migrateAutonomousContainerDatabaseDataguardAssociat
 
 	var response MigrateAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MigrateAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20588,7 +20588,7 @@ func (client DatabaseClient) migrateDataGuardAssociationToMultiDataGuards(ctx co
 
 	var response MigrateDataGuardAssociationToMultiDataGuardsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MigrateDataGuardAssociationToMultiDataGuards")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20651,7 +20651,7 @@ func (client DatabaseClient) migrateExadataDbSystemResourceModel(ctx context.Con
 
 	var response MigrateExadataDbSystemResourceModelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MigrateExadataDbSystemResourceModel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20713,7 +20713,7 @@ func (client DatabaseClient) migrateVaultKey(ctx context.Context, request common
 
 	var response MigrateVaultKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MigrateVaultKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20775,7 +20775,7 @@ func (client DatabaseClient) modifyDatabaseManagement(ctx context.Context, reque
 
 	var response ModifyDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ModifyDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20837,7 +20837,7 @@ func (client DatabaseClient) modifyPluggableDatabaseManagement(ctx context.Conte
 
 	var response ModifyPluggableDatabaseManagementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ModifyPluggableDatabaseManagement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20899,7 +20899,7 @@ func (client DatabaseClient) mountAdvancedClusterFileSystem(ctx context.Context,
 
 	var response MountAdvancedClusterFileSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MountAdvancedClusterFileSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -20961,7 +20961,7 @@ func (client DatabaseClient) mountDbnodeSnapshot(ctx context.Context, request co
 
 	var response MountDbnodeSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MountDbnodeSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21023,7 +21023,7 @@ func (client DatabaseClient) moveExecutionActionMember(ctx context.Context, requ
 
 	var response MoveExecutionActionMemberResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "MoveExecutionActionMember")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21085,7 +21085,7 @@ func (client DatabaseClient) refreshDataGuardHealthStatus(ctx context.Context, r
 
 	var response RefreshDataGuardHealthStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RefreshDataGuardHealthStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21147,7 +21147,7 @@ func (client DatabaseClient) refreshPluggableDatabase(ctx context.Context, reque
 
 	var response RefreshPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RefreshPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21204,7 +21204,7 @@ func (client DatabaseClient) registerAutonomousDatabaseDataSafe(ctx context.Cont
 
 	var response RegisterAutonomousDatabaseDataSafeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RegisterAutonomousDatabaseDataSafe")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21266,7 +21266,7 @@ func (client DatabaseClient) registerCloudAutonomousVmClusterPkcs(ctx context.Co
 
 	var response RegisterCloudAutonomousVmClusterPkcsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RegisterCloudAutonomousVmClusterPkcs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21328,7 +21328,7 @@ func (client DatabaseClient) registerCloudVmClusterPkcs(ctx context.Context, req
 
 	var response RegisterCloudVmClusterPkcsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RegisterCloudVmClusterPkcs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21386,7 +21386,7 @@ func (client DatabaseClient) reinstateAutonomousContainerDatabaseDataguard(ctx c
 
 	var response ReinstateAutonomousContainerDatabaseDataguardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ReinstateAutonomousContainerDatabaseDataguard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21443,7 +21443,7 @@ func (client DatabaseClient) reinstateAutonomousContainerDatabaseDataguardAssoci
 
 	var response ReinstateAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ReinstateAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21506,7 +21506,7 @@ func (client DatabaseClient) reinstateDataGuard(ctx context.Context, request com
 
 	var response ReinstateDataGuardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ReinstateDataGuard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21563,7 +21563,7 @@ func (client DatabaseClient) reinstateDataGuardAssociation(ctx context.Context, 
 
 	var response ReinstateDataGuardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ReinstateDataGuardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21627,7 +21627,7 @@ func (client DatabaseClient) remoteClonePluggableDatabase(ctx context.Context, r
 
 	var response RemoteClonePluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RemoteClonePluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21689,7 +21689,7 @@ func (client DatabaseClient) removeVirtualMachineFromCloudVmCluster(ctx context.
 
 	var response RemoveVirtualMachineFromCloudVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RemoveVirtualMachineFromCloudVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21751,7 +21751,7 @@ func (client DatabaseClient) removeVirtualMachineFromExadbVmCluster(ctx context.
 
 	var response RemoveVirtualMachineFromExadbVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RemoveVirtualMachineFromExadbVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21813,7 +21813,7 @@ func (client DatabaseClient) removeVirtualMachineFromVmCluster(ctx context.Conte
 
 	var response RemoveVirtualMachineFromVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RemoveVirtualMachineFromVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21875,7 +21875,7 @@ func (client DatabaseClient) reorderExecutionActions(ctx context.Context, reques
 
 	var response ReorderExecutionActionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ReorderExecutionActions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -21937,7 +21937,7 @@ func (client DatabaseClient) reorderScheduledActions(ctx context.Context, reques
 
 	var response ReorderScheduledActionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ReorderScheduledActions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22000,7 +22000,7 @@ func (client DatabaseClient) resizeVmClusterNetwork(ctx context.Context, request
 
 	var response ResizeVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ResizeVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22062,7 +22062,7 @@ func (client DatabaseClient) resourcePoolShapes(ctx context.Context, request com
 
 	var response ResourcePoolShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ResourcePoolShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22119,7 +22119,7 @@ func (client DatabaseClient) restartAutonomousContainerDatabase(ctx context.Cont
 
 	var response RestartAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RestartAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22176,7 +22176,7 @@ func (client DatabaseClient) restartAutonomousDatabase(ctx context.Context, requ
 
 	var response RestartAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RestartAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22233,7 +22233,7 @@ func (client DatabaseClient) restoreAutonomousDatabase(ctx context.Context, requ
 
 	var response RestoreAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RestoreAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22290,7 +22290,7 @@ func (client DatabaseClient) restoreDatabase(ctx context.Context, request common
 
 	var response RestoreDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RestoreDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22352,7 +22352,7 @@ func (client DatabaseClient) rotateAutonomousContainerDatabaseEncryptionKey(ctx 
 
 	var response RotateAutonomousContainerDatabaseEncryptionKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateAutonomousContainerDatabaseEncryptionKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22414,7 +22414,7 @@ func (client DatabaseClient) rotateAutonomousDatabaseEncryptionKey(ctx context.C
 
 	var response RotateAutonomousDatabaseEncryptionKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateAutonomousDatabaseEncryptionKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22476,7 +22476,7 @@ func (client DatabaseClient) rotateAutonomousVmClusterOrdsCerts(ctx context.Cont
 
 	var response RotateAutonomousVmClusterOrdsCertsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateAutonomousVmClusterOrdsCerts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22538,7 +22538,7 @@ func (client DatabaseClient) rotateAutonomousVmClusterSslCerts(ctx context.Conte
 
 	var response RotateAutonomousVmClusterSslCertsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateAutonomousVmClusterSslCerts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22600,7 +22600,7 @@ func (client DatabaseClient) rotateCloudAutonomousVmClusterOrdsCerts(ctx context
 
 	var response RotateCloudAutonomousVmClusterOrdsCertsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateCloudAutonomousVmClusterOrdsCerts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22662,7 +22662,7 @@ func (client DatabaseClient) rotateCloudAutonomousVmClusterSslCerts(ctx context.
 
 	var response RotateCloudAutonomousVmClusterSslCertsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateCloudAutonomousVmClusterSslCerts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22724,7 +22724,7 @@ func (client DatabaseClient) rotateOrdsCerts(ctx context.Context, request common
 
 	var response RotateOrdsCertsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateOrdsCerts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22786,7 +22786,7 @@ func (client DatabaseClient) rotatePluggableDatabaseEncryptionKey(ctx context.Co
 
 	var response RotatePluggableDatabaseEncryptionKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotatePluggableDatabaseEncryptionKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22848,7 +22848,7 @@ func (client DatabaseClient) rotateSslCerts(ctx context.Context, request common.
 
 	var response RotateSslCertsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateSslCerts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22910,7 +22910,7 @@ func (client DatabaseClient) rotateVaultKey(ctx context.Context, request common.
 
 	var response RotateVaultKeyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RotateVaultKey")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -22972,7 +22972,7 @@ func (client DatabaseClient) runDataPatch(ctx context.Context, request common.OC
 
 	var response RunDataPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "RunDataPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23029,7 +23029,7 @@ func (client DatabaseClient) saasAdminUserStatus(ctx context.Context, request co
 
 	var response SaasAdminUserStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SaasAdminUserStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23092,7 +23092,7 @@ func (client DatabaseClient) scanExternalContainerDatabasePluggableDatabases(ctx
 
 	var response ScanExternalContainerDatabasePluggableDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ScanExternalContainerDatabasePluggableDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23154,7 +23154,7 @@ func (client DatabaseClient) setDbKeyVersion(ctx context.Context, request common
 
 	var response SetDbKeyVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SetDbKeyVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23216,7 +23216,7 @@ func (client DatabaseClient) setPdbKeyVersion(ctx context.Context, request commo
 
 	var response SetPdbKeyVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SetPdbKeyVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23273,7 +23273,7 @@ func (client DatabaseClient) shrinkAutonomousDatabase(ctx context.Context, reque
 
 	var response ShrinkAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ShrinkAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23330,7 +23330,7 @@ func (client DatabaseClient) startAutonomousDatabase(ctx context.Context, reques
 
 	var response StartAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "StartAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23392,7 +23392,7 @@ func (client DatabaseClient) startPluggableDatabase(ctx context.Context, request
 
 	var response StartPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "StartPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23449,7 +23449,7 @@ func (client DatabaseClient) stopAutonomousDatabase(ctx context.Context, request
 
 	var response StopAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "StopAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23511,7 +23511,7 @@ func (client DatabaseClient) stopPluggableDatabase(ctx context.Context, request 
 
 	var response StopPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "StopPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23576,7 +23576,7 @@ func (client DatabaseClient) switchOverDataGuard(ctx context.Context, request co
 
 	var response SwitchOverDataGuardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SwitchOverDataGuard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23634,7 +23634,7 @@ func (client DatabaseClient) switchoverAutonomousContainerDatabaseDataguard(ctx 
 
 	var response SwitchoverAutonomousContainerDatabaseDataguardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SwitchoverAutonomousContainerDatabaseDataguard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23692,7 +23692,7 @@ func (client DatabaseClient) switchoverAutonomousContainerDatabaseDataguardAssoc
 
 	var response SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SwitchoverAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23759,7 +23759,7 @@ func (client DatabaseClient) switchoverAutonomousDatabase(ctx context.Context, r
 
 	var response SwitchoverAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SwitchoverAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23818,7 +23818,7 @@ func (client DatabaseClient) switchoverDataGuardAssociation(ctx context.Context,
 
 	var response SwitchoverDataGuardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "SwitchoverDataGuardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23875,7 +23875,7 @@ func (client DatabaseClient) terminateAutonomousContainerDatabase(ctx context.Co
 
 	var response TerminateAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "TerminateAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23932,7 +23932,7 @@ func (client DatabaseClient) terminateAutonomousExadataInfrastructure(ctx contex
 
 	var response TerminateAutonomousExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "TerminateAutonomousExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -23991,7 +23991,7 @@ func (client DatabaseClient) terminateDbSystem(ctx context.Context, request comm
 
 	var response TerminateDbSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "TerminateDbSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24053,7 +24053,7 @@ func (client DatabaseClient) unmountAdvancedClusterFileSystem(ctx context.Contex
 
 	var response UnmountAdvancedClusterFileSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UnmountAdvancedClusterFileSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24115,7 +24115,7 @@ func (client DatabaseClient) unmountDbnodeSnapshot(ctx context.Context, request 
 
 	var response UnmountDbnodeSnapshotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UnmountDbnodeSnapshot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24177,7 +24177,7 @@ func (client DatabaseClient) unregisterCloudAutonomousVmClusterPkcs(ctx context.
 
 	var response UnregisterCloudAutonomousVmClusterPkcsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UnregisterCloudAutonomousVmClusterPkcs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24239,7 +24239,7 @@ func (client DatabaseClient) unregisterCloudVmClusterPkcs(ctx context.Context, r
 
 	var response UnregisterCloudVmClusterPkcsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UnregisterCloudVmClusterPkcs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24296,7 +24296,7 @@ func (client DatabaseClient) updateAdvancedClusterFileSystem(ctx context.Context
 
 	var response UpdateAdvancedClusterFileSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAdvancedClusterFileSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24353,7 +24353,7 @@ func (client DatabaseClient) updateAutonomousContainerDatabase(ctx context.Conte
 
 	var response UpdateAutonomousContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24410,7 +24410,7 @@ func (client DatabaseClient) updateAutonomousContainerDatabaseDataguardAssociati
 
 	var response UpdateAutonomousContainerDatabaseDataguardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousContainerDatabaseDataguardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24467,7 +24467,7 @@ func (client DatabaseClient) updateAutonomousDatabase(ctx context.Context, reque
 
 	var response UpdateAutonomousDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24524,7 +24524,7 @@ func (client DatabaseClient) updateAutonomousDatabaseBackup(ctx context.Context,
 
 	var response UpdateAutonomousDatabaseBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousDatabaseBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24581,7 +24581,7 @@ func (client DatabaseClient) updateAutonomousDatabaseRegionalWallet(ctx context.
 
 	var response UpdateAutonomousDatabaseRegionalWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousDatabaseRegionalWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24638,7 +24638,7 @@ func (client DatabaseClient) updateAutonomousDatabaseSoftwareImage(ctx context.C
 
 	var response UpdateAutonomousDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24695,7 +24695,7 @@ func (client DatabaseClient) updateAutonomousDatabaseWallet(ctx context.Context,
 
 	var response UpdateAutonomousDatabaseWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousDatabaseWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24752,7 +24752,7 @@ func (client DatabaseClient) updateAutonomousExadataInfrastructure(ctx context.C
 
 	var response UpdateAutonomousExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24809,7 +24809,7 @@ func (client DatabaseClient) updateAutonomousVmCluster(ctx context.Context, requ
 
 	var response UpdateAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24866,7 +24866,7 @@ func (client DatabaseClient) updateBackup(ctx context.Context, request common.OC
 
 	var response UpdateBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24925,7 +24925,7 @@ func (client DatabaseClient) updateBackupDestination(ctx context.Context, reques
 
 	var response UpdateBackupDestinationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateBackupDestination")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -24982,7 +24982,7 @@ func (client DatabaseClient) updateCloudAutonomousVmCluster(ctx context.Context,
 
 	var response UpdateCloudAutonomousVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateCloudAutonomousVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25039,7 +25039,7 @@ func (client DatabaseClient) updateCloudExadataInfrastructure(ctx context.Contex
 
 	var response UpdateCloudExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateCloudExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25096,7 +25096,7 @@ func (client DatabaseClient) updateCloudVmCluster(ctx context.Context, request c
 
 	var response UpdateCloudVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateCloudVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25153,7 +25153,7 @@ func (client DatabaseClient) updateCloudVmClusterIormConfig(ctx context.Context,
 
 	var response UpdateCloudVmClusterIormConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateCloudVmClusterIormConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25210,7 +25210,7 @@ func (client DatabaseClient) updateConsoleConnection(ctx context.Context, reques
 
 	var response UpdateConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25267,7 +25267,7 @@ func (client DatabaseClient) updateConsoleHistory(ctx context.Context, request c
 
 	var response UpdateConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25330,7 +25330,7 @@ func (client DatabaseClient) updateDataGuard(ctx context.Context, request common
 
 	var response UpdateDataGuardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDataGuard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25387,7 +25387,7 @@ func (client DatabaseClient) updateDataGuardAssociation(ctx context.Context, req
 
 	var response UpdateDataGuardAssociationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDataGuardAssociation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25444,7 +25444,7 @@ func (client DatabaseClient) updateDatabase(ctx context.Context, request common.
 
 	var response UpdateDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25501,7 +25501,7 @@ func (client DatabaseClient) updateDatabaseSoftwareImage(ctx context.Context, re
 
 	var response UpdateDatabaseSoftwareImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDatabaseSoftwareImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25558,7 +25558,7 @@ func (client DatabaseClient) updateDbHome(ctx context.Context, request common.OC
 
 	var response UpdateDbHomeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDbHome")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25615,7 +25615,7 @@ func (client DatabaseClient) updateDbNode(ctx context.Context, request common.OC
 
 	var response UpdateDbNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDbNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25674,7 +25674,7 @@ func (client DatabaseClient) updateDbSystem(ctx context.Context, request common.
 
 	var response UpdateDbSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateDbSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25732,7 +25732,7 @@ func (client DatabaseClient) updateExadataInfrastructure(ctx context.Context, re
 
 	var response UpdateExadataInfrastructureResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExadataInfrastructure")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25793,7 +25793,7 @@ func (client DatabaseClient) updateExadataIormConfig(ctx context.Context, reques
 
 	var response UpdateExadataIormConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExadataIormConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25850,7 +25850,7 @@ func (client DatabaseClient) updateExadbVmCluster(ctx context.Context, request c
 
 	var response UpdateExadbVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExadbVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25907,7 +25907,7 @@ func (client DatabaseClient) updateExascaleDbStorageVault(ctx context.Context, r
 
 	var response UpdateExascaleDbStorageVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExascaleDbStorageVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -25964,7 +25964,7 @@ func (client DatabaseClient) updateExecutionAction(ctx context.Context, request 
 
 	var response UpdateExecutionActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExecutionAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26021,7 +26021,7 @@ func (client DatabaseClient) updateExecutionWindow(ctx context.Context, request 
 
 	var response UpdateExecutionWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExecutionWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26080,7 +26080,7 @@ func (client DatabaseClient) updateExternalContainerDatabase(ctx context.Context
 
 	var response UpdateExternalContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExternalContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26137,7 +26137,7 @@ func (client DatabaseClient) updateExternalDatabaseConnector(ctx context.Context
 
 	var response UpdateExternalDatabaseConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExternalDatabaseConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26194,7 +26194,7 @@ func (client DatabaseClient) updateExternalNonContainerDatabase(ctx context.Cont
 
 	var response UpdateExternalNonContainerDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExternalNonContainerDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26253,7 +26253,7 @@ func (client DatabaseClient) updateExternalPluggableDatabase(ctx context.Context
 
 	var response UpdateExternalPluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateExternalPluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26310,7 +26310,7 @@ func (client DatabaseClient) updateKeyStore(ctx context.Context, request common.
 
 	var response UpdateKeyStoreResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateKeyStore")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26367,7 +26367,7 @@ func (client DatabaseClient) updateMaintenanceRun(ctx context.Context, request c
 
 	var response UpdateMaintenanceRunResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateMaintenanceRun")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26424,7 +26424,7 @@ func (client DatabaseClient) updateOneoffPatch(ctx context.Context, request comm
 
 	var response UpdateOneoffPatchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateOneoffPatch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26481,7 +26481,7 @@ func (client DatabaseClient) updatePluggableDatabase(ctx context.Context, reques
 
 	var response UpdatePluggableDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdatePluggableDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26538,7 +26538,7 @@ func (client DatabaseClient) updateScheduledAction(ctx context.Context, request 
 
 	var response UpdateScheduledActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateScheduledAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26595,7 +26595,7 @@ func (client DatabaseClient) updateSchedulingPolicy(ctx context.Context, request
 
 	var response UpdateSchedulingPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateSchedulingPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26652,7 +26652,7 @@ func (client DatabaseClient) updateSchedulingWindow(ctx context.Context, request
 
 	var response UpdateSchedulingWindowResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateSchedulingWindow")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26709,7 +26709,7 @@ func (client DatabaseClient) updateVmCluster(ctx context.Context, request common
 
 	var response UpdateVmClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateVmCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26767,7 +26767,7 @@ func (client DatabaseClient) updateVmClusterNetwork(ctx context.Context, request
 
 	var response UpdateVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpdateVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26824,7 +26824,7 @@ func (client DatabaseClient) upgradeDatabase(ctx context.Context, request common
 
 	var response UpgradeDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpgradeDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26886,7 +26886,7 @@ func (client DatabaseClient) upgradeDbSystem(ctx context.Context, request common
 
 	var response UpgradeDbSystemResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "UpgradeDbSystem")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -26948,7 +26948,7 @@ func (client DatabaseClient) validateVmClusterNetwork(ctx context.Context, reque
 
 	var response ValidateVmClusterNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "database", "ValidateVmClusterNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

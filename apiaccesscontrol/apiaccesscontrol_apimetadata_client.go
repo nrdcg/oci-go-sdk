@@ -142,7 +142,7 @@ func (client ApiMetadataClient) getApiMetadata(ctx context.Context, request comm
 
 	var response GetApiMetadataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apiMetadata", "GetApiMetadata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -200,7 +200,7 @@ func (client ApiMetadataClient) listApiMetadata(ctx context.Context, request com
 
 	var response ListApiMetadataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apiMetadata", "ListApiMetadata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -258,7 +258,7 @@ func (client ApiMetadataClient) listApiMetadataByEntityTypes(ctx context.Context
 
 	var response ListApiMetadataByEntityTypesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apiMetadata", "ListApiMetadataByEntityTypes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

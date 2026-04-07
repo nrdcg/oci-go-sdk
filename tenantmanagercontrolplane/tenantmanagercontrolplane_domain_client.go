@@ -141,7 +141,7 @@ func (client DomainClient) createDomain(ctx context.Context, request common.OCIR
 
 	var response CreateDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "domain", "CreateDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -198,7 +198,7 @@ func (client DomainClient) deleteDomain(ctx context.Context, request common.OCIR
 
 	var response DeleteDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "domain", "DeleteDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -255,7 +255,7 @@ func (client DomainClient) getDomain(ctx context.Context, request common.OCIRequ
 
 	var response GetDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "domain", "GetDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -312,7 +312,7 @@ func (client DomainClient) listDomains(ctx context.Context, request common.OCIRe
 
 	var response ListDomainsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "domain", "ListDomains")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -369,7 +369,7 @@ func (client DomainClient) updateDomain(ctx context.Context, request common.OCIR
 
 	var response UpdateDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "domain", "UpdateDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

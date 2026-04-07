@@ -137,7 +137,7 @@ func (client VnMonitoringClient) changePathAnalyzerTestCompartment(ctx context.C
 
 	var response ChangePathAnalyzerTestCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "ChangePathAnalyzerTestCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -199,7 +199,7 @@ func (client VnMonitoringClient) createPathAnalyzerTest(ctx context.Context, req
 
 	var response CreatePathAnalyzerTestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "CreatePathAnalyzerTest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -256,7 +256,7 @@ func (client VnMonitoringClient) deletePathAnalyzerTest(ctx context.Context, req
 
 	var response DeletePathAnalyzerTestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "DeletePathAnalyzerTest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -324,7 +324,7 @@ func (client VnMonitoringClient) getPathAnalysis(ctx context.Context, request co
 
 	var response GetPathAnalysisResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "GetPathAnalysis")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -381,7 +381,7 @@ func (client VnMonitoringClient) getPathAnalyzerTest(ctx context.Context, reques
 
 	var response GetPathAnalyzerTestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "GetPathAnalyzerTest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -438,7 +438,7 @@ func (client VnMonitoringClient) getWorkRequest(ctx context.Context, request com
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -495,7 +495,7 @@ func (client VnMonitoringClient) listPathAnalyzerTests(ctx context.Context, requ
 
 	var response ListPathAnalyzerTestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "ListPathAnalyzerTests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -552,7 +552,7 @@ func (client VnMonitoringClient) listWorkRequestErrors(ctx context.Context, requ
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -609,7 +609,7 @@ func (client VnMonitoringClient) listWorkRequestLogs(ctx context.Context, reques
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -667,7 +667,7 @@ func (client VnMonitoringClient) listWorkRequestResults(ctx context.Context, req
 
 	var response ListWorkRequestResultsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "ListWorkRequestResults")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -724,7 +724,7 @@ func (client VnMonitoringClient) listWorkRequests(ctx context.Context, request c
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -786,7 +786,7 @@ func (client VnMonitoringClient) updatePathAnalyzerTest(ctx context.Context, req
 
 	var response UpdatePathAnalyzerTestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "vnMonitoring", "UpdatePathAnalyzerTest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

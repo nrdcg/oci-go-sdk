@@ -143,7 +143,7 @@ func (client DatastoreClusterClient) addDatastoreToDatastoreCluster(ctx context.
 
 	var response AddDatastoreToDatastoreClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "AddDatastoreToDatastoreCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -208,7 +208,7 @@ func (client DatastoreClusterClient) attachDatastoreClusterToCluster(ctx context
 
 	var response AttachDatastoreClusterToClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "AttachDatastoreClusterToCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -273,7 +273,7 @@ func (client DatastoreClusterClient) attachDatastoreClusterToEsxiHost(ctx contex
 
 	var response AttachDatastoreClusterToEsxiHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "AttachDatastoreClusterToEsxiHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -338,7 +338,7 @@ func (client DatastoreClusterClient) changeDatastoreClusterCompartment(ctx conte
 
 	var response ChangeDatastoreClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "ChangeDatastoreClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client DatastoreClusterClient) createDatastoreCluster(ctx context.Context,
 
 	var response CreateDatastoreClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "CreateDatastoreCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -459,7 +459,7 @@ func (client DatastoreClusterClient) deleteDatastoreCluster(ctx context.Context,
 
 	var response DeleteDatastoreClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "DeleteDatastoreCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -524,7 +524,7 @@ func (client DatastoreClusterClient) detachDatastoreClusterFromCluster(ctx conte
 
 	var response DetachDatastoreClusterFromClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "DetachDatastoreClusterFromCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -589,7 +589,7 @@ func (client DatastoreClusterClient) detachDatastoreClusterFromEsxiHost(ctx cont
 
 	var response DetachDatastoreClusterFromEsxiHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "DetachDatastoreClusterFromEsxiHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -647,7 +647,7 @@ func (client DatastoreClusterClient) getDatastoreCluster(ctx context.Context, re
 
 	var response GetDatastoreClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "GetDatastoreCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -706,7 +706,7 @@ func (client DatastoreClusterClient) listDatastoreClusters(ctx context.Context, 
 
 	var response ListDatastoreClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "ListDatastoreClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -769,7 +769,7 @@ func (client DatastoreClusterClient) removeDatastoreFromDatastoreCluster(ctx con
 
 	var response RemoveDatastoreFromDatastoreClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "RemoveDatastoreFromDatastoreCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -829,7 +829,7 @@ func (client DatastoreClusterClient) updateDatastoreCluster(ctx context.Context,
 
 	var response UpdateDatastoreClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "datastoreCluster", "UpdateDatastoreCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

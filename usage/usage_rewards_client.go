@@ -141,7 +141,7 @@ func (client RewardsClient) createRedeemableUser(ctx context.Context, request co
 
 	var response CreateRedeemableUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "rewards", "CreateRedeemableUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -198,7 +198,7 @@ func (client RewardsClient) deleteRedeemableUser(ctx context.Context, request co
 
 	var response DeleteRedeemableUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "rewards", "DeleteRedeemableUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -255,7 +255,7 @@ func (client RewardsClient) listProducts(ctx context.Context, request common.OCI
 
 	var response ListProductsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "rewards", "ListProducts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -312,7 +312,7 @@ func (client RewardsClient) listRedeemableUsers(ctx context.Context, request com
 
 	var response ListRedeemableUsersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "rewards", "ListRedeemableUsers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -369,7 +369,7 @@ func (client RewardsClient) listRedemptions(ctx context.Context, request common.
 
 	var response ListRedemptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "rewards", "ListRedemptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -426,7 +426,7 @@ func (client RewardsClient) listRewards(ctx context.Context, request common.OCIR
 
 	var response ListRewardsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "rewards", "ListRewards")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

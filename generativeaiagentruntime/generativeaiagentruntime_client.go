@@ -146,7 +146,7 @@ func (client GenerativeAiAgentRuntimeClient) chat(ctx context.Context, request c
 
 	var response ChatResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "generativeAiAgentRuntime", "Chat")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -210,7 +210,7 @@ func (client GenerativeAiAgentRuntimeClient) createSession(ctx context.Context, 
 
 	var response CreateSessionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "generativeAiAgentRuntime", "CreateSession")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client GenerativeAiAgentRuntimeClient) deleteSession(ctx context.Context, 
 
 	var response DeleteSessionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "generativeAiAgentRuntime", "DeleteSession")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -326,7 +326,7 @@ func (client GenerativeAiAgentRuntimeClient) getSession(ctx context.Context, req
 
 	var response GetSessionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "generativeAiAgentRuntime", "GetSession")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -389,7 +389,7 @@ func (client GenerativeAiAgentRuntimeClient) retrieveMetadata(ctx context.Contex
 
 	var response RetrieveMetadataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "generativeAiAgentRuntime", "RetrieveMetadata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -447,7 +447,7 @@ func (client GenerativeAiAgentRuntimeClient) updateSession(ctx context.Context, 
 
 	var response UpdateSessionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "generativeAiAgentRuntime", "UpdateSession")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

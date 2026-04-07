@@ -146,7 +146,7 @@ func (client MonitoringClient) changeAlarmCompartment(ctx context.Context, reque
 
 	var response ChangeAlarmCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "ChangeAlarmCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -215,7 +215,7 @@ func (client MonitoringClient) createAlarm(ctx context.Context, request common.O
 
 	var response CreateAlarmResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "CreateAlarm")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -285,7 +285,7 @@ func (client MonitoringClient) createAlarmSuppression(ctx context.Context, reque
 
 	var response CreateAlarmSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "CreateAlarmSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -349,7 +349,7 @@ func (client MonitoringClient) deleteAlarm(ctx context.Context, request common.O
 
 	var response DeleteAlarmResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "DeleteAlarm")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -413,7 +413,7 @@ func (client MonitoringClient) deleteAlarmSuppression(ctx context.Context, reque
 
 	var response DeleteAlarmSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "DeleteAlarmSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -477,7 +477,7 @@ func (client MonitoringClient) getAlarm(ctx context.Context, request common.OCIR
 
 	var response GetAlarmResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "GetAlarm")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -541,7 +541,7 @@ func (client MonitoringClient) getAlarmHistory(ctx context.Context, request comm
 
 	var response GetAlarmHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "GetAlarmHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -604,7 +604,7 @@ func (client MonitoringClient) getAlarmSuppression(ctx context.Context, request 
 
 	var response GetAlarmSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "GetAlarmSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -667,7 +667,7 @@ func (client MonitoringClient) listAlarmSuppressions(ctx context.Context, reques
 
 	var response ListAlarmSuppressionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "ListAlarmSuppressions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -731,7 +731,7 @@ func (client MonitoringClient) listAlarms(ctx context.Context, request common.OC
 
 	var response ListAlarmsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "ListAlarms")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -799,7 +799,7 @@ func (client MonitoringClient) listAlarmsStatus(ctx context.Context, request com
 
 	var response ListAlarmsStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "ListAlarmsStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -863,7 +863,7 @@ func (client MonitoringClient) listMetrics(ctx context.Context, request common.O
 
 	var response ListMetricsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "ListMetrics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -942,7 +942,7 @@ func (client MonitoringClient) postMetricData(ctx context.Context, request commo
 
 	var response PostMetricDataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "PostMetricData")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1006,7 +1006,7 @@ func (client MonitoringClient) removeAlarmSuppression(ctx context.Context, reque
 
 	var response RemoveAlarmSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "RemoveAlarmSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1071,7 +1071,7 @@ func (client MonitoringClient) retrieveDimensionStates(ctx context.Context, requ
 
 	var response RetrieveDimensionStatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "RetrieveDimensionStates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1134,7 +1134,7 @@ func (client MonitoringClient) summarizeAlarmSuppressionHistory(ctx context.Cont
 
 	var response SummarizeAlarmSuppressionHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "SummarizeAlarmSuppressionHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1198,7 +1198,7 @@ func (client MonitoringClient) summarizeMetricsData(ctx context.Context, request
 
 	var response SummarizeMetricsDataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "SummarizeMetricsData")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1262,7 +1262,7 @@ func (client MonitoringClient) updateAlarm(ctx context.Context, request common.O
 
 	var response UpdateAlarmResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "monitoring", "UpdateAlarm")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

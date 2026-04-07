@@ -138,7 +138,7 @@ func (client DeploymentClient) addDeploymentLock(ctx context.Context, request co
 
 	var response AddDeploymentLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "AddDeploymentLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -200,7 +200,7 @@ func (client DeploymentClient) changeDeploymentCompartment(ctx context.Context, 
 
 	var response ChangeDeploymentCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "ChangeDeploymentCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client DeploymentClient) createDeployment(ctx context.Context, request com
 
 	var response CreateDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "CreateDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -320,7 +320,7 @@ func (client DeploymentClient) deleteDeployment(ctx context.Context, request com
 
 	var response DeleteDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "DeleteDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -378,7 +378,7 @@ func (client DeploymentClient) getDeployment(ctx context.Context, request common
 
 	var response GetDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "GetDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -436,7 +436,7 @@ func (client DeploymentClient) listDeployments(ctx context.Context, request comm
 
 	var response ListDeploymentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "ListDeployments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -493,7 +493,7 @@ func (client DeploymentClient) removeDeploymentLock(ctx context.Context, request
 
 	var response RemoveDeploymentLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "RemoveDeploymentLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -550,7 +550,7 @@ func (client DeploymentClient) updateDeployment(ctx context.Context, request com
 
 	var response UpdateDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "deployment", "UpdateDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -139,7 +139,7 @@ func (client ContainerEngineClient) clusterMigrateToNativeVcn(ctx context.Contex
 
 	var response ClusterMigrateToNativeVcnResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ClusterMigrateToNativeVcn")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -202,7 +202,7 @@ func (client ContainerEngineClient) completeCredentialRotation(ctx context.Conte
 
 	var response CompleteCredentialRotationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "CompleteCredentialRotation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client ContainerEngineClient) createCluster(ctx context.Context, request c
 
 	var response CreateClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "CreateCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -323,7 +323,7 @@ func (client ContainerEngineClient) createKubeconfig(ctx context.Context, reques
 
 	var response CreateKubeconfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "CreateKubeconfig")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/containerengine/20180222/Cluster/CreateKubeconfig"
@@ -385,7 +385,7 @@ func (client ContainerEngineClient) createNodePool(ctx context.Context, request 
 
 	var response CreateNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "CreateNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -448,7 +448,7 @@ func (client ContainerEngineClient) createVirtualNodePool(ctx context.Context, r
 
 	var response CreateVirtualNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "CreateVirtualNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -511,7 +511,7 @@ func (client ContainerEngineClient) createWorkloadMapping(ctx context.Context, r
 
 	var response CreateWorkloadMappingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "CreateWorkloadMapping")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -569,7 +569,7 @@ func (client ContainerEngineClient) deleteCluster(ctx context.Context, request c
 
 	var response DeleteClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DeleteCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -627,7 +627,7 @@ func (client ContainerEngineClient) deleteNode(ctx context.Context, request comm
 
 	var response DeleteNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DeleteNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -685,7 +685,7 @@ func (client ContainerEngineClient) deleteNodePool(ctx context.Context, request 
 
 	var response DeleteNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DeleteNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -743,7 +743,7 @@ func (client ContainerEngineClient) deleteVirtualNodePool(ctx context.Context, r
 
 	var response DeleteVirtualNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DeleteVirtualNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -801,7 +801,7 @@ func (client ContainerEngineClient) deleteWorkRequest(ctx context.Context, reque
 
 	var response DeleteWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DeleteWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -859,7 +859,7 @@ func (client ContainerEngineClient) deleteWorkloadMapping(ctx context.Context, r
 
 	var response DeleteWorkloadMappingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DeleteWorkloadMapping")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -917,7 +917,7 @@ func (client ContainerEngineClient) disableAddon(ctx context.Context, request co
 
 	var response DisableAddonResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "DisableAddon")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -981,7 +981,7 @@ func (client ContainerEngineClient) extendEndpointDecommissionRollbackDeadline(c
 
 	var response ExtendEndpointDecommissionRollbackDeadlineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ExtendEndpointDecommissionRollbackDeadline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1039,7 +1039,7 @@ func (client ContainerEngineClient) getAddon(ctx context.Context, request common
 
 	var response GetAddonResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetAddon")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1097,7 +1097,7 @@ func (client ContainerEngineClient) getCluster(ctx context.Context, request comm
 
 	var response GetClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1155,7 +1155,7 @@ func (client ContainerEngineClient) getClusterMigrateToNativeVcnStatus(ctx conte
 
 	var response GetClusterMigrateToNativeVcnStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetClusterMigrateToNativeVcnStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1213,7 +1213,7 @@ func (client ContainerEngineClient) getClusterOptions(ctx context.Context, reque
 
 	var response GetClusterOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetClusterOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1271,7 +1271,7 @@ func (client ContainerEngineClient) getCredentialRotationStatus(ctx context.Cont
 
 	var response GetCredentialRotationStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetCredentialRotationStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1329,7 +1329,7 @@ func (client ContainerEngineClient) getNodePool(ctx context.Context, request com
 
 	var response GetNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1387,7 +1387,7 @@ func (client ContainerEngineClient) getNodePoolOptions(ctx context.Context, requ
 
 	var response GetNodePoolOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetNodePoolOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1445,7 +1445,7 @@ func (client ContainerEngineClient) getPublicApiEndpointDecommissionStatus(ctx c
 
 	var response GetPublicApiEndpointDecommissionStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetPublicApiEndpointDecommissionStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1503,7 +1503,7 @@ func (client ContainerEngineClient) getVirtualNode(ctx context.Context, request 
 
 	var response GetVirtualNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetVirtualNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1561,7 +1561,7 @@ func (client ContainerEngineClient) getVirtualNodePool(ctx context.Context, requ
 
 	var response GetVirtualNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetVirtualNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1619,7 +1619,7 @@ func (client ContainerEngineClient) getWorkRequest(ctx context.Context, request 
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1677,7 +1677,7 @@ func (client ContainerEngineClient) getWorkloadMapping(ctx context.Context, requ
 
 	var response GetWorkloadMappingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "GetWorkloadMapping")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1740,7 +1740,7 @@ func (client ContainerEngineClient) installAddon(ctx context.Context, request co
 
 	var response InstallAddonResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "InstallAddon")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1798,7 +1798,7 @@ func (client ContainerEngineClient) listAddonOptions(ctx context.Context, reques
 
 	var response ListAddonOptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListAddonOptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1856,7 +1856,7 @@ func (client ContainerEngineClient) listAddons(ctx context.Context, request comm
 
 	var response ListAddonsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListAddons")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1914,7 +1914,7 @@ func (client ContainerEngineClient) listClusters(ctx context.Context, request co
 
 	var response ListClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1972,7 +1972,7 @@ func (client ContainerEngineClient) listNodePools(ctx context.Context, request c
 
 	var response ListNodePoolsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListNodePools")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2030,7 +2030,7 @@ func (client ContainerEngineClient) listPodShapes(ctx context.Context, request c
 
 	var response ListPodShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListPodShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2088,7 +2088,7 @@ func (client ContainerEngineClient) listVirtualNodePools(ctx context.Context, re
 
 	var response ListVirtualNodePoolsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListVirtualNodePools")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2146,7 +2146,7 @@ func (client ContainerEngineClient) listVirtualNodes(ctx context.Context, reques
 
 	var response ListVirtualNodesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListVirtualNodes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2204,7 +2204,7 @@ func (client ContainerEngineClient) listWorkRequestErrors(ctx context.Context, r
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2262,7 +2262,7 @@ func (client ContainerEngineClient) listWorkRequestLogs(ctx context.Context, req
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2320,7 +2320,7 @@ func (client ContainerEngineClient) listWorkRequests(ctx context.Context, reques
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2378,7 +2378,7 @@ func (client ContainerEngineClient) listWorkloadMappings(ctx context.Context, re
 
 	var response ListWorkloadMappingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ListWorkloadMappings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2441,7 +2441,7 @@ func (client ContainerEngineClient) rebootClusterNode(ctx context.Context, reque
 
 	var response RebootClusterNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "RebootClusterNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2504,7 +2504,7 @@ func (client ContainerEngineClient) replaceBootVolumeClusterNode(ctx context.Con
 
 	var response ReplaceBootVolumeClusterNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "ReplaceBootVolumeClusterNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2568,7 +2568,7 @@ func (client ContainerEngineClient) rollbackPublicApiEndpointDecommission(ctx co
 
 	var response RollbackPublicApiEndpointDecommissionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "RollbackPublicApiEndpointDecommission")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2631,7 +2631,7 @@ func (client ContainerEngineClient) startCredentialRotation(ctx context.Context,
 
 	var response StartCredentialRotationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "StartCredentialRotation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2694,7 +2694,7 @@ func (client ContainerEngineClient) startPublicApiEndpointDecommission(ctx conte
 
 	var response StartPublicApiEndpointDecommissionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "StartPublicApiEndpointDecommission")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2752,7 +2752,7 @@ func (client ContainerEngineClient) updateAddon(ctx context.Context, request com
 
 	var response UpdateAddonResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "UpdateAddon")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2810,7 +2810,7 @@ func (client ContainerEngineClient) updateCluster(ctx context.Context, request c
 
 	var response UpdateClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "UpdateCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2868,7 +2868,7 @@ func (client ContainerEngineClient) updateClusterEndpointConfig(ctx context.Cont
 
 	var response UpdateClusterEndpointConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "UpdateClusterEndpointConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2926,7 +2926,7 @@ func (client ContainerEngineClient) updateNodePool(ctx context.Context, request 
 
 	var response UpdateNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "UpdateNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2984,7 +2984,7 @@ func (client ContainerEngineClient) updateVirtualNodePool(ctx context.Context, r
 
 	var response UpdateVirtualNodePoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "UpdateVirtualNodePool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3042,7 +3042,7 @@ func (client ContainerEngineClient) updateWorkloadMapping(ctx context.Context, r
 
 	var response UpdateWorkloadMappingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "containerEngine", "UpdateWorkloadMapping")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

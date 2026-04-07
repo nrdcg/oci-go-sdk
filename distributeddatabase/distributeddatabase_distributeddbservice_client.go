@@ -142,7 +142,7 @@ func (client DistributedDbServiceClient) addDistributedDatabaseGdsControlNode(ct
 
 	var response AddDistributedDatabaseGdsControlNodeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "AddDistributedDatabaseGdsControlNode")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client DistributedDbServiceClient) changeDistributedDatabaseCompartment(ct
 
 	var response ChangeDistributedDatabaseCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "ChangeDistributedDatabaseCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client DistributedDbServiceClient) changeDistributedDbBackupConfig(ctx con
 
 	var response ChangeDistributedDbBackupConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "ChangeDistributedDbBackupConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client DistributedDbServiceClient) configureDistributedDatabaseGsms(ctx co
 
 	var response ConfigureDistributedDatabaseGsmsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "ConfigureDistributedDatabaseGsms")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -398,7 +398,7 @@ func (client DistributedDbServiceClient) configureDistributedDatabaseSharding(ct
 
 	var response ConfigureDistributedDatabaseShardingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "ConfigureDistributedDatabaseSharding")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -461,7 +461,7 @@ func (client DistributedDbServiceClient) createDistributedDatabase(ctx context.C
 
 	var response CreateDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "CreateDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -526,7 +526,7 @@ func (client DistributedDbServiceClient) deleteDistributedDatabase(ctx context.C
 
 	var response DeleteDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "DeleteDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -592,7 +592,7 @@ func (client DistributedDbServiceClient) downloadDistributedDatabaseGsmCertifica
 
 	var response DownloadDistributedDatabaseGsmCertificateSigningRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "DownloadDistributedDatabaseGsmCertificateSigningRequest")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedDatabase/DownloadDistributedDatabaseGsmCertificateSigningRequest"
@@ -656,7 +656,7 @@ func (client DistributedDbServiceClient) generateDistributedDatabaseGsmCertifica
 
 	var response GenerateDistributedDatabaseGsmCertificateSigningRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "GenerateDistributedDatabaseGsmCertificateSigningRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -719,7 +719,7 @@ func (client DistributedDbServiceClient) generateDistributedDatabaseWallet(ctx c
 
 	var response GenerateDistributedDatabaseWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "GenerateDistributedDatabaseWallet")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedDatabase/GenerateDistributedDatabaseWallet"
@@ -776,7 +776,7 @@ func (client DistributedDbServiceClient) getDistributedDatabase(ctx context.Cont
 
 	var response GetDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "GetDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -835,7 +835,7 @@ func (client DistributedDbServiceClient) getDistributedDatabaseRaftMetric(ctx co
 
 	var response GetDistributedDatabaseRaftMetricResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "GetDistributedDatabaseRaftMetric")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -893,7 +893,7 @@ func (client DistributedDbServiceClient) listDistributedDatabases(ctx context.Co
 
 	var response ListDistributedDatabasesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "ListDistributedDatabases")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -956,7 +956,7 @@ func (client DistributedDbServiceClient) moveDistributedDatabaseReplicationUnit(
 
 	var response MoveDistributedDatabaseReplicationUnitResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "MoveDistributedDatabaseReplicationUnit")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1023,7 +1023,7 @@ func (client DistributedDbServiceClient) patchDistributedDatabase(ctx context.Co
 
 	var response PatchDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "PatchDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1086,7 +1086,7 @@ func (client DistributedDbServiceClient) recreateFailedDistributedDatabaseResour
 
 	var response RecreateFailedDistributedDatabaseResourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "RecreateFailedDistributedDatabaseResource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1149,7 +1149,7 @@ func (client DistributedDbServiceClient) rotateDistributedDatabasePasswords(ctx 
 
 	var response RotateDistributedDatabasePasswordsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "RotateDistributedDatabasePasswords")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1212,7 +1212,7 @@ func (client DistributedDbServiceClient) startDistributedDatabase(ctx context.Co
 
 	var response StartDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "StartDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1275,7 +1275,7 @@ func (client DistributedDbServiceClient) stopDistributedDatabase(ctx context.Con
 
 	var response StopDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "StopDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1333,7 +1333,7 @@ func (client DistributedDbServiceClient) updateDistributedDatabase(ctx context.C
 
 	var response UpdateDistributedDatabaseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "UpdateDistributedDatabase")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1398,7 +1398,7 @@ func (client DistributedDbServiceClient) uploadDistributedDatabaseSignedCertific
 
 	var response UploadDistributedDatabaseSignedCertificateAndGenerateWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "UploadDistributedDatabaseSignedCertificateAndGenerateWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1461,7 +1461,7 @@ func (client DistributedDbServiceClient) validateDistributedDatabaseNetwork(ctx 
 
 	var response ValidateDistributedDatabaseNetworkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "distributedDbService", "ValidateDistributedDatabaseNetwork")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

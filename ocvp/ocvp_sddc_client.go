@@ -143,7 +143,7 @@ func (client SddcClient) cancelDowngradeHcx(ctx context.Context, request common.
 
 	var response CancelDowngradeHcxResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "CancelDowngradeHcx")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -208,7 +208,7 @@ func (client SddcClient) changeSddcCompartment(ctx context.Context, request comm
 
 	var response ChangeSddcCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "ChangeSddcCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -274,7 +274,7 @@ func (client SddcClient) createSddc(ctx context.Context, request common.OCIReque
 
 	var response CreateSddcResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "CreateSddc")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -336,7 +336,7 @@ func (client SddcClient) deleteSddc(ctx context.Context, request common.OCIReque
 
 	var response DeleteSddcResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "DeleteSddc")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -403,7 +403,7 @@ func (client SddcClient) downgradeHcx(ctx context.Context, request common.OCIReq
 
 	var response DowngradeHcxResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "DowngradeHcx")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -461,7 +461,7 @@ func (client SddcClient) getSddc(ctx context.Context, request common.OCIRequest,
 
 	var response GetSddcResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "GetSddc")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -520,7 +520,7 @@ func (client SddcClient) listSddcs(ctx context.Context, request common.OCIReques
 
 	var response ListSddcsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "ListSddcs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -578,7 +578,7 @@ func (client SddcClient) listSupportedCommitments(ctx context.Context, request c
 
 	var response ListSupportedCommitmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "ListSupportedCommitments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -636,7 +636,7 @@ func (client SddcClient) listSupportedHostShapes(ctx context.Context, request co
 
 	var response ListSupportedHostShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "ListSupportedHostShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -695,7 +695,7 @@ func (client SddcClient) listSupportedVmwareSoftwareVersions(ctx context.Context
 
 	var response ListSupportedVmwareSoftwareVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "ListSupportedVmwareSoftwareVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -758,7 +758,7 @@ func (client SddcClient) refreshHcxLicenseStatus(ctx context.Context, request co
 
 	var response RefreshHcxLicenseStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "RefreshHcxLicenseStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -821,7 +821,7 @@ func (client SddcClient) retrievePassword(ctx context.Context, request common.OC
 
 	var response RetrievePasswordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "RetrievePassword")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -883,7 +883,7 @@ func (client SddcClient) updateSddc(ctx context.Context, request common.OCIReque
 
 	var response UpdateSddcResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "UpdateSddc")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -946,7 +946,7 @@ func (client SddcClient) upgradeHcx(ctx context.Context, request common.OCIReque
 
 	var response UpgradeHcxResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sddc", "UpgradeHcx")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

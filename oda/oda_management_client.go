@@ -142,7 +142,7 @@ func (client ManagementClient) bulkCreateSkillEntities(ctx context.Context, requ
 
 	var response BulkCreateSkillEntitiesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "BulkCreateSkillEntities")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client ManagementClient) cascadingDeleteSkillCustomEntities(ctx context.Co
 
 	var response CascadingDeleteSkillCustomEntitiesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CascadingDeleteSkillCustomEntities")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -271,7 +271,7 @@ func (client ManagementClient) changeOdaPrivateEndpointCompartment(ctx context.C
 
 	var response ChangeOdaPrivateEndpointCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ChangeOdaPrivateEndpointCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -329,7 +329,7 @@ func (client ManagementClient) configureDigitalAssistantParameters(ctx context.C
 
 	var response ConfigureDigitalAssistantParametersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ConfigureDigitalAssistantParameters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -392,7 +392,7 @@ func (client ManagementClient) createAuthenticationProvider(ctx context.Context,
 
 	var response CreateAuthenticationProviderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateAuthenticationProvider")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -455,7 +455,7 @@ func (client ManagementClient) createChannel(ctx context.Context, request common
 
 	var response CreateChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -518,7 +518,7 @@ func (client ManagementClient) createDigitalAssistant(ctx context.Context, reque
 
 	var response CreateDigitalAssistantResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateDigitalAssistant")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -583,7 +583,7 @@ func (client ManagementClient) createOdaPrivateEndpoint(ctx context.Context, req
 
 	var response CreateOdaPrivateEndpointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateOdaPrivateEndpoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -648,7 +648,7 @@ func (client ManagementClient) createOdaPrivateEndpointAttachment(ctx context.Co
 
 	var response CreateOdaPrivateEndpointAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateOdaPrivateEndpointAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -713,7 +713,7 @@ func (client ManagementClient) createOdaPrivateEndpointScanProxy(ctx context.Con
 
 	var response CreateOdaPrivateEndpointScanProxyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateOdaPrivateEndpointScanProxy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -776,7 +776,7 @@ func (client ManagementClient) createSkill(ctx context.Context, request common.O
 
 	var response CreateSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -839,7 +839,7 @@ func (client ManagementClient) createSkillParameter(ctx context.Context, request
 
 	var response CreateSkillParameterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateSkillParameter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -902,7 +902,7 @@ func (client ManagementClient) createTranslator(ctx context.Context, request com
 
 	var response CreateTranslatorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "CreateTranslator")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -960,7 +960,7 @@ func (client ManagementClient) deleteAuthenticationProvider(ctx context.Context,
 
 	var response DeleteAuthenticationProviderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteAuthenticationProvider")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1018,7 +1018,7 @@ func (client ManagementClient) deleteChannel(ctx context.Context, request common
 
 	var response DeleteChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1076,7 +1076,7 @@ func (client ManagementClient) deleteDigitalAssistant(ctx context.Context, reque
 
 	var response DeleteDigitalAssistantResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteDigitalAssistant")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1135,7 +1135,7 @@ func (client ManagementClient) deleteOdaPrivateEndpoint(ctx context.Context, req
 
 	var response DeleteOdaPrivateEndpointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteOdaPrivateEndpoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1194,7 +1194,7 @@ func (client ManagementClient) deleteOdaPrivateEndpointAttachment(ctx context.Co
 
 	var response DeleteOdaPrivateEndpointAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteOdaPrivateEndpointAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1253,7 +1253,7 @@ func (client ManagementClient) deleteOdaPrivateEndpointScanProxy(ctx context.Con
 
 	var response DeleteOdaPrivateEndpointScanProxyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteOdaPrivateEndpointScanProxy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1311,7 +1311,7 @@ func (client ManagementClient) deleteSkill(ctx context.Context, request common.O
 
 	var response DeleteSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1369,7 +1369,7 @@ func (client ManagementClient) deleteSkillParameter(ctx context.Context, request
 
 	var response DeleteSkillParameterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteSkillParameter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1427,7 +1427,7 @@ func (client ManagementClient) deleteTranslator(ctx context.Context, request com
 
 	var response DeleteTranslatorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "DeleteTranslator")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1485,7 +1485,7 @@ func (client ManagementClient) exportDigitalAssistant(ctx context.Context, reque
 
 	var response ExportDigitalAssistantResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ExportDigitalAssistant")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1543,7 +1543,7 @@ func (client ManagementClient) exportSkill(ctx context.Context, request common.O
 
 	var response ExportSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ExportSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1601,7 +1601,7 @@ func (client ManagementClient) getAuthenticationProvider(ctx context.Context, re
 
 	var response GetAuthenticationProviderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetAuthenticationProvider")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1659,7 +1659,7 @@ func (client ManagementClient) getChannel(ctx context.Context, request common.OC
 
 	var response GetChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1717,7 +1717,7 @@ func (client ManagementClient) getDigitalAssistant(ctx context.Context, request 
 
 	var response GetDigitalAssistantResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetDigitalAssistant")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1775,7 +1775,7 @@ func (client ManagementClient) getDigitalAssistantParameter(ctx context.Context,
 
 	var response GetDigitalAssistantParameterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetDigitalAssistantParameter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1833,7 +1833,7 @@ func (client ManagementClient) getOdaPrivateEndpoint(ctx context.Context, reques
 
 	var response GetOdaPrivateEndpointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetOdaPrivateEndpoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1891,7 +1891,7 @@ func (client ManagementClient) getOdaPrivateEndpointAttachment(ctx context.Conte
 
 	var response GetOdaPrivateEndpointAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetOdaPrivateEndpointAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1949,7 +1949,7 @@ func (client ManagementClient) getOdaPrivateEndpointScanProxy(ctx context.Contex
 
 	var response GetOdaPrivateEndpointScanProxyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetOdaPrivateEndpointScanProxy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2007,7 +2007,7 @@ func (client ManagementClient) getSkill(ctx context.Context, request common.OCIR
 
 	var response GetSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2065,7 +2065,7 @@ func (client ManagementClient) getSkillParameter(ctx context.Context, request co
 
 	var response GetSkillParameterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetSkillParameter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2123,7 +2123,7 @@ func (client ManagementClient) getTranslator(ctx context.Context, request common
 
 	var response GetTranslatorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "GetTranslator")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2186,7 +2186,7 @@ func (client ManagementClient) importBot(ctx context.Context, request common.OCI
 
 	var response ImportBotResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ImportBot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2247,7 +2247,7 @@ func (client ManagementClient) listAuthenticationProviders(ctx context.Context, 
 
 	var response ListAuthenticationProvidersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListAuthenticationProviders")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2308,7 +2308,7 @@ func (client ManagementClient) listChannels(ctx context.Context, request common.
 
 	var response ListChannelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListChannels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2369,7 +2369,7 @@ func (client ManagementClient) listDigitalAssistantParameters(ctx context.Contex
 
 	var response ListDigitalAssistantParametersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListDigitalAssistantParameters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2430,7 +2430,7 @@ func (client ManagementClient) listDigitalAssistants(ctx context.Context, reques
 
 	var response ListDigitalAssistantsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListDigitalAssistants")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2491,7 +2491,7 @@ func (client ManagementClient) listOdaPrivateEndpointAttachments(ctx context.Con
 
 	var response ListOdaPrivateEndpointAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListOdaPrivateEndpointAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2553,7 +2553,7 @@ func (client ManagementClient) listOdaPrivateEndpointScanProxies(ctx context.Con
 
 	var response ListOdaPrivateEndpointScanProxiesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListOdaPrivateEndpointScanProxies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2615,7 +2615,7 @@ func (client ManagementClient) listOdaPrivateEndpoints(ctx context.Context, requ
 
 	var response ListOdaPrivateEndpointsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListOdaPrivateEndpoints")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2676,7 +2676,7 @@ func (client ManagementClient) listSkillParameters(ctx context.Context, request 
 
 	var response ListSkillParametersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListSkillParameters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2737,7 +2737,7 @@ func (client ManagementClient) listSkills(ctx context.Context, request common.OC
 
 	var response ListSkillsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListSkills")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2798,7 +2798,7 @@ func (client ManagementClient) listTranslators(ctx context.Context, request comm
 
 	var response ListTranslatorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "ListTranslators")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2857,7 +2857,7 @@ func (client ManagementClient) publishDigitalAssistant(ctx context.Context, requ
 
 	var response PublishDigitalAssistantResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "PublishDigitalAssistant")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2916,7 +2916,7 @@ func (client ManagementClient) publishSkill(ctx context.Context, request common.
 
 	var response PublishSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "PublishSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2976,7 +2976,7 @@ func (client ManagementClient) rotateChannelKeys(ctx context.Context, request co
 
 	var response RotateChannelKeysResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "RotateChannelKeys")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3034,7 +3034,7 @@ func (client ManagementClient) startChannel(ctx context.Context, request common.
 
 	var response StartChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "StartChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3092,7 +3092,7 @@ func (client ManagementClient) stopChannel(ctx context.Context, request common.O
 
 	var response StopChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "StopChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3155,7 +3155,7 @@ func (client ManagementClient) trainSkill(ctx context.Context, request common.OC
 
 	var response TrainSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "TrainSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3213,7 +3213,7 @@ func (client ManagementClient) updateAuthenticationProvider(ctx context.Context,
 
 	var response UpdateAuthenticationProviderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateAuthenticationProvider")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3271,7 +3271,7 @@ func (client ManagementClient) updateChannel(ctx context.Context, request common
 
 	var response UpdateChannelResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateChannel")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3329,7 +3329,7 @@ func (client ManagementClient) updateDigitalAssistant(ctx context.Context, reque
 
 	var response UpdateDigitalAssistantResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateDigitalAssistant")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3387,7 +3387,7 @@ func (client ManagementClient) updateDigitalAssistantParameter(ctx context.Conte
 
 	var response UpdateDigitalAssistantParameterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateDigitalAssistantParameter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3445,7 +3445,7 @@ func (client ManagementClient) updateOdaPrivateEndpoint(ctx context.Context, req
 
 	var response UpdateOdaPrivateEndpointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateOdaPrivateEndpoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3503,7 +3503,7 @@ func (client ManagementClient) updateSkill(ctx context.Context, request common.O
 
 	var response UpdateSkillResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateSkill")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3561,7 +3561,7 @@ func (client ManagementClient) updateSkillParameter(ctx context.Context, request
 
 	var response UpdateSkillParameterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateSkillParameter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3619,7 +3619,7 @@ func (client ManagementClient) updateTranslator(ctx context.Context, request com
 
 	var response UpdateTranslatorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "management", "UpdateTranslator")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

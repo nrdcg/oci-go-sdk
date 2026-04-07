@@ -143,7 +143,7 @@ func (client NetworkLoadBalancerClient) changeNetworkLoadBalancerCompartment(ctx
 
 	var response ChangeNetworkLoadBalancerCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ChangeNetworkLoadBalancerCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client NetworkLoadBalancerClient) createBackend(ctx context.Context, reque
 
 	var response CreateBackendResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "CreateBackend")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -269,7 +269,7 @@ func (client NetworkLoadBalancerClient) createBackendSet(ctx context.Context, re
 
 	var response CreateBackendSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "CreateBackendSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -332,7 +332,7 @@ func (client NetworkLoadBalancerClient) createListener(ctx context.Context, requ
 
 	var response CreateListenerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "CreateListener")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -395,7 +395,7 @@ func (client NetworkLoadBalancerClient) createNetworkLoadBalancer(ctx context.Co
 
 	var response CreateNetworkLoadBalancerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "CreateNetworkLoadBalancer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -453,7 +453,7 @@ func (client NetworkLoadBalancerClient) deleteBackend(ctx context.Context, reque
 
 	var response DeleteBackendResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "DeleteBackend")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -512,7 +512,7 @@ func (client NetworkLoadBalancerClient) deleteBackendSet(ctx context.Context, re
 
 	var response DeleteBackendSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "DeleteBackendSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -570,7 +570,7 @@ func (client NetworkLoadBalancerClient) deleteListener(ctx context.Context, requ
 
 	var response DeleteListenerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "DeleteListener")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -628,7 +628,7 @@ func (client NetworkLoadBalancerClient) deleteNetworkLoadBalancer(ctx context.Co
 
 	var response DeleteNetworkLoadBalancerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "DeleteNetworkLoadBalancer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -686,7 +686,7 @@ func (client NetworkLoadBalancerClient) getBackend(ctx context.Context, request 
 
 	var response GetBackendResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetBackend")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -744,7 +744,7 @@ func (client NetworkLoadBalancerClient) getBackendHealth(ctx context.Context, re
 
 	var response GetBackendHealthResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetBackendHealth")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -802,7 +802,7 @@ func (client NetworkLoadBalancerClient) getBackendOperationalStatus(ctx context.
 
 	var response GetBackendOperationalStatusResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetBackendOperationalStatus")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -860,7 +860,7 @@ func (client NetworkLoadBalancerClient) getBackendSet(ctx context.Context, reque
 
 	var response GetBackendSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetBackendSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -918,7 +918,7 @@ func (client NetworkLoadBalancerClient) getBackendSetHealth(ctx context.Context,
 
 	var response GetBackendSetHealthResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetBackendSetHealth")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -981,7 +981,7 @@ func (client NetworkLoadBalancerClient) getHealthChecker(ctx context.Context, re
 
 	var response GetHealthCheckerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetHealthChecker")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1039,7 +1039,7 @@ func (client NetworkLoadBalancerClient) getListener(ctx context.Context, request
 
 	var response GetListenerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetListener")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1097,7 +1097,7 @@ func (client NetworkLoadBalancerClient) getNetworkLoadBalancer(ctx context.Conte
 
 	var response GetNetworkLoadBalancerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetNetworkLoadBalancer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1155,7 +1155,7 @@ func (client NetworkLoadBalancerClient) getNetworkLoadBalancerHealth(ctx context
 
 	var response GetNetworkLoadBalancerHealthResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetNetworkLoadBalancerHealth")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1213,7 +1213,7 @@ func (client NetworkLoadBalancerClient) getWorkRequest(ctx context.Context, requ
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1271,7 +1271,7 @@ func (client NetworkLoadBalancerClient) listBackendSets(ctx context.Context, req
 
 	var response ListBackendSetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListBackendSets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1329,7 +1329,7 @@ func (client NetworkLoadBalancerClient) listBackends(ctx context.Context, reques
 
 	var response ListBackendsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListBackends")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1387,7 +1387,7 @@ func (client NetworkLoadBalancerClient) listListeners(ctx context.Context, reque
 
 	var response ListListenersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListListeners")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1445,7 +1445,7 @@ func (client NetworkLoadBalancerClient) listNetworkLoadBalancerHealths(ctx conte
 
 	var response ListNetworkLoadBalancerHealthsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListNetworkLoadBalancerHealths")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1503,7 +1503,7 @@ func (client NetworkLoadBalancerClient) listNetworkLoadBalancers(ctx context.Con
 
 	var response ListNetworkLoadBalancersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListNetworkLoadBalancers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1561,7 +1561,7 @@ func (client NetworkLoadBalancerClient) listNetworkLoadBalancersPolicies(ctx con
 
 	var response ListNetworkLoadBalancersPoliciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListNetworkLoadBalancersPolicies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1620,7 +1620,7 @@ func (client NetworkLoadBalancerClient) listNetworkLoadBalancersProtocols(ctx co
 
 	var response ListNetworkLoadBalancersProtocolsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListNetworkLoadBalancersProtocols")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1678,7 +1678,7 @@ func (client NetworkLoadBalancerClient) listWorkRequestErrors(ctx context.Contex
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1736,7 +1736,7 @@ func (client NetworkLoadBalancerClient) listWorkRequestLogs(ctx context.Context,
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1794,7 +1794,7 @@ func (client NetworkLoadBalancerClient) listWorkRequests(ctx context.Context, re
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1857,7 +1857,7 @@ func (client NetworkLoadBalancerClient) updateBackend(ctx context.Context, reque
 
 	var response UpdateBackendResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "UpdateBackend")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1920,7 +1920,7 @@ func (client NetworkLoadBalancerClient) updateBackendSet(ctx context.Context, re
 
 	var response UpdateBackendSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "UpdateBackendSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1983,7 +1983,7 @@ func (client NetworkLoadBalancerClient) updateHealthChecker(ctx context.Context,
 
 	var response UpdateHealthCheckerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "UpdateHealthChecker")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2046,7 +2046,7 @@ func (client NetworkLoadBalancerClient) updateListener(ctx context.Context, requ
 
 	var response UpdateListenerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "UpdateListener")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2104,7 +2104,7 @@ func (client NetworkLoadBalancerClient) updateNetworkLoadBalancer(ctx context.Co
 
 	var response UpdateNetworkLoadBalancerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "UpdateNetworkLoadBalancer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2167,7 +2167,7 @@ func (client NetworkLoadBalancerClient) updateNetworkSecurityGroups(ctx context.
 
 	var response UpdateNetworkSecurityGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "networkLoadBalancer", "UpdateNetworkSecurityGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

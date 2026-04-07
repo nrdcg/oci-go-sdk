@@ -164,7 +164,7 @@ func (client OracleDBAzureBlobContainerClient) changeOracleDbAzureBlobContainerC
 
 	var response ChangeOracleDbAzureBlobContainerCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobContainer", "ChangeOracleDbAzureBlobContainerCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -227,7 +227,7 @@ func (client OracleDBAzureBlobContainerClient) createOracleDbAzureBlobContainer(
 
 	var response CreateOracleDbAzureBlobContainerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobContainer", "CreateOracleDbAzureBlobContainer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -285,7 +285,7 @@ func (client OracleDBAzureBlobContainerClient) deleteOracleDbAzureBlobContainer(
 
 	var response DeleteOracleDbAzureBlobContainerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobContainer", "DeleteOracleDbAzureBlobContainer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -343,7 +343,7 @@ func (client OracleDBAzureBlobContainerClient) getOracleDbAzureBlobContainer(ctx
 
 	var response GetOracleDbAzureBlobContainerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobContainer", "GetOracleDbAzureBlobContainer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client OracleDBAzureBlobContainerClient) listOracleDbAzureBlobContainers(c
 
 	var response ListOracleDbAzureBlobContainersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobContainer", "ListOracleDbAzureBlobContainers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -459,7 +459,7 @@ func (client OracleDBAzureBlobContainerClient) updateOracleDbAzureBlobContainer(
 
 	var response UpdateOracleDbAzureBlobContainerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobContainer", "UpdateOracleDbAzureBlobContainer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

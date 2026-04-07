@@ -164,7 +164,7 @@ func (client MultiCloudResourceDiscoveryClient) changeMultiCloudResourceDiscover
 
 	var response ChangeMultiCloudResourceDiscoveryCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudResourceDiscovery", "ChangeMultiCloudResourceDiscoveryCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -227,7 +227,7 @@ func (client MultiCloudResourceDiscoveryClient) createMultiCloudResourceDiscover
 
 	var response CreateMultiCloudResourceDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudResourceDiscovery", "CreateMultiCloudResourceDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -285,7 +285,7 @@ func (client MultiCloudResourceDiscoveryClient) deleteMultiCloudResourceDiscover
 
 	var response DeleteMultiCloudResourceDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudResourceDiscovery", "DeleteMultiCloudResourceDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -343,7 +343,7 @@ func (client MultiCloudResourceDiscoveryClient) getMultiCloudResourceDiscovery(c
 
 	var response GetMultiCloudResourceDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudResourceDiscovery", "GetMultiCloudResourceDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client MultiCloudResourceDiscoveryClient) listMultiCloudResourceDiscoverie
 
 	var response ListMultiCloudResourceDiscoveriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudResourceDiscovery", "ListMultiCloudResourceDiscoveries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -459,7 +459,7 @@ func (client MultiCloudResourceDiscoveryClient) updateMultiCloudResourceDiscover
 
 	var response UpdateMultiCloudResourceDiscoveryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudResourceDiscovery", "UpdateMultiCloudResourceDiscovery")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -142,7 +142,7 @@ func (client ApmSyntheticClient) aggregateNetworkData(ctx context.Context, reque
 
 	var response AggregateNetworkDataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "AggregateNetworkData")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client ApmSyntheticClient) createDedicatedVantagePoint(ctx context.Context
 
 	var response CreateDedicatedVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "CreateDedicatedVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client ApmSyntheticClient) createMonitor(ctx context.Context, request comm
 
 	var response CreateMonitorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "CreateMonitor")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client ApmSyntheticClient) createOnPremiseVantagePoint(ctx context.Context
 
 	var response CreateOnPremiseVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "CreateOnPremiseVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -394,7 +394,7 @@ func (client ApmSyntheticClient) createScript(ctx context.Context, request commo
 
 	var response CreateScriptResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "CreateScript")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -457,7 +457,7 @@ func (client ApmSyntheticClient) createWorker(ctx context.Context, request commo
 
 	var response CreateWorkerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "CreateWorker")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -515,7 +515,7 @@ func (client ApmSyntheticClient) deleteDedicatedVantagePoint(ctx context.Context
 
 	var response DeleteDedicatedVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "DeleteDedicatedVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -573,7 +573,7 @@ func (client ApmSyntheticClient) deleteMonitor(ctx context.Context, request comm
 
 	var response DeleteMonitorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "DeleteMonitor")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -631,7 +631,7 @@ func (client ApmSyntheticClient) deleteOnPremiseVantagePoint(ctx context.Context
 
 	var response DeleteOnPremiseVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "DeleteOnPremiseVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -689,7 +689,7 @@ func (client ApmSyntheticClient) deleteScript(ctx context.Context, request commo
 
 	var response DeleteScriptResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "DeleteScript")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -747,7 +747,7 @@ func (client ApmSyntheticClient) deleteWorker(ctx context.Context, request commo
 
 	var response DeleteWorkerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "DeleteWorker")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -805,7 +805,7 @@ func (client ApmSyntheticClient) getDedicatedVantagePoint(ctx context.Context, r
 
 	var response GetDedicatedVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "GetDedicatedVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -863,7 +863,7 @@ func (client ApmSyntheticClient) getMonitor(ctx context.Context, request common.
 
 	var response GetMonitorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "GetMonitor")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -921,7 +921,7 @@ func (client ApmSyntheticClient) getMonitorResult(ctx context.Context, request c
 
 	var response GetMonitorResultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "GetMonitorResult")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -979,7 +979,7 @@ func (client ApmSyntheticClient) getOnPremiseVantagePoint(ctx context.Context, r
 
 	var response GetOnPremiseVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "GetOnPremiseVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1037,7 +1037,7 @@ func (client ApmSyntheticClient) getScript(ctx context.Context, request common.O
 
 	var response GetScriptResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "GetScript")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1095,7 +1095,7 @@ func (client ApmSyntheticClient) getWorker(ctx context.Context, request common.O
 
 	var response GetWorkerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "GetWorker")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1153,7 +1153,7 @@ func (client ApmSyntheticClient) listDedicatedVantagePoints(ctx context.Context,
 
 	var response ListDedicatedVantagePointsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "ListDedicatedVantagePoints")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1211,7 +1211,7 @@ func (client ApmSyntheticClient) listMonitors(ctx context.Context, request commo
 
 	var response ListMonitorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "ListMonitors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1269,7 +1269,7 @@ func (client ApmSyntheticClient) listOnPremiseVantagePoints(ctx context.Context,
 
 	var response ListOnPremiseVantagePointsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "ListOnPremiseVantagePoints")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1327,7 +1327,7 @@ func (client ApmSyntheticClient) listPublicVantagePoints(ctx context.Context, re
 
 	var response ListPublicVantagePointsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "ListPublicVantagePoints")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1385,7 +1385,7 @@ func (client ApmSyntheticClient) listScripts(ctx context.Context, request common
 
 	var response ListScriptsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "ListScripts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1443,7 +1443,7 @@ func (client ApmSyntheticClient) listWorkers(ctx context.Context, request common
 
 	var response ListWorkersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "ListWorkers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1501,7 +1501,7 @@ func (client ApmSyntheticClient) updateDedicatedVantagePoint(ctx context.Context
 
 	var response UpdateDedicatedVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "UpdateDedicatedVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1559,7 +1559,7 @@ func (client ApmSyntheticClient) updateMonitor(ctx context.Context, request comm
 
 	var response UpdateMonitorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "UpdateMonitor")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1617,7 +1617,7 @@ func (client ApmSyntheticClient) updateOnPremiseVantagePoint(ctx context.Context
 
 	var response UpdateOnPremiseVantagePointResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "UpdateOnPremiseVantagePoint")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1675,7 +1675,7 @@ func (client ApmSyntheticClient) updateScript(ctx context.Context, request commo
 
 	var response UpdateScriptResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "UpdateScript")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1733,7 +1733,7 @@ func (client ApmSyntheticClient) updateWorker(ctx context.Context, request commo
 
 	var response UpdateWorkerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "apmSynthetic", "UpdateWorker")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

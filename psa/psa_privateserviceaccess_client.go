@@ -137,7 +137,7 @@ func (client PrivateServiceAccessClient) cancelPsaWorkRequest(ctx context.Contex
 
 	var response CancelPsaWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "CancelPsaWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -201,7 +201,7 @@ func (client PrivateServiceAccessClient) changePrivateServiceAccessCompartment(c
 
 	var response ChangePrivateServiceAccessCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "ChangePrivateServiceAccessCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client PrivateServiceAccessClient) createPrivateServiceAccess(ctx context.
 
 	var response CreatePrivateServiceAccessResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "CreatePrivateServiceAccess")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -323,7 +323,7 @@ func (client PrivateServiceAccessClient) deletePrivateServiceAccess(ctx context.
 
 	var response DeletePrivateServiceAccessResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "DeletePrivateServiceAccess")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -381,7 +381,7 @@ func (client PrivateServiceAccessClient) getPrivateServiceAccess(ctx context.Con
 
 	var response GetPrivateServiceAccessResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "GetPrivateServiceAccess")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -439,7 +439,7 @@ func (client PrivateServiceAccessClient) getPsaWorkRequest(ctx context.Context, 
 
 	var response GetPsaWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "GetPsaWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -498,7 +498,7 @@ func (client PrivateServiceAccessClient) listPrivateServiceAccesses(ctx context.
 
 	var response ListPrivateServiceAccessesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "ListPrivateServiceAccesses")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -556,7 +556,7 @@ func (client PrivateServiceAccessClient) listPsaServices(ctx context.Context, re
 
 	var response ListPsaServicesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "ListPsaServices")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -614,7 +614,7 @@ func (client PrivateServiceAccessClient) listPsaWorkRequestErrors(ctx context.Co
 
 	var response ListPsaWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "ListPsaWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -672,7 +672,7 @@ func (client PrivateServiceAccessClient) listPsaWorkRequestLogs(ctx context.Cont
 
 	var response ListPsaWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "ListPsaWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -730,7 +730,7 @@ func (client PrivateServiceAccessClient) listPsaWorkRequests(ctx context.Context
 
 	var response ListPsaWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "ListPsaWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -788,7 +788,7 @@ func (client PrivateServiceAccessClient) updatePrivateServiceAccess(ctx context.
 
 	var response UpdatePrivateServiceAccessResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "privateServiceAccess", "UpdatePrivateServiceAccess")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

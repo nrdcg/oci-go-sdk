@@ -148,7 +148,7 @@ func (client SoftwareSourceClient) addPackagesToSoftwareSource(ctx context.Conte
 
 	var response AddPackagesToSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "AddPackagesToSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -211,7 +211,7 @@ func (client SoftwareSourceClient) changeAvailabilityOfSoftwareSources(ctx conte
 
 	var response ChangeAvailabilityOfSoftwareSourcesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ChangeAvailabilityOfSoftwareSources")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -275,7 +275,7 @@ func (client SoftwareSourceClient) changeSoftwareSourceCompartment(ctx context.C
 
 	var response ChangeSoftwareSourceCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ChangeSoftwareSourceCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -338,7 +338,7 @@ func (client SoftwareSourceClient) createEntitlement(ctx context.Context, reques
 
 	var response CreateEntitlementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "CreateEntitlement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client SoftwareSourceClient) createSoftwareSource(ctx context.Context, req
 
 	var response CreateSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "CreateSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -459,7 +459,7 @@ func (client SoftwareSourceClient) deleteSoftwareSource(ctx context.Context, req
 
 	var response DeleteSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "DeleteSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -517,7 +517,7 @@ func (client SoftwareSourceClient) getErratum(ctx context.Context, request commo
 
 	var response GetErratumResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetErratum")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -575,7 +575,7 @@ func (client SoftwareSourceClient) getModuleStream(ctx context.Context, request 
 
 	var response GetModuleStreamResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetModuleStream")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -633,7 +633,7 @@ func (client SoftwareSourceClient) getModuleStreamProfile(ctx context.Context, r
 
 	var response GetModuleStreamProfileResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetModuleStreamProfile")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -691,7 +691,7 @@ func (client SoftwareSourceClient) getPackageGroup(ctx context.Context, request 
 
 	var response GetPackageGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetPackageGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -749,7 +749,7 @@ func (client SoftwareSourceClient) getSoftwarePackage(ctx context.Context, reque
 
 	var response GetSoftwarePackageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetSoftwarePackage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -807,7 +807,7 @@ func (client SoftwareSourceClient) getSoftwarePackageByName(ctx context.Context,
 
 	var response GetSoftwarePackageByNameResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetSoftwarePackageByName")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -865,7 +865,7 @@ func (client SoftwareSourceClient) getSoftwareSource(ctx context.Context, reques
 
 	var response GetSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -923,7 +923,7 @@ func (client SoftwareSourceClient) getSoftwareSourceManifest(ctx context.Context
 
 	var response GetSoftwareSourceManifestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "GetSoftwareSourceManifest")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/SoftwareSource/GetSoftwareSourceManifest"
@@ -981,7 +981,7 @@ func (client SoftwareSourceClient) listAllSoftwarePackages(ctx context.Context, 
 
 	var response ListAllSoftwarePackagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListAllSoftwarePackages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1040,12 +1040,75 @@ func (client SoftwareSourceClient) listAvailableSoftwarePackages(ctx context.Con
 
 	var response ListAvailableSoftwarePackagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListAvailableSoftwarePackages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/SoftwareSource/ListAvailableSoftwarePackages"
 		err = common.PostProcessServiceError(err, "SoftwareSource", "ListAvailableSoftwarePackages", apiReferenceLink)
+		return response, err
+	}
+
+	err = common.UnmarshalResponse(httpResponse, &response)
+	return response, err
+}
+
+// ListAvailableSoftwareSourcesToAdd Retrieves a list of software source repos that are available to add to a specified compartment. This API returns repos that are not already selected in the specified compartment.
+//
+// # See also
+//
+// Click https://docs.oracle.com/en-us/iaas/tools/go-sdk-examples/latest/osmanagementhub/ListAvailableSoftwareSourcesToAdd.go.html to see an example of how to use ListAvailableSoftwareSourcesToAdd API.
+// A default retry strategy applies to this operation ListAvailableSoftwareSourcesToAdd()
+func (client SoftwareSourceClient) ListAvailableSoftwareSourcesToAdd(ctx context.Context, request ListAvailableSoftwareSourcesToAddRequest) (response ListAvailableSoftwareSourcesToAddResponse, err error) {
+	var ociResponse common.OCIResponse
+	policy := common.DefaultRetryPolicy()
+	if client.RetryPolicy() != nil {
+		policy = *client.RetryPolicy()
+	}
+	if request.RetryPolicy() != nil {
+		policy = *request.RetryPolicy()
+	}
+
+	if !(request.OpcRetryToken != nil && *request.OpcRetryToken != "") {
+		request.OpcRetryToken = common.String(common.RetryToken())
+	}
+
+	ociResponse, err = common.Retry(ctx, request, client.listAvailableSoftwareSourcesToAdd, policy)
+	if err != nil {
+		if ociResponse != nil {
+			if httpResponse := ociResponse.HTTPResponse(); httpResponse != nil {
+				opcRequestId := httpResponse.Header.Get("opc-request-id")
+				response = ListAvailableSoftwareSourcesToAddResponse{RawResponse: httpResponse, OpcRequestId: &opcRequestId}
+			} else {
+				response = ListAvailableSoftwareSourcesToAddResponse{}
+			}
+		}
+		return
+	}
+	if convertedResponse, ok := ociResponse.(ListAvailableSoftwareSourcesToAddResponse); ok {
+		response = convertedResponse
+	} else {
+		err = fmt.Errorf("failed to convert OCIResponse into ListAvailableSoftwareSourcesToAddResponse")
+	}
+	return
+}
+
+// listAvailableSoftwareSourcesToAdd implements the OCIOperation interface (enables retrying operations)
+func (client SoftwareSourceClient) listAvailableSoftwareSourcesToAdd(ctx context.Context, request common.OCIRequest, binaryReqBody *common.OCIReadSeekCloser, extraHeaders map[string]string) (common.OCIResponse, error) {
+
+	httpRequest, err := request.HTTPRequest(http.MethodPost, "/softwareSources/actions/availableSoftwareSources", binaryReqBody, extraHeaders)
+	if err != nil {
+		return nil, err
+	}
+
+	var response ListAvailableSoftwareSourcesToAddResponse
+	var httpResponse *http.Response
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListAvailableSoftwareSourcesToAdd")
+	defer common.CloseBodyIfValid(httpResponse)
+	response.RawResponse = httpResponse
+	if err != nil {
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/SoftwareSource/ListAvailableSoftwareSourcesToAdd"
+		err = common.PostProcessServiceError(err, "SoftwareSource", "ListAvailableSoftwareSourcesToAdd", apiReferenceLink)
 		return response, err
 	}
 
@@ -1099,7 +1162,7 @@ func (client SoftwareSourceClient) listEntitlements(ctx context.Context, request
 
 	var response ListEntitlementsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListEntitlements")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1158,7 +1221,7 @@ func (client SoftwareSourceClient) listErrata(ctx context.Context, request commo
 
 	var response ListErrataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListErrata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1217,7 +1280,7 @@ func (client SoftwareSourceClient) listModuleStreamProfiles(ctx context.Context,
 
 	var response ListModuleStreamProfilesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListModuleStreamProfiles")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1276,7 +1339,7 @@ func (client SoftwareSourceClient) listModuleStreams(ctx context.Context, reques
 
 	var response ListModuleStreamsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListModuleStreams")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1335,7 +1398,7 @@ func (client SoftwareSourceClient) listPackageGroups(ctx context.Context, reques
 
 	var response ListPackageGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListPackageGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1394,7 +1457,7 @@ func (client SoftwareSourceClient) listSoftwarePackageSoftwareSources(ctx contex
 
 	var response ListSoftwarePackageSoftwareSourcesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListSoftwarePackageSoftwareSources")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1453,7 +1516,7 @@ func (client SoftwareSourceClient) listSoftwarePackages(ctx context.Context, req
 
 	var response ListSoftwarePackagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListSoftwarePackages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1512,7 +1575,7 @@ func (client SoftwareSourceClient) listSoftwareSourceVendors(ctx context.Context
 
 	var response ListSoftwareSourceVendorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListSoftwareSourceVendors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1571,7 +1634,7 @@ func (client SoftwareSourceClient) listSoftwareSources(ctx context.Context, requ
 
 	var response ListSoftwareSourcesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ListSoftwareSources")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1638,7 +1701,7 @@ func (client SoftwareSourceClient) removePackagesFromSoftwareSource(ctx context.
 
 	var response RemovePackagesFromSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "RemovePackagesFromSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1705,7 +1768,7 @@ func (client SoftwareSourceClient) replacePackagesInSoftwareSource(ctx context.C
 
 	var response ReplacePackagesInSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "ReplacePackagesInSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1764,7 +1827,7 @@ func (client SoftwareSourceClient) searchSoftwareSourceModuleStreams(ctx context
 
 	var response SearchSoftwareSourceModuleStreamsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "SearchSoftwareSourceModuleStreams")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1823,7 +1886,7 @@ func (client SoftwareSourceClient) searchSoftwareSourceModules(ctx context.Conte
 
 	var response SearchSoftwareSourceModulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "SearchSoftwareSourceModules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1882,7 +1945,7 @@ func (client SoftwareSourceClient) searchSoftwareSourcePackageGroups(ctx context
 
 	var response SearchSoftwareSourcePackageGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "SearchSoftwareSourcePackageGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1945,7 +2008,7 @@ func (client SoftwareSourceClient) softwareSourceGenerateMetadata(ctx context.Co
 
 	var response SoftwareSourceGenerateMetadataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "SoftwareSourceGenerateMetadata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2003,7 +2066,7 @@ func (client SoftwareSourceClient) updateSoftwareSource(ctx context.Context, req
 
 	var response UpdateSoftwareSourceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "UpdateSoftwareSource")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2066,7 +2129,7 @@ func (client SoftwareSourceClient) updateSoftwareSourceManifest(ctx context.Cont
 
 	var response UpdateSoftwareSourceManifestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "softwareSource", "UpdateSoftwareSourceManifest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

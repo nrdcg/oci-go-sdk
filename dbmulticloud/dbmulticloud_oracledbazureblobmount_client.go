@@ -164,7 +164,7 @@ func (client OracleDBAzureBlobMountClient) changeOracleDbAzureBlobMountCompartme
 
 	var response ChangeOracleDbAzureBlobMountCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobMount", "ChangeOracleDbAzureBlobMountCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -227,7 +227,7 @@ func (client OracleDBAzureBlobMountClient) createOracleDbAzureBlobMount(ctx cont
 
 	var response CreateOracleDbAzureBlobMountResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobMount", "CreateOracleDbAzureBlobMount")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -285,7 +285,7 @@ func (client OracleDBAzureBlobMountClient) deleteOracleDbAzureBlobMount(ctx cont
 
 	var response DeleteOracleDbAzureBlobMountResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobMount", "DeleteOracleDbAzureBlobMount")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -343,7 +343,7 @@ func (client OracleDBAzureBlobMountClient) getOracleDbAzureBlobMount(ctx context
 
 	var response GetOracleDbAzureBlobMountResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobMount", "GetOracleDbAzureBlobMount")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client OracleDBAzureBlobMountClient) listOracleDbAzureBlobMounts(ctx conte
 
 	var response ListOracleDbAzureBlobMountsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobMount", "ListOracleDbAzureBlobMounts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -459,7 +459,7 @@ func (client OracleDBAzureBlobMountClient) updateOracleDbAzureBlobMount(ctx cont
 
 	var response UpdateOracleDbAzureBlobMountResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureBlobMount", "UpdateOracleDbAzureBlobMount")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

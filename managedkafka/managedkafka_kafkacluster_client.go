@@ -137,7 +137,7 @@ func (client KafkaClusterClient) cancelWorkRequest(ctx context.Context, request 
 
 	var response CancelWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "CancelWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -196,7 +196,7 @@ func (client KafkaClusterClient) changeKafkaClusterCompartment(ctx context.Conte
 
 	var response ChangeKafkaClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ChangeKafkaClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -255,7 +255,7 @@ func (client KafkaClusterClient) changeKafkaClusterConfigCompartment(ctx context
 
 	var response ChangeKafkaClusterConfigCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ChangeKafkaClusterConfigCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -318,7 +318,7 @@ func (client KafkaClusterClient) createKafkaCluster(ctx context.Context, request
 
 	var response CreateKafkaClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "CreateKafkaCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -381,7 +381,7 @@ func (client KafkaClusterClient) createKafkaClusterConfig(ctx context.Context, r
 
 	var response CreateKafkaClusterConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "CreateKafkaClusterConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -439,7 +439,7 @@ func (client KafkaClusterClient) deleteKafkaCluster(ctx context.Context, request
 
 	var response DeleteKafkaClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "DeleteKafkaCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -497,7 +497,7 @@ func (client KafkaClusterClient) deleteKafkaClusterConfig(ctx context.Context, r
 
 	var response DeleteKafkaClusterConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "DeleteKafkaClusterConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -555,7 +555,7 @@ func (client KafkaClusterClient) deleteKafkaClusterConfigVersion(ctx context.Con
 
 	var response DeleteKafkaClusterConfigVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "DeleteKafkaClusterConfigVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -618,7 +618,7 @@ func (client KafkaClusterClient) disableSuperuser(ctx context.Context, request c
 
 	var response DisableSuperuserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "DisableSuperuser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -681,7 +681,7 @@ func (client KafkaClusterClient) enableSuperuser(ctx context.Context, request co
 
 	var response EnableSuperuserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "EnableSuperuser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -739,7 +739,7 @@ func (client KafkaClusterClient) getKafkaCluster(ctx context.Context, request co
 
 	var response GetKafkaClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "GetKafkaCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -797,7 +797,7 @@ func (client KafkaClusterClient) getKafkaClusterConfig(ctx context.Context, requ
 
 	var response GetKafkaClusterConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "GetKafkaClusterConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -855,7 +855,7 @@ func (client KafkaClusterClient) getKafkaClusterConfigVersion(ctx context.Contex
 
 	var response GetKafkaClusterConfigVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "GetKafkaClusterConfigVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -913,7 +913,7 @@ func (client KafkaClusterClient) getWorkRequest(ctx context.Context, request com
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -971,7 +971,7 @@ func (client KafkaClusterClient) listKafkaClusterConfigVersions(ctx context.Cont
 
 	var response ListKafkaClusterConfigVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListKafkaClusterConfigVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1029,7 +1029,7 @@ func (client KafkaClusterClient) listKafkaClusterConfigs(ctx context.Context, re
 
 	var response ListKafkaClusterConfigsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListKafkaClusterConfigs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1087,7 +1087,7 @@ func (client KafkaClusterClient) listKafkaClusters(ctx context.Context, request 
 
 	var response ListKafkaClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListKafkaClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1145,7 +1145,7 @@ func (client KafkaClusterClient) listNodeShapes(ctx context.Context, request com
 
 	var response ListNodeShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListNodeShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1203,7 +1203,7 @@ func (client KafkaClusterClient) listWorkRequestErrors(ctx context.Context, requ
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1261,7 +1261,7 @@ func (client KafkaClusterClient) listWorkRequestLogs(ctx context.Context, reques
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1319,7 +1319,7 @@ func (client KafkaClusterClient) listWorkRequests(ctx context.Context, request c
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1377,7 +1377,7 @@ func (client KafkaClusterClient) updateKafkaCluster(ctx context.Context, request
 
 	var response UpdateKafkaClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "UpdateKafkaCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1435,7 +1435,7 @@ func (client KafkaClusterClient) updateKafkaClusterConfig(ctx context.Context, r
 
 	var response UpdateKafkaClusterConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kafkaCluster", "UpdateKafkaClusterConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

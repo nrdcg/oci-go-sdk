@@ -142,7 +142,7 @@ func (client RoverClusterClient) changeRoverClusterCompartment(ctx context.Conte
 
 	var response ChangeRoverClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "ChangeRoverClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client RoverClusterClient) createRoverCluster(ctx context.Context, request
 
 	var response CreateRoverClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "CreateRoverCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client RoverClusterClient) deleteRoverCluster(ctx context.Context, request
 
 	var response DeleteRoverClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "DeleteRoverCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -326,7 +326,7 @@ func (client RoverClusterClient) getRoverCluster(ctx context.Context, request co
 
 	var response GetRoverClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "GetRoverCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -384,7 +384,7 @@ func (client RoverClusterClient) getRoverClusterCertificate(ctx context.Context,
 
 	var response GetRoverClusterCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "GetRoverClusterCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -442,7 +442,7 @@ func (client RoverClusterClient) listRoverClusters(ctx context.Context, request 
 
 	var response ListRoverClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "ListRoverClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -505,7 +505,7 @@ func (client RoverClusterClient) requestAdditionalNodes(ctx context.Context, req
 
 	var response RequestAdditionalNodesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "RequestAdditionalNodes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -563,7 +563,7 @@ func (client RoverClusterClient) updateRoverCluster(ctx context.Context, request
 
 	var response UpdateRoverClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "roverCluster", "UpdateRoverCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

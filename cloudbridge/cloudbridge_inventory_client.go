@@ -138,7 +138,7 @@ func (client InventoryClient) analyzeAssets(ctx context.Context, request common.
 
 	var response AnalyzeAssetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "AnalyzeAssets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -201,7 +201,7 @@ func (client InventoryClient) changeAssetCompartment(ctx context.Context, reques
 
 	var response ChangeAssetCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "ChangeAssetCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -264,7 +264,7 @@ func (client InventoryClient) changeAssetTags(ctx context.Context, request commo
 
 	var response ChangeAssetTagsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "ChangeAssetTags")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -327,7 +327,7 @@ func (client InventoryClient) createAsset(ctx context.Context, request common.OC
 
 	var response CreateAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "CreateAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -390,7 +390,7 @@ func (client InventoryClient) createInventory(ctx context.Context, request commo
 
 	var response CreateInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "CreateInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -448,7 +448,7 @@ func (client InventoryClient) deleteAsset(ctx context.Context, request common.OC
 
 	var response DeleteAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "DeleteAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -506,7 +506,7 @@ func (client InventoryClient) deleteInventory(ctx context.Context, request commo
 
 	var response DeleteInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "DeleteInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -564,7 +564,7 @@ func (client InventoryClient) getAsset(ctx context.Context, request common.OCIRe
 
 	var response GetAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "GetAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -622,7 +622,7 @@ func (client InventoryClient) getInventory(ctx context.Context, request common.O
 
 	var response GetInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "GetInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -685,7 +685,7 @@ func (client InventoryClient) importInventory(ctx context.Context, request commo
 
 	var response ImportInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "ImportInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -743,7 +743,7 @@ func (client InventoryClient) listAssets(ctx context.Context, request common.OCI
 
 	var response ListAssetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "ListAssets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -801,7 +801,7 @@ func (client InventoryClient) listHistoricalMetrics(ctx context.Context, request
 
 	var response ListHistoricalMetricsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "ListHistoricalMetrics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -859,7 +859,7 @@ func (client InventoryClient) listInventories(ctx context.Context, request commo
 
 	var response ListInventoriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "ListInventories")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -917,7 +917,7 @@ func (client InventoryClient) submitHistoricalMetrics(ctx context.Context, reque
 
 	var response SubmitHistoricalMetricsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "SubmitHistoricalMetrics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -975,7 +975,7 @@ func (client InventoryClient) updateAsset(ctx context.Context, request common.OC
 
 	var response UpdateAssetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "UpdateAsset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1033,7 +1033,7 @@ func (client InventoryClient) updateInventory(ctx context.Context, request commo
 
 	var response UpdateInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "inventory", "UpdateInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

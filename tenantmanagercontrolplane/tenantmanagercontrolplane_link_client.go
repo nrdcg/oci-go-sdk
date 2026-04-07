@@ -136,7 +136,7 @@ func (client LinkClient) deleteLink(ctx context.Context, request common.OCIReque
 
 	var response DeleteLinkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "link", "DeleteLink")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -193,7 +193,7 @@ func (client LinkClient) getLink(ctx context.Context, request common.OCIRequest,
 
 	var response GetLinkResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "link", "GetLink")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -250,7 +250,7 @@ func (client LinkClient) listLinks(ctx context.Context, request common.OCIReques
 
 	var response ListLinksResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "link", "ListLinks")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

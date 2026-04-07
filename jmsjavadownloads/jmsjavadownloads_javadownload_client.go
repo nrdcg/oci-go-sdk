@@ -137,7 +137,7 @@ func (client JavaDownloadClient) cancelWorkRequest(ctx context.Context, request 
 
 	var response CancelWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CancelWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -201,7 +201,7 @@ func (client JavaDownloadClient) createJavaDownloadReport(ctx context.Context, r
 
 	var response CreateJavaDownloadReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CreateJavaDownloadReport")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client JavaDownloadClient) createJavaDownloadToken(ctx context.Context, re
 
 	var response CreateJavaDownloadTokenResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CreateJavaDownloadToken")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -328,7 +328,7 @@ func (client JavaDownloadClient) createJavaLicenseAcceptanceRecord(ctx context.C
 
 	var response CreateJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CreateJavaLicenseAcceptanceRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -386,7 +386,7 @@ func (client JavaDownloadClient) deleteJavaDownloadReport(ctx context.Context, r
 
 	var response DeleteJavaDownloadReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "DeleteJavaDownloadReport")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -444,7 +444,7 @@ func (client JavaDownloadClient) deleteJavaDownloadToken(ctx context.Context, re
 
 	var response DeleteJavaDownloadTokenResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "DeleteJavaDownloadToken")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -502,7 +502,7 @@ func (client JavaDownloadClient) deleteJavaLicenseAcceptanceRecord(ctx context.C
 
 	var response DeleteJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "DeleteJavaLicenseAcceptanceRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -564,7 +564,7 @@ func (client JavaDownloadClient) generateArtifactDownloadUrl(ctx context.Context
 
 	var response GenerateArtifactDownloadUrlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GenerateArtifactDownloadUrl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -622,7 +622,7 @@ func (client JavaDownloadClient) getJavaDownloadReport(ctx context.Context, requ
 
 	var response GetJavaDownloadReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaDownloadReport")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -680,7 +680,7 @@ func (client JavaDownloadClient) getJavaDownloadReportContent(ctx context.Contex
 
 	var response GetJavaDownloadReportContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaDownloadReportContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/jms-java-download/20230601/JavaDownloadReport/GetJavaDownloadReportContent"
@@ -737,7 +737,7 @@ func (client JavaDownloadClient) getJavaDownloadToken(ctx context.Context, reque
 
 	var response GetJavaDownloadTokenResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaDownloadToken")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -795,7 +795,7 @@ func (client JavaDownloadClient) getJavaLicense(ctx context.Context, request com
 
 	var response GetJavaLicenseResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaLicense")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -853,7 +853,7 @@ func (client JavaDownloadClient) getJavaLicenseAcceptanceRecord(ctx context.Cont
 
 	var response GetJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaLicenseAcceptanceRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -911,7 +911,7 @@ func (client JavaDownloadClient) getWorkRequest(ctx context.Context, request com
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -971,7 +971,7 @@ func (client JavaDownloadClient) listJavaDownloadRecords(ctx context.Context, re
 
 	var response ListJavaDownloadRecordsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaDownloadRecords")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1029,7 +1029,7 @@ func (client JavaDownloadClient) listJavaDownloadReports(ctx context.Context, re
 
 	var response ListJavaDownloadReportsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaDownloadReports")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1087,7 +1087,7 @@ func (client JavaDownloadClient) listJavaDownloadTokens(ctx context.Context, req
 
 	var response ListJavaDownloadTokensResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaDownloadTokens")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1145,7 +1145,7 @@ func (client JavaDownloadClient) listJavaLicenseAcceptanceRecords(ctx context.Co
 
 	var response ListJavaLicenseAcceptanceRecordsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaLicenseAcceptanceRecords")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1203,7 +1203,7 @@ func (client JavaDownloadClient) listJavaLicenses(ctx context.Context, request c
 
 	var response ListJavaLicensesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaLicenses")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1261,7 +1261,7 @@ func (client JavaDownloadClient) listWorkRequestErrors(ctx context.Context, requ
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1319,7 +1319,7 @@ func (client JavaDownloadClient) listWorkRequestLogs(ctx context.Context, reques
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1377,7 +1377,7 @@ func (client JavaDownloadClient) listWorkRequests(ctx context.Context, request c
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1435,7 +1435,7 @@ func (client JavaDownloadClient) requestSummarizedJavaDownloadCounts(ctx context
 
 	var response RequestSummarizedJavaDownloadCountsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "RequestSummarizedJavaDownloadCounts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1493,7 +1493,7 @@ func (client JavaDownloadClient) updateJavaDownloadToken(ctx context.Context, re
 
 	var response UpdateJavaDownloadTokenResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "UpdateJavaDownloadToken")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1551,7 +1551,7 @@ func (client JavaDownloadClient) updateJavaLicenseAcceptanceRecord(ctx context.C
 
 	var response UpdateJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "UpdateJavaLicenseAcceptanceRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

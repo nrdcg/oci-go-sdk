@@ -139,7 +139,7 @@ func (client WeblogicManagementServiceConfigurationClient) getConfiguration(ctx 
 
 	var response GetConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementServiceConfiguration", "GetConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -202,7 +202,7 @@ func (client WeblogicManagementServiceConfigurationClient) updateConfiguration(c
 
 	var response UpdateConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementServiceConfiguration", "UpdateConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

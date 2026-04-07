@@ -142,7 +142,7 @@ func (client OciCacheUserClient) changeOciCacheUserCompartment(ctx context.Conte
 
 	var response ChangeOciCacheUserCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "ChangeOciCacheUserCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client OciCacheUserClient) createOciCacheUser(ctx context.Context, request
 
 	var response CreateOciCacheUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "CreateOciCacheUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client OciCacheUserClient) deleteOciCacheUser(ctx context.Context, request
 
 	var response DeleteOciCacheUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "DeleteOciCacheUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -321,7 +321,7 @@ func (client OciCacheUserClient) getOciCacheUser(ctx context.Context, request co
 
 	var response GetOciCacheUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "GetOciCacheUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -379,7 +379,7 @@ func (client OciCacheUserClient) listAttachedRedisClusters(ctx context.Context, 
 
 	var response ListAttachedRedisClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "ListAttachedRedisClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -437,7 +437,7 @@ func (client OciCacheUserClient) listOciCacheUsers(ctx context.Context, request 
 
 	var response ListOciCacheUsersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "ListOciCacheUsers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -495,7 +495,7 @@ func (client OciCacheUserClient) updateOciCacheUser(ctx context.Context, request
 
 	var response UpdateOciCacheUserResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheUser", "UpdateOciCacheUser")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

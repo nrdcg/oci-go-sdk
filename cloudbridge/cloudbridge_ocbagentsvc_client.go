@@ -142,7 +142,7 @@ func (client OcbAgentSvcClient) addAgentDependency(ctx context.Context, request 
 
 	var response AddAgentDependencyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "AddAgentDependency")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -205,7 +205,7 @@ func (client OcbAgentSvcClient) changeAgentCompartment(ctx context.Context, requ
 
 	var response ChangeAgentCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ChangeAgentCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -268,7 +268,7 @@ func (client OcbAgentSvcClient) changeAgentDependencyCompartment(ctx context.Con
 
 	var response ChangeAgentDependencyCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ChangeAgentDependencyCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client OcbAgentSvcClient) changeEnvironmentCompartment(ctx context.Context
 
 	var response ChangeEnvironmentCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ChangeEnvironmentCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -394,7 +394,7 @@ func (client OcbAgentSvcClient) createAgent(ctx context.Context, request common.
 
 	var response CreateAgentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "CreateAgent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -457,7 +457,7 @@ func (client OcbAgentSvcClient) createAgentDependency(ctx context.Context, reque
 
 	var response CreateAgentDependencyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "CreateAgentDependency")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -520,7 +520,7 @@ func (client OcbAgentSvcClient) createEnvironment(ctx context.Context, request c
 
 	var response CreateEnvironmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "CreateEnvironment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -583,7 +583,7 @@ func (client OcbAgentSvcClient) deleteAgent(ctx context.Context, request common.
 
 	var response DeleteAgentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "DeleteAgent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -641,7 +641,7 @@ func (client OcbAgentSvcClient) deleteAgentDependency(ctx context.Context, reque
 
 	var response DeleteAgentDependencyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "DeleteAgentDependency")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -699,7 +699,7 @@ func (client OcbAgentSvcClient) deleteEnvironment(ctx context.Context, request c
 
 	var response DeleteEnvironmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "DeleteEnvironment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -757,7 +757,7 @@ func (client OcbAgentSvcClient) getAgent(ctx context.Context, request common.OCI
 
 	var response GetAgentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "GetAgent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -815,7 +815,7 @@ func (client OcbAgentSvcClient) getAgentDependency(ctx context.Context, request 
 
 	var response GetAgentDependencyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "GetAgentDependency")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -873,7 +873,7 @@ func (client OcbAgentSvcClient) getEnvironment(ctx context.Context, request comm
 
 	var response GetEnvironmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "GetEnvironment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -931,7 +931,7 @@ func (client OcbAgentSvcClient) getPlugin(ctx context.Context, request common.OC
 
 	var response GetPluginResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "GetPlugin")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -989,7 +989,7 @@ func (client OcbAgentSvcClient) listAgentDependencies(ctx context.Context, reque
 
 	var response ListAgentDependenciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ListAgentDependencies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1047,7 +1047,7 @@ func (client OcbAgentSvcClient) listAgents(ctx context.Context, request common.O
 
 	var response ListAgentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ListAgents")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1105,7 +1105,7 @@ func (client OcbAgentSvcClient) listApplianceImages(ctx context.Context, request
 
 	var response ListApplianceImagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ListApplianceImages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1163,7 +1163,7 @@ func (client OcbAgentSvcClient) listEnvironments(ctx context.Context, request co
 
 	var response ListEnvironmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "ListEnvironments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1226,7 +1226,7 @@ func (client OcbAgentSvcClient) removeAgentDependency(ctx context.Context, reque
 
 	var response RemoveAgentDependencyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "RemoveAgentDependency")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1289,7 +1289,7 @@ func (client OcbAgentSvcClient) updateAgent(ctx context.Context, request common.
 
 	var response UpdateAgentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "UpdateAgent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1352,7 +1352,7 @@ func (client OcbAgentSvcClient) updateAgentDependency(ctx context.Context, reque
 
 	var response UpdateAgentDependencyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "UpdateAgentDependency")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1415,7 +1415,7 @@ func (client OcbAgentSvcClient) updateEnvironment(ctx context.Context, request c
 
 	var response UpdateEnvironmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "UpdateEnvironment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1473,7 +1473,7 @@ func (client OcbAgentSvcClient) updatePlugin(ctx context.Context, request common
 
 	var response UpdatePluginResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ocbAgentSvc", "UpdatePlugin")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

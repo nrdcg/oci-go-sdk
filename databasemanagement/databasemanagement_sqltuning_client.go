@@ -143,7 +143,7 @@ func (client SqlTuningClient) cloneSqlTuningTask(ctx context.Context, request co
 
 	var response CloneSqlTuningTaskResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "CloneSqlTuningTask")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client SqlTuningClient) createSqlTuningSet(ctx context.Context, request co
 
 	var response CreateSqlTuningSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "CreateSqlTuningSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -269,7 +269,7 @@ func (client SqlTuningClient) dropSqlTuningSet(ctx context.Context, request comm
 
 	var response DropSqlTuningSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "DropSqlTuningSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -331,7 +331,7 @@ func (client SqlTuningClient) dropSqlTuningTask(ctx context.Context, request com
 
 	var response DropSqlTuningTaskResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "DropSqlTuningTask")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -395,7 +395,7 @@ func (client SqlTuningClient) dropSqlsInSqlTuningSet(ctx context.Context, reques
 
 	var response DropSqlsInSqlTuningSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "DropSqlsInSqlTuningSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -458,7 +458,7 @@ func (client SqlTuningClient) fetchSqlTuningSet(ctx context.Context, request com
 
 	var response FetchSqlTuningSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "FetchSqlTuningSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -517,7 +517,7 @@ func (client SqlTuningClient) getExecutionPlanStatsComparision(ctx context.Conte
 
 	var response GetExecutionPlanStatsComparisionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "GetExecutionPlanStatsComparision")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -574,7 +574,7 @@ func (client SqlTuningClient) getSqlExecutionPlan(ctx context.Context, request c
 
 	var response GetSqlExecutionPlanResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "GetSqlExecutionPlan")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -631,7 +631,7 @@ func (client SqlTuningClient) getSqlTuningAdvisorTaskSummaryReport(ctx context.C
 
 	var response GetSqlTuningAdvisorTaskSummaryReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "GetSqlTuningAdvisorTaskSummaryReport")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -688,7 +688,7 @@ func (client SqlTuningClient) listSqlTuningAdvisorTaskFindings(ctx context.Conte
 
 	var response ListSqlTuningAdvisorTaskFindingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "ListSqlTuningAdvisorTaskFindings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -746,7 +746,7 @@ func (client SqlTuningClient) listSqlTuningAdvisorTaskRecommendations(ctx contex
 
 	var response ListSqlTuningAdvisorTaskRecommendationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "ListSqlTuningAdvisorTaskRecommendations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -803,7 +803,7 @@ func (client SqlTuningClient) listSqlTuningAdvisorTasks(ctx context.Context, req
 
 	var response ListSqlTuningAdvisorTasksResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "ListSqlTuningAdvisorTasks")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -860,7 +860,7 @@ func (client SqlTuningClient) listSqlTuningSets(ctx context.Context, request com
 
 	var response ListSqlTuningSetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "ListSqlTuningSets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -923,7 +923,7 @@ func (client SqlTuningClient) loadSqlTuningSet(ctx context.Context, request comm
 
 	var response LoadSqlTuningSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "LoadSqlTuningSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -986,7 +986,7 @@ func (client SqlTuningClient) saveSqlTuningSetAs(ctx context.Context, request co
 
 	var response SaveSqlTuningSetAsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "SaveSqlTuningSetAs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1048,7 +1048,7 @@ func (client SqlTuningClient) startSqlTuningTask(ctx context.Context, request co
 
 	var response StartSqlTuningTaskResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "StartSqlTuningTask")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1111,7 +1111,7 @@ func (client SqlTuningClient) validateBasicFilter(ctx context.Context, request c
 
 	var response ValidateBasicFilterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "sqlTuning", "ValidateBasicFilter")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

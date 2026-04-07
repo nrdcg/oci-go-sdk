@@ -143,7 +143,7 @@ func (client ManagementStationClient) changeManagementStationCompartment(ctx con
 
 	var response ChangeManagementStationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "ChangeManagementStationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client ManagementStationClient) createManagementStation(ctx context.Contex
 
 	var response CreateManagementStationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "CreateManagementStation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -271,7 +271,7 @@ func (client ManagementStationClient) deleteManagementStation(ctx context.Contex
 
 	var response DeleteManagementStationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "DeleteManagementStation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -329,7 +329,7 @@ func (client ManagementStationClient) getManagementStation(ctx context.Context, 
 
 	var response GetManagementStationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "GetManagementStation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -388,7 +388,7 @@ func (client ManagementStationClient) listManagementStations(ctx context.Context
 
 	var response ListManagementStationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "ListManagementStations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -446,7 +446,7 @@ func (client ManagementStationClient) listMirrors(ctx context.Context, request c
 
 	var response ListMirrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "ListMirrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -509,7 +509,7 @@ func (client ManagementStationClient) refreshManagementStationConfig(ctx context
 
 	var response RefreshManagementStationConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "RefreshManagementStationConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -572,7 +572,7 @@ func (client ManagementStationClient) synchronizeMirrors(ctx context.Context, re
 
 	var response SynchronizeMirrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "SynchronizeMirrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -635,7 +635,7 @@ func (client ManagementStationClient) synchronizeSingleMirrors(ctx context.Conte
 
 	var response SynchronizeSingleMirrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "SynchronizeSingleMirrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -693,7 +693,7 @@ func (client ManagementStationClient) updateManagementStation(ctx context.Contex
 
 	var response UpdateManagementStationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "managementStation", "UpdateManagementStation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

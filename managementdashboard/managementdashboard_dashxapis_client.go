@@ -142,7 +142,7 @@ func (client DashxApisClient) changeManagementDashboardsCompartment(ctx context.
 
 	var response ChangeManagementDashboardsCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ChangeManagementDashboardsCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -204,7 +204,7 @@ func (client DashxApisClient) changeManagementSavedSearchesCompartment(ctx conte
 
 	var response ChangeManagementSavedSearchesCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ChangeManagementSavedSearchesCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -269,7 +269,7 @@ func (client DashxApisClient) createManagementDashboard(ctx context.Context, req
 
 	var response CreateManagementDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "CreateManagementDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -334,7 +334,7 @@ func (client DashxApisClient) createManagementSavedSearch(ctx context.Context, r
 
 	var response CreateManagementSavedSearchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "CreateManagementSavedSearch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -391,7 +391,7 @@ func (client DashxApisClient) deleteManagementDashboard(ctx context.Context, req
 
 	var response DeleteManagementDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "DeleteManagementDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -448,7 +448,7 @@ func (client DashxApisClient) deleteManagementSavedSearch(ctx context.Context, r
 
 	var response DeleteManagementSavedSearchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "DeleteManagementSavedSearch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -512,7 +512,7 @@ func (client DashxApisClient) exportDashboard(ctx context.Context, request commo
 
 	var response ExportDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ExportDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -574,7 +574,7 @@ func (client DashxApisClient) getManagementDashboard(ctx context.Context, reques
 
 	var response GetManagementDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "GetManagementDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -636,7 +636,7 @@ func (client DashxApisClient) getManagementSavedSearch(ctx context.Context, requ
 
 	var response GetManagementSavedSearchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "GetManagementSavedSearch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -693,7 +693,7 @@ func (client DashxApisClient) getOobManagementDashboard(ctx context.Context, req
 
 	var response GetOobManagementDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "GetOobManagementDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -750,7 +750,7 @@ func (client DashxApisClient) getOobManagementSavedSearch(ctx context.Context, r
 
 	var response GetOobManagementSavedSearchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "GetOobManagementSavedSearch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -817,7 +817,7 @@ func (client DashxApisClient) importDashboard(ctx context.Context, request commo
 
 	var response ImportDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ImportDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -874,7 +874,7 @@ func (client DashxApisClient) listManagementDashboards(ctx context.Context, requ
 
 	var response ListManagementDashboardsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ListManagementDashboards")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -931,7 +931,7 @@ func (client DashxApisClient) listManagementSavedSearches(ctx context.Context, r
 
 	var response ListManagementSavedSearchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ListManagementSavedSearches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -988,7 +988,7 @@ func (client DashxApisClient) listOobManagementDashboards(ctx context.Context, r
 
 	var response ListOobManagementDashboardsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ListOobManagementDashboards")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1045,7 +1045,7 @@ func (client DashxApisClient) listOobManagementSavedSearches(ctx context.Context
 
 	var response ListOobManagementSavedSearchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "ListOobManagementSavedSearches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1107,7 +1107,7 @@ func (client DashxApisClient) updateManagementDashboard(ctx context.Context, req
 
 	var response UpdateManagementDashboardResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "UpdateManagementDashboard")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1169,7 +1169,7 @@ func (client DashxApisClient) updateManagementSavedSearch(ctx context.Context, r
 
 	var response UpdateManagementSavedSearchResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dashxApis", "UpdateManagementSavedSearch")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

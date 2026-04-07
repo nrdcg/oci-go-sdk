@@ -137,7 +137,7 @@ func (client WaasClient) acceptRecommendations(ctx context.Context, request comm
 
 	var response AcceptRecommendationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "AcceptRecommendations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -199,7 +199,7 @@ func (client WaasClient) cancelWorkRequest(ctx context.Context, request common.O
 
 	var response CancelWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "CancelWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client WaasClient) changeAddressListCompartment(ctx context.Context, reque
 
 	var response ChangeAddressListCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ChangeAddressListCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -326,7 +326,7 @@ func (client WaasClient) changeCertificateCompartment(ctx context.Context, reque
 
 	var response ChangeCertificateCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ChangeCertificateCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -388,7 +388,7 @@ func (client WaasClient) changeCustomProtectionRuleCompartment(ctx context.Conte
 
 	var response ChangeCustomProtectionRuleCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ChangeCustomProtectionRuleCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -451,7 +451,7 @@ func (client WaasClient) changeWaasPolicyCompartment(ctx context.Context, reques
 
 	var response ChangeWaasPolicyCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ChangeWaasPolicyCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -513,7 +513,7 @@ func (client WaasClient) createAddressList(ctx context.Context, request common.O
 
 	var response CreateAddressListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "CreateAddressList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -576,7 +576,7 @@ func (client WaasClient) createCertificate(ctx context.Context, request common.O
 
 	var response CreateCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "CreateCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -639,7 +639,7 @@ func (client WaasClient) createCustomProtectionRule(ctx context.Context, request
 
 	var response CreateCustomProtectionRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "CreateCustomProtectionRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -707,7 +707,7 @@ func (client WaasClient) createWaasPolicy(ctx context.Context, request common.OC
 
 	var response CreateWaasPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "CreateWaasPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -769,7 +769,7 @@ func (client WaasClient) deleteAddressList(ctx context.Context, request common.O
 
 	var response DeleteAddressListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "DeleteAddressList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -831,7 +831,7 @@ func (client WaasClient) deleteCertificate(ctx context.Context, request common.O
 
 	var response DeleteCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "DeleteCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -893,7 +893,7 @@ func (client WaasClient) deleteCustomProtectionRule(ctx context.Context, request
 
 	var response DeleteCustomProtectionRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "DeleteCustomProtectionRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -955,7 +955,7 @@ func (client WaasClient) deleteWaasPolicy(ctx context.Context, request common.OC
 
 	var response DeleteWaasPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "DeleteWaasPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1013,7 +1013,7 @@ func (client WaasClient) getAddressList(ctx context.Context, request common.OCIR
 
 	var response GetAddressListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetAddressList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1071,7 +1071,7 @@ func (client WaasClient) getCertificate(ctx context.Context, request common.OCIR
 
 	var response GetCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1129,7 +1129,7 @@ func (client WaasClient) getCustomProtectionRule(ctx context.Context, request co
 
 	var response GetCustomProtectionRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetCustomProtectionRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1187,7 +1187,7 @@ func (client WaasClient) getDeviceFingerprintChallenge(ctx context.Context, requ
 
 	var response GetDeviceFingerprintChallengeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetDeviceFingerprintChallenge")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1245,7 +1245,7 @@ func (client WaasClient) getHumanInteractionChallenge(ctx context.Context, reque
 
 	var response GetHumanInteractionChallengeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetHumanInteractionChallenge")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1303,7 +1303,7 @@ func (client WaasClient) getJsChallenge(ctx context.Context, request common.OCIR
 
 	var response GetJsChallengeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetJsChallenge")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1361,7 +1361,7 @@ func (client WaasClient) getPolicyConfig(ctx context.Context, request common.OCI
 
 	var response GetPolicyConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetPolicyConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1419,7 +1419,7 @@ func (client WaasClient) getProtectionRule(ctx context.Context, request common.O
 
 	var response GetProtectionRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetProtectionRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1477,7 +1477,7 @@ func (client WaasClient) getProtectionSettings(ctx context.Context, request comm
 
 	var response GetProtectionSettingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetProtectionSettings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1535,7 +1535,7 @@ func (client WaasClient) getWaasPolicy(ctx context.Context, request common.OCIRe
 
 	var response GetWaasPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetWaasPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1593,7 +1593,7 @@ func (client WaasClient) getWafAddressRateLimiting(ctx context.Context, request 
 
 	var response GetWafAddressRateLimitingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetWafAddressRateLimiting")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1651,7 +1651,7 @@ func (client WaasClient) getWafConfig(ctx context.Context, request common.OCIReq
 
 	var response GetWafConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetWafConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1709,7 +1709,7 @@ func (client WaasClient) getWorkRequest(ctx context.Context, request common.OCIR
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1768,7 +1768,7 @@ func (client WaasClient) listAccessRules(ctx context.Context, request common.OCI
 
 	var response ListAccessRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListAccessRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1826,7 +1826,7 @@ func (client WaasClient) listAddressLists(ctx context.Context, request common.OC
 
 	var response ListAddressListsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListAddressLists")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1885,7 +1885,7 @@ func (client WaasClient) listCachingRules(ctx context.Context, request common.OC
 
 	var response ListCachingRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListCachingRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1946,7 +1946,7 @@ func (client WaasClient) listCaptchas(ctx context.Context, request common.OCIReq
 
 	var response ListCaptchasResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListCaptchas")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2004,7 +2004,7 @@ func (client WaasClient) listCertificates(ctx context.Context, request common.OC
 
 	var response ListCertificatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListCertificates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2062,7 +2062,7 @@ func (client WaasClient) listCustomProtectionRules(ctx context.Context, request 
 
 	var response ListCustomProtectionRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListCustomProtectionRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2120,7 +2120,7 @@ func (client WaasClient) listEdgeSubnets(ctx context.Context, request common.OCI
 
 	var response ListEdgeSubnetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListEdgeSubnets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2179,7 +2179,7 @@ func (client WaasClient) listGoodBots(ctx context.Context, request common.OCIReq
 
 	var response ListGoodBotsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListGoodBots")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2238,7 +2238,7 @@ func (client WaasClient) listProtectionRules(ctx context.Context, request common
 
 	var response ListProtectionRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListProtectionRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2298,7 +2298,7 @@ func (client WaasClient) listRecommendations(ctx context.Context, request common
 
 	var response ListRecommendationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListRecommendations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2358,7 +2358,7 @@ func (client WaasClient) listThreatFeeds(ctx context.Context, request common.OCI
 
 	var response ListThreatFeedsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListThreatFeeds")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2416,7 +2416,7 @@ func (client WaasClient) listWaasPolicies(ctx context.Context, request common.OC
 
 	var response ListWaasPoliciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWaasPolicies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2474,7 +2474,7 @@ func (client WaasClient) listWaasPolicyCustomProtectionRules(ctx context.Context
 
 	var response ListWaasPolicyCustomProtectionRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWaasPolicyCustomProtectionRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2532,7 +2532,7 @@ func (client WaasClient) listWafBlockedRequests(ctx context.Context, request com
 
 	var response ListWafBlockedRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWafBlockedRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2592,7 +2592,7 @@ func (client WaasClient) listWafLogs(ctx context.Context, request common.OCIRequ
 
 	var response ListWafLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWafLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2652,7 +2652,7 @@ func (client WaasClient) listWafRequests(ctx context.Context, request common.OCI
 
 	var response ListWafRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWafRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2711,7 +2711,7 @@ func (client WaasClient) listWafTraffic(ctx context.Context, request common.OCIR
 
 	var response ListWafTrafficResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWafTraffic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2769,7 +2769,7 @@ func (client WaasClient) listWhitelists(ctx context.Context, request common.OCIR
 
 	var response ListWhitelistsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWhitelists")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2827,7 +2827,7 @@ func (client WaasClient) listWorkRequests(ctx context.Context, request common.OC
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2885,7 +2885,7 @@ func (client WaasClient) purgeCache(ctx context.Context, request common.OCIReque
 
 	var response PurgeCacheResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "PurgeCache")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2951,7 +2951,7 @@ func (client WaasClient) updateAccessRules(ctx context.Context, request common.O
 
 	var response UpdateAccessRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateAccessRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3008,7 +3008,7 @@ func (client WaasClient) updateAddressList(ctx context.Context, request common.O
 
 	var response UpdateAddressListResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateAddressList")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3073,7 +3073,7 @@ func (client WaasClient) updateCachingRules(ctx context.Context, request common.
 
 	var response UpdateCachingRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateCachingRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3140,7 +3140,7 @@ func (client WaasClient) updateCaptchas(ctx context.Context, request common.OCIR
 
 	var response UpdateCaptchasResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateCaptchas")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3197,7 +3197,7 @@ func (client WaasClient) updateCertificate(ctx context.Context, request common.O
 
 	var response UpdateCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3259,7 +3259,7 @@ func (client WaasClient) updateCustomProtectionRule(ctx context.Context, request
 
 	var response UpdateCustomProtectionRuleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateCustomProtectionRule")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3323,7 +3323,7 @@ func (client WaasClient) updateDeviceFingerprintChallenge(ctx context.Context, r
 
 	var response UpdateDeviceFingerprintChallengeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateDeviceFingerprintChallenge")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3386,7 +3386,7 @@ func (client WaasClient) updateGoodBots(ctx context.Context, request common.OCIR
 
 	var response UpdateGoodBotsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateGoodBots")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3448,7 +3448,7 @@ func (client WaasClient) updateHumanInteractionChallenge(ctx context.Context, re
 
 	var response UpdateHumanInteractionChallengeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateHumanInteractionChallenge")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3510,7 +3510,7 @@ func (client WaasClient) updateJsChallenge(ctx context.Context, request common.O
 
 	var response UpdateJsChallengeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateJsChallenge")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3572,7 +3572,7 @@ func (client WaasClient) updatePolicyConfig(ctx context.Context, request common.
 
 	var response UpdatePolicyConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdatePolicyConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3631,7 +3631,7 @@ func (client WaasClient) updateProtectionRules(ctx context.Context, request comm
 
 	var response UpdateProtectionRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateProtectionRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3693,7 +3693,7 @@ func (client WaasClient) updateProtectionSettings(ctx context.Context, request c
 
 	var response UpdateProtectionSettingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateProtectionSettings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3750,7 +3750,7 @@ func (client WaasClient) updateThreatFeeds(ctx context.Context, request common.O
 
 	var response UpdateThreatFeedsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateThreatFeeds")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3814,7 +3814,7 @@ func (client WaasClient) updateWaasPolicy(ctx context.Context, request common.OC
 
 	var response UpdateWaasPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateWaasPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3876,7 +3876,7 @@ func (client WaasClient) updateWaasPolicyCustomProtectionRules(ctx context.Conte
 
 	var response UpdateWaasPolicyCustomProtectionRulesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateWaasPolicyCustomProtectionRules")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3938,7 +3938,7 @@ func (client WaasClient) updateWafAddressRateLimiting(ctx context.Context, reque
 
 	var response UpdateWafAddressRateLimitingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateWafAddressRateLimiting")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4005,7 +4005,7 @@ func (client WaasClient) updateWafConfig(ctx context.Context, request common.OCI
 
 	var response UpdateWafConfigResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateWafConfig")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4071,7 +4071,7 @@ func (client WaasClient) updateWhitelists(ctx context.Context, request common.OC
 
 	var response UpdateWhitelistsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "waas", "UpdateWhitelists")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

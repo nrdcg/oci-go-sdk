@@ -144,7 +144,7 @@ func (client WeblogicManagementServiceClient) changeWlsDomainCompartment(ctx con
 
 	var response ChangeWlsDomainCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ChangeWlsDomainCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -207,7 +207,7 @@ func (client WeblogicManagementServiceClient) createAgreementRecord(ctx context.
 
 	var response CreateAgreementRecordResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "CreateAgreementRecord")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -270,7 +270,7 @@ func (client WeblogicManagementServiceClient) deleteWlsDomain(ctx context.Contex
 
 	var response DeleteWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "DeleteWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -328,7 +328,7 @@ func (client WeblogicManagementServiceClient) getAgreement(ctx context.Context, 
 
 	var response GetAgreementResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetAgreement")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -386,7 +386,7 @@ func (client WeblogicManagementServiceClient) getManagedInstance(ctx context.Con
 
 	var response GetManagedInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetManagedInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -444,7 +444,7 @@ func (client WeblogicManagementServiceClient) getManagedInstanceServer(ctx conte
 
 	var response GetManagedInstanceServerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetManagedInstanceServer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -502,7 +502,7 @@ func (client WeblogicManagementServiceClient) getWlsDomain(ctx context.Context, 
 
 	var response GetWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -560,7 +560,7 @@ func (client WeblogicManagementServiceClient) getWlsDomainCredential(ctx context
 
 	var response GetWlsDomainCredentialResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetWlsDomainCredential")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -618,7 +618,7 @@ func (client WeblogicManagementServiceClient) getWlsDomainServer(ctx context.Con
 
 	var response GetWlsDomainServerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetWlsDomainServer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -676,7 +676,7 @@ func (client WeblogicManagementServiceClient) getWlsDomainServerBackup(ctx conte
 
 	var response GetWlsDomainServerBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetWlsDomainServerBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -734,7 +734,7 @@ func (client WeblogicManagementServiceClient) getWlsDomainServerBackupContent(ct
 
 	var response GetWlsDomainServerBackupContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetWlsDomainServerBackupContent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -792,7 +792,7 @@ func (client WeblogicManagementServiceClient) getWorkRequest(ctx context.Context
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -855,7 +855,7 @@ func (client WeblogicManagementServiceClient) installLatestPatchesOnWlsDomain(ct
 
 	var response InstallLatestPatchesOnWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "InstallLatestPatchesOnWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -913,7 +913,7 @@ func (client WeblogicManagementServiceClient) listAgreementRecords(ctx context.C
 
 	var response ListAgreementRecordsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListAgreementRecords")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -976,7 +976,7 @@ func (client WeblogicManagementServiceClient) listApplicablePatches(ctx context.
 
 	var response ListApplicablePatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListApplicablePatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1034,7 +1034,7 @@ func (client WeblogicManagementServiceClient) listManagedInstanceScanResults(ctx
 
 	var response ListManagedInstanceScanResultsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListManagedInstanceScanResults")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1092,7 +1092,7 @@ func (client WeblogicManagementServiceClient) listManagedInstanceServerInstalled
 
 	var response ListManagedInstanceServerInstalledPatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListManagedInstanceServerInstalledPatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1155,7 +1155,7 @@ func (client WeblogicManagementServiceClient) listManagedInstanceServers(ctx con
 
 	var response ListManagedInstanceServersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListManagedInstanceServers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1218,7 +1218,7 @@ func (client WeblogicManagementServiceClient) listManagedInstances(ctx context.C
 
 	var response ListManagedInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListManagedInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1276,7 +1276,7 @@ func (client WeblogicManagementServiceClient) listRequiredPolicies(ctx context.C
 
 	var response ListRequiredPoliciesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListRequiredPolicies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1339,7 +1339,7 @@ func (client WeblogicManagementServiceClient) listWlsDomainCredentials(ctx conte
 
 	var response ListWlsDomainCredentialsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomainCredentials")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1397,7 +1397,7 @@ func (client WeblogicManagementServiceClient) listWlsDomainScanResults(ctx conte
 
 	var response ListWlsDomainScanResultsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomainScanResults")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1455,7 +1455,7 @@ func (client WeblogicManagementServiceClient) listWlsDomainServerBackups(ctx con
 
 	var response ListWlsDomainServerBackupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomainServerBackups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1513,7 +1513,7 @@ func (client WeblogicManagementServiceClient) listWlsDomainServerInstalledPatche
 
 	var response ListWlsDomainServerInstalledPatchesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomainServerInstalledPatches")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1576,7 +1576,7 @@ func (client WeblogicManagementServiceClient) listWlsDomainServers(ctx context.C
 
 	var response ListWlsDomainServersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomainServers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1639,7 +1639,7 @@ func (client WeblogicManagementServiceClient) listWlsDomains(ctx context.Context
 
 	var response ListWlsDomainsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomains")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1697,7 +1697,7 @@ func (client WeblogicManagementServiceClient) listWlsDomainsSharingMiddlewares(c
 
 	var response ListWlsDomainsSharingMiddlewaresResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWlsDomainsSharingMiddlewares")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1755,7 +1755,7 @@ func (client WeblogicManagementServiceClient) listWorkRequestErrors(ctx context.
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1813,7 +1813,7 @@ func (client WeblogicManagementServiceClient) listWorkRequestLogs(ctx context.Co
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1871,7 +1871,7 @@ func (client WeblogicManagementServiceClient) listWorkRequests(ctx context.Conte
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1934,7 +1934,7 @@ func (client WeblogicManagementServiceClient) restartWlsDomain(ctx context.Conte
 
 	var response RestartWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "RestartWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1997,7 +1997,7 @@ func (client WeblogicManagementServiceClient) restoreWlsDomain(ctx context.Conte
 
 	var response RestoreWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "RestoreWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2060,7 +2060,7 @@ func (client WeblogicManagementServiceClient) scanManagedInstance(ctx context.Co
 
 	var response ScanManagedInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ScanManagedInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2123,7 +2123,7 @@ func (client WeblogicManagementServiceClient) scanWlsDomain(ctx context.Context,
 
 	var response ScanWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "ScanWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2186,7 +2186,7 @@ func (client WeblogicManagementServiceClient) setRestartOrder(ctx context.Contex
 
 	var response SetRestartOrderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "SetRestartOrder")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2249,7 +2249,7 @@ func (client WeblogicManagementServiceClient) startWlsDomain(ctx context.Context
 
 	var response StartWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "StartWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2312,7 +2312,7 @@ func (client WeblogicManagementServiceClient) stopWlsDomain(ctx context.Context,
 
 	var response StopWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "StopWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2370,7 +2370,7 @@ func (client WeblogicManagementServiceClient) summarizeResourceInventory(ctx con
 
 	var response SummarizeResourceInventoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "SummarizeResourceInventory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2433,7 +2433,7 @@ func (client WeblogicManagementServiceClient) updateManagedInstance(ctx context.
 
 	var response UpdateManagedInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "UpdateManagedInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2491,7 +2491,7 @@ func (client WeblogicManagementServiceClient) updateWlsDomain(ctx context.Contex
 
 	var response UpdateWlsDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "UpdateWlsDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2549,7 +2549,7 @@ func (client WeblogicManagementServiceClient) updateWlsDomainCredential(ctx cont
 
 	var response UpdateWlsDomainCredentialResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "weblogicManagementService", "UpdateWlsDomainCredential")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

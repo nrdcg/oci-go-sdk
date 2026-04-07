@@ -138,7 +138,7 @@ func (client FleetAppsManagementProvisionClient) changeProvisionCompartment(ctx 
 
 	var response ChangeProvisionCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetAppsManagementProvision", "ChangeProvisionCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -201,7 +201,7 @@ func (client FleetAppsManagementProvisionClient) createProvision(ctx context.Con
 
 	var response CreateProvisionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetAppsManagementProvision", "CreateProvision")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -259,7 +259,7 @@ func (client FleetAppsManagementProvisionClient) deleteProvision(ctx context.Con
 
 	var response DeleteProvisionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetAppsManagementProvision", "DeleteProvision")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -317,7 +317,7 @@ func (client FleetAppsManagementProvisionClient) getProvision(ctx context.Contex
 
 	var response GetProvisionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetAppsManagementProvision", "GetProvision")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -376,7 +376,7 @@ func (client FleetAppsManagementProvisionClient) listProvisions(ctx context.Cont
 
 	var response ListProvisionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetAppsManagementProvision", "ListProvisions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -434,7 +434,7 @@ func (client FleetAppsManagementProvisionClient) updateProvision(ctx context.Con
 
 	var response UpdateProvisionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "fleetAppsManagementProvision", "UpdateProvision")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

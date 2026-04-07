@@ -145,7 +145,7 @@ func (client ComputeClient) acceptShieldedIntegrityPolicy(ctx context.Context, r
 
 	var response AcceptShieldedIntegrityPolicyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "AcceptShieldedIntegrityPolicy")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -202,7 +202,7 @@ func (client ComputeClient) addImageShapeCompatibilityEntry(ctx context.Context,
 
 	var response AddImageShapeCompatibilityEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "AddImageShapeCompatibilityEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -265,7 +265,7 @@ func (client ComputeClient) applyHostConfiguration(ctx context.Context, request 
 
 	var response ApplyHostConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ApplyHostConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -327,7 +327,7 @@ func (client ComputeClient) attachBootVolume(ctx context.Context, request common
 
 	var response AttachBootVolumeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "AttachBootVolume")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -390,7 +390,7 @@ func (client ComputeClient) attachComputeHostGroupHost(ctx context.Context, requ
 
 	var response AttachComputeHostGroupHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "AttachComputeHostGroupHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -454,7 +454,7 @@ func (client ComputeClient) attachVnic(ctx context.Context, request common.OCIRe
 
 	var response AttachVnicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "AttachVnic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -516,7 +516,7 @@ func (client ComputeClient) attachVolume(ctx context.Context, request common.OCI
 
 	var response AttachVolumeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "AttachVolume")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -592,7 +592,7 @@ func (client ComputeClient) captureConsoleHistory(ctx context.Context, request c
 
 	var response CaptureConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CaptureConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -656,7 +656,7 @@ func (client ComputeClient) changeComputeCapacityReservationCompartment(ctx cont
 
 	var response ChangeComputeCapacityReservationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeCapacityReservationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -720,7 +720,7 @@ func (client ComputeClient) changeComputeCapacityTopologyCompartment(ctx context
 
 	var response ChangeComputeCapacityTopologyCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeCapacityTopologyCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -785,7 +785,7 @@ func (client ComputeClient) changeComputeClusterCompartment(ctx context.Context,
 
 	var response ChangeComputeClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -849,7 +849,7 @@ func (client ComputeClient) changeComputeGpuMemoryClusterCompartment(ctx context
 
 	var response ChangeComputeGpuMemoryClusterCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeGpuMemoryClusterCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -913,7 +913,7 @@ func (client ComputeClient) changeComputeGpuMemoryFabricCompartment(ctx context.
 
 	var response ChangeComputeGpuMemoryFabricCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeGpuMemoryFabricCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -977,7 +977,7 @@ func (client ComputeClient) changeComputeHostCompartment(ctx context.Context, re
 
 	var response ChangeComputeHostCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeHostCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1041,7 +1041,7 @@ func (client ComputeClient) changeComputeHostGroupCompartment(ctx context.Contex
 
 	var response ChangeComputeHostGroupCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeHostGroupCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1107,7 +1107,7 @@ func (client ComputeClient) changeComputeImageCapabilitySchemaCompartment(ctx co
 
 	var response ChangeComputeImageCapabilitySchemaCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeComputeImageCapabilitySchemaCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1169,7 +1169,7 @@ func (client ComputeClient) changeDedicatedVmHostCompartment(ctx context.Context
 
 	var response ChangeDedicatedVmHostCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeDedicatedVmHostCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1234,7 +1234,7 @@ func (client ComputeClient) changeImageCompartment(ctx context.Context, request 
 
 	var response ChangeImageCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeImageCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1300,7 +1300,7 @@ func (client ComputeClient) changeInstanceCompartment(ctx context.Context, reque
 
 	var response ChangeInstanceCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ChangeInstanceCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1363,7 +1363,7 @@ func (client ComputeClient) checkHostConfiguration(ctx context.Context, request 
 
 	var response CheckHostConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CheckHostConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1426,7 +1426,7 @@ func (client ComputeClient) createAppCatalogSubscription(ctx context.Context, re
 
 	var response CreateAppCatalogSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateAppCatalogSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1493,7 +1493,7 @@ func (client ComputeClient) createComputeCapacityReport(ctx context.Context, req
 
 	var response CreateComputeCapacityReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeCapacityReport")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1559,7 +1559,7 @@ func (client ComputeClient) createComputeCapacityReservation(ctx context.Context
 
 	var response CreateComputeCapacityReservationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeCapacityReservation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1625,7 +1625,7 @@ func (client ComputeClient) createComputeCapacityTopology(ctx context.Context, r
 
 	var response CreateComputeCapacityTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeCapacityTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1695,7 +1695,7 @@ func (client ComputeClient) createComputeCluster(ctx context.Context, request co
 
 	var response CreateComputeClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1758,7 +1758,7 @@ func (client ComputeClient) createComputeGpuMemoryCluster(ctx context.Context, r
 
 	var response CreateComputeGpuMemoryClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeGpuMemoryCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1821,7 +1821,7 @@ func (client ComputeClient) createComputeHostGroup(ctx context.Context, request 
 
 	var response CreateComputeHostGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeHostGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1884,7 +1884,7 @@ func (client ComputeClient) createComputeImageCapabilitySchema(ctx context.Conte
 
 	var response CreateComputeImageCapabilitySchemaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateComputeImageCapabilitySchema")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1949,7 +1949,7 @@ func (client ComputeClient) createDedicatedVmHost(ctx context.Context, request c
 
 	var response CreateDedicatedVmHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateDedicatedVmHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2028,7 +2028,7 @@ func (client ComputeClient) createImage(ctx context.Context, request common.OCIR
 
 	var response CreateImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2093,7 +2093,7 @@ func (client ComputeClient) createInstanceConsoleConnection(ctx context.Context,
 
 	var response CreateInstanceConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "CreateInstanceConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2150,7 +2150,7 @@ func (client ComputeClient) deleteAppCatalogSubscription(ctx context.Context, re
 
 	var response DeleteAppCatalogSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteAppCatalogSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2207,7 +2207,7 @@ func (client ComputeClient) deleteComputeCapacityReservation(ctx context.Context
 
 	var response DeleteComputeCapacityReservationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteComputeCapacityReservation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2265,7 +2265,7 @@ func (client ComputeClient) deleteComputeCapacityTopology(ctx context.Context, r
 
 	var response DeleteComputeCapacityTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteComputeCapacityTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2325,7 +2325,7 @@ func (client ComputeClient) deleteComputeCluster(ctx context.Context, request co
 
 	var response DeleteComputeClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteComputeCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2383,7 +2383,7 @@ func (client ComputeClient) deleteComputeGpuMemoryCluster(ctx context.Context, r
 
 	var response DeleteComputeGpuMemoryClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteComputeGpuMemoryCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2440,7 +2440,7 @@ func (client ComputeClient) deleteComputeHostGroup(ctx context.Context, request 
 
 	var response DeleteComputeHostGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteComputeHostGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2497,7 +2497,7 @@ func (client ComputeClient) deleteComputeImageCapabilitySchema(ctx context.Conte
 
 	var response DeleteComputeImageCapabilitySchemaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteComputeImageCapabilitySchema")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2554,7 +2554,7 @@ func (client ComputeClient) deleteConsoleHistory(ctx context.Context, request co
 
 	var response DeleteConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2613,7 +2613,7 @@ func (client ComputeClient) deleteDedicatedVmHost(ctx context.Context, request c
 
 	var response DeleteDedicatedVmHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteDedicatedVmHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2670,7 +2670,7 @@ func (client ComputeClient) deleteImage(ctx context.Context, request common.OCIR
 
 	var response DeleteImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2727,7 +2727,7 @@ func (client ComputeClient) deleteInstanceConsoleConnection(ctx context.Context,
 
 	var response DeleteInstanceConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DeleteInstanceConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2786,7 +2786,7 @@ func (client ComputeClient) detachBootVolume(ctx context.Context, request common
 
 	var response DetachBootVolumeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DetachBootVolume")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2849,7 +2849,7 @@ func (client ComputeClient) detachComputeHostGroupHost(ctx context.Context, requ
 
 	var response DetachComputeHostGroupHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DetachComputeHostGroupHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2914,7 +2914,7 @@ func (client ComputeClient) detachVnic(ctx context.Context, request common.OCIRe
 
 	var response DetachVnicResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DetachVnic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2973,7 +2973,7 @@ func (client ComputeClient) detachVolume(ctx context.Context, request common.OCI
 
 	var response DetachVolumeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "DetachVolume")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3042,7 +3042,7 @@ func (client ComputeClient) exportImage(ctx context.Context, request common.OCIR
 
 	var response ExportImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ExportImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3100,7 +3100,7 @@ func (client ComputeClient) getAppCatalogListing(ctx context.Context, request co
 
 	var response GetAppCatalogListingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetAppCatalogListing")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3158,7 +3158,7 @@ func (client ComputeClient) getAppCatalogListingAgreements(ctx context.Context, 
 
 	var response GetAppCatalogListingAgreementsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetAppCatalogListingAgreements")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3216,7 +3216,7 @@ func (client ComputeClient) getAppCatalogListingResourceVersion(ctx context.Cont
 
 	var response GetAppCatalogListingResourceVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetAppCatalogListingResourceVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3273,7 +3273,7 @@ func (client ComputeClient) getBootVolumeAttachment(ctx context.Context, request
 
 	var response GetBootVolumeAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetBootVolumeAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3330,7 +3330,7 @@ func (client ComputeClient) getComputeCapacityReservation(ctx context.Context, r
 
 	var response GetComputeCapacityReservationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeCapacityReservation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3388,7 +3388,7 @@ func (client ComputeClient) getComputeCapacityTopology(ctx context.Context, requ
 
 	var response GetComputeCapacityTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeCapacityTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3446,7 +3446,7 @@ func (client ComputeClient) getComputeCluster(ctx context.Context, request commo
 
 	var response GetComputeClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3504,7 +3504,7 @@ func (client ComputeClient) getComputeGlobalImageCapabilitySchema(ctx context.Co
 
 	var response GetComputeGlobalImageCapabilitySchemaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeGlobalImageCapabilitySchema")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3562,7 +3562,7 @@ func (client ComputeClient) getComputeGlobalImageCapabilitySchemaVersion(ctx con
 
 	var response GetComputeGlobalImageCapabilitySchemaVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeGlobalImageCapabilitySchemaVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3619,7 +3619,7 @@ func (client ComputeClient) getComputeGpuMemoryCluster(ctx context.Context, requ
 
 	var response GetComputeGpuMemoryClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeGpuMemoryCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3677,7 +3677,7 @@ func (client ComputeClient) getComputeGpuMemoryFabric(ctx context.Context, reque
 
 	var response GetComputeGpuMemoryFabricResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeGpuMemoryFabric")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3735,7 +3735,7 @@ func (client ComputeClient) getComputeHostGroup(ctx context.Context, request com
 
 	var response GetComputeHostGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeHostGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3793,7 +3793,7 @@ func (client ComputeClient) getComputeHosts(ctx context.Context, request common.
 
 	var response GetComputeHostsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeHosts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3851,7 +3851,7 @@ func (client ComputeClient) getComputeImageCapabilitySchema(ctx context.Context,
 
 	var response GetComputeImageCapabilitySchemaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetComputeImageCapabilitySchema")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3910,7 +3910,7 @@ func (client ComputeClient) getConsoleHistory(ctx context.Context, request commo
 
 	var response GetConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3969,7 +3969,7 @@ func (client ComputeClient) getConsoleHistoryContent(ctx context.Context, reques
 
 	var response GetConsoleHistoryContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetConsoleHistoryContent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4026,7 +4026,7 @@ func (client ComputeClient) getDedicatedVmHost(ctx context.Context, request comm
 
 	var response GetDedicatedVmHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetDedicatedVmHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4083,7 +4083,7 @@ func (client ComputeClient) getFirmwareBundle(ctx context.Context, request commo
 
 	var response GetFirmwareBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetFirmwareBundle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4141,7 +4141,7 @@ func (client ComputeClient) getImage(ctx context.Context, request common.OCIRequ
 
 	var response GetImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4199,7 +4199,7 @@ func (client ComputeClient) getImageShapeCompatibilityEntry(ctx context.Context,
 
 	var response GetImageShapeCompatibilityEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetImageShapeCompatibilityEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4258,7 +4258,7 @@ func (client ComputeClient) getInstance(ctx context.Context, request common.OCIR
 
 	var response GetInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4315,7 +4315,7 @@ func (client ComputeClient) getInstanceConsoleConnection(ctx context.Context, re
 
 	var response GetInstanceConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetInstanceConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4372,7 +4372,7 @@ func (client ComputeClient) getInstanceMaintenanceEvent(ctx context.Context, req
 
 	var response GetInstanceMaintenanceEventResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetInstanceMaintenanceEvent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4430,7 +4430,7 @@ func (client ComputeClient) getInstanceMaintenanceReboot(ctx context.Context, re
 
 	var response GetInstanceMaintenanceRebootResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetInstanceMaintenanceReboot")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4487,7 +4487,7 @@ func (client ComputeClient) getMeasuredBootReport(ctx context.Context, request c
 
 	var response GetMeasuredBootReportResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetMeasuredBootReport")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4544,7 +4544,7 @@ func (client ComputeClient) getVnicAttachment(ctx context.Context, request commo
 
 	var response GetVnicAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetVnicAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4601,7 +4601,7 @@ func (client ComputeClient) getVolumeAttachment(ctx context.Context, request com
 
 	var response GetVolumeAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetVolumeAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4659,7 +4659,7 @@ func (client ComputeClient) getWindowsInstanceInitialCredentials(ctx context.Con
 
 	var response GetWindowsInstanceInitialCredentialsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "GetWindowsInstanceInitialCredentials")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4751,7 +4751,7 @@ func (client ComputeClient) instanceAction(ctx context.Context, request common.O
 
 	var response InstanceActionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "InstanceAction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4852,7 +4852,7 @@ func (client ComputeClient) launchInstance(ctx context.Context, request common.O
 
 	var response LaunchInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "LaunchInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4910,7 +4910,7 @@ func (client ComputeClient) listAppCatalogListingResourceVersions(ctx context.Co
 
 	var response ListAppCatalogListingResourceVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListAppCatalogListingResourceVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4968,7 +4968,7 @@ func (client ComputeClient) listAppCatalogListings(ctx context.Context, request 
 
 	var response ListAppCatalogListingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListAppCatalogListings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5026,7 +5026,7 @@ func (client ComputeClient) listAppCatalogSubscriptions(ctx context.Context, req
 
 	var response ListAppCatalogSubscriptionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListAppCatalogSubscriptions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5084,7 +5084,7 @@ func (client ComputeClient) listBootVolumeAttachments(ctx context.Context, reque
 
 	var response ListBootVolumeAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListBootVolumeAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5141,7 +5141,7 @@ func (client ComputeClient) listComputeCapacityReservationInstanceShapes(ctx con
 
 	var response ListComputeCapacityReservationInstanceShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityReservationInstanceShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5198,7 +5198,7 @@ func (client ComputeClient) listComputeCapacityReservationInstances(ctx context.
 
 	var response ListComputeCapacityReservationInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityReservationInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5257,7 +5257,7 @@ func (client ComputeClient) listComputeCapacityReservations(ctx context.Context,
 
 	var response ListComputeCapacityReservationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityReservations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5316,7 +5316,7 @@ func (client ComputeClient) listComputeCapacityTopologies(ctx context.Context, r
 
 	var response ListComputeCapacityTopologiesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityTopologies")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5374,7 +5374,7 @@ func (client ComputeClient) listComputeCapacityTopologyComputeBareMetalHosts(ctx
 
 	var response ListComputeCapacityTopologyComputeBareMetalHostsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityTopologyComputeBareMetalHosts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5432,7 +5432,7 @@ func (client ComputeClient) listComputeCapacityTopologyComputeHpcIslands(ctx con
 
 	var response ListComputeCapacityTopologyComputeHpcIslandsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityTopologyComputeHpcIslands")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5490,7 +5490,7 @@ func (client ComputeClient) listComputeCapacityTopologyComputeNetworkBlocks(ctx 
 
 	var response ListComputeCapacityTopologyComputeNetworkBlocksResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeCapacityTopologyComputeNetworkBlocks")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5548,7 +5548,7 @@ func (client ComputeClient) listComputeClusters(ctx context.Context, request com
 
 	var response ListComputeClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5606,7 +5606,7 @@ func (client ComputeClient) listComputeGlobalImageCapabilitySchemaVersions(ctx c
 
 	var response ListComputeGlobalImageCapabilitySchemaVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeGlobalImageCapabilitySchemaVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5664,7 +5664,7 @@ func (client ComputeClient) listComputeGlobalImageCapabilitySchemas(ctx context.
 
 	var response ListComputeGlobalImageCapabilitySchemasResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeGlobalImageCapabilitySchemas")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5722,7 +5722,7 @@ func (client ComputeClient) listComputeGpuMemoryClusterInstances(ctx context.Con
 
 	var response ListComputeGpuMemoryClusterInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeGpuMemoryClusterInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5780,7 +5780,7 @@ func (client ComputeClient) listComputeGpuMemoryClusters(ctx context.Context, re
 
 	var response ListComputeGpuMemoryClustersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeGpuMemoryClusters")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5838,7 +5838,7 @@ func (client ComputeClient) listComputeGpuMemoryFabrics(ctx context.Context, req
 
 	var response ListComputeGpuMemoryFabricsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeGpuMemoryFabrics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5896,7 +5896,7 @@ func (client ComputeClient) listComputeHostGroups(ctx context.Context, request c
 
 	var response ListComputeHostGroupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeHostGroups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5954,7 +5954,7 @@ func (client ComputeClient) listComputeHosts(ctx context.Context, request common
 
 	var response ListComputeHostsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeHosts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6012,7 +6012,7 @@ func (client ComputeClient) listComputeImageCapabilitySchemas(ctx context.Contex
 
 	var response ListComputeImageCapabilitySchemasResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListComputeImageCapabilitySchemas")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6069,7 +6069,7 @@ func (client ComputeClient) listConsoleHistories(ctx context.Context, request co
 
 	var response ListConsoleHistoriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListConsoleHistories")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6127,7 +6127,7 @@ func (client ComputeClient) listDedicatedVmHostInstanceShapes(ctx context.Contex
 
 	var response ListDedicatedVmHostInstanceShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListDedicatedVmHostInstanceShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6184,7 +6184,7 @@ func (client ComputeClient) listDedicatedVmHostInstances(ctx context.Context, re
 
 	var response ListDedicatedVmHostInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListDedicatedVmHostInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6241,7 +6241,7 @@ func (client ComputeClient) listDedicatedVmHostShapes(ctx context.Context, reque
 
 	var response ListDedicatedVmHostShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListDedicatedVmHostShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6300,7 +6300,7 @@ func (client ComputeClient) listDedicatedVmHosts(ctx context.Context, request co
 
 	var response ListDedicatedVmHostsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListDedicatedVmHosts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6358,7 +6358,7 @@ func (client ComputeClient) listFirmwareBundles(ctx context.Context, request com
 
 	var response ListFirmwareBundlesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListFirmwareBundles")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6416,7 +6416,7 @@ func (client ComputeClient) listImageShapeCompatibilityEntries(ctx context.Conte
 
 	var response ListImageShapeCompatibilityEntriesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListImageShapeCompatibilityEntries")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6482,7 +6482,7 @@ func (client ComputeClient) listImages(ctx context.Context, request common.OCIRe
 
 	var response ListImagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListImages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6540,7 +6540,7 @@ func (client ComputeClient) listInstanceConsoleConnections(ctx context.Context, 
 
 	var response ListInstanceConsoleConnectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListInstanceConsoleConnections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6597,7 +6597,7 @@ func (client ComputeClient) listInstanceDevices(ctx context.Context, request com
 
 	var response ListInstanceDevicesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListInstanceDevices")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6654,7 +6654,7 @@ func (client ComputeClient) listInstanceMaintenanceEvents(ctx context.Context, r
 
 	var response ListInstanceMaintenanceEventsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListInstanceMaintenanceEvents")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6715,7 +6715,7 @@ func (client ComputeClient) listInstances(ctx context.Context, request common.OC
 
 	var response ListInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6773,7 +6773,7 @@ func (client ComputeClient) listShapes(ctx context.Context, request common.OCIRe
 
 	var response ListShapesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListShapes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6832,7 +6832,7 @@ func (client ComputeClient) listVnicAttachments(ctx context.Context, request com
 
 	var response ListVnicAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListVnicAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6908,7 +6908,7 @@ func (client ComputeClient) listVolumeAttachments(ctx context.Context, request c
 
 	var response ListVolumeAttachmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "ListVolumeAttachments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -6965,7 +6965,7 @@ func (client ComputeClient) removeImageShapeCompatibilityEntry(ctx context.Conte
 
 	var response RemoveImageShapeCompatibilityEntryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "RemoveImageShapeCompatibilityEntry")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7030,7 +7030,7 @@ func (client ComputeClient) terminateInstance(ctx context.Context, request commo
 
 	var response TerminateInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "TerminateInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7089,7 +7089,7 @@ func (client ComputeClient) updateComputeCapacityReservation(ctx context.Context
 
 	var response UpdateComputeCapacityReservationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeCapacityReservation")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7147,7 +7147,7 @@ func (client ComputeClient) updateComputeCapacityTopology(ctx context.Context, r
 
 	var response UpdateComputeCapacityTopologyResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeCapacityTopology")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7214,7 +7214,7 @@ func (client ComputeClient) updateComputeCluster(ctx context.Context, request co
 
 	var response UpdateComputeClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7277,7 +7277,7 @@ func (client ComputeClient) updateComputeGpuMemoryCluster(ctx context.Context, r
 
 	var response UpdateComputeGpuMemoryClusterResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeGpuMemoryCluster")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7341,7 +7341,7 @@ func (client ComputeClient) updateComputeGpuMemoryFabric(ctx context.Context, re
 
 	var response UpdateComputeGpuMemoryFabricResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeGpuMemoryFabric")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7404,7 +7404,7 @@ func (client ComputeClient) updateComputeHostGroup(ctx context.Context, request 
 
 	var response UpdateComputeHostGroupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeHostGroup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7467,7 +7467,7 @@ func (client ComputeClient) updateComputeHosts(ctx context.Context, request comm
 
 	var response UpdateComputeHostsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeHosts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7524,7 +7524,7 @@ func (client ComputeClient) updateComputeImageCapabilitySchema(ctx context.Conte
 
 	var response UpdateComputeImageCapabilitySchemaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateComputeImageCapabilitySchema")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7581,7 +7581,7 @@ func (client ComputeClient) updateConsoleHistory(ctx context.Context, request co
 
 	var response UpdateConsoleHistoryResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateConsoleHistory")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7644,7 +7644,7 @@ func (client ComputeClient) updateDedicatedVmHost(ctx context.Context, request c
 
 	var response UpdateDedicatedVmHostResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateDedicatedVmHost")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7706,7 +7706,7 @@ func (client ComputeClient) updateImage(ctx context.Context, request common.OCIR
 
 	var response UpdateImageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateImage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7772,7 +7772,7 @@ func (client ComputeClient) updateInstance(ctx context.Context, request common.O
 
 	var response UpdateInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7829,7 +7829,7 @@ func (client ComputeClient) updateInstanceConsoleConnection(ctx context.Context,
 
 	var response UpdateInstanceConsoleConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateInstanceConsoleConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7892,7 +7892,7 @@ func (client ComputeClient) updateInstanceMaintenanceEvent(ctx context.Context, 
 
 	var response UpdateInstanceMaintenanceEventResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateInstanceMaintenanceEvent")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -7949,7 +7949,7 @@ func (client ComputeClient) updateVolumeAttachment(ctx context.Context, request 
 
 	var response UpdateVolumeAttachmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "compute", "UpdateVolumeAttachment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

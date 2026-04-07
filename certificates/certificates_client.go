@@ -136,7 +136,7 @@ func (client CertificatesClient) getCaBundle(ctx context.Context, request common
 
 	var response GetCaBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "certificates", "GetCaBundle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -194,7 +194,7 @@ func (client CertificatesClient) getCertificateAuthorityBundle(ctx context.Conte
 
 	var response GetCertificateAuthorityBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "certificates", "GetCertificateAuthorityBundle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -254,7 +254,7 @@ func (client CertificatesClient) getCertificateBundle(ctx context.Context, reque
 
 	var response GetCertificateBundleResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "certificates", "GetCertificateBundle")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -311,7 +311,7 @@ func (client CertificatesClient) listCertificateAuthorityBundleVersions(ctx cont
 
 	var response ListCertificateAuthorityBundleVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "certificates", "ListCertificateAuthorityBundleVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -368,7 +368,7 @@ func (client CertificatesClient) listCertificateBundleVersions(ctx context.Conte
 
 	var response ListCertificateBundleVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "certificates", "ListCertificateBundleVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

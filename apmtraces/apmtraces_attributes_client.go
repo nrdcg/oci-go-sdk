@@ -142,7 +142,7 @@ func (client AttributesClient) bulkActivateAttribute(ctx context.Context, reques
 
 	var response BulkActivateAttributeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "BulkActivateAttribute")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -206,7 +206,7 @@ func (client AttributesClient) bulkDeActivateAttribute(ctx context.Context, requ
 
 	var response BulkDeActivateAttributeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "BulkDeActivateAttribute")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -264,7 +264,7 @@ func (client AttributesClient) bulkPinAttribute(ctx context.Context, request com
 
 	var response BulkPinAttributeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "BulkPinAttribute")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -321,7 +321,7 @@ func (client AttributesClient) bulkUnpinAttribute(ctx context.Context, request c
 
 	var response BulkUnpinAttributeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "BulkUnpinAttribute")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -378,7 +378,7 @@ func (client AttributesClient) bulkUpdateAttribute(ctx context.Context, request 
 
 	var response BulkUpdateAttributeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "BulkUpdateAttribute")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -437,7 +437,7 @@ func (client AttributesClient) bulkUpdateAttributeNotes(ctx context.Context, req
 
 	var response BulkUpdateAttributeNotesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "BulkUpdateAttributeNotes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -494,7 +494,7 @@ func (client AttributesClient) getStatusAutoActivate(ctx context.Context, reques
 
 	var response GetStatusAutoActivateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "GetStatusAutoActivate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -551,7 +551,7 @@ func (client AttributesClient) putToggleAutoActivate(ctx context.Context, reques
 
 	var response PutToggleAutoActivateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "attributes", "PutToggleAutoActivate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

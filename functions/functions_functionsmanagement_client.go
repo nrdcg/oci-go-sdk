@@ -138,7 +138,7 @@ func (client FunctionsManagementClient) changeApplicationCompartment(ctx context
 
 	var response ChangeApplicationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "ChangeApplicationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -196,7 +196,7 @@ func (client FunctionsManagementClient) createApplication(ctx context.Context, r
 
 	var response CreateApplicationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "CreateApplication")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -254,7 +254,7 @@ func (client FunctionsManagementClient) createFunction(ctx context.Context, requ
 
 	var response CreateFunctionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "CreateFunction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -312,7 +312,7 @@ func (client FunctionsManagementClient) deleteApplication(ctx context.Context, r
 
 	var response DeleteApplicationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "DeleteApplication")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -370,7 +370,7 @@ func (client FunctionsManagementClient) deleteFunction(ctx context.Context, requ
 
 	var response DeleteFunctionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "DeleteFunction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -428,7 +428,7 @@ func (client FunctionsManagementClient) getApplication(ctx context.Context, requ
 
 	var response GetApplicationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "GetApplication")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -486,7 +486,7 @@ func (client FunctionsManagementClient) getFunction(ctx context.Context, request
 
 	var response GetFunctionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "GetFunction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -544,7 +544,7 @@ func (client FunctionsManagementClient) getPbfListing(ctx context.Context, reque
 
 	var response GetPbfListingResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "GetPbfListing")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -602,7 +602,7 @@ func (client FunctionsManagementClient) getPbfListingVersion(ctx context.Context
 
 	var response GetPbfListingVersionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "GetPbfListingVersion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -660,7 +660,7 @@ func (client FunctionsManagementClient) listApplications(ctx context.Context, re
 
 	var response ListApplicationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "ListApplications")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -718,7 +718,7 @@ func (client FunctionsManagementClient) listFunctions(ctx context.Context, reque
 
 	var response ListFunctionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "ListFunctions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -779,7 +779,7 @@ func (client FunctionsManagementClient) listPbfListingVersions(ctx context.Conte
 
 	var response ListPbfListingVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "ListPbfListingVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -838,7 +838,7 @@ func (client FunctionsManagementClient) listPbfListings(ctx context.Context, req
 
 	var response ListPbfListingsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "ListPbfListings")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -896,7 +896,7 @@ func (client FunctionsManagementClient) listTriggers(ctx context.Context, reques
 
 	var response ListTriggersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "ListTriggers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -954,7 +954,7 @@ func (client FunctionsManagementClient) updateApplication(ctx context.Context, r
 
 	var response UpdateApplicationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "UpdateApplication")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1012,7 +1012,7 @@ func (client FunctionsManagementClient) updateFunction(ctx context.Context, requ
 
 	var response UpdateFunctionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "functionsManagement", "UpdateFunction")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

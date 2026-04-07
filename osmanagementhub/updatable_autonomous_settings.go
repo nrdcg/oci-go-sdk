@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdatableAutonomousSettings Updatable settings for the Autonomous Linux service.
+// UpdatableAutonomousSettings Updatable settings for the Autonomous Linux service. This is required when creating an Autonomous Linux Managed Instance Group. Do not include it when creating a standard (non-Autonomous) Managed Instance Group.
 type UpdatableAutonomousSettings struct {
 
 	// Indicates whether Autonomous Linux will collect crash files.

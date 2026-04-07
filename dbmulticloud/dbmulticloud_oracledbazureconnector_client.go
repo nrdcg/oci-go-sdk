@@ -164,7 +164,7 @@ func (client OracleDBAzureConnectorClient) changeOracleDbAzureConnectorCompartme
 
 	var response ChangeOracleDbAzureConnectorCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "ChangeOracleDbAzureConnectorCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -227,7 +227,7 @@ func (client OracleDBAzureConnectorClient) createOracleDbAzureConnector(ctx cont
 
 	var response CreateOracleDbAzureConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "CreateOracleDbAzureConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -285,7 +285,7 @@ func (client OracleDBAzureConnectorClient) deleteOracleDbAzureConnector(ctx cont
 
 	var response DeleteOracleDbAzureConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "DeleteOracleDbAzureConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -343,7 +343,7 @@ func (client OracleDBAzureConnectorClient) getOracleDbAzureConnector(ctx context
 
 	var response GetOracleDbAzureConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "GetOracleDbAzureConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -401,7 +401,7 @@ func (client OracleDBAzureConnectorClient) listOracleDbAzureConnectors(ctx conte
 
 	var response ListOracleDbAzureConnectorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "ListOracleDbAzureConnectors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -459,7 +459,7 @@ func (client OracleDBAzureConnectorClient) patchOracleDbAzureConnector(ctx conte
 
 	var response PatchOracleDbAzureConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "PatchOracleDbAzureConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -522,7 +522,7 @@ func (client OracleDBAzureConnectorClient) refreshOracleDbAzureConnector(ctx con
 
 	var response RefreshOracleDbAzureConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "RefreshOracleDbAzureConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -580,7 +580,7 @@ func (client OracleDBAzureConnectorClient) updateOracleDbAzureConnector(ctx cont
 
 	var response UpdateOracleDbAzureConnectorResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "oracleDBAzureConnector", "UpdateOracleDbAzureConnector")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

@@ -138,7 +138,7 @@ func (client SubscribersClient) addSubscriberLock(ctx context.Context, request c
 
 	var response AddSubscriberLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "AddSubscriberLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -200,7 +200,7 @@ func (client SubscribersClient) changeSubscriberCompartment(ctx context.Context,
 
 	var response ChangeSubscriberCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "ChangeSubscriberCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client SubscribersClient) createSubscriber(ctx context.Context, request co
 
 	var response CreateSubscriberResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "CreateSubscriber")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -320,7 +320,7 @@ func (client SubscribersClient) deleteSubscriber(ctx context.Context, request co
 
 	var response DeleteSubscriberResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "DeleteSubscriber")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -378,7 +378,7 @@ func (client SubscribersClient) getSubscriber(ctx context.Context, request commo
 
 	var response GetSubscriberResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "GetSubscriber")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -436,7 +436,7 @@ func (client SubscribersClient) listSubscribers(ctx context.Context, request com
 
 	var response ListSubscribersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "ListSubscribers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -493,7 +493,7 @@ func (client SubscribersClient) removeSubscriberLock(ctx context.Context, reques
 
 	var response RemoveSubscriberLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "RemoveSubscriberLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -550,7 +550,7 @@ func (client SubscribersClient) updateSubscriber(ctx context.Context, request co
 
 	var response UpdateSubscriberResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "subscribers", "UpdateSubscriber")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

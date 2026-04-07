@@ -143,7 +143,7 @@ func (client KmsVaultClient) backupVault(ctx context.Context, request common.OCI
 
 	var response BackupVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "BackupVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -212,7 +212,7 @@ func (client KmsVaultClient) cancelVaultDeletion(ctx context.Context, request co
 
 	var response CancelVaultDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "CancelVaultDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -280,7 +280,7 @@ func (client KmsVaultClient) changeVaultCompartment(ctx context.Context, request
 
 	var response ChangeVaultCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "ChangeVaultCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -349,7 +349,7 @@ func (client KmsVaultClient) createVault(ctx context.Context, request common.OCI
 
 	var response CreateVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "CreateVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -418,7 +418,7 @@ func (client KmsVaultClient) createVaultReplica(ctx context.Context, request com
 
 	var response CreateVaultReplicaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "CreateVaultReplica")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -484,7 +484,7 @@ func (client KmsVaultClient) deleteVaultReplica(ctx context.Context, request com
 
 	var response DeleteVaultReplicaResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "DeleteVaultReplica")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -545,7 +545,7 @@ func (client KmsVaultClient) getVault(ctx context.Context, request common.OCIReq
 
 	var response GetVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "GetVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -602,7 +602,7 @@ func (client KmsVaultClient) getVaultUsage(ctx context.Context, request common.O
 
 	var response GetVaultUsageResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "GetVaultUsage")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -668,7 +668,7 @@ func (client KmsVaultClient) listVaultReplicas(ctx context.Context, request comm
 
 	var response ListVaultReplicasResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "ListVaultReplicas")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -729,7 +729,7 @@ func (client KmsVaultClient) listVaults(ctx context.Context, request common.OCIR
 
 	var response ListVaultsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "ListVaults")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -793,7 +793,7 @@ func (client KmsVaultClient) restoreVaultFromFile(ctx context.Context, request c
 
 	var response RestoreVaultFromFileResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "RestoreVaultFromFile")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -857,7 +857,7 @@ func (client KmsVaultClient) restoreVaultFromObjectStore(ctx context.Context, re
 
 	var response RestoreVaultFromObjectStoreResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "RestoreVaultFromObjectStore")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -927,7 +927,7 @@ func (client KmsVaultClient) scheduleVaultDeletion(ctx context.Context, request 
 
 	var response ScheduleVaultDeletionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "ScheduleVaultDeletion")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -990,7 +990,7 @@ func (client KmsVaultClient) updateVault(ctx context.Context, request common.OCI
 
 	var response UpdateVaultResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "kmsVault", "UpdateVault")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

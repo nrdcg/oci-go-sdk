@@ -160,6 +160,10 @@ func (m *event) UnmarshalPolymorphicJSON(data []byte) (interface{}, error) {
 		mm := SysadminEvent{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "SNAP_UPDATE":
+		mm := SnapUpdateEvent{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "REBOOT":
 		mm := RebootEvent{}
 		err = json.Unmarshal(data, &mm)

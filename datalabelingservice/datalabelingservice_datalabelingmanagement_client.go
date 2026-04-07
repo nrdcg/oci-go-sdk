@@ -142,7 +142,7 @@ func (client DataLabelingManagementClient) addDatasetLabels(ctx context.Context,
 
 	var response AddDatasetLabelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "AddDatasetLabels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -200,7 +200,7 @@ func (client DataLabelingManagementClient) changeDatasetCompartment(ctx context.
 
 	var response ChangeDatasetCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ChangeDatasetCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -263,7 +263,7 @@ func (client DataLabelingManagementClient) createDataset(ctx context.Context, re
 
 	var response CreateDatasetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "CreateDataset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -321,7 +321,7 @@ func (client DataLabelingManagementClient) deleteDataset(ctx context.Context, re
 
 	var response DeleteDatasetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "DeleteDataset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -384,7 +384,7 @@ func (client DataLabelingManagementClient) generateDatasetRecords(ctx context.Co
 
 	var response GenerateDatasetRecordsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "GenerateDatasetRecords")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -442,7 +442,7 @@ func (client DataLabelingManagementClient) getDataset(ctx context.Context, reque
 
 	var response GetDatasetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "GetDataset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -500,7 +500,7 @@ func (client DataLabelingManagementClient) getWorkRequest(ctx context.Context, r
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -563,7 +563,7 @@ func (client DataLabelingManagementClient) importPreAnnotatedData(ctx context.Co
 
 	var response ImportPreAnnotatedDataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ImportPreAnnotatedData")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -621,7 +621,7 @@ func (client DataLabelingManagementClient) listAnnotationFormats(ctx context.Con
 
 	var response ListAnnotationFormatsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ListAnnotationFormats")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -679,7 +679,7 @@ func (client DataLabelingManagementClient) listDatasets(ctx context.Context, req
 
 	var response ListDatasetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ListDatasets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -737,7 +737,7 @@ func (client DataLabelingManagementClient) listWorkRequestErrors(ctx context.Con
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -795,7 +795,7 @@ func (client DataLabelingManagementClient) listWorkRequestLogs(ctx context.Conte
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -853,7 +853,7 @@ func (client DataLabelingManagementClient) listWorkRequests(ctx context.Context,
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -916,7 +916,7 @@ func (client DataLabelingManagementClient) removeDatasetLabels(ctx context.Conte
 
 	var response RemoveDatasetLabelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "RemoveDatasetLabels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -979,7 +979,7 @@ func (client DataLabelingManagementClient) renameDatasetLabels(ctx context.Conte
 
 	var response RenameDatasetLabelsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "RenameDatasetLabels")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1043,7 +1043,7 @@ func (client DataLabelingManagementClient) snapshotDataset(ctx context.Context, 
 
 	var response SnapshotDatasetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "SnapshotDataset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1101,7 +1101,7 @@ func (client DataLabelingManagementClient) updateDataset(ctx context.Context, re
 
 	var response UpdateDatasetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "dataLabelingManagement", "UpdateDataset")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

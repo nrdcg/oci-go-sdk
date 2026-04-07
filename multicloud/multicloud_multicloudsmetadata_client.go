@@ -138,7 +138,7 @@ func (client MultiCloudsMetadataClient) getMultiCloudMetadata(ctx context.Contex
 
 	var response GetMultiCloudMetadataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudsMetadata", "GetMultiCloudMetadata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -197,7 +197,7 @@ func (client MultiCloudsMetadataClient) listMultiCloudMetadata(ctx context.Conte
 
 	var response ListMultiCloudMetadataResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "multiCloudsMetadata", "ListMultiCloudMetadata")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

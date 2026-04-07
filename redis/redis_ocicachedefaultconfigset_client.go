@@ -137,7 +137,7 @@ func (client OciCacheDefaultConfigSetClient) getOciCacheDefaultConfigSet(ctx con
 
 	var response GetOciCacheDefaultConfigSetResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheDefaultConfigSet", "GetOciCacheDefaultConfigSet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -195,7 +195,7 @@ func (client OciCacheDefaultConfigSetClient) listOciCacheDefaultConfigSets(ctx c
 
 	var response ListOciCacheDefaultConfigSetsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "ociCacheDefaultConfigSet", "ListOciCacheDefaultConfigSets")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

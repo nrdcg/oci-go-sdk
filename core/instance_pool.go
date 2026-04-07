@@ -77,6 +77,9 @@ type InstancePool struct {
 	InstanceHostnameFormatter *string `mandatory:"false" json:"instanceHostnameFormatter"`
 
 	LifecycleManagement *InstancePoolLifecycleManagementDetails `mandatory:"false" json:"lifecycleManagement"`
+
+	// Count of instance in running state associated to the Instance Pool.
+	CurrentSize *int `mandatory:"false" json:"currentSize"`
 }
 
 func (m InstancePool) String() string {

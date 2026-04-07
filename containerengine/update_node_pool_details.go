@@ -77,6 +77,12 @@ type UpdateNodePoolDetails struct {
 	NodeEvictionNodePoolSettings *NodeEvictionNodePoolSettings `mandatory:"false" json:"nodeEvictionNodePoolSettings"`
 
 	NodePoolCyclingDetails *NodePoolCyclingDetails `mandatory:"false" json:"nodePoolCyclingDetails"`
+
+	// A list of secondary vnics to attach to nodes
+	SecondaryVnics []NodePoolSecondaryVnicDetails `mandatory:"false" json:"secondaryVnics"`
+
+	// Emulation type for the physical network interface card (NIC) for nodes
+	NetworkLaunchType NetworkLaunchTypeEnum `mandatory:"false" json:"networkLaunchType,omitempty"`
 }
 
 func (m UpdateNodePoolDetails) String() string {
@@ -89,6 +95,9 @@ func (m UpdateNodePoolDetails) String() string {
 func (m UpdateNodePoolDetails) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
+	if _, ok := GetMappingNetworkLaunchTypeEnum(string(m.NetworkLaunchType)); !ok && m.NetworkLaunchType != "" {
+		errMessage = append(errMessage, fmt.Sprintf("unsupported enum value for NetworkLaunchType: %s. Supported values are: %s.", m.NetworkLaunchType, strings.Join(GetNetworkLaunchTypeEnumStringValues(), ",")))
+	}
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
@@ -113,6 +122,8 @@ func (m *UpdateNodePoolDetails) UnmarshalJSON(data []byte) (e error) {
 		DefinedTags                  map[string]map[string]interface{} `json:"definedTags"`
 		NodeEvictionNodePoolSettings *NodeEvictionNodePoolSettings     `json:"nodeEvictionNodePoolSettings"`
 		NodePoolCyclingDetails       *NodePoolCyclingDetails           `json:"nodePoolCyclingDetails"`
+		SecondaryVnics               []NodePoolSecondaryVnicDetails    `json:"secondaryVnics"`
+		NetworkLaunchType            NetworkLaunchTypeEnum             `json:"networkLaunchType"`
 	}{}
 
 	e = json.Unmarshal(data, &model)
@@ -157,6 +168,10 @@ func (m *UpdateNodePoolDetails) UnmarshalJSON(data []byte) (e error) {
 	m.NodeEvictionNodePoolSettings = model.NodeEvictionNodePoolSettings
 
 	m.NodePoolCyclingDetails = model.NodePoolCyclingDetails
+
+	m.SecondaryVnics = make([]NodePoolSecondaryVnicDetails, len(model.SecondaryVnics))
+	copy(m.SecondaryVnics, model.SecondaryVnics)
+	m.NetworkLaunchType = model.NetworkLaunchType
 
 	return
 }

@@ -138,7 +138,7 @@ func (client DiagnosabilityClient) listAlertLogs(ctx context.Context, request co
 
 	var response ListAlertLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "diagnosability", "ListAlertLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -195,7 +195,7 @@ func (client DiagnosabilityClient) listAttentionLogs(ctx context.Context, reques
 
 	var response ListAttentionLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "diagnosability", "ListAttentionLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -252,7 +252,7 @@ func (client DiagnosabilityClient) summarizeAlertLogCounts(ctx context.Context, 
 
 	var response SummarizeAlertLogCountsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "diagnosability", "SummarizeAlertLogCounts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -309,7 +309,7 @@ func (client DiagnosabilityClient) summarizeAttentionLogCounts(ctx context.Conte
 
 	var response SummarizeAttentionLogCountsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "diagnosability", "SummarizeAttentionLogCounts")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

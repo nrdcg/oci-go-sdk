@@ -138,7 +138,7 @@ func (client ReportingManagedInstanceClient) getManagedInstanceAnalyticContent(c
 
 	var response GetManagedInstanceAnalyticContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "reportingManagedInstance", "GetManagedInstanceAnalyticContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/GetManagedInstanceAnalyticContent"
@@ -195,7 +195,7 @@ func (client ReportingManagedInstanceClient) getManagedInstanceContent(ctx conte
 
 	var response GetManagedInstanceContentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "reportingManagedInstance", "GetManagedInstanceContent")
 	response.RawResponse = httpResponse
 	if err != nil {
 		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/GetManagedInstanceContent"
@@ -252,7 +252,7 @@ func (client ReportingManagedInstanceClient) summarizeManagedInstanceAnalytics(c
 
 	var response SummarizeManagedInstanceAnalyticsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "reportingManagedInstance", "SummarizeManagedInstanceAnalytics")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

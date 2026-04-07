@@ -193,6 +193,7 @@ type ListProfilesOsFamilyEnum string
 
 // Set of constants representing the allowable values for ListProfilesOsFamilyEnum
 const (
+	ListProfilesOsFamilyOracleLinux10     ListProfilesOsFamilyEnum = "ORACLE_LINUX_10"
 	ListProfilesOsFamilyOracleLinux9      ListProfilesOsFamilyEnum = "ORACLE_LINUX_9"
 	ListProfilesOsFamilyOracleLinux8      ListProfilesOsFamilyEnum = "ORACLE_LINUX_8"
 	ListProfilesOsFamilyOracleLinux7      ListProfilesOsFamilyEnum = "ORACLE_LINUX_7"
@@ -200,10 +201,16 @@ const (
 	ListProfilesOsFamilyWindowsServer2016 ListProfilesOsFamilyEnum = "WINDOWS_SERVER_2016"
 	ListProfilesOsFamilyWindowsServer2019 ListProfilesOsFamilyEnum = "WINDOWS_SERVER_2019"
 	ListProfilesOsFamilyWindowsServer2022 ListProfilesOsFamilyEnum = "WINDOWS_SERVER_2022"
+	ListProfilesOsFamilyWindowsServer2025 ListProfilesOsFamilyEnum = "WINDOWS_SERVER_2025"
+	ListProfilesOsFamilyWindows11         ListProfilesOsFamilyEnum = "WINDOWS_11"
 	ListProfilesOsFamilyAll               ListProfilesOsFamilyEnum = "ALL"
+	ListProfilesOsFamilyUbuntu2004        ListProfilesOsFamilyEnum = "UBUNTU_20_04"
+	ListProfilesOsFamilyUbuntu2204        ListProfilesOsFamilyEnum = "UBUNTU_22_04"
+	ListProfilesOsFamilyUbuntu2404        ListProfilesOsFamilyEnum = "UBUNTU_24_04"
 )
 
 var mappingListProfilesOsFamilyEnum = map[string]ListProfilesOsFamilyEnum{
+	"ORACLE_LINUX_10":     ListProfilesOsFamilyOracleLinux10,
 	"ORACLE_LINUX_9":      ListProfilesOsFamilyOracleLinux9,
 	"ORACLE_LINUX_8":      ListProfilesOsFamilyOracleLinux8,
 	"ORACLE_LINUX_7":      ListProfilesOsFamilyOracleLinux7,
@@ -211,10 +218,16 @@ var mappingListProfilesOsFamilyEnum = map[string]ListProfilesOsFamilyEnum{
 	"WINDOWS_SERVER_2016": ListProfilesOsFamilyWindowsServer2016,
 	"WINDOWS_SERVER_2019": ListProfilesOsFamilyWindowsServer2019,
 	"WINDOWS_SERVER_2022": ListProfilesOsFamilyWindowsServer2022,
+	"WINDOWS_SERVER_2025": ListProfilesOsFamilyWindowsServer2025,
+	"WINDOWS_11":          ListProfilesOsFamilyWindows11,
 	"ALL":                 ListProfilesOsFamilyAll,
+	"UBUNTU_20_04":        ListProfilesOsFamilyUbuntu2004,
+	"UBUNTU_22_04":        ListProfilesOsFamilyUbuntu2204,
+	"UBUNTU_24_04":        ListProfilesOsFamilyUbuntu2404,
 }
 
 var mappingListProfilesOsFamilyEnumLowerCase = map[string]ListProfilesOsFamilyEnum{
+	"oracle_linux_10":     ListProfilesOsFamilyOracleLinux10,
 	"oracle_linux_9":      ListProfilesOsFamilyOracleLinux9,
 	"oracle_linux_8":      ListProfilesOsFamilyOracleLinux8,
 	"oracle_linux_7":      ListProfilesOsFamilyOracleLinux7,
@@ -222,7 +235,12 @@ var mappingListProfilesOsFamilyEnumLowerCase = map[string]ListProfilesOsFamilyEn
 	"windows_server_2016": ListProfilesOsFamilyWindowsServer2016,
 	"windows_server_2019": ListProfilesOsFamilyWindowsServer2019,
 	"windows_server_2022": ListProfilesOsFamilyWindowsServer2022,
+	"windows_server_2025": ListProfilesOsFamilyWindowsServer2025,
+	"windows_11":          ListProfilesOsFamilyWindows11,
 	"all":                 ListProfilesOsFamilyAll,
+	"ubuntu_20_04":        ListProfilesOsFamilyUbuntu2004,
+	"ubuntu_22_04":        ListProfilesOsFamilyUbuntu2204,
+	"ubuntu_24_04":        ListProfilesOsFamilyUbuntu2404,
 }
 
 // GetListProfilesOsFamilyEnumValues Enumerates the set of values for ListProfilesOsFamilyEnum
@@ -237,6 +255,7 @@ func GetListProfilesOsFamilyEnumValues() []ListProfilesOsFamilyEnum {
 // GetListProfilesOsFamilyEnumStringValues Enumerates the set of values in String for ListProfilesOsFamilyEnum
 func GetListProfilesOsFamilyEnumStringValues() []string {
 	return []string{
+		"ORACLE_LINUX_10",
 		"ORACLE_LINUX_9",
 		"ORACLE_LINUX_8",
 		"ORACLE_LINUX_7",
@@ -244,7 +263,12 @@ func GetListProfilesOsFamilyEnumStringValues() []string {
 		"WINDOWS_SERVER_2016",
 		"WINDOWS_SERVER_2019",
 		"WINDOWS_SERVER_2022",
+		"WINDOWS_SERVER_2025",
+		"WINDOWS_11",
 		"ALL",
+		"UBUNTU_20_04",
+		"UBUNTU_22_04",
+		"UBUNTU_24_04",
 	}
 }
 
@@ -265,6 +289,9 @@ const (
 	ListProfilesArchTypeNoarch  ListProfilesArchTypeEnum = "NOARCH"
 	ListProfilesArchTypeSrc     ListProfilesArchTypeEnum = "SRC"
 	ListProfilesArchTypeI386    ListProfilesArchTypeEnum = "I386"
+	ListProfilesArchTypeAmd64   ListProfilesArchTypeEnum = "AMD64"
+	ListProfilesArchTypeArm64   ListProfilesArchTypeEnum = "ARM64"
+	ListProfilesArchTypeAll     ListProfilesArchTypeEnum = "ALL"
 )
 
 var mappingListProfilesArchTypeEnum = map[string]ListProfilesArchTypeEnum{
@@ -274,6 +301,9 @@ var mappingListProfilesArchTypeEnum = map[string]ListProfilesArchTypeEnum{
 	"NOARCH":  ListProfilesArchTypeNoarch,
 	"SRC":     ListProfilesArchTypeSrc,
 	"I386":    ListProfilesArchTypeI386,
+	"AMD64":   ListProfilesArchTypeAmd64,
+	"ARM64":   ListProfilesArchTypeArm64,
+	"ALL":     ListProfilesArchTypeAll,
 }
 
 var mappingListProfilesArchTypeEnumLowerCase = map[string]ListProfilesArchTypeEnum{
@@ -283,6 +313,9 @@ var mappingListProfilesArchTypeEnumLowerCase = map[string]ListProfilesArchTypeEn
 	"noarch":  ListProfilesArchTypeNoarch,
 	"src":     ListProfilesArchTypeSrc,
 	"i386":    ListProfilesArchTypeI386,
+	"amd64":   ListProfilesArchTypeAmd64,
+	"arm64":   ListProfilesArchTypeArm64,
+	"all":     ListProfilesArchTypeAll,
 }
 
 // GetListProfilesArchTypeEnumValues Enumerates the set of values for ListProfilesArchTypeEnum
@@ -303,6 +336,9 @@ func GetListProfilesArchTypeEnumStringValues() []string {
 		"NOARCH",
 		"SRC",
 		"I386",
+		"AMD64",
+		"ARM64",
+		"ALL",
 	}
 }
 
@@ -319,16 +355,19 @@ type ListProfilesVendorNameEnum string
 const (
 	ListProfilesVendorNameOracle    ListProfilesVendorNameEnum = "ORACLE"
 	ListProfilesVendorNameMicrosoft ListProfilesVendorNameEnum = "MICROSOFT"
+	ListProfilesVendorNameCanonical ListProfilesVendorNameEnum = "CANONICAL"
 )
 
 var mappingListProfilesVendorNameEnum = map[string]ListProfilesVendorNameEnum{
 	"ORACLE":    ListProfilesVendorNameOracle,
 	"MICROSOFT": ListProfilesVendorNameMicrosoft,
+	"CANONICAL": ListProfilesVendorNameCanonical,
 }
 
 var mappingListProfilesVendorNameEnumLowerCase = map[string]ListProfilesVendorNameEnum{
 	"oracle":    ListProfilesVendorNameOracle,
 	"microsoft": ListProfilesVendorNameMicrosoft,
+	"canonical": ListProfilesVendorNameCanonical,
 }
 
 // GetListProfilesVendorNameEnumValues Enumerates the set of values for ListProfilesVendorNameEnum
@@ -345,6 +384,7 @@ func GetListProfilesVendorNameEnumStringValues() []string {
 	return []string{
 		"ORACLE",
 		"MICROSOFT",
+		"CANONICAL",
 	}
 }
 

@@ -139,7 +139,7 @@ func (client EmailClient) addEmailDomainLock(ctx context.Context, request common
 
 	var response AddEmailDomainLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "AddEmailDomainLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -196,7 +196,7 @@ func (client EmailClient) addEmailIpPoolLock(ctx context.Context, request common
 
 	var response AddEmailIpPoolLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "AddEmailIpPoolLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -258,7 +258,7 @@ func (client EmailClient) addEmailOutboundIp(ctx context.Context, request common
 
 	var response AddEmailOutboundIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "AddEmailOutboundIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -315,7 +315,7 @@ func (client EmailClient) addReturnPathLock(ctx context.Context, request common.
 
 	var response AddReturnPathLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "AddReturnPathLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -372,7 +372,7 @@ func (client EmailClient) addSenderLock(ctx context.Context, request common.OCIR
 
 	var response AddSenderLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "AddSenderLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -438,7 +438,7 @@ func (client EmailClient) changeEmailDomainCompartment(ctx context.Context, requ
 
 	var response ChangeEmailDomainCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ChangeEmailDomainCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -500,7 +500,7 @@ func (client EmailClient) changeEmailIpPoolCompartment(ctx context.Context, requ
 
 	var response ChangeEmailIpPoolCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ChangeEmailIpPoolCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -557,7 +557,7 @@ func (client EmailClient) changeSenderCompartment(ctx context.Context, request c
 
 	var response ChangeSenderCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ChangeSenderCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -623,7 +623,7 @@ func (client EmailClient) createDkim(ctx context.Context, request common.OCIRequ
 
 	var response CreateDkimResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "CreateDkim")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -685,7 +685,7 @@ func (client EmailClient) createEmailDomain(ctx context.Context, request common.
 
 	var response CreateEmailDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "CreateEmailDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -747,7 +747,7 @@ func (client EmailClient) createEmailIpPool(ctx context.Context, request common.
 
 	var response CreateEmailIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "CreateEmailIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -809,7 +809,7 @@ func (client EmailClient) createEmailReturnPath(ctx context.Context, request com
 
 	var response CreateEmailReturnPathResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "CreateEmailReturnPath")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -866,7 +866,7 @@ func (client EmailClient) createSender(ctx context.Context, request common.OCIRe
 
 	var response CreateSenderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "CreateSender")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -926,7 +926,7 @@ func (client EmailClient) createSuppression(ctx context.Context, request common.
 
 	var response CreateSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "CreateSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -988,7 +988,7 @@ func (client EmailClient) deleteDkim(ctx context.Context, request common.OCIRequ
 
 	var response DeleteDkimResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "DeleteDkim")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1045,7 +1045,7 @@ func (client EmailClient) deleteEmailDomain(ctx context.Context, request common.
 
 	var response DeleteEmailDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "DeleteEmailDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1102,7 +1102,7 @@ func (client EmailClient) deleteEmailIpPool(ctx context.Context, request common.
 
 	var response DeleteEmailIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "DeleteEmailIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1159,7 +1159,7 @@ func (client EmailClient) deleteEmailReturnPath(ctx context.Context, request com
 
 	var response DeleteEmailReturnPathResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "DeleteEmailReturnPath")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1217,7 +1217,7 @@ func (client EmailClient) deleteSender(ctx context.Context, request common.OCIRe
 
 	var response DeleteSenderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "DeleteSender")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1275,7 +1275,7 @@ func (client EmailClient) deleteSuppression(ctx context.Context, request common.
 
 	var response DeleteSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "DeleteSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1332,7 +1332,7 @@ func (client EmailClient) getDkim(ctx context.Context, request common.OCIRequest
 
 	var response GetDkimResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetDkim")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1389,7 +1389,7 @@ func (client EmailClient) getEmailConfiguration(ctx context.Context, request com
 
 	var response GetEmailConfigurationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetEmailConfiguration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1446,7 +1446,7 @@ func (client EmailClient) getEmailDomain(ctx context.Context, request common.OCI
 
 	var response GetEmailDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetEmailDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1503,7 +1503,7 @@ func (client EmailClient) getEmailIpPool(ctx context.Context, request common.OCI
 
 	var response GetEmailIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetEmailIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1560,7 +1560,7 @@ func (client EmailClient) getEmailReturnPath(ctx context.Context, request common
 
 	var response GetEmailReturnPathResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetEmailReturnPath")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1617,7 +1617,7 @@ func (client EmailClient) getSender(ctx context.Context, request common.OCIReque
 
 	var response GetSenderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetSender")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1675,7 +1675,7 @@ func (client EmailClient) getSuppression(ctx context.Context, request common.OCI
 
 	var response GetSuppressionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetSuppression")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1732,7 +1732,7 @@ func (client EmailClient) getWorkRequest(ctx context.Context, request common.OCI
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1789,7 +1789,7 @@ func (client EmailClient) listDkims(ctx context.Context, request common.OCIReque
 
 	var response ListDkimsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListDkims")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1846,7 +1846,7 @@ func (client EmailClient) listEmailDomains(ctx context.Context, request common.O
 
 	var response ListEmailDomainsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListEmailDomains")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1903,7 +1903,7 @@ func (client EmailClient) listEmailIpPools(ctx context.Context, request common.O
 
 	var response ListEmailIpPoolsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListEmailIpPools")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1960,7 +1960,7 @@ func (client EmailClient) listEmailOutboundIps(ctx context.Context, request comm
 
 	var response ListEmailOutboundIpsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListEmailOutboundIps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2017,7 +2017,7 @@ func (client EmailClient) listEmailReturnPaths(ctx context.Context, request comm
 
 	var response ListEmailReturnPathsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListEmailReturnPaths")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2074,7 +2074,7 @@ func (client EmailClient) listSenders(ctx context.Context, request common.OCIReq
 
 	var response ListSendersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListSenders")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2133,7 +2133,7 @@ func (client EmailClient) listSuppressions(ctx context.Context, request common.O
 
 	var response ListSuppressionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListSuppressions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2190,7 +2190,7 @@ func (client EmailClient) listWorkRequestErrors(ctx context.Context, request com
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2247,7 +2247,7 @@ func (client EmailClient) listWorkRequestLogs(ctx context.Context, request commo
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2304,7 +2304,7 @@ func (client EmailClient) listWorkRequests(ctx context.Context, request common.O
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2361,7 +2361,7 @@ func (client EmailClient) removeEmailDomainLock(ctx context.Context, request com
 
 	var response RemoveEmailDomainLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "RemoveEmailDomainLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2418,7 +2418,7 @@ func (client EmailClient) removeEmailIpPoolLock(ctx context.Context, request com
 
 	var response RemoveEmailIpPoolLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "RemoveEmailIpPoolLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2480,7 +2480,7 @@ func (client EmailClient) removeEmailOutboundIp(ctx context.Context, request com
 
 	var response RemoveEmailOutboundIpResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "RemoveEmailOutboundIp")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2537,7 +2537,7 @@ func (client EmailClient) removeReturnPathLock(ctx context.Context, request comm
 
 	var response RemoveReturnPathLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "RemoveReturnPathLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2594,7 +2594,7 @@ func (client EmailClient) removeSenderLock(ctx context.Context, request common.O
 
 	var response RemoveSenderLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "RemoveSenderLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2651,7 +2651,7 @@ func (client EmailClient) updateDkim(ctx context.Context, request common.OCIRequ
 
 	var response UpdateDkimResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "UpdateDkim")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2708,7 +2708,7 @@ func (client EmailClient) updateEmailDomain(ctx context.Context, request common.
 
 	var response UpdateEmailDomainResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "UpdateEmailDomain")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2765,7 +2765,7 @@ func (client EmailClient) updateEmailIpPool(ctx context.Context, request common.
 
 	var response UpdateEmailIpPoolResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "UpdateEmailIpPool")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2822,7 +2822,7 @@ func (client EmailClient) updateEmailReturnPath(ctx context.Context, request com
 
 	var response UpdateEmailReturnPathResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "UpdateEmailReturnPath")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2882,7 +2882,7 @@ func (client EmailClient) updateSender(ctx context.Context, request common.OCIRe
 
 	var response UpdateSenderResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "email", "UpdateSender")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

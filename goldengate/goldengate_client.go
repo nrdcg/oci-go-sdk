@@ -137,7 +137,7 @@ func (client GoldenGateClient) addConnectionLock(ctx context.Context, request co
 
 	var response AddConnectionLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "AddConnectionLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -195,7 +195,7 @@ func (client GoldenGateClient) addDeploymentBackupLock(ctx context.Context, requ
 
 	var response AddDeploymentBackupLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "AddDeploymentBackupLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -258,7 +258,7 @@ func (client GoldenGateClient) addDeploymentLocalPeer(ctx context.Context, reque
 
 	var response AddDeploymentLocalPeerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "AddDeploymentLocalPeer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -316,7 +316,7 @@ func (client GoldenGateClient) addDeploymentLock(ctx context.Context, request co
 
 	var response AddDeploymentLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "AddDeploymentLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -379,7 +379,7 @@ func (client GoldenGateClient) cancelDeploymentBackup(ctx context.Context, reque
 
 	var response CancelDeploymentBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CancelDeploymentBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -442,7 +442,7 @@ func (client GoldenGateClient) cancelDeploymentUpgrade(ctx context.Context, requ
 
 	var response CancelDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CancelDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -505,7 +505,7 @@ func (client GoldenGateClient) cancelSnoozeDeploymentUpgrade(ctx context.Context
 
 	var response CancelSnoozeDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CancelSnoozeDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -566,7 +566,7 @@ func (client GoldenGateClient) changeConnectionCompartment(ctx context.Context, 
 
 	var response ChangeConnectionCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangeConnectionCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -629,7 +629,7 @@ func (client GoldenGateClient) changeConnectionSubscription(ctx context.Context,
 
 	var response ChangeConnectionSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangeConnectionSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -696,7 +696,7 @@ func (client GoldenGateClient) changeDatabaseRegistrationCompartment(ctx context
 
 	var response ChangeDatabaseRegistrationCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangeDatabaseRegistrationCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -762,7 +762,7 @@ func (client GoldenGateClient) changeDeploymentBackupCompartment(ctx context.Con
 
 	var response ChangeDeploymentBackupCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangeDeploymentBackupCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -828,7 +828,7 @@ func (client GoldenGateClient) changeDeploymentCompartment(ctx context.Context, 
 
 	var response ChangeDeploymentCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangeDeploymentCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -891,7 +891,7 @@ func (client GoldenGateClient) changeDeploymentSubscription(ctx context.Context,
 
 	var response ChangeDeploymentSubscriptionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangeDeploymentSubscription")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -957,7 +957,7 @@ func (client GoldenGateClient) changePipelineCompartment(ctx context.Context, re
 
 	var response ChangePipelineCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ChangePipelineCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1020,7 +1020,7 @@ func (client GoldenGateClient) collectDeploymentDiagnostic(ctx context.Context, 
 
 	var response CollectDeploymentDiagnosticResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CollectDeploymentDiagnostic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1083,7 +1083,7 @@ func (client GoldenGateClient) collectPipelineDiagnostic(ctx context.Context, re
 
 	var response CollectPipelineDiagnosticResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CollectPipelineDiagnostic")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1146,7 +1146,7 @@ func (client GoldenGateClient) copyDeploymentBackup(ctx context.Context, request
 
 	var response CopyDeploymentBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CopyDeploymentBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1209,7 +1209,7 @@ func (client GoldenGateClient) createCertificate(ctx context.Context, request co
 
 	var response CreateCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreateCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1272,7 +1272,7 @@ func (client GoldenGateClient) createConnection(ctx context.Context, request com
 
 	var response CreateConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreateConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1335,7 +1335,7 @@ func (client GoldenGateClient) createConnectionAssignment(ctx context.Context, r
 
 	var response CreateConnectionAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreateConnectionAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1399,7 +1399,7 @@ func (client GoldenGateClient) createDatabaseRegistration(ctx context.Context, r
 
 	var response CreateDatabaseRegistrationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreateDatabaseRegistration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1462,7 +1462,7 @@ func (client GoldenGateClient) createDeployment(ctx context.Context, request com
 
 	var response CreateDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreateDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1525,7 +1525,7 @@ func (client GoldenGateClient) createDeploymentBackup(ctx context.Context, reque
 
 	var response CreateDeploymentBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreateDeploymentBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1588,7 +1588,7 @@ func (client GoldenGateClient) createPipeline(ctx context.Context, request commo
 
 	var response CreatePipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "CreatePipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1646,7 +1646,7 @@ func (client GoldenGateClient) deleteCertificate(ctx context.Context, request co
 
 	var response DeleteCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeleteCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1704,7 +1704,7 @@ func (client GoldenGateClient) deleteConnection(ctx context.Context, request com
 
 	var response DeleteConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeleteConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1762,7 +1762,7 @@ func (client GoldenGateClient) deleteConnectionAssignment(ctx context.Context, r
 
 	var response DeleteConnectionAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeleteConnectionAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1821,7 +1821,7 @@ func (client GoldenGateClient) deleteDatabaseRegistration(ctx context.Context, r
 
 	var response DeleteDatabaseRegistrationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeleteDatabaseRegistration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1879,7 +1879,7 @@ func (client GoldenGateClient) deleteDeployment(ctx context.Context, request com
 
 	var response DeleteDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeleteDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1937,7 +1937,7 @@ func (client GoldenGateClient) deleteDeploymentBackup(ctx context.Context, reque
 
 	var response DeleteDeploymentBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeleteDeploymentBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -1995,7 +1995,7 @@ func (client GoldenGateClient) deletePipeline(ctx context.Context, request commo
 
 	var response DeletePipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeletePipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2058,7 +2058,7 @@ func (client GoldenGateClient) deploymentWalletExists(ctx context.Context, reque
 
 	var response DeploymentWalletExistsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "DeploymentWalletExists")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2121,7 +2121,7 @@ func (client GoldenGateClient) exportDeploymentWallet(ctx context.Context, reque
 
 	var response ExportDeploymentWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ExportDeploymentWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2184,7 +2184,7 @@ func (client GoldenGateClient) generateLibraryUrl(ctx context.Context, request c
 
 	var response GenerateLibraryUrlResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GenerateLibraryUrl")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2242,7 +2242,7 @@ func (client GoldenGateClient) getCertificate(ctx context.Context, request commo
 
 	var response GetCertificateResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetCertificate")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2300,7 +2300,7 @@ func (client GoldenGateClient) getConnection(ctx context.Context, request common
 
 	var response GetConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2358,7 +2358,7 @@ func (client GoldenGateClient) getConnectionAssignment(ctx context.Context, requ
 
 	var response GetConnectionAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetConnectionAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2417,7 +2417,7 @@ func (client GoldenGateClient) getDatabaseRegistration(ctx context.Context, requ
 
 	var response GetDatabaseRegistrationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetDatabaseRegistration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2475,7 +2475,7 @@ func (client GoldenGateClient) getDeployment(ctx context.Context, request common
 
 	var response GetDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2533,7 +2533,7 @@ func (client GoldenGateClient) getDeploymentBackup(ctx context.Context, request 
 
 	var response GetDeploymentBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetDeploymentBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2591,7 +2591,7 @@ func (client GoldenGateClient) getDeploymentUpgrade(ctx context.Context, request
 
 	var response GetDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2649,7 +2649,7 @@ func (client GoldenGateClient) getPipeline(ctx context.Context, request common.O
 
 	var response GetPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2707,7 +2707,7 @@ func (client GoldenGateClient) getWorkRequest(ctx context.Context, request commo
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2770,7 +2770,7 @@ func (client GoldenGateClient) importDeploymentWallet(ctx context.Context, reque
 
 	var response ImportDeploymentWalletResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ImportDeploymentWallet")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2828,7 +2828,7 @@ func (client GoldenGateClient) listCertificates(ctx context.Context, request com
 
 	var response ListCertificatesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListCertificates")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2886,7 +2886,7 @@ func (client GoldenGateClient) listConnectionAssignments(ctx context.Context, re
 
 	var response ListConnectionAssignmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListConnectionAssignments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -2944,7 +2944,7 @@ func (client GoldenGateClient) listConnections(ctx context.Context, request comm
 
 	var response ListConnectionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListConnections")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3003,7 +3003,7 @@ func (client GoldenGateClient) listDatabaseRegistrations(ctx context.Context, re
 
 	var response ListDatabaseRegistrationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDatabaseRegistrations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3061,7 +3061,7 @@ func (client GoldenGateClient) listDeploymentBackups(ctx context.Context, reques
 
 	var response ListDeploymentBackupsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentBackups")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3119,7 +3119,7 @@ func (client GoldenGateClient) listDeploymentEnvironments(ctx context.Context, r
 
 	var response ListDeploymentEnvironmentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentEnvironments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3177,7 +3177,7 @@ func (client GoldenGateClient) listDeploymentPeers(ctx context.Context, request 
 
 	var response ListDeploymentPeersResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentPeers")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3235,7 +3235,7 @@ func (client GoldenGateClient) listDeploymentTypes(ctx context.Context, request 
 
 	var response ListDeploymentTypesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentTypes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3293,7 +3293,7 @@ func (client GoldenGateClient) listDeploymentUpgrades(ctx context.Context, reque
 
 	var response ListDeploymentUpgradesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentUpgrades")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3351,7 +3351,7 @@ func (client GoldenGateClient) listDeploymentVersions(ctx context.Context, reque
 
 	var response ListDeploymentVersionsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentVersions")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3409,7 +3409,7 @@ func (client GoldenGateClient) listDeploymentWalletsOperations(ctx context.Conte
 
 	var response ListDeploymentWalletsOperationsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeploymentWalletsOperations")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3467,7 +3467,7 @@ func (client GoldenGateClient) listDeployments(ctx context.Context, request comm
 
 	var response ListDeploymentsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListDeployments")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3525,7 +3525,7 @@ func (client GoldenGateClient) listMessages(ctx context.Context, request common.
 
 	var response ListMessagesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListMessages")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3583,7 +3583,7 @@ func (client GoldenGateClient) listPipelineInitializationSteps(ctx context.Conte
 
 	var response ListPipelineInitializationStepsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListPipelineInitializationSteps")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3641,7 +3641,7 @@ func (client GoldenGateClient) listPipelineRunningProcesses(ctx context.Context,
 
 	var response ListPipelineRunningProcessesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListPipelineRunningProcesses")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3699,7 +3699,7 @@ func (client GoldenGateClient) listPipelineSchemaTables(ctx context.Context, req
 
 	var response ListPipelineSchemaTablesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListPipelineSchemaTables")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3757,7 +3757,7 @@ func (client GoldenGateClient) listPipelineSchemas(ctx context.Context, request 
 
 	var response ListPipelineSchemasResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListPipelineSchemas")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3815,7 +3815,7 @@ func (client GoldenGateClient) listPipelines(ctx context.Context, request common
 
 	var response ListPipelinesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListPipelines")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3873,7 +3873,7 @@ func (client GoldenGateClient) listRecipes(ctx context.Context, request common.O
 
 	var response ListRecipesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListRecipes")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3932,7 +3932,7 @@ func (client GoldenGateClient) listTrailFiles(ctx context.Context, request commo
 
 	var response ListTrailFilesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListTrailFiles")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -3991,7 +3991,7 @@ func (client GoldenGateClient) listTrailSequences(ctx context.Context, request c
 
 	var response ListTrailSequencesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListTrailSequences")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4049,7 +4049,7 @@ func (client GoldenGateClient) listWorkRequestErrors(ctx context.Context, reques
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4107,7 +4107,7 @@ func (client GoldenGateClient) listWorkRequestLogs(ctx context.Context, request 
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4165,7 +4165,7 @@ func (client GoldenGateClient) listWorkRequests(ctx context.Context, request com
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4228,7 +4228,7 @@ func (client GoldenGateClient) pausePipeline(ctx context.Context, request common
 
 	var response PausePipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "PausePipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4286,7 +4286,7 @@ func (client GoldenGateClient) refreshConnection(ctx context.Context, request co
 
 	var response RefreshConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RefreshConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4344,7 +4344,7 @@ func (client GoldenGateClient) removeConnectionLock(ctx context.Context, request
 
 	var response RemoveConnectionLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RemoveConnectionLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4402,7 +4402,7 @@ func (client GoldenGateClient) removeDeploymentBackupLock(ctx context.Context, r
 
 	var response RemoveDeploymentBackupLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RemoveDeploymentBackupLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4465,7 +4465,7 @@ func (client GoldenGateClient) removeDeploymentLocalPeer(ctx context.Context, re
 
 	var response RemoveDeploymentLocalPeerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RemoveDeploymentLocalPeer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4523,7 +4523,7 @@ func (client GoldenGateClient) removeDeploymentLock(ctx context.Context, request
 
 	var response RemoveDeploymentLockResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RemoveDeploymentLock")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4586,7 +4586,7 @@ func (client GoldenGateClient) rescheduleDeploymentUpgrade(ctx context.Context, 
 
 	var response RescheduleDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RescheduleDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4649,7 +4649,7 @@ func (client GoldenGateClient) restoreDeployment(ctx context.Context, request co
 
 	var response RestoreDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RestoreDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4712,7 +4712,7 @@ func (client GoldenGateClient) rollbackDeploymentUpgrade(ctx context.Context, re
 
 	var response RollbackDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "RollbackDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4775,7 +4775,7 @@ func (client GoldenGateClient) snoozeDeploymentUpgrade(ctx context.Context, requ
 
 	var response SnoozeDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "SnoozeDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4838,7 +4838,7 @@ func (client GoldenGateClient) startDeployment(ctx context.Context, request comm
 
 	var response StartDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "StartDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4901,7 +4901,7 @@ func (client GoldenGateClient) startPipeline(ctx context.Context, request common
 
 	var response StartPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "StartPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -4964,7 +4964,7 @@ func (client GoldenGateClient) stopDeployment(ctx context.Context, request commo
 
 	var response StopDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "StopDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5027,7 +5027,7 @@ func (client GoldenGateClient) stopPipeline(ctx context.Context, request common.
 
 	var response StopPipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "StopPipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5090,7 +5090,7 @@ func (client GoldenGateClient) switchoverDeploymentPeer(ctx context.Context, req
 
 	var response SwitchoverDeploymentPeerResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "SwitchoverDeploymentPeer")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5154,7 +5154,7 @@ func (client GoldenGateClient) testConnectionAssignment(ctx context.Context, req
 
 	var response TestConnectionAssignmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "TestConnectionAssignment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5218,7 +5218,7 @@ func (client GoldenGateClient) testPipelineConnection(ctx context.Context, reque
 
 	var response TestPipelineConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "TestPipelineConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5276,7 +5276,7 @@ func (client GoldenGateClient) updateConnection(ctx context.Context, request com
 
 	var response UpdateConnectionResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpdateConnection")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5335,7 +5335,7 @@ func (client GoldenGateClient) updateDatabaseRegistration(ctx context.Context, r
 
 	var response UpdateDatabaseRegistrationResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpdateDatabaseRegistration")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5393,7 +5393,7 @@ func (client GoldenGateClient) updateDeployment(ctx context.Context, request com
 
 	var response UpdateDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpdateDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5451,7 +5451,7 @@ func (client GoldenGateClient) updateDeploymentBackup(ctx context.Context, reque
 
 	var response UpdateDeploymentBackupResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpdateDeploymentBackup")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5509,7 +5509,7 @@ func (client GoldenGateClient) updatePipeline(ctx context.Context, request commo
 
 	var response UpdatePipelineResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpdatePipeline")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5572,7 +5572,7 @@ func (client GoldenGateClient) upgradeDeployment(ctx context.Context, request co
 
 	var response UpgradeDeploymentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpgradeDeployment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -5635,7 +5635,7 @@ func (client GoldenGateClient) upgradeDeploymentUpgrade(ctx context.Context, req
 
 	var response UpgradeDeploymentUpgradeResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "goldenGate", "UpgradeDeploymentUpgrade")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {

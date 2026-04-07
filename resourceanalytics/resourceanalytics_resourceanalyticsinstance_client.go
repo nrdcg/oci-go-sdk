@@ -137,7 +137,7 @@ func (client ResourceAnalyticsInstanceClient) cancelWorkRequest(ctx context.Cont
 
 	var response CancelWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "CancelWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -196,7 +196,7 @@ func (client ResourceAnalyticsInstanceClient) changeResourceAnalyticsInstanceCom
 
 	var response ChangeResourceAnalyticsInstanceCompartmentResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ChangeResourceAnalyticsInstanceCompartment")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -259,7 +259,7 @@ func (client ResourceAnalyticsInstanceClient) createResourceAnalyticsInstance(ct
 
 	var response CreateResourceAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "CreateResourceAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -317,7 +317,7 @@ func (client ResourceAnalyticsInstanceClient) deleteResourceAnalyticsInstance(ct
 
 	var response DeleteResourceAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "DeleteResourceAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -375,7 +375,7 @@ func (client ResourceAnalyticsInstanceClient) getResourceAnalyticsInstance(ctx c
 
 	var response GetResourceAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "GetResourceAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -433,7 +433,7 @@ func (client ResourceAnalyticsInstanceClient) getWorkRequest(ctx context.Context
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "GetWorkRequest")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -491,7 +491,7 @@ func (client ResourceAnalyticsInstanceClient) listResourceAnalyticsInstances(ctx
 
 	var response ListResourceAnalyticsInstancesResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ListResourceAnalyticsInstances")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -549,7 +549,7 @@ func (client ResourceAnalyticsInstanceClient) listWorkRequestErrors(ctx context.
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ListWorkRequestErrors")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -607,7 +607,7 @@ func (client ResourceAnalyticsInstanceClient) listWorkRequestLogs(ctx context.Co
 
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ListWorkRequestLogs")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -665,7 +665,7 @@ func (client ResourceAnalyticsInstanceClient) listWorkRequests(ctx context.Conte
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ListWorkRequests")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -722,7 +722,7 @@ func (client ResourceAnalyticsInstanceClient) resourceAnalyticsInstanceDisableOa
 
 	var response ResourceAnalyticsInstanceDisableOacResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ResourceAnalyticsInstanceDisableOac")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -779,7 +779,7 @@ func (client ResourceAnalyticsInstanceClient) resourceAnalyticsInstanceEnableOac
 
 	var response ResourceAnalyticsInstanceEnableOacResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "ResourceAnalyticsInstanceEnableOac")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
@@ -837,7 +837,7 @@ func (client ResourceAnalyticsInstanceClient) updateResourceAnalyticsInstance(ct
 
 	var response UpdateResourceAnalyticsInstanceResponse
 	var httpResponse *http.Response
-	httpResponse, err = client.Call(ctx, &httpRequest)
+	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "resourceAnalyticsInstance", "UpdateResourceAnalyticsInstance")
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
