@@ -4,7 +4,7 @@
 
 // Oracle Multicloud API
 //
-// Use the Oracle Multicloud API to retrieve resource anchors and network anchors, and the metadata mappings related a Cloud Service Provider. For more information, see <link to docs>.
+// Use the Oracle Multicloud API to retrieve resource anchors and network anchors, and the metadata mappings related a Cloud Service Provider. For more information, see Oracle Multicloud Hub (https://docs.oracle.com/iaas/Content/multicloud-hub/home.htm).
 //
 
 package multicloud
@@ -16,9 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ExternalLocationMappingMetadatumSummary Flat Map of CSP Region -> CSP-Physical-AZ -> OCI Site Group
-// All fields in this object has immutable mappings. Please don't add any field that case change
-// for any customer as this is only for Oracle Cloud Infrastructure internal service use.
+// ExternalLocationMappingMetadatumSummary Flat Map of CSP Region -> CSP-Physical-AZ -> OCI Site Group.
 type ExternalLocationMappingMetadatumSummary struct {
 
 	// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

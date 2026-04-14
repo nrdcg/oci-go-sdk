@@ -26,8 +26,10 @@ type IotDomainGroupSummary struct {
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment corresponding to the resource.
 	CompartmentId *string `mandatory:"true" json:"compartmentId"`
 
-	// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO),
-	// making it suitable for development and testing. STANDARD is recommended for production.
+	// Type of domain group. DEVELOPMENT uses fewer resources and has a higher Recovery Time Objective (RTO),
+	// making it suitable for development and testing. PRODUCTION is recommended for production workloads.
+	// LIGHTWEIGHT and STANDARD are deprecated aliases for DEVELOPMENT and PRODUCTION respectively and will be removed
+	// in a future release.
 	Type IotDomainGroupSummaryTypeEnum `mandatory:"true" json:"type"`
 
 	// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
@@ -89,16 +91,22 @@ type IotDomainGroupSummaryTypeEnum string
 
 // Set of constants representing the allowable values for IotDomainGroupSummaryTypeEnum
 const (
+	IotDomainGroupSummaryTypeProduction  IotDomainGroupSummaryTypeEnum = "PRODUCTION"
+	IotDomainGroupSummaryTypeDevelopment IotDomainGroupSummaryTypeEnum = "DEVELOPMENT"
 	IotDomainGroupSummaryTypeStandard    IotDomainGroupSummaryTypeEnum = "STANDARD"
 	IotDomainGroupSummaryTypeLightweight IotDomainGroupSummaryTypeEnum = "LIGHTWEIGHT"
 )
 
 var mappingIotDomainGroupSummaryTypeEnum = map[string]IotDomainGroupSummaryTypeEnum{
+	"PRODUCTION":  IotDomainGroupSummaryTypeProduction,
+	"DEVELOPMENT": IotDomainGroupSummaryTypeDevelopment,
 	"STANDARD":    IotDomainGroupSummaryTypeStandard,
 	"LIGHTWEIGHT": IotDomainGroupSummaryTypeLightweight,
 }
 
 var mappingIotDomainGroupSummaryTypeEnumLowerCase = map[string]IotDomainGroupSummaryTypeEnum{
+	"production":  IotDomainGroupSummaryTypeProduction,
+	"development": IotDomainGroupSummaryTypeDevelopment,
 	"standard":    IotDomainGroupSummaryTypeStandard,
 	"lightweight": IotDomainGroupSummaryTypeLightweight,
 }
@@ -115,6 +123,8 @@ func GetIotDomainGroupSummaryTypeEnumValues() []IotDomainGroupSummaryTypeEnum {
 // GetIotDomainGroupSummaryTypeEnumStringValues Enumerates the set of values in String for IotDomainGroupSummaryTypeEnum
 func GetIotDomainGroupSummaryTypeEnumStringValues() []string {
 	return []string{
+		"PRODUCTION",
+		"DEVELOPMENT",
 		"STANDARD",
 		"LIGHTWEIGHT",
 	}

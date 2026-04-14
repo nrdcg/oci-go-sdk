@@ -100,6 +100,8 @@ const (
 	WorkRequestOperationTypeRefreshFusionEnvironment                 WorkRequestOperationTypeEnum = "REFRESH_FUSION_ENVIRONMENT"
 	WorkRequestOperationTypeExecuteColdPatch                         WorkRequestOperationTypeEnum = "EXECUTE_COLD_PATCH"
 	WorkRequestOperationTypeDataMaskFusionEnvironment                WorkRequestOperationTypeEnum = "DATA_MASK_FUSION_ENVIRONMENT"
+	WorkRequestOperationTypeEnableVanityDomain                       WorkRequestOperationTypeEnum = "ENABLE_VANITY_DOMAIN"
+	WorkRequestOperationTypeDeleteVanityDomain                       WorkRequestOperationTypeEnum = "DELETE_VANITY_DOMAIN"
 	WorkRequestOperationTypeInitiateExtract                          WorkRequestOperationTypeEnum = "INITIATE_EXTRACT"
 	WorkRequestOperationTypeSubscriptionSuspend                      WorkRequestOperationTypeEnum = "SUBSCRIPTION_SUSPEND"
 	WorkRequestOperationTypeSubscriptionExpire                       WorkRequestOperationTypeEnum = "SUBSCRIPTION_EXPIRE"
@@ -130,6 +132,8 @@ var mappingWorkRequestOperationTypeEnum = map[string]WorkRequestOperationTypeEnu
 	"REFRESH_FUSION_ENVIRONMENT":                   WorkRequestOperationTypeRefreshFusionEnvironment,
 	"EXECUTE_COLD_PATCH":                           WorkRequestOperationTypeExecuteColdPatch,
 	"DATA_MASK_FUSION_ENVIRONMENT":                 WorkRequestOperationTypeDataMaskFusionEnvironment,
+	"ENABLE_VANITY_DOMAIN":                         WorkRequestOperationTypeEnableVanityDomain,
+	"DELETE_VANITY_DOMAIN":                         WorkRequestOperationTypeDeleteVanityDomain,
 	"INITIATE_EXTRACT":                             WorkRequestOperationTypeInitiateExtract,
 	"SUBSCRIPTION_SUSPEND":                         WorkRequestOperationTypeSubscriptionSuspend,
 	"SUBSCRIPTION_EXPIRE":                          WorkRequestOperationTypeSubscriptionExpire,
@@ -160,6 +164,8 @@ var mappingWorkRequestOperationTypeEnumLowerCase = map[string]WorkRequestOperati
 	"refresh_fusion_environment":                   WorkRequestOperationTypeRefreshFusionEnvironment,
 	"execute_cold_patch":                           WorkRequestOperationTypeExecuteColdPatch,
 	"data_mask_fusion_environment":                 WorkRequestOperationTypeDataMaskFusionEnvironment,
+	"enable_vanity_domain":                         WorkRequestOperationTypeEnableVanityDomain,
+	"delete_vanity_domain":                         WorkRequestOperationTypeDeleteVanityDomain,
 	"initiate_extract":                             WorkRequestOperationTypeInitiateExtract,
 	"subscription_suspend":                         WorkRequestOperationTypeSubscriptionSuspend,
 	"subscription_expire":                          WorkRequestOperationTypeSubscriptionExpire,
@@ -201,6 +207,8 @@ func GetWorkRequestOperationTypeEnumStringValues() []string {
 		"REFRESH_FUSION_ENVIRONMENT",
 		"EXECUTE_COLD_PATCH",
 		"DATA_MASK_FUSION_ENVIRONMENT",
+		"ENABLE_VANITY_DOMAIN",
+		"DELETE_VANITY_DOMAIN",
 		"INITIATE_EXTRACT",
 		"SUBSCRIPTION_SUSPEND",
 		"SUBSCRIPTION_EXPIRE",
