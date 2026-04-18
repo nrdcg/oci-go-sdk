@@ -112,3 +112,11 @@ if [[ "${ORG}" != "oracle" ]]; then
   rm go.mod
   rm go.sum
 fi
+
+## Copy LICENSE.txt into each submodule root (for license scanners / module zips)
+
+for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'); do
+  if [[ -f "${row}/go.mod" ]]; then
+    cp LICENSE.txt "${row}/LICENSE.txt"
+  fi
+done

@@ -209,6 +209,14 @@ if [[ "${DEST_ORG}" != "${SRC_ORG}" ]]; then
   rm oci.go go.mod go.sum
 fi
 
+## Copy LICENSE.txt into each submodule root (for license scanners / module zips)
+
+for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'); do
+  if [[ -f "${row}/go.mod" ]]; then
+    cp LICENSE.txt "${row}/LICENSE.txt"
+  fi
+done
+
 ## Remove git data.
 
 rm -rf .git
