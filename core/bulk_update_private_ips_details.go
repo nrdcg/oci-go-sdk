@@ -22,10 +22,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// BulkUpdatePrivateIpsDetails Bulk Secondary IPv4 addresses update object.
+// BulkUpdatePrivateIpsDetails Details used for a secondary IPv4 address bulk update.
 type BulkUpdatePrivateIpsDetails struct {
 
-	// Secondary IPv4 addresses to updated.
+	// A secondary IPv4 address to update.
 	BulkUpdatePrivateIpItem []BulkUpdatePrivateIpItem `mandatory:"true" json:"bulkUpdatePrivateIpItem"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to reassign

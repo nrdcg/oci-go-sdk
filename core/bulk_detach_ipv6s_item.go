@@ -22,7 +22,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// BulkDetachIpv6sItem Secondary IPv6 object to detach as part of bulk detach operation.
+// BulkDetachIpv6sItem A secondary IPv6 object to detach as part of a bulk detach operation.
 type BulkDetachIpv6sItem struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the secondary IPv6.

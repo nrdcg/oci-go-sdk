@@ -22,7 +22,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ChangeComputeGpuMemoryClusterCompartmentDetails Specifies the compartment to move the compute GPU memory cluster to.
+// ChangeComputeGpuMemoryClusterCompartmentDetails Specifies the compartment to move the compute GPU Memory Cluster to.
 type ChangeComputeGpuMemoryClusterCompartmentDetails struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to move the compute GPU

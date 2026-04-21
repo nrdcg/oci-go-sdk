@@ -22,10 +22,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ComputeGpuMemoryClusterInstanceCollection A list of compute GPU memory cluster instances.
+// ComputeGpuMemoryClusterInstanceCollection A list of compute GPU Memory Cluster instances.
 type ComputeGpuMemoryClusterInstanceCollection struct {
 
-	// The list of compute GPU memory cluster instances.
+	// The list of compute GPU Memory Cluster instances.
 	Items []ComputeGpuMemoryClusterInstanceSummary `mandatory:"true" json:"items"`
 }
 

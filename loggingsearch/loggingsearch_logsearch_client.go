@@ -4,7 +4,7 @@
 
 // Logging Search API
 //
-// Search for logs in your compartments, log groups, and log objects.
+// Use the Logging Search API to search for logs in your compartments, log groups, and log objects. For more information, see Logging Overview (https://docs.oracle.com/iaas/Content/Logging/Concepts/loggingoverview.htm).
 //
 
 package loggingsearch
@@ -68,7 +68,7 @@ func newLogSearchClientFromBaseClient(baseClient common.BaseClient, configProvid
 
 // SetRegion overrides the region of this client.
 func (client *LogSearchClient) SetRegion(region string) {
-	client.Host = common.StringToRegion(region).EndpointForTemplate("loggingsearch", "https://logging.{region}.oci.{secondLevelDomain}")
+	client.Host = common.StringToRegion(region).EndpointForTemplate("loggingsearch", "https://logging.{region}.{dualStack?ds.:}oci.{secondLevelDomain}")
 }
 
 // SetConfigurationProvider sets the configuration provider including the region, returns an error if is not valid
@@ -90,6 +90,12 @@ func (client *LogSearchClient) setConfigurationProvider(configProvider common.Co
 // ConfigurationProvider the ConfigurationProvider used in this client, or null if none set
 func (client *LogSearchClient) ConfigurationProvider() *common.ConfigurationProvider {
 	return client.config
+}
+
+// EnableDualStackEndpoints Determines whether dual stack endpoint should be used or not.
+// Default value is false
+func (client *LogSearchClient) EnableDualStackEndpoints(enableDualStack bool) {
+	client.BaseClient.EnableDualStackEndpoints(enableDualStack)
 }
 
 // SearchLogs Submit a query to search logs.
@@ -134,6 +140,13 @@ func (client LogSearchClient) searchLogs(ctx context.Context, request common.OCI
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response SearchLogsResponse
 	var httpResponse *http.Response

@@ -22,10 +22,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// BulkDeletePrivateIpsDetails Bulk Secondary IPv4 deletion object.
+// BulkDeletePrivateIpsDetails Details used tp delete Secondary IPv4 objects in a bulk operation.
 type BulkDeletePrivateIpsDetails struct {
 
-	// Secondary IPv4 addresses to deleted
+	// A secondary IPv4 address to delete.
 	BulkDeletePrivateIpItem []BulkDeletePrivateIpItem `mandatory:"true" json:"bulkDeletePrivateIpItem"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC of which

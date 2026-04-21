@@ -69,7 +69,7 @@ func newEventsClientFromBaseClient(baseClient common.BaseClient, configProvider 
 
 // SetRegion overrides the region of this client.
 func (client *EventsClient) SetRegion(region string) {
-	client.Host = common.StringToRegion(region).EndpointForTemplate("events", "https://events.{region}.oci.{secondLevelDomain}")
+	client.Host, _ = common.StringToRegion(region).EndpointForTemplateDottedRegion("events", "https://events.{region}.{dualStack?ds.:}oci.{secondLevelDomain}", "events")
 }
 
 // SetConfigurationProvider sets the configuration provider including the region, returns an error if is not valid
@@ -91,6 +91,12 @@ func (client *EventsClient) setConfigurationProvider(configProvider common.Confi
 // ConfigurationProvider the ConfigurationProvider used in this client, or null if none set
 func (client *EventsClient) ConfigurationProvider() *common.ConfigurationProvider {
 	return client.config
+}
+
+// EnableDualStackEndpoints Determines whether dual stack endpoint should be used or not.
+// Default value is false
+func (client *EventsClient) EnableDualStackEndpoints(enableDualStack bool) {
+	client.BaseClient.EnableDualStackEndpoints(enableDualStack)
 }
 
 // ChangeRuleCompartment Moves a rule into a different compartment within the same tenancy. For information about moving
@@ -140,6 +146,13 @@ func (client EventsClient) changeRuleCompartment(ctx context.Context, request co
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ChangeRuleCompartmentResponse
 	var httpResponse *http.Response
@@ -203,6 +216,13 @@ func (client EventsClient) createRule(ctx context.Context, request common.OCIReq
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response CreateRuleResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "events", "CreateRule")
@@ -259,6 +279,13 @@ func (client EventsClient) deleteRule(ctx context.Context, request common.OCIReq
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response DeleteRuleResponse
 	var httpResponse *http.Response
@@ -317,6 +344,13 @@ func (client EventsClient) getRule(ctx context.Context, request common.OCIReques
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GetRuleResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "events", "GetRule")
@@ -374,6 +408,13 @@ func (client EventsClient) listRules(ctx context.Context, request common.OCIRequ
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListRulesResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "events", "ListRules")
@@ -430,6 +471,13 @@ func (client EventsClient) updateRule(ctx context.Context, request common.OCIReq
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response UpdateRuleResponse
 	var httpResponse *http.Response

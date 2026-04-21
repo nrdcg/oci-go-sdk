@@ -22,10 +22,10 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// BulkUpdateIpv6sItem Secondary IPv6 object to update as part of bulk update.
+// BulkUpdateIpv6sItem A secondary IPv6 object to update as part of a bulk update.
 type BulkUpdateIpv6sItem struct {
 
-	// The OCID of the IPv6.
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPv6 object.
 	Ipv6Id *string `mandatory:"true" json:"ipv6Id"`
 
 	// Defined tags for this resource. Each key is predefined and scoped to a

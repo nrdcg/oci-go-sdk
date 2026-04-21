@@ -31,7 +31,7 @@ type UpdateComputeGpuMemoryClusterScaleConfig struct {
 	// Enables downsizing towards the target size.
 	IsDownsizeEnabled *bool `mandatory:"false" json:"isDownsizeEnabled"`
 
-	// The configured target size for the GPU Memory cluster.
+	// The configured target size for the GPU Memory Cluster.
 	TargetSize *int64 `mandatory:"false" json:"targetSize"`
 }
 
