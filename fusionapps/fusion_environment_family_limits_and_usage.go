@@ -23,6 +23,8 @@ type FusionEnvironmentFamilyLimitsAndUsage struct {
 	TestLimitAndUsage *LimitAndUsage `mandatory:"true" json:"testLimitAndUsage"`
 
 	DevelopmentLimitAndUsage *LimitAndUsage `mandatory:"true" json:"developmentLimitAndUsage"`
+
+	DemoLimitAndUsage *LimitAndUsage `mandatory:"true" json:"demoLimitAndUsage"`
 }
 
 func (m FusionEnvironmentFamilyLimitsAndUsage) String() string {

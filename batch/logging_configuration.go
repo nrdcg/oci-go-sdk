@@ -17,7 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// LoggingConfiguration Logging configuration for batch context.
+// LoggingConfiguration Logging configuration of the batch context.
 type LoggingConfiguration interface {
 }
 

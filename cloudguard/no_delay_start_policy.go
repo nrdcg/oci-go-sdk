@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// NoDelayStartPolicy Continuous query start policy that starts the query immediately
+// NoDelayStartPolicy DEPRECATED - Continuous query start policy that starts the query immediately
 type NoDelayStartPolicy struct {
 }
 

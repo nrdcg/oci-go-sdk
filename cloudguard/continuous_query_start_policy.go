@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ContinuousQueryStartPolicy Start policy for continuous query
+// ContinuousQueryStartPolicy DEPRECATED - Start policy for continuous query
 type ContinuousQueryStartPolicy interface {
 }
 

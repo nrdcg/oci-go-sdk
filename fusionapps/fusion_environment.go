@@ -265,18 +265,21 @@ const (
 	FusionEnvironmentFusionEnvironmentTypeProduction  FusionEnvironmentFusionEnvironmentTypeEnum = "PRODUCTION"
 	FusionEnvironmentFusionEnvironmentTypeTest        FusionEnvironmentFusionEnvironmentTypeEnum = "TEST"
 	FusionEnvironmentFusionEnvironmentTypeDevelopment FusionEnvironmentFusionEnvironmentTypeEnum = "DEVELOPMENT"
+	FusionEnvironmentFusionEnvironmentTypeDemo        FusionEnvironmentFusionEnvironmentTypeEnum = "DEMO"
 )
 
 var mappingFusionEnvironmentFusionEnvironmentTypeEnum = map[string]FusionEnvironmentFusionEnvironmentTypeEnum{
 	"PRODUCTION":  FusionEnvironmentFusionEnvironmentTypeProduction,
 	"TEST":        FusionEnvironmentFusionEnvironmentTypeTest,
 	"DEVELOPMENT": FusionEnvironmentFusionEnvironmentTypeDevelopment,
+	"DEMO":        FusionEnvironmentFusionEnvironmentTypeDemo,
 }
 
 var mappingFusionEnvironmentFusionEnvironmentTypeEnumLowerCase = map[string]FusionEnvironmentFusionEnvironmentTypeEnum{
 	"production":  FusionEnvironmentFusionEnvironmentTypeProduction,
 	"test":        FusionEnvironmentFusionEnvironmentTypeTest,
 	"development": FusionEnvironmentFusionEnvironmentTypeDevelopment,
+	"demo":        FusionEnvironmentFusionEnvironmentTypeDemo,
 }
 
 // GetFusionEnvironmentFusionEnvironmentTypeEnumValues Enumerates the set of values for FusionEnvironmentFusionEnvironmentTypeEnum
@@ -294,6 +297,7 @@ func GetFusionEnvironmentFusionEnvironmentTypeEnumStringValues() []string {
 		"PRODUCTION",
 		"TEST",
 		"DEVELOPMENT",
+		"DEMO",
 	}
 }
 

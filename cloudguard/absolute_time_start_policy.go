@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AbsoluteTimeStartPolicy Start policy that defines the exact start time
+// AbsoluteTimeStartPolicy DEPRECATED - Start policy that defines the exact start time
 type AbsoluteTimeStartPolicy struct {
 
 	// Time when the query can start. If not specified it can start immediately

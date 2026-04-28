@@ -38,6 +38,8 @@ func NewJavaDownloadClientWithConfigurationProvider(configProvider common.Config
 	if e != nil {
 		return client, e
 	}
+	// This client should use Dual Stack Endpoints by default
+	baseClient.UseDualStackEndpointsByDefault(true)
 	return newJavaDownloadClientFromBaseClient(baseClient, provider)
 }
 
@@ -50,7 +52,8 @@ func NewJavaDownloadClientWithOboToken(configProvider common.ConfigurationProvid
 	if err != nil {
 		return client, err
 	}
-
+	// This client should use Dual Stack Endpoints by default
+	baseClient.UseDualStackEndpointsByDefault(true)
 	return newJavaDownloadClientFromBaseClient(baseClient, configProvider)
 }
 
@@ -68,7 +71,7 @@ func newJavaDownloadClientFromBaseClient(baseClient common.BaseClient, configPro
 
 // SetRegion overrides the region of this client.
 func (client *JavaDownloadClient) SetRegion(region string) {
-	client.Host = common.StringToRegion(region).EndpointForTemplate("jmsjavadownloads", "https://javamanagementservice-download.{region}.oci.{secondLevelDomain}")
+	client.Host, _ = common.StringToRegion(region).EndpointForTemplateDottedRegion("jmsjavadownloads", "https://{dualStack?download.javamanagement:javamanagementservice-download}.{region}.{dualStack?ds.:}oci.{secondLevelDomain}", "download.javamanagement")
 }
 
 // SetConfigurationProvider sets the configuration provider including the region, returns an error if is not valid
@@ -90,6 +93,12 @@ func (client *JavaDownloadClient) setConfigurationProvider(configProvider common
 // ConfigurationProvider the ConfigurationProvider used in this client, or null if none set
 func (client *JavaDownloadClient) ConfigurationProvider() *common.ConfigurationProvider {
 	return client.config
+}
+
+// EnableDualStackEndpoints Determines whether dual stack endpoint should be used or not.
+// Default value is false
+func (client *JavaDownloadClient) EnableDualStackEndpoints(enableDualStack bool) {
+	client.BaseClient.EnableDualStackEndpoints(enableDualStack)
 }
 
 // CancelWorkRequest Cancels the work request with the given ID.
@@ -134,6 +143,13 @@ func (client JavaDownloadClient) cancelWorkRequest(ctx context.Context, request 
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response CancelWorkRequestResponse
 	var httpResponse *http.Response
@@ -199,6 +215,13 @@ func (client JavaDownloadClient) createJavaDownloadReport(ctx context.Context, r
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response CreateJavaDownloadReportResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CreateJavaDownloadReport")
@@ -263,6 +286,13 @@ func (client JavaDownloadClient) createJavaDownloadToken(ctx context.Context, re
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response CreateJavaDownloadTokenResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CreateJavaDownloadToken")
@@ -326,6 +356,13 @@ func (client JavaDownloadClient) createJavaLicenseAcceptanceRecord(ctx context.C
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response CreateJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "CreateJavaLicenseAcceptanceRecord")
@@ -383,6 +420,13 @@ func (client JavaDownloadClient) deleteJavaDownloadReport(ctx context.Context, r
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response DeleteJavaDownloadReportResponse
 	var httpResponse *http.Response
@@ -442,6 +486,13 @@ func (client JavaDownloadClient) deleteJavaDownloadToken(ctx context.Context, re
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response DeleteJavaDownloadTokenResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "DeleteJavaDownloadToken")
@@ -499,6 +550,13 @@ func (client JavaDownloadClient) deleteJavaLicenseAcceptanceRecord(ctx context.C
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response DeleteJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
@@ -562,6 +620,13 @@ func (client JavaDownloadClient) generateArtifactDownloadUrl(ctx context.Context
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GenerateArtifactDownloadUrlResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GenerateArtifactDownloadUrl")
@@ -619,6 +684,13 @@ func (client JavaDownloadClient) getJavaDownloadReport(ctx context.Context, requ
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response GetJavaDownloadReportResponse
 	var httpResponse *http.Response
@@ -678,6 +750,13 @@ func (client JavaDownloadClient) getJavaDownloadReportContent(ctx context.Contex
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GetJavaDownloadReportContentResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaDownloadReportContent")
@@ -734,6 +813,13 @@ func (client JavaDownloadClient) getJavaDownloadToken(ctx context.Context, reque
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response GetJavaDownloadTokenResponse
 	var httpResponse *http.Response
@@ -793,6 +879,13 @@ func (client JavaDownloadClient) getJavaLicense(ctx context.Context, request com
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GetJavaLicenseResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaLicense")
@@ -851,6 +944,13 @@ func (client JavaDownloadClient) getJavaLicenseAcceptanceRecord(ctx context.Cont
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GetJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "GetJavaLicenseAcceptanceRecord")
@@ -908,6 +1008,13 @@ func (client JavaDownloadClient) getWorkRequest(ctx context.Context, request com
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response GetWorkRequestResponse
 	var httpResponse *http.Response
@@ -969,6 +1076,13 @@ func (client JavaDownloadClient) listJavaDownloadRecords(ctx context.Context, re
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListJavaDownloadRecordsResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaDownloadRecords")
@@ -1026,6 +1140,13 @@ func (client JavaDownloadClient) listJavaDownloadReports(ctx context.Context, re
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListJavaDownloadReportsResponse
 	var httpResponse *http.Response
@@ -1085,6 +1206,13 @@ func (client JavaDownloadClient) listJavaDownloadTokens(ctx context.Context, req
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListJavaDownloadTokensResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaDownloadTokens")
@@ -1142,6 +1270,13 @@ func (client JavaDownloadClient) listJavaLicenseAcceptanceRecords(ctx context.Co
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListJavaLicenseAcceptanceRecordsResponse
 	var httpResponse *http.Response
@@ -1201,6 +1336,13 @@ func (client JavaDownloadClient) listJavaLicenses(ctx context.Context, request c
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListJavaLicensesResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListJavaLicenses")
@@ -1258,6 +1400,13 @@ func (client JavaDownloadClient) listWorkRequestErrors(ctx context.Context, requ
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListWorkRequestErrorsResponse
 	var httpResponse *http.Response
@@ -1317,6 +1466,13 @@ func (client JavaDownloadClient) listWorkRequestLogs(ctx context.Context, reques
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListWorkRequestLogsResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "ListWorkRequestLogs")
@@ -1374,6 +1530,13 @@ func (client JavaDownloadClient) listWorkRequests(ctx context.Context, request c
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListWorkRequestsResponse
 	var httpResponse *http.Response
@@ -1433,6 +1596,13 @@ func (client JavaDownloadClient) requestSummarizedJavaDownloadCounts(ctx context
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response RequestSummarizedJavaDownloadCountsResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "RequestSummarizedJavaDownloadCounts")
@@ -1491,6 +1661,13 @@ func (client JavaDownloadClient) updateJavaDownloadToken(ctx context.Context, re
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response UpdateJavaDownloadTokenResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "javaDownload", "UpdateJavaDownloadToken")
@@ -1548,6 +1725,13 @@ func (client JavaDownloadClient) updateJavaLicenseAcceptanceRecord(ctx context.C
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response UpdateJavaLicenseAcceptanceRecordResponse
 	var httpResponse *http.Response
