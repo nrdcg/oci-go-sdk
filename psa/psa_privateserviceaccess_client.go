@@ -141,7 +141,7 @@ func (client PrivateServiceAccessClient) cancelPsaWorkRequest(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequest/CancelPsaWorkRequest"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "CancelPsaWorkRequest", apiReferenceLink)
 		return response, err
 	}
@@ -205,7 +205,7 @@ func (client PrivateServiceAccessClient) changePrivateServiceAccessCompartment(c
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/ChangePrivateServiceAccessCompartment"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "ChangePrivateServiceAccessCompartment", apiReferenceLink)
 		return response, err
 	}
@@ -269,7 +269,7 @@ func (client PrivateServiceAccessClient) createPrivateServiceAccess(ctx context.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/CreatePrivateServiceAccess"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "CreatePrivateServiceAccess", apiReferenceLink)
 		return response, err
 	}
@@ -327,7 +327,7 @@ func (client PrivateServiceAccessClient) deletePrivateServiceAccess(ctx context.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/DeletePrivateServiceAccess"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "DeletePrivateServiceAccess", apiReferenceLink)
 		return response, err
 	}
@@ -385,7 +385,7 @@ func (client PrivateServiceAccessClient) getPrivateServiceAccess(ctx context.Con
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/GetPrivateServiceAccess"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "GetPrivateServiceAccess", apiReferenceLink)
 		return response, err
 	}
@@ -443,7 +443,7 @@ func (client PrivateServiceAccessClient) getPsaWorkRequest(ctx context.Context, 
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequest/GetPsaWorkRequest"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "GetPsaWorkRequest", apiReferenceLink)
 		return response, err
 	}
@@ -502,7 +502,7 @@ func (client PrivateServiceAccessClient) listPrivateServiceAccesses(ctx context.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccessCollection/ListPrivateServiceAccesses"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "ListPrivateServiceAccesses", apiReferenceLink)
 		return response, err
 	}
@@ -560,7 +560,7 @@ func (client PrivateServiceAccessClient) listPsaServices(ctx context.Context, re
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PsaServiceCollection/ListPsaServices"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "ListPsaServices", apiReferenceLink)
 		return response, err
 	}
@@ -618,7 +618,7 @@ func (client PrivateServiceAccessClient) listPsaWorkRequestErrors(ctx context.Co
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequestError/ListPsaWorkRequestErrors"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "ListPsaWorkRequestErrors", apiReferenceLink)
 		return response, err
 	}
@@ -676,7 +676,7 @@ func (client PrivateServiceAccessClient) listPsaWorkRequestLogs(ctx context.Cont
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequestLogEntry/ListPsaWorkRequestLogs"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "ListPsaWorkRequestLogs", apiReferenceLink)
 		return response, err
 	}
@@ -734,7 +734,7 @@ func (client PrivateServiceAccessClient) listPsaWorkRequests(ctx context.Context
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequest/ListPsaWorkRequests"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "ListPsaWorkRequests", apiReferenceLink)
 		return response, err
 	}
@@ -792,7 +792,7 @@ func (client PrivateServiceAccessClient) updatePrivateServiceAccess(ctx context.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/UpdatePrivateServiceAccess"
 		err = common.PostProcessServiceError(err, "PrivateServiceAccess", "UpdatePrivateServiceAccess", apiReferenceLink)
 		return response, err
 	}

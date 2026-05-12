@@ -31,7 +31,7 @@ func main() {
 
 	signature, err := SignAndUploadContainerImageSignatureMetadata(ctx, artifactClient, configProvider, kmsKeyId, kmsKeyVersionId, signingAlgo, compartmentId, imageId, description, metadata)
 	helpers.FatalIfError(err)
-	common.Logf(fmt.Sprintf("A signature has been successfully uploaded: %s", *signature))
+	common.Logf("%s", fmt.Sprintf("A signature has been successfully uploaded: %s", *signature))
 
 	// Pull Image and Verify Signature Flow
 	repoName := "repo-name"

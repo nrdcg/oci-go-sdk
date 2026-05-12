@@ -79,7 +79,7 @@ func SignAndUploadContainerImageSignatureMetadata(ctx context.Context, artifactC
 	if err != nil {
 		return nil, err
 	}
-	common.Debugf(fmt.Sprintf("Container image metadata: %s", *containerImageMetadata))
+	common.Debugf("%s", fmt.Sprintf("Container image metadata: %s", *containerImageMetadata))
 
 	// Generate message
 	message := Message{
@@ -105,7 +105,7 @@ func SignAndUploadContainerImageSignatureMetadata(ctx context.Context, artifactC
 	if err != nil {
 		return nil, err
 	}
-	common.Debugf(fmt.Sprintf("Signature: %s", *signedData.Signature))
+	common.Debugf("%s", fmt.Sprintf("Signature: %s", *signedData.Signature))
 
 	// Upload signature metadata
 	common.Debugf("Uploading signature")
@@ -113,7 +113,7 @@ func SignAndUploadContainerImageSignatureMetadata(ctx context.Context, artifactC
 	if err != nil {
 		return nil, err
 	}
-	common.Debugf(fmt.Sprintf("Uploaded signature: %s\nMessage: %s\nID: %s\n", *containerImageSignatureUploaded.Signature, *containerImageSignatureUploaded.Message, *containerImageSignatureUploaded.Id))
+	common.Debugf("%s", fmt.Sprintf("Uploaded signature: %s\nMessage: %s\nID: %s\n", *containerImageSignatureUploaded.Signature, *containerImageSignatureUploaded.Message, *containerImageSignatureUploaded.Id))
 
 	return containerImageSignatureUploaded, err
 }
@@ -149,11 +149,11 @@ func getAndVerifyImageSignatureMetadataHelper(ctx context.Context, artifactClien
 	if listErr != nil {
 		return false, listErr
 	}
-	common.Debugf(fmt.Sprintf("Fetched signature: %d signatures in compartment %s with image URL: %s:%s. Remaining count %d", len(signatureCollection.Items), compartmentId, repositoryName, imageDigest, *signatureCollection.RemainingItemsCount))
+	common.Debugf("%s", fmt.Sprintf("Fetched signature: %d signatures in compartment %s with image URL: %s:%s. Remaining count %d", len(signatureCollection.Items), compartmentId, repositoryName, imageDigest, *signatureCollection.RemainingItemsCount))
 
 	// filter out the keys
 	ContainerImageSignatureSummaries := filterItemByTrustedKeys(signatureCollection.Items, trustedKeys)
-	common.Debugf(fmt.Sprintf("Filtered out %d signatures by the trusted keys", len(signatureCollection.Items)-len(ContainerImageSignatureSummaries)))
+	common.Debugf("%s", fmt.Sprintf("Filtered out %d signatures by the trusted keys", len(signatureCollection.Items)-len(ContainerImageSignatureSummaries)))
 
 	// Verify signature
 	common.Debugf("Verifying signature")
@@ -326,7 +326,7 @@ func buildVaultCryptoClient(configProvider common.ConfigurationProvider, keyId s
 	vaultExt := re.FindStringSubmatch(keyId)[3]
 	cryptoEndpointTemplate := common.StringToRegion(region).EndpointForTemplate("kms", "https://{vaultExt}-crypto.kms.{region}.{secondLevelDomain}")
 	cryptoEndpoint := strings.Replace(cryptoEndpointTemplate, "{vaultExt}", vaultExt, 1)
-	common.Debugf(fmt.Sprintf("Built vault crypto client with endpoint: %s", cryptoEndpoint))
+	common.Debugf("%s", fmt.Sprintf("Built vault crypto client with endpoint: %s", cryptoEndpoint))
 
 	return keymanagement.NewKmsCryptoClientWithConfigurationProvider(configProvider, cryptoEndpoint)
 }
