@@ -43,6 +43,8 @@ import (
 
 The modules exist since v65.95.0 (v1065.95.0).
 
+<!-- module list -->
+
 - `github.com/nrdcg/oci-go-sdk/accessgovernancecp/v1065 v1065.114.2`
 - `github.com/nrdcg/oci-go-sdk/adm/v1065 v1065.114.2`
 - `github.com/nrdcg/oci-go-sdk/aidataplatform/v1065 v1065.114.2`
@@ -211,6 +213,8 @@ The modules exist since v65.95.0 (v1065.95.0).
 - `github.com/nrdcg/oci-go-sdk/wlms/v1065 v1065.114.2`
 - `github.com/nrdcg/oci-go-sdk/workrequests/v1065 v1065.114.2`
 - `github.com/nrdcg/oci-go-sdk/zpr/v1065 v1065.114.2`
+
+<!-- end module list -->
 
 ## Extra Scripts
 

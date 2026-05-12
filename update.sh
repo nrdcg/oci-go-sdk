@@ -247,15 +247,28 @@ git push -q origin ${DEST_BRANCH}
 
 for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'| grep -v 'example'); do
     echo "tag: ${row}/${DEST_TAG}"
-    git tag ${row}/${DEST_TAG}
-    git push -q origin ${row}/${DEST_TAG}
+    git tag "${row}/${DEST_TAG}"
+    git push -q origin "${row}/${DEST_TAG}"
 done
 
 ### Ignored for the fork
 #git tag ${VERSION}
 #git push origin ${VERSION}
 
-find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > ${INITIAL_PATH}/modules.md
+find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort > "${INITIAL_PATH}/modules.md"
+
+MODULE_LIST=$(find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DEST_TAG}\`" \; | grep -v example | sort)
+
+{
+    sed -n '1,/<!-- module list -->/p' "${INITIAL_PATH}/readme.md"
+    echo ""
+    echo "${MODULE_LIST}"
+    echo ""
+    sed -n '/<!-- end module list -->/,$p' "${INITIAL_PATH}/readme.md"
+} > "${INITIAL_PATH}/readme.md.tmp" && mv "${INITIAL_PATH}/readme.md.tmp" "${INITIAL_PATH}/readme.md"
+
+echo "The user needs to run:"
+echo "git commit -m 'chore: ${LIB_VERSION}'"
 
 cd -
 
