@@ -63,6 +63,10 @@ func (m *dbsystemsource) UnmarshalPolymorphicJSON(data []byte) (interface{}, err
 		mm := DbSystemSourceFromNone{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "DBSYSTEM":
+		mm := DbSystemSourceFromDbSystem{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "IMPORTURL":
 		mm := DbSystemSourceImportFromUrl{}
 		err = json.Unmarshal(data, &mm)
@@ -98,6 +102,7 @@ const (
 	DbSystemSourceSourceTypeBackup    DbSystemSourceSourceTypeEnum = "BACKUP"
 	DbSystemSourceSourceTypePitr      DbSystemSourceSourceTypeEnum = "PITR"
 	DbSystemSourceSourceTypeImporturl DbSystemSourceSourceTypeEnum = "IMPORTURL"
+	DbSystemSourceSourceTypeDbsystem  DbSystemSourceSourceTypeEnum = "DBSYSTEM"
 )
 
 var mappingDbSystemSourceSourceTypeEnum = map[string]DbSystemSourceSourceTypeEnum{
@@ -105,6 +110,7 @@ var mappingDbSystemSourceSourceTypeEnum = map[string]DbSystemSourceSourceTypeEnu
 	"BACKUP":    DbSystemSourceSourceTypeBackup,
 	"PITR":      DbSystemSourceSourceTypePitr,
 	"IMPORTURL": DbSystemSourceSourceTypeImporturl,
+	"DBSYSTEM":  DbSystemSourceSourceTypeDbsystem,
 }
 
 var mappingDbSystemSourceSourceTypeEnumLowerCase = map[string]DbSystemSourceSourceTypeEnum{
@@ -112,6 +118,7 @@ var mappingDbSystemSourceSourceTypeEnumLowerCase = map[string]DbSystemSourceSour
 	"backup":    DbSystemSourceSourceTypeBackup,
 	"pitr":      DbSystemSourceSourceTypePitr,
 	"importurl": DbSystemSourceSourceTypeImporturl,
+	"dbsystem":  DbSystemSourceSourceTypeDbsystem,
 }
 
 // GetDbSystemSourceSourceTypeEnumValues Enumerates the set of values for DbSystemSourceSourceTypeEnum
@@ -130,6 +137,7 @@ func GetDbSystemSourceSourceTypeEnumStringValues() []string {
 		"BACKUP",
 		"PITR",
 		"IMPORTURL",
+		"DBSYSTEM",
 	}
 }
 

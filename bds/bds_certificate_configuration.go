@@ -85,6 +85,7 @@ const (
 	BdsCertificateConfigurationLifecycleStateDeleting BdsCertificateConfigurationLifecycleStateEnum = "DELETING"
 	BdsCertificateConfigurationLifecycleStateDeleted  BdsCertificateConfigurationLifecycleStateEnum = "DELETED"
 	BdsCertificateConfigurationLifecycleStateFailed   BdsCertificateConfigurationLifecycleStateEnum = "FAILED"
+	BdsCertificateConfigurationLifecycleStateUpdating BdsCertificateConfigurationLifecycleStateEnum = "UPDATING"
 )
 
 var mappingBdsCertificateConfigurationLifecycleStateEnum = map[string]BdsCertificateConfigurationLifecycleStateEnum{
@@ -93,6 +94,7 @@ var mappingBdsCertificateConfigurationLifecycleStateEnum = map[string]BdsCertifi
 	"DELETING": BdsCertificateConfigurationLifecycleStateDeleting,
 	"DELETED":  BdsCertificateConfigurationLifecycleStateDeleted,
 	"FAILED":   BdsCertificateConfigurationLifecycleStateFailed,
+	"UPDATING": BdsCertificateConfigurationLifecycleStateUpdating,
 }
 
 var mappingBdsCertificateConfigurationLifecycleStateEnumLowerCase = map[string]BdsCertificateConfigurationLifecycleStateEnum{
@@ -101,6 +103,7 @@ var mappingBdsCertificateConfigurationLifecycleStateEnumLowerCase = map[string]B
 	"deleting": BdsCertificateConfigurationLifecycleStateDeleting,
 	"deleted":  BdsCertificateConfigurationLifecycleStateDeleted,
 	"failed":   BdsCertificateConfigurationLifecycleStateFailed,
+	"updating": BdsCertificateConfigurationLifecycleStateUpdating,
 }
 
 // GetBdsCertificateConfigurationLifecycleStateEnumValues Enumerates the set of values for BdsCertificateConfigurationLifecycleStateEnum
@@ -120,6 +123,7 @@ func GetBdsCertificateConfigurationLifecycleStateEnumStringValues() []string {
 		"DELETING",
 		"DELETED",
 		"FAILED",
+		"UPDATING",
 	}
 }
 
