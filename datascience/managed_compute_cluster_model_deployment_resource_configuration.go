@@ -10,46 +10,31 @@
 package datascience
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
 
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateIdcsAuthConfigurationDetails Configuration of IDCS AuthN/Z for online prediction
-type CreateIdcsAuthConfigurationDetails struct {
+// ManagedComputeClusterModelDeploymentResourceConfiguration Resource configuration details for model deploy on managed compute cluster type compute target.
+type ManagedComputeClusterModelDeploymentResourceConfiguration struct {
+	ResourceRequestConfiguration *ResourceRequestConfiguration `mandatory:"true" json:"resourceRequestConfiguration"`
 
-	// Identity Domain OCID
-	DomainId *string `mandatory:"true" json:"domainId"`
+	ResourceLimitConfiguration *ResourceLimitConfiguration `mandatory:"false" json:"resourceLimitConfiguration"`
 }
 
-func (m CreateIdcsAuthConfigurationDetails) String() string {
+func (m ManagedComputeClusterModelDeploymentResourceConfiguration) String() string {
 	return common.PointerString(m)
 }
 
 // ValidateEnumValue returns an error when providing an unsupported enum value
 // This function is being called during constructing API request process
 // Not recommended for calling this function directly
-func (m CreateIdcsAuthConfigurationDetails) ValidateEnumValue() (bool, error) {
+func (m ManagedComputeClusterModelDeploymentResourceConfiguration) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
-}
-
-// MarshalJSON marshals to json representation
-func (m CreateIdcsAuthConfigurationDetails) MarshalJSON() (buff []byte, e error) {
-	type MarshalTypeCreateIdcsAuthConfigurationDetails CreateIdcsAuthConfigurationDetails
-	s := struct {
-		DiscriminatorParam string `json:"type"`
-		MarshalTypeCreateIdcsAuthConfigurationDetails
-	}{
-		"IDCS",
-		(MarshalTypeCreateIdcsAuthConfigurationDetails)(m),
-	}
-
-	return json.Marshal(&s)
 }

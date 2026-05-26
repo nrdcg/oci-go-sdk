@@ -106,6 +106,7 @@ const (
 	ScheduledActionSummaryActionTypeFsuVmClusterOsSoftwareUpdate    ScheduledActionSummaryActionTypeEnum = "FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE"
 	ScheduledActionSummaryActionTypeFsuVmClusterGiSoftwareUpdate    ScheduledActionSummaryActionTypeEnum = "FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE"
 	ScheduledActionSummaryActionTypeFsuVmClusterGiOsSoftwareUpdate  ScheduledActionSummaryActionTypeEnum = "FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE"
+	ScheduledActionSummaryActionTypeDbServerOnlineSoftwareUpdate    ScheduledActionSummaryActionTypeEnum = "DB_SERVER_ONLINE_SOFTWARE_UPDATE"
 )
 
 var mappingScheduledActionSummaryActionTypeEnum = map[string]ScheduledActionSummaryActionTypeEnum{
@@ -115,6 +116,7 @@ var mappingScheduledActionSummaryActionTypeEnum = map[string]ScheduledActionSumm
 	"FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE":    ScheduledActionSummaryActionTypeFsuVmClusterOsSoftwareUpdate,
 	"FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE":    ScheduledActionSummaryActionTypeFsuVmClusterGiSoftwareUpdate,
 	"FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE": ScheduledActionSummaryActionTypeFsuVmClusterGiOsSoftwareUpdate,
+	"DB_SERVER_ONLINE_SOFTWARE_UPDATE":     ScheduledActionSummaryActionTypeDbServerOnlineSoftwareUpdate,
 }
 
 var mappingScheduledActionSummaryActionTypeEnumLowerCase = map[string]ScheduledActionSummaryActionTypeEnum{
@@ -124,6 +126,7 @@ var mappingScheduledActionSummaryActionTypeEnumLowerCase = map[string]ScheduledA
 	"fsu_vm_cluster_os_software_update":    ScheduledActionSummaryActionTypeFsuVmClusterOsSoftwareUpdate,
 	"fsu_vm_cluster_gi_software_update":    ScheduledActionSummaryActionTypeFsuVmClusterGiSoftwareUpdate,
 	"fsu_vm_cluster_gi_os_software_update": ScheduledActionSummaryActionTypeFsuVmClusterGiOsSoftwareUpdate,
+	"db_server_online_software_update":     ScheduledActionSummaryActionTypeDbServerOnlineSoftwareUpdate,
 }
 
 // GetScheduledActionSummaryActionTypeEnumValues Enumerates the set of values for ScheduledActionSummaryActionTypeEnum
@@ -144,6 +147,7 @@ func GetScheduledActionSummaryActionTypeEnumStringValues() []string {
 		"FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE",
 		"FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE",
 		"FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE",
+		"DB_SERVER_ONLINE_SOFTWARE_UPDATE",
 	}
 }
 

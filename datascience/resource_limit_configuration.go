@@ -10,49 +10,34 @@
 package datascience
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
 
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// IdcsAuthConfiguration Configuration of IDCS AuthN/Z for online prediction
-type IdcsAuthConfiguration struct {
+// ResourceLimitConfiguration Resource limit configuration details for workload on managed compute cluster type compute target
+type ResourceLimitConfiguration struct {
 
-	// Identity Domain OCID
-	DomainId *string `mandatory:"true" json:"domainId"`
+	// Burstable limit for cpu.
+	Ocpus *float32 `mandatory:"true" json:"ocpus"`
 
-	// Name of the IDCS application
-	ApplicationName *string `mandatory:"false" json:"applicationName"`
+	// Burstable limit for memory.
+	MemoryInGBs *float32 `mandatory:"true" json:"memoryInGBs"`
 }
 
-func (m IdcsAuthConfiguration) String() string {
+func (m ResourceLimitConfiguration) String() string {
 	return common.PointerString(m)
 }
 
 // ValidateEnumValue returns an error when providing an unsupported enum value
 // This function is being called during constructing API request process
 // Not recommended for calling this function directly
-func (m IdcsAuthConfiguration) ValidateEnumValue() (bool, error) {
+func (m ResourceLimitConfiguration) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
-}
-
-// MarshalJSON marshals to json representation
-func (m IdcsAuthConfiguration) MarshalJSON() (buff []byte, e error) {
-	type MarshalTypeIdcsAuthConfiguration IdcsAuthConfiguration
-	s := struct {
-		DiscriminatorParam string `json:"type"`
-		MarshalTypeIdcsAuthConfiguration
-	}{
-		"IDCS",
-		(MarshalTypeIdcsAuthConfiguration)(m),
-	}
-
-	return json.Marshal(&s)
 }

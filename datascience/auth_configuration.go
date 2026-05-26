@@ -51,14 +51,6 @@ func (m *authconfiguration) UnmarshalPolymorphicJSON(data []byte) (interface{}, 
 
 	var err error
 	switch m.Type {
-	case "IDCS":
-		mm := IdcsAuthConfiguration{}
-		err = json.Unmarshal(data, &mm)
-		return mm, err
-	case "IDCS_CUSTOM_SERVICE":
-		mm := IdcsCustomServiceAuthConfiguration{}
-		err = json.Unmarshal(data, &mm)
-		return mm, err
 	case "IAM":
 		mm := IamAuthConfiguration{}
 		err = json.Unmarshal(data, &mm)
@@ -90,21 +82,15 @@ type AuthConfigurationTypeEnum string
 
 // Set of constants representing the allowable values for AuthConfigurationTypeEnum
 const (
-	AuthConfigurationTypeIdcs              AuthConfigurationTypeEnum = "IDCS"
-	AuthConfigurationTypeIam               AuthConfigurationTypeEnum = "IAM"
-	AuthConfigurationTypeIdcsCustomService AuthConfigurationTypeEnum = "IDCS_CUSTOM_SERVICE"
+	AuthConfigurationTypeIam AuthConfigurationTypeEnum = "IAM"
 )
 
 var mappingAuthConfigurationTypeEnum = map[string]AuthConfigurationTypeEnum{
-	"IDCS":                AuthConfigurationTypeIdcs,
-	"IAM":                 AuthConfigurationTypeIam,
-	"IDCS_CUSTOM_SERVICE": AuthConfigurationTypeIdcsCustomService,
+	"IAM": AuthConfigurationTypeIam,
 }
 
 var mappingAuthConfigurationTypeEnumLowerCase = map[string]AuthConfigurationTypeEnum{
-	"idcs":                AuthConfigurationTypeIdcs,
-	"iam":                 AuthConfigurationTypeIam,
-	"idcs_custom_service": AuthConfigurationTypeIdcsCustomService,
+	"iam": AuthConfigurationTypeIam,
 }
 
 // GetAuthConfigurationTypeEnumValues Enumerates the set of values for AuthConfigurationTypeEnum
@@ -119,9 +105,7 @@ func GetAuthConfigurationTypeEnumValues() []AuthConfigurationTypeEnum {
 // GetAuthConfigurationTypeEnumStringValues Enumerates the set of values in String for AuthConfigurationTypeEnum
 func GetAuthConfigurationTypeEnumStringValues() []string {
 	return []string{
-		"IDCS",
 		"IAM",
-		"IDCS_CUSTOM_SERVICE",
 	}
 }
 

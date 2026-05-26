@@ -17,33 +17,21 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// IdcsCustomServiceAuthConfiguration Using existing Oracle Cloud Service for online prediction AuthN/Z
-type IdcsCustomServiceAuthConfiguration struct {
+// ManagedComputeClusterCustomMetricExpressionRule A custom Monitoring Query Language (MQL) expression for triggering an autoscaling action on the managed compute cluster type compute target .
+type ManagedComputeClusterCustomMetricExpressionRule struct {
+	ScaleInConfiguration *ManagedComputeClusterCustomExpressionQueryScalingConfiguration `mandatory:"true" json:"scaleInConfiguration"`
 
-	// URI of IDCS Stripe
-	IdcsStripeUri *string `mandatory:"true" json:"idcsStripeUri"`
-
-	// Audience of the IDCS application
-	Audience *string `mandatory:"true" json:"audience"`
-
-	// Scope of the IDCS application
-	Scope *string `mandatory:"true" json:"scope"`
-
-	// Name of the IDCS application
-	ApplicationName *string `mandatory:"true" json:"applicationName"`
-
-	// Name of the IDCS application role
-	RoleName *string `mandatory:"true" json:"roleName"`
+	ScaleOutConfiguration *ManagedComputeClusterCustomExpressionQueryScalingConfiguration `mandatory:"true" json:"scaleOutConfiguration"`
 }
 
-func (m IdcsCustomServiceAuthConfiguration) String() string {
+func (m ManagedComputeClusterCustomMetricExpressionRule) String() string {
 	return common.PointerString(m)
 }
 
 // ValidateEnumValue returns an error when providing an unsupported enum value
 // This function is being called during constructing API request process
 // Not recommended for calling this function directly
-func (m IdcsCustomServiceAuthConfiguration) ValidateEnumValue() (bool, error) {
+func (m ManagedComputeClusterCustomMetricExpressionRule) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {
@@ -53,14 +41,14 @@ func (m IdcsCustomServiceAuthConfiguration) ValidateEnumValue() (bool, error) {
 }
 
 // MarshalJSON marshals to json representation
-func (m IdcsCustomServiceAuthConfiguration) MarshalJSON() (buff []byte, e error) {
-	type MarshalTypeIdcsCustomServiceAuthConfiguration IdcsCustomServiceAuthConfiguration
+func (m ManagedComputeClusterCustomMetricExpressionRule) MarshalJSON() (buff []byte, e error) {
+	type MarshalTypeManagedComputeClusterCustomMetricExpressionRule ManagedComputeClusterCustomMetricExpressionRule
 	s := struct {
-		DiscriminatorParam string `json:"type"`
-		MarshalTypeIdcsCustomServiceAuthConfiguration
+		DiscriminatorParam string `json:"metricExpressionRuleType"`
+		MarshalTypeManagedComputeClusterCustomMetricExpressionRule
 	}{
-		"IDCS_CUSTOM_SERVICE",
-		(MarshalTypeIdcsCustomServiceAuthConfiguration)(m),
+		"CUSTOM_EXPRESSION",
+		(MarshalTypeManagedComputeClusterCustomMetricExpressionRule)(m),
 	}
 
 	return json.Marshal(&s)

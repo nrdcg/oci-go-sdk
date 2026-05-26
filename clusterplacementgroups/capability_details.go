@@ -10,6 +10,7 @@
 package clusterplacementgroups
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -24,6 +25,8 @@ type CapabilityDetails struct {
 
 	// The type of resource.
 	Name *string `mandatory:"true" json:"name"`
+
+	AdditionalDetails AdditionalCapabilityDetails `mandatory:"false" json:"additionalDetails"`
 }
 
 func (m CapabilityDetails) String() string {
@@ -40,4 +43,34 @@ func (m CapabilityDetails) ValidateEnumValue() (bool, error) {
 		return true, fmt.Errorf("%s", strings.Join(errMessage, "\n"))
 	}
 	return false, nil
+}
+
+// UnmarshalJSON unmarshals from json
+func (m *CapabilityDetails) UnmarshalJSON(data []byte) (e error) {
+	model := struct {
+		AdditionalDetails additionalcapabilitydetails `json:"additionalDetails"`
+		Service           *string                     `json:"service"`
+		Name              *string                     `json:"name"`
+	}{}
+
+	e = json.Unmarshal(data, &model)
+	if e != nil {
+		return
+	}
+	var nn interface{}
+	nn, e = model.AdditionalDetails.UnmarshalPolymorphicJSON(model.AdditionalDetails.JsonData)
+	if e != nil {
+		return
+	}
+	if nn != nil {
+		m.AdditionalDetails = nn.(AdditionalCapabilityDetails)
+	} else {
+		m.AdditionalDetails = nil
+	}
+
+	m.Service = model.Service
+
+	m.Name = model.Name
+
+	return
 }

@@ -142,6 +142,8 @@ const (
 	ListDeploymentVersionsDeploymentTypeDatabaseDb2i               ListDeploymentVersionsDeploymentTypeEnum = "DATABASE_DB2I"
 	ListDeploymentVersionsDeploymentTypeGgsa                       ListDeploymentVersionsDeploymentTypeEnum = "GGSA"
 	ListDeploymentVersionsDeploymentTypeDataTransforms             ListDeploymentVersionsDeploymentTypeEnum = "DATA_TRANSFORMS"
+	ListDeploymentVersionsDeploymentTypeVeridataServer             ListDeploymentVersionsDeploymentTypeEnum = "VERIDATA_SERVER"
+	ListDeploymentVersionsDeploymentTypeVeridataAgent              ListDeploymentVersionsDeploymentTypeEnum = "VERIDATA_AGENT"
 )
 
 var mappingListDeploymentVersionsDeploymentTypeEnum = map[string]ListDeploymentVersionsDeploymentTypeEnum{
@@ -155,6 +157,8 @@ var mappingListDeploymentVersionsDeploymentTypeEnum = map[string]ListDeploymentV
 	"DATABASE_DB2I":                ListDeploymentVersionsDeploymentTypeDatabaseDb2i,
 	"GGSA":                         ListDeploymentVersionsDeploymentTypeGgsa,
 	"DATA_TRANSFORMS":              ListDeploymentVersionsDeploymentTypeDataTransforms,
+	"VERIDATA_SERVER":              ListDeploymentVersionsDeploymentTypeVeridataServer,
+	"VERIDATA_AGENT":               ListDeploymentVersionsDeploymentTypeVeridataAgent,
 }
 
 var mappingListDeploymentVersionsDeploymentTypeEnumLowerCase = map[string]ListDeploymentVersionsDeploymentTypeEnum{
@@ -168,6 +172,8 @@ var mappingListDeploymentVersionsDeploymentTypeEnumLowerCase = map[string]ListDe
 	"database_db2i":                ListDeploymentVersionsDeploymentTypeDatabaseDb2i,
 	"ggsa":                         ListDeploymentVersionsDeploymentTypeGgsa,
 	"data_transforms":              ListDeploymentVersionsDeploymentTypeDataTransforms,
+	"veridata_server":              ListDeploymentVersionsDeploymentTypeVeridataServer,
+	"veridata_agent":               ListDeploymentVersionsDeploymentTypeVeridataAgent,
 }
 
 // GetListDeploymentVersionsDeploymentTypeEnumValues Enumerates the set of values for ListDeploymentVersionsDeploymentTypeEnum
@@ -192,6 +198,8 @@ func GetListDeploymentVersionsDeploymentTypeEnumStringValues() []string {
 		"DATABASE_DB2I",
 		"GGSA",
 		"DATA_TRANSFORMS",
+		"VERIDATA_SERVER",
+		"VERIDATA_AGENT",
 	}
 }
 

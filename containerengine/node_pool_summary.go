@@ -99,6 +99,8 @@ type NodePoolSummary struct {
 
 	// Emulation type for the physical network interface card (NIC) for nodes
 	NetworkLaunchType NetworkLaunchTypeEnum `mandatory:"false" json:"networkLaunchType,omitempty"`
+
+	PrimaryVnic *NodePoolPrimaryVnicDetails `mandatory:"false" json:"primaryVnic"`
 }
 
 func (m NodePoolSummary) String() string {
@@ -151,6 +153,7 @@ func (m *NodePoolSummary) UnmarshalJSON(data []byte) (e error) {
 		NodePoolCyclingDetails       *NodePoolCyclingDetails           `json:"nodePoolCyclingDetails"`
 		SecondaryVnics               []NodePoolSecondaryVnicDetails    `json:"secondaryVnics"`
 		NetworkLaunchType            NetworkLaunchTypeEnum             `json:"networkLaunchType"`
+		PrimaryVnic                  *NodePoolPrimaryVnicDetails       `json:"primaryVnic"`
 	}{}
 
 	e = json.Unmarshal(data, &model)
@@ -223,6 +226,8 @@ func (m *NodePoolSummary) UnmarshalJSON(data []byte) (e error) {
 	m.SecondaryVnics = make([]NodePoolSecondaryVnicDetails, len(model.SecondaryVnics))
 	copy(m.SecondaryVnics, model.SecondaryVnics)
 	m.NetworkLaunchType = model.NetworkLaunchType
+
+	m.PrimaryVnic = model.PrimaryVnic
 
 	return
 }

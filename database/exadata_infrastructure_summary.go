@@ -135,6 +135,8 @@ type ExadataInfrastructureSummary struct {
 
 	MaintenanceWindow *MaintenanceWindow `mandatory:"false" json:"maintenanceWindow"`
 
+	MaintenanceVersionPreferences *MaintenanceVersionPreferenceDetails `mandatory:"false" json:"maintenanceVersionPreferences"`
+
 	// The software version of the storage servers (cells) in the Exadata infrastructure.
 	StorageServerVersion *string `mandatory:"false" json:"storageServerVersion"`
 

@@ -106,6 +106,7 @@ const (
 	ScheduledActionActionTypeFsuVmClusterOsSoftwareUpdate    ScheduledActionActionTypeEnum = "FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE"
 	ScheduledActionActionTypeFsuVmClusterGiSoftwareUpdate    ScheduledActionActionTypeEnum = "FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE"
 	ScheduledActionActionTypeFsuVmClusterGiOsSoftwareUpdate  ScheduledActionActionTypeEnum = "FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE"
+	ScheduledActionActionTypeDbServerOnlineSoftwareUpdate    ScheduledActionActionTypeEnum = "DB_SERVER_ONLINE_SOFTWARE_UPDATE"
 )
 
 var mappingScheduledActionActionTypeEnum = map[string]ScheduledActionActionTypeEnum{
@@ -115,6 +116,7 @@ var mappingScheduledActionActionTypeEnum = map[string]ScheduledActionActionTypeE
 	"FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE":    ScheduledActionActionTypeFsuVmClusterOsSoftwareUpdate,
 	"FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE":    ScheduledActionActionTypeFsuVmClusterGiSoftwareUpdate,
 	"FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE": ScheduledActionActionTypeFsuVmClusterGiOsSoftwareUpdate,
+	"DB_SERVER_ONLINE_SOFTWARE_UPDATE":     ScheduledActionActionTypeDbServerOnlineSoftwareUpdate,
 }
 
 var mappingScheduledActionActionTypeEnumLowerCase = map[string]ScheduledActionActionTypeEnum{
@@ -124,6 +126,7 @@ var mappingScheduledActionActionTypeEnumLowerCase = map[string]ScheduledActionAc
 	"fsu_vm_cluster_os_software_update":    ScheduledActionActionTypeFsuVmClusterOsSoftwareUpdate,
 	"fsu_vm_cluster_gi_software_update":    ScheduledActionActionTypeFsuVmClusterGiSoftwareUpdate,
 	"fsu_vm_cluster_gi_os_software_update": ScheduledActionActionTypeFsuVmClusterGiOsSoftwareUpdate,
+	"db_server_online_software_update":     ScheduledActionActionTypeDbServerOnlineSoftwareUpdate,
 }
 
 // GetScheduledActionActionTypeEnumValues Enumerates the set of values for ScheduledActionActionTypeEnum
@@ -144,6 +147,7 @@ func GetScheduledActionActionTypeEnumStringValues() []string {
 		"FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE",
 		"FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE",
 		"FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE",
+		"DB_SERVER_ONLINE_SOFTWARE_UPDATE",
 	}
 }
 
