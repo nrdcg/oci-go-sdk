@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ManagedMySqlDatabaseInboundReplicationSummary Inbound replication information of a MySQL replica.
+// ManagedMySqlDatabaseInboundReplicationSummary Inbound replication information of a MySQL replica. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type ManagedMySqlDatabaseInboundReplicationSummary struct {
 
 	// The host name or IP address of the source this replica is connected to.

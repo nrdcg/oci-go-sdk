@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlDigestErrorSummary Consists of the error and the number of times it is encountered.
+// MySqlDigestErrorSummary The MySQL digest error and the number of times it is encountered. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type MySqlDigestErrorSummary struct {
 	Error *MySqlQueryMessage `mandatory:"true" json:"error"`
 

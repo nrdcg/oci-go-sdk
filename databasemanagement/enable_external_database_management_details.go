@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// EnableExternalDatabaseManagementDetails Detail to enable or disable database management.
+// EnableExternalDatabaseManagementDetails Detail to enable or disable database management. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type EnableExternalDatabaseManagementDetails struct {
 
 	// OCID of External MySQL Database connector.

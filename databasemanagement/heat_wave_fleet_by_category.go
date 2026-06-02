@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// HeatWaveFleetByCategory The number of HeatWave clusters in the fleet, grouped by shape and Lakehouse-enabled status.
+// HeatWaveFleetByCategory The number of HeatWave clusters in the fleet, grouped by shape and Lakehouse-enabled status. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type HeatWaveFleetByCategory struct {
 
 	// The name of the HeatWave fleet category.

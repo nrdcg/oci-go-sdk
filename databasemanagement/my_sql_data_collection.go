@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlDataCollection The collection of SQL performance data records for a specific Managed MySQL Database.
+// MySqlDataCollection The collection of SQL performance data records for a specific Managed MySQL Database. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type MySqlDataCollection struct {
 
 	// The list of SQLDataSummary records.

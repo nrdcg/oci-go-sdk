@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlChannelFetchError MySQL server replication channel name and error from its fetch operation.
+// MySqlChannelFetchError MySQL server replication channel name and error from its fetch operation. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type MySqlChannelFetchError struct {
 	FetchError *MySqlFetchError `mandatory:"true" json:"fetchError"`
 

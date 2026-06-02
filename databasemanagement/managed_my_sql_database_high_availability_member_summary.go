@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ManagedMySqlDatabaseHighAvailabilityMemberSummary Information about a member of a MySQL server group replication for high availability.
+// ManagedMySqlDatabaseHighAvailabilityMemberSummary Information about a member of a MySQL server group replication for high availability. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type ManagedMySqlDatabaseHighAvailabilityMemberSummary struct {
 
 	// The host name of the group member that clients use to connect to it.

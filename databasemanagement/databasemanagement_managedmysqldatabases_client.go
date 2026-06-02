@@ -95,7 +95,8 @@ func (client *ManagedMySqlDatabasesClient) ConfigurationProvider() *common.Confi
 }
 
 // ChangeMysqlDatabaseManagementType Changes the management type for a HeatWave MySQL instance, from BASIC to FULL and vice versa.
-// It can also be used to enable or disable database management.
+// It can also be used to enable or disable Database Management.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -159,6 +160,7 @@ func (client ManagedMySqlDatabasesClient) changeMysqlDatabaseManagementType(ctx 
 }
 
 // GetBinaryLogInformation Retrieves information pertaining to the binary log of a specific MySQL server.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -217,6 +219,7 @@ func (client ManagedMySqlDatabasesClient) getBinaryLogInformation(ctx context.Co
 }
 
 // GetGeneralReplicationInformation Retrieves general information regarding the replication of a specific MySQL server.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -275,6 +278,7 @@ func (client ManagedMySqlDatabasesClient) getGeneralReplicationInformation(ctx c
 }
 
 // GetHeatWaveFleetMetric Gets the health metrics for a fleet of HeatWave clusters in a compartment.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -332,6 +336,7 @@ func (client ManagedMySqlDatabasesClient) getHeatWaveFleetMetric(ctx context.Con
 }
 
 // GetManagedMySqlDatabase Retrieves the general information for a specific MySQL Database.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -389,6 +394,7 @@ func (client ManagedMySqlDatabasesClient) getManagedMySqlDatabase(ctx context.Co
 }
 
 // GetMySqlFleetMetric Gets the health metrics for a fleet of MySQL Databases in a compartment.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -445,7 +451,8 @@ func (client ManagedMySqlDatabasesClient) getMySqlFleetMetric(ctx context.Contex
 	return response, err
 }
 
-// GetMySqlQueryDetails Retrieves query sample details, explain plan and potential warnings for a given digest.
+// GetMySqlQueryDetails Retrieves query sample details, explain plan, and potential warnings for a given digest.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -504,6 +511,7 @@ func (client ManagedMySqlDatabasesClient) getMySqlQueryDetails(ctx context.Conte
 }
 
 // ListHighAvailabilityMembers Retrieves information about the high availability members of a specific MySQL server's replication group.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -562,6 +570,7 @@ func (client ManagedMySqlDatabasesClient) listHighAvailabilityMembers(ctx contex
 }
 
 // ListInboundReplications Retrieves information about the inbound replications of a specific MySQL server.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -620,6 +629,7 @@ func (client ManagedMySqlDatabasesClient) listInboundReplications(ctx context.Co
 }
 
 // ListManagedMySqlDatabaseConfigurationData Retrieves configuration data for a specific MySQL database.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -678,6 +688,7 @@ func (client ManagedMySqlDatabasesClient) listManagedMySqlDatabaseConfigurationD
 }
 
 // ListManagedMySqlDatabaseSqlData Retrieves the SQL performance data for a specific MySQL database.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -736,6 +747,7 @@ func (client ManagedMySqlDatabasesClient) listManagedMySqlDatabaseSqlData(ctx co
 }
 
 // ListManagedMySqlDatabases Gets the list of Managed MySQL Databases in a specific compartment.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -793,6 +805,7 @@ func (client ManagedMySqlDatabasesClient) listManagedMySqlDatabases(ctx context.
 }
 
 // ListMySqlDigestErrors Retrieves any potential errors for a given digest.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -851,6 +864,7 @@ func (client ManagedMySqlDatabasesClient) listMySqlDigestErrors(ctx context.Cont
 }
 
 // ListOutboundReplications Retrieves information pertaining to the outbound replications of a specific MySQL server.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //
@@ -909,6 +923,7 @@ func (client ManagedMySqlDatabasesClient) listOutboundReplications(ctx context.C
 }
 
 // SummarizeManagedMySqlDatabaseAvailabilityMetrics Gets the availability metrics for the MySQL Database specified by managedMySqlDatabaseId.
+// MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 //
 // # See also
 //

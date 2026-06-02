@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// HeatWaveFleetSummary The inventory count of HeatWave clusters in the fleet and a summary of the metrics that provide the aggregated usage of CPU, storage, and so on of all the clusters.
+// HeatWaveFleetSummary The inventory count of HeatWave clusters in the fleet and a summary of the metrics that provide the aggregated usage of CPU, storage, and so on of all the clusters. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type HeatWaveFleetSummary struct {
 
 	// The usage metrics for the HeatWave clusters in the fleet.

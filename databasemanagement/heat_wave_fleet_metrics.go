@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// HeatWaveFleetMetrics The details of the HeatWave cluster fleet health metrics.
+// HeatWaveFleetMetrics The details of the HeatWave cluster fleet health metrics. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type HeatWaveFleetMetrics struct {
 
 	// The beginning of the time range during which metric data is retrieved.

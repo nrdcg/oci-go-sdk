@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateExternalMySqlDatabaseDetails Details for creating an external database.
+// CreateExternalMySqlDatabaseDetails Details for creating an external database. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type CreateExternalMySqlDatabaseDetails struct {
 
 	// OCID of compartment for the External MySQL Database.

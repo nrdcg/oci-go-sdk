@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlConfigurationDataCollection The collection of configuration records for a specific MySQL Database.
+// MySqlConfigurationDataCollection The collection of configuration records for a specific MySQL Database. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type MySqlConfigurationDataCollection struct {
 
 	// The list of ConfigurationDataSummary records.

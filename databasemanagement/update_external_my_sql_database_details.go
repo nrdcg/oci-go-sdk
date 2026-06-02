@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateExternalMySqlDatabaseDetails Details for updating an external MySQL database.
+// UpdateExternalMySqlDatabaseDetails Details for updating an external MySQL database. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type UpdateExternalMySqlDatabaseDetails struct {
 
 	// Display Name of the External MySQL Database.

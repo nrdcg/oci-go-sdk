@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlHighAvailabilityStatusSummary High availability status summary of a MySQL server.
+// MySqlHighAvailabilityStatusSummary High availability status summary of a MySQL server. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type MySqlHighAvailabilityStatusSummary struct {
 
 	// A list of MySqlChannelFetchError records.

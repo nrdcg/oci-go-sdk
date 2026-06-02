@@ -18,7 +18,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// MySqlFleetByCategory The number of MySQL Databases in the fleet, grouped by database type and sub type.
+// MySqlFleetByCategory The number of MySQL Databases in the fleet, grouped by database type and sub type. MySQL support within OCI Database Management service has been deprecated as of January 29, 2026.
 type MySqlFleetByCategory struct {
 
 	// The type of the MySQL Database. Indicates whether the database is on premises or Oracle Cloud. Allowed values are: MDS and ONPREMISE
