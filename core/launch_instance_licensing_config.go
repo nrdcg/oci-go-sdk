@@ -29,6 +29,7 @@ type LaunchInstanceLicensingConfig interface {
 	// License Type for the OS license.
 	// * `OCI_PROVIDED` - OCI provided license (e.g. metered $/OCPU-hour).
 	// * `BRING_YOUR_OWN_LICENSE` - Bring your own license.
+	// * `PARTNER_PROVIDED` - Partner provided license.
 	GetLicenseType() LaunchInstanceLicensingConfigLicenseTypeEnum
 }
 
@@ -105,16 +106,19 @@ type LaunchInstanceLicensingConfigLicenseTypeEnum string
 const (
 	LaunchInstanceLicensingConfigLicenseTypeOciProvided         LaunchInstanceLicensingConfigLicenseTypeEnum = "OCI_PROVIDED"
 	LaunchInstanceLicensingConfigLicenseTypeBringYourOwnLicense LaunchInstanceLicensingConfigLicenseTypeEnum = "BRING_YOUR_OWN_LICENSE"
+	LaunchInstanceLicensingConfigLicenseTypePartnerProvided     LaunchInstanceLicensingConfigLicenseTypeEnum = "PARTNER_PROVIDED"
 )
 
 var mappingLaunchInstanceLicensingConfigLicenseTypeEnum = map[string]LaunchInstanceLicensingConfigLicenseTypeEnum{
 	"OCI_PROVIDED":           LaunchInstanceLicensingConfigLicenseTypeOciProvided,
 	"BRING_YOUR_OWN_LICENSE": LaunchInstanceLicensingConfigLicenseTypeBringYourOwnLicense,
+	"PARTNER_PROVIDED":       LaunchInstanceLicensingConfigLicenseTypePartnerProvided,
 }
 
 var mappingLaunchInstanceLicensingConfigLicenseTypeEnumLowerCase = map[string]LaunchInstanceLicensingConfigLicenseTypeEnum{
 	"oci_provided":           LaunchInstanceLicensingConfigLicenseTypeOciProvided,
 	"bring_your_own_license": LaunchInstanceLicensingConfigLicenseTypeBringYourOwnLicense,
+	"partner_provided":       LaunchInstanceLicensingConfigLicenseTypePartnerProvided,
 }
 
 // GetLaunchInstanceLicensingConfigLicenseTypeEnumValues Enumerates the set of values for LaunchInstanceLicensingConfigLicenseTypeEnum
@@ -131,6 +135,7 @@ func GetLaunchInstanceLicensingConfigLicenseTypeEnumStringValues() []string {
 	return []string{
 		"OCI_PROVIDED",
 		"BRING_YOUR_OWN_LICENSE",
+		"PARTNER_PROVIDED",
 	}
 }
 

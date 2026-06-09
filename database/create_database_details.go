@@ -81,6 +81,11 @@ type CreateDatabaseDetails struct {
 	EncryptionKeyLocationDetails EncryptionKeyLocationDetails `mandatory:"false" json:"encryptionKeyLocationDetails"`
 
 	StorageSizeDetails *DatabaseStorageSizeDetails `mandatory:"false" json:"storageSizeDetails"`
+
+	ManagedSoftwareUpdateDetails *ManagedSoftwareUpdateInputDetails `mandatory:"false" json:"managedSoftwareUpdateDetails"`
+
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
+	VmClusterId *string `mandatory:"false" json:"vmClusterId"`
 }
 
 func (m CreateDatabaseDetails) String() string {
@@ -122,6 +127,8 @@ func (m *CreateDatabaseDetails) UnmarshalJSON(data []byte) (e error) {
 		KeyStoreId                   *string                             `json:"keyStoreId"`
 		EncryptionKeyLocationDetails encryptionkeylocationdetails        `json:"encryptionKeyLocationDetails"`
 		StorageSizeDetails           *DatabaseStorageSizeDetails         `json:"storageSizeDetails"`
+		ManagedSoftwareUpdateDetails *ManagedSoftwareUpdateInputDetails  `json:"managedSoftwareUpdateDetails"`
+		VmClusterId                  *string                             `json:"vmClusterId"`
 		DbName                       *string                             `json:"dbName"`
 		AdminPassword                *string                             `json:"adminPassword"`
 	}{}
@@ -172,6 +179,10 @@ func (m *CreateDatabaseDetails) UnmarshalJSON(data []byte) (e error) {
 	}
 
 	m.StorageSizeDetails = model.StorageSizeDetails
+
+	m.ManagedSoftwareUpdateDetails = model.ManagedSoftwareUpdateDetails
+
+	m.VmClusterId = model.VmClusterId
 
 	m.DbName = model.DbName
 

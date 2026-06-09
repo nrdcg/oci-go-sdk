@@ -74,7 +74,7 @@ func newComputeManagementClientFromBaseClient(baseClient common.BaseClient, conf
 
 // SetRegion overrides the region of this client.
 func (client *ComputeManagementClient) SetRegion(region string) {
-	client.Host = common.StringToRegion(region).EndpointForTemplate("iaas", "https://iaas.{region}.{secondLevelDomain}")
+	client.Host, _ = common.StringToRegion(region).EndpointForTemplateDottedRegion("iaas", "https://iaas.{region}.{dualStack?ds.oci.:}{secondLevelDomain}", "iaas")
 }
 
 // SetConfigurationProvider sets the configuration provider including the region, returns an error if is not valid
@@ -96,6 +96,12 @@ func (client *ComputeManagementClient) setConfigurationProvider(configProvider c
 // ConfigurationProvider the ConfigurationProvider used in this client, or null if none set
 func (client *ComputeManagementClient) ConfigurationProvider() *common.ConfigurationProvider {
 	return client.config
+}
+
+// EnableDualStackEndpoints Determines whether dual stack endpoint should be used or not.
+// Default value is false
+func (client *ComputeManagementClient) EnableDualStackEndpoints(enableDualStack bool) {
+	client.BaseClient.EnableDualStackEndpoints(enableDualStack)
 }
 
 // AttachInstancePoolInstance Attaches an instance to an instance pool. For information about the prerequisites
@@ -146,6 +152,13 @@ func (client ComputeManagementClient) attachInstancePoolInstance(ctx context.Con
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response AttachInstancePoolInstanceResponse
 	var httpResponse *http.Response
@@ -208,6 +221,13 @@ func (client ComputeManagementClient) attachLoadBalancer(ctx context.Context, re
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response AttachLoadBalancerResponse
 	var httpResponse *http.Response
@@ -275,6 +295,13 @@ func (client ComputeManagementClient) changeClusterNetworkCompartment(ctx contex
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ChangeClusterNetworkCompartmentResponse
 	var httpResponse *http.Response
@@ -348,6 +375,13 @@ func (client ComputeManagementClient) changeInstanceConfigurationCompartment(ctx
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ChangeInstanceConfigurationCompartmentResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "ChangeInstanceConfigurationCompartment")
@@ -413,6 +447,13 @@ func (client ComputeManagementClient) changeInstancePoolCompartment(ctx context.
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ChangeInstancePoolCompartmentResponse
 	var httpResponse *http.Response
@@ -487,6 +528,13 @@ func (client ComputeManagementClient) createClusterNetwork(ctx context.Context, 
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response CreateClusterNetworkResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "CreateClusterNetwork")
@@ -549,6 +597,13 @@ func (client ComputeManagementClient) createInstanceConfiguration(ctx context.Co
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response CreateInstanceConfigurationResponse
 	var httpResponse *http.Response
@@ -615,6 +670,13 @@ func (client ComputeManagementClient) createInstancePool(ctx context.Context, re
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response CreateInstancePoolResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "CreateInstancePool")
@@ -671,6 +733,13 @@ func (client ComputeManagementClient) deleteInstanceConfiguration(ctx context.Co
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response DeleteInstanceConfigurationResponse
 	var httpResponse *http.Response
@@ -734,6 +803,13 @@ func (client ComputeManagementClient) detachInstancePoolInstance(ctx context.Con
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response DetachInstancePoolInstanceResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "DetachInstancePoolInstance")
@@ -796,6 +872,13 @@ func (client ComputeManagementClient) detachLoadBalancer(ctx context.Context, re
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response DetachLoadBalancerResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "DetachLoadBalancer")
@@ -852,6 +935,13 @@ func (client ComputeManagementClient) getClusterNetwork(ctx context.Context, req
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response GetClusterNetworkResponse
 	var httpResponse *http.Response
@@ -910,6 +1000,13 @@ func (client ComputeManagementClient) getInstanceConfiguration(ctx context.Conte
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GetInstanceConfigurationResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "GetInstanceConfiguration")
@@ -966,6 +1063,13 @@ func (client ComputeManagementClient) getInstancePool(ctx context.Context, reque
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response GetInstancePoolResponse
 	var httpResponse *http.Response
@@ -1024,6 +1128,13 @@ func (client ComputeManagementClient) getInstancePoolInstance(ctx context.Contex
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response GetInstancePoolInstanceResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "GetInstancePoolInstance")
@@ -1080,6 +1191,13 @@ func (client ComputeManagementClient) getInstancePoolLoadBalancerAttachment(ctx 
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response GetInstancePoolLoadBalancerAttachmentResponse
 	var httpResponse *http.Response
@@ -1151,6 +1269,13 @@ func (client ComputeManagementClient) launchInstanceConfiguration(ctx context.Co
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response LaunchInstanceConfigurationResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "LaunchInstanceConfiguration")
@@ -1207,6 +1332,13 @@ func (client ComputeManagementClient) listClusterNetworkInstances(ctx context.Co
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListClusterNetworkInstancesResponse
 	var httpResponse *http.Response
@@ -1266,6 +1398,13 @@ func (client ComputeManagementClient) listClusterNetworks(ctx context.Context, r
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListClusterNetworksResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "ListClusterNetworks")
@@ -1322,6 +1461,13 @@ func (client ComputeManagementClient) listInstanceConfigurations(ctx context.Con
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListInstanceConfigurationsResponse
 	var httpResponse *http.Response
@@ -1380,6 +1526,13 @@ func (client ComputeManagementClient) listInstancePoolInstances(ctx context.Cont
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response ListInstancePoolInstancesResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "ListInstancePoolInstances")
@@ -1436,6 +1589,13 @@ func (client ComputeManagementClient) listInstancePools(ctx context.Context, req
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ListInstancePoolsResponse
 	var httpResponse *http.Response
@@ -1499,6 +1659,13 @@ func (client ComputeManagementClient) resetInstancePool(ctx context.Context, req
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response ResetInstancePoolResponse
 	var httpResponse *http.Response
@@ -1565,6 +1732,13 @@ func (client ComputeManagementClient) softresetInstancePool(ctx context.Context,
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response SoftresetInstancePoolResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "SoftresetInstancePool")
@@ -1630,6 +1804,13 @@ func (client ComputeManagementClient) softstopInstancePool(ctx context.Context, 
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response SoftstopInstancePoolResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "SoftstopInstancePool")
@@ -1692,6 +1873,13 @@ func (client ComputeManagementClient) startInstancePool(ctx context.Context, req
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response StartInstancePoolResponse
 	var httpResponse *http.Response
@@ -1756,6 +1944,13 @@ func (client ComputeManagementClient) stopInstancePool(ctx context.Context, requ
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response StopInstancePoolResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "StopInstancePool")
@@ -1814,6 +2009,13 @@ func (client ComputeManagementClient) terminateClusterNetwork(ctx context.Contex
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response TerminateClusterNetworkResponse
 	var httpResponse *http.Response
@@ -1877,6 +2079,13 @@ func (client ComputeManagementClient) terminateInstancePool(ctx context.Context,
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response TerminateInstancePoolResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "TerminateInstancePool")
@@ -1938,6 +2147,13 @@ func (client ComputeManagementClient) terminationProceedInstancePoolInstance(ctx
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response TerminationProceedInstancePoolInstanceResponse
 	var httpResponse *http.Response
@@ -2002,6 +2218,13 @@ func (client ComputeManagementClient) updateClusterNetwork(ctx context.Context, 
 		return nil, err
 	}
 
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
+
 	var response UpdateClusterNetworkResponse
 	var httpResponse *http.Response
 	httpResponse, err = client.CallWithServiceAndOperationName(ctx, &httpRequest, "computeManagement", "UpdateClusterNetwork")
@@ -2063,6 +2286,13 @@ func (client ComputeManagementClient) updateInstanceConfiguration(ctx context.Co
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response UpdateInstanceConfigurationResponse
 	var httpResponse *http.Response
@@ -2126,6 +2356,13 @@ func (client ComputeManagementClient) updateInstancePool(ctx context.Context, re
 	if err != nil {
 		return nil, err
 	}
+
+	host := client.Host
+	common.UpdateEndpointTemplateForOptions(&client.BaseClient)
+	common.SetMissingTemplateParams(&client.BaseClient)
+	defer func() {
+		client.Host = host
+	}()
 
 	var response UpdateInstancePoolResponse
 	var httpResponse *http.Response
