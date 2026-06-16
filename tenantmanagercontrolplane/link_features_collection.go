@@ -16,24 +16,21 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ReviveWorkflowInstanceDetails The parameters for reviving failed workflow
-type ReviveWorkflowInstanceDetails struct {
+// LinkFeaturesCollection Result of a query request for a list of link features. Contains LinkFeature items.
+type LinkFeaturesCollection struct {
 
-	// Id of failed workflow
-	WorkflowInstanceId *string `mandatory:"false" json:"workflowInstanceId"`
-
-	// Service specific workflow instance name
-	WorkflowInstanceName *string `mandatory:"false" json:"workflowInstanceName"`
+	// Array containing LinkFeature items.
+	Items []LinkFeatureSummary `mandatory:"true" json:"items"`
 }
 
-func (m ReviveWorkflowInstanceDetails) String() string {
+func (m LinkFeaturesCollection) String() string {
 	return common.PointerString(m)
 }
 
 // ValidateEnumValue returns an error when providing an unsupported enum value
 // This function is being called during constructing API request process
 // Not recommended for calling this function directly
-func (m ReviveWorkflowInstanceDetails) ValidateEnumValue() (bool, error) {
+func (m LinkFeaturesCollection) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if len(errMessage) > 0 {

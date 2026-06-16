@@ -39,6 +39,9 @@ type Link struct {
 
 	// Date-time when this link was terminated.
 	TimeTerminated *common.SDKTime `mandatory:"false" json:"timeTerminated"`
+
+	// The feature associated with this link. Default value is CORE.
+	Feature *string `mandatory:"false" json:"feature"`
 }
 
 func (m Link) String() string {
