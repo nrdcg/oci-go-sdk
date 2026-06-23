@@ -26,9 +26,6 @@ type JsonWebKey struct {
 	// JWT with matching "kid".
 	Kid *string `mandatory:"true" json:"kid"`
 
-	// The algorithm intended for use with this key.
-	Alg *string `mandatory:"true" json:"alg"`
-
 	// The base64 url encoded modulus of the RSA public key represented
 	// by this key.
 	N *string `mandatory:"true" json:"n"`
@@ -36,6 +33,9 @@ type JsonWebKey struct {
 	// The base64 url encoded exponent of the RSA public key represented
 	// by this key.
 	E *string `mandatory:"true" json:"e"`
+
+	// The algorithm intended for use with this key.
+	Alg *string `mandatory:"false" json:"alg"`
 
 	// The key type.
 	Kty JsonWebKeyKtyEnum `mandatory:"true" json:"kty"`

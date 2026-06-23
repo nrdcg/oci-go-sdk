@@ -262,6 +262,7 @@ type SteeringPolicyLifecycleStateEnum string
 const (
 	SteeringPolicyLifecycleStateActive   SteeringPolicyLifecycleStateEnum = "ACTIVE"
 	SteeringPolicyLifecycleStateCreating SteeringPolicyLifecycleStateEnum = "CREATING"
+	SteeringPolicyLifecycleStateUpdating SteeringPolicyLifecycleStateEnum = "UPDATING"
 	SteeringPolicyLifecycleStateDeleted  SteeringPolicyLifecycleStateEnum = "DELETED"
 	SteeringPolicyLifecycleStateDeleting SteeringPolicyLifecycleStateEnum = "DELETING"
 )
@@ -269,6 +270,7 @@ const (
 var mappingSteeringPolicyLifecycleStateEnum = map[string]SteeringPolicyLifecycleStateEnum{
 	"ACTIVE":   SteeringPolicyLifecycleStateActive,
 	"CREATING": SteeringPolicyLifecycleStateCreating,
+	"UPDATING": SteeringPolicyLifecycleStateUpdating,
 	"DELETED":  SteeringPolicyLifecycleStateDeleted,
 	"DELETING": SteeringPolicyLifecycleStateDeleting,
 }
@@ -276,6 +278,7 @@ var mappingSteeringPolicyLifecycleStateEnum = map[string]SteeringPolicyLifecycle
 var mappingSteeringPolicyLifecycleStateEnumLowerCase = map[string]SteeringPolicyLifecycleStateEnum{
 	"active":   SteeringPolicyLifecycleStateActive,
 	"creating": SteeringPolicyLifecycleStateCreating,
+	"updating": SteeringPolicyLifecycleStateUpdating,
 	"deleted":  SteeringPolicyLifecycleStateDeleted,
 	"deleting": SteeringPolicyLifecycleStateDeleting,
 }
@@ -294,6 +297,7 @@ func GetSteeringPolicyLifecycleStateEnumStringValues() []string {
 	return []string{
 		"ACTIVE",
 		"CREATING",
+		"UPDATING",
 		"DELETED",
 		"DELETING",
 	}

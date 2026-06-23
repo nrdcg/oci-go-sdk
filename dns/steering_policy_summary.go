@@ -188,6 +188,7 @@ type SteeringPolicySummaryLifecycleStateEnum string
 const (
 	SteeringPolicySummaryLifecycleStateActive   SteeringPolicySummaryLifecycleStateEnum = "ACTIVE"
 	SteeringPolicySummaryLifecycleStateCreating SteeringPolicySummaryLifecycleStateEnum = "CREATING"
+	SteeringPolicySummaryLifecycleStateUpdating SteeringPolicySummaryLifecycleStateEnum = "UPDATING"
 	SteeringPolicySummaryLifecycleStateDeleted  SteeringPolicySummaryLifecycleStateEnum = "DELETED"
 	SteeringPolicySummaryLifecycleStateDeleting SteeringPolicySummaryLifecycleStateEnum = "DELETING"
 )
@@ -195,6 +196,7 @@ const (
 var mappingSteeringPolicySummaryLifecycleStateEnum = map[string]SteeringPolicySummaryLifecycleStateEnum{
 	"ACTIVE":   SteeringPolicySummaryLifecycleStateActive,
 	"CREATING": SteeringPolicySummaryLifecycleStateCreating,
+	"UPDATING": SteeringPolicySummaryLifecycleStateUpdating,
 	"DELETED":  SteeringPolicySummaryLifecycleStateDeleted,
 	"DELETING": SteeringPolicySummaryLifecycleStateDeleting,
 }
@@ -202,6 +204,7 @@ var mappingSteeringPolicySummaryLifecycleStateEnum = map[string]SteeringPolicySu
 var mappingSteeringPolicySummaryLifecycleStateEnumLowerCase = map[string]SteeringPolicySummaryLifecycleStateEnum{
 	"active":   SteeringPolicySummaryLifecycleStateActive,
 	"creating": SteeringPolicySummaryLifecycleStateCreating,
+	"updating": SteeringPolicySummaryLifecycleStateUpdating,
 	"deleted":  SteeringPolicySummaryLifecycleStateDeleted,
 	"deleting": SteeringPolicySummaryLifecycleStateDeleting,
 }
@@ -220,6 +223,7 @@ func GetSteeringPolicySummaryLifecycleStateEnumStringValues() []string {
 	return []string{
 		"ACTIVE",
 		"CREATING",
+		"UPDATING",
 		"DELETED",
 		"DELETING",
 	}
