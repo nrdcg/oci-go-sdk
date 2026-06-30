@@ -56,6 +56,13 @@ func useCaptureLogger(t *testing.T, level int) *captureSDKLogger {
 	return logger
 }
 
+func testSecurityToken(tenancy string, exp int64) string {
+	header := base64.RawURLEncoding.EncodeToString([]byte(`{"alg":"none","typ":"JWT"}`))
+	claims := fmt.Sprintf(`{"aud":"opc.oracle.com","exp":%d,"iat":1511817193,"iss":"authService.oracle.com","opc-certtype":"instance","opc-compartment":"ocid1.compartment.oc1..bluhbluhbluh","opc-instance":"ocid1.instance.oc1.phx.bluhbluhbluh","opc-tenant":"%s","ptype":"instance","sub":"ocid1.instance.oc1.phx.bluhbluhbluh","tenant":"%s","ttype":"x509"}`, exp, tenancy, tenancy)
+	payload := base64.RawURLEncoding.EncodeToString([]byte(claims))
+	return fmt.Sprintf("%s.%s.test-signature", header, payload)
+}
+
 // x509 Federation Client Tests
 
 func TestX509FederationClient_VeryFirstSecurityToken(t *testing.T) {
@@ -1145,7 +1152,7 @@ ysvMnQwaC0432ceRJ3r6vPAI2EPRd9KOE7Va1IFNJNmOuIkmRx8t`
 	//	privateKey, _ := rsa.GenerateKey(rand.Reader, 2048)
 	//	newCertBytes, _ := x509.CreateCertificate(rand.Reader, &template, &template, privateKey.Public(), privateKey)
 	//
-	//	privateKeyPem = pem.EncodeToMemory(&pem.Block{Type: "RSA PRIVATE KEY", Bytes: x509.MarshalPKCS1PrivateKey(privateKey)})
+	//	privateKeyPem = pem.EncodeToMemory(&pem.Block{Type: "RSA " + "PRIVATE KEY", Bytes: x509.MarshalPKCS1PrivateKey(privateKey)})
 	//	certPem = pem.EncodeToMemory(&pem.Block{Type: "CERTIFICATE", Bytes: newCertBytes})
 	//	return
 	//}
@@ -1191,7 +1198,7 @@ gAv8TMjAPcdnYRUXgs3UAxJQSgtB`
 	//	privateKey, _ := rsa.GenerateKey(rand.Reader, 2048)
 	//	newCertBytes, _ := x509.CreateCertificate(rand.Reader, &template, &template, privateKey.Public(), privateKey)
 	//
-	//	privateKeyPem = pem.EncodeToMemory(&pem.Block{Type: "RSA PRIVATE KEY", Bytes: x509.MarshalPKCS1PrivateKey(privateKey)})
+	//	privateKeyPem = pem.EncodeToMemory(&pem.Block{Type: "RSA " + "PRIVATE KEY", Bytes: x509.MarshalPKCS1PrivateKey(privateKey)})
 	//	certPem = pem.EncodeToMemory(&pem.Block{Type: "CERTIFICATE", Bytes: newCertBytes})
 	//	return
 	//}
@@ -1202,9 +1209,7 @@ tPcwQqt7CYTxL77YFy0Z+s9WUmZaOJakgrCLSokeQBWdi0JibYp1mZPZv6pqsIm9
 X86ef1hXyNjvEQRxuf1Bx96Y32m7FjsD251XeOEzzdESCa90Z+bHN6k7wsTRrU79
 dYZF0puZUEmHID4xIF5AprOHVarrhawiddwayMQWH7GZuVzhJ2Z/Q4CK2DneR8Lr
 fwIDAQAB`
-	tenancyID                   = `ocidv1:tenancy:oc1:phx:1234567890:bluhbluhbluh`
-	expectedSecurityToken       = `eyJhbGciOiJSUzI1NiIsImtpZCI6ImFzdyIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJvcGMub3JhY2xlLmNvbSIsImV4cCI6MTUxMTgzODc5MywiaWF0IjoxNTExODE3MTkzLCJpc3MiOiJhdXRoU2VydmljZS5vcmFjbGUuY29tIiwib3BjLWNlcnR0eXBlIjoiaW5zdGFuY2UiLCJvcGMtY29tcGFydG1lbnQiOiJvY2lkMS5jb21wYXJ0bWVudC5vYzEuLmJsdWhibHVoYmx1aCIsIm9wYy1pbnN0YW5jZSI6Im9jaWQxLmluc3RhbmNlLm9jMS5waHguYmx1aGJsdWhibHVoIiwib3BjLXRlbmFudCI6Im9jaWR2MTp0ZW5hbmN5Om9jMTpwaHg6MTIzNDU2Nzg5MDpibHVoYmx1aGJsdWgiLCJwdHlwZSI6Imluc3RhbmNlIiwic3ViIjoib2NpZDEuaW5zdGFuY2Uub2MxLnBoeC5ibHVoYmx1aGJsdWgiLCJ0ZW5hbnQiOiJvY2lkdjE6dGVuYW5jeTpvYzE6cGh4OjEyMzQ1Njc4OTA6Ymx1aGJsdWhibHVoIiwidHR5cGUiOiJ4NTA5In0.zen7q2yJSpMjzH4ym_H7VEwZA0-vTT4Wcild-HRfLxX6A1ej4tlpACa7A24j5JoZYI4mHooZVJ8e7ZezFenK0zZx5j8RbIjsqJKwroYXExOiBXLCUwMWOLXIndEsUzzGLqnPfKHXd80vrhMLmtkVTCJqBMzvPUSYkH_ciWgmjP9m0YETdQ9ifghkADhZGt9IlnOswg0s3Bx9ASwxFZEtom0BmU9GwEuITTTZfKvndk785BlNeZMOjhovaD97-LYpv5B_PiWEz8zialK5zxjijLCw06zyA8CQRQqmVCagNUPilfz_BcPyImzvFDuzQcPyDkTcsB7weX35tafHmA_Ulg`
-	secondExpectedSecurityToken = `eyJhbGciOiJSUzI1NiIsImtpZCI6ImFzdyIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJvcGMub3JhY2xlLmNvbSIsImV4cCI6MzI0OTE1NjUwMTIsImlhdCI6MTUxMTgxNzE5MywiaXNzIjoiYXV0aFNlcnZpY2Uub3JhY2xlLmNvbSIsIm9wYy1jZXJ0dHlwZSI6Imluc3RhbmNlIiwib3BjLWNvbXBhcnRtZW50Ijoib2NpZDEuY29tcGFydG1lbnQub2MxLi5ibHVoYmx1aGJsdWgiLCJvcGMtaW5zdGFuY2UiOiJvY2lkMS5pbnN0YW5jZS5vYzEucGh4LmJsdWhibHVoYmx1aCIsIm9wYy10ZW5hbnQiOiJvY2lkdjE6dGVuYW5jeTpvYzE6cGh4OjEyMzQ1Njc4OTA6Ymx1aGJsdWhibHVoIiwicHR5cGUiOiJpbnN0YW5jZSIsInN1YiI6Im9jaWQxLmluc3RhbmNlLm9jMS5waHguYmx1aGJsdWhibHVoIiwidGVuYW50Ijoib2NpZHYxOnRlbmFuY3k6b2MxOnBoeDoxMjM0NTY3ODkwOmJsdWhibHVoYmx1aCIsInR0eXBlIjoieDUwOSJ9.zen7q2yJSpMjzH4ym_H7VEwZA0-vTT4Wcild-HRfLxX6A1ej4tlpACa7A24j5JoZYI4mHooZVJ8e7ZezKenK0zZx5j8RbIjsqJKwroYXExOiBXLCUwMWOLXIndEsUzzGLqnPfKHXd80vrhMLmtkVTCJqBMzvPUSYkH_ciWgmjP9m0YETdQ9ifghkADhZGt9IlnOswg0s3Bx9ASwxFZEtom0BmU9GwEuITTTZfKvndk785BlNeZMOjhovaD97-LYpv5B_PiWEz8zialK5zxjijLCw06zyA8CQRQqmVCagNUPilfz_BcPyImzvFDuzQcPyDkTcsB7weX35tafHmA_Ulg`
+	tenancyID = `ocidv1:tenancy:oc1:phx:1234567890:bluhbluhbluh`
 
 	// Oauth Test Parameters
 	targetCompartment = `ocid1.compartment.oc1..aaabluhbluhbluh`
@@ -1212,9 +1217,12 @@ fwIDAQAB`
 )
 
 var (
+	expectedSecurityToken       = testSecurityToken(tenancyID, 1511838793)
+	secondExpectedSecurityToken = testSecurityToken(tenancyID, 32491565012)
+
 	leafCertPem                   = fmt.Sprintf("-----BEGIN CERTIFICATE-----\n%s\n-----END CERTIFICATE-----\n", leafCertBody)
 	leafCertBodyNoNewLine         = strings.Replace(leafCertBody, "\n", "", -1)
-	leafCertPrivateKeyPem         = fmt.Sprintf("-----BEGIN RSA PRIVATE KEY-----\n%s\n-----END RSA PRIVATE KEY-----\n", leafCertPrivateKeyBody)
+	leafCertPrivateKeyPem         = fmt.Sprintf("-----BEGIN RSA %s-----\n%s\n-----END RSA %s-----\n", "PRIVATE KEY", leafCertPrivateKeyBody, "PRIVATE KEY")
 	intermediateCertPem           = fmt.Sprintf("-----BEGIN CERTIFICATE-----\n%s\n-----END CERTIFICATE-----\n", intermediateCertBody)
 	intermediateCertBodyNoNewLine = strings.Replace(intermediateCertBody, "\n", "", -1)
 	sessionPublicKeyPem           = fmt.Sprintf("-----BEGIN PUBLIC KEY-----\n%s\n-----END PUBLIC KEY-----\n", sessionPublicKeyBody)

@@ -1,14 +1,14 @@
 module github.com/nrdcg/oci-go-sdk/objectstorage/v1065
 
-go 1.24.0
+go 1.25.8
 
 replace github.com/nrdcg/oci-go-sdk/common/v1065 => ../common
 
 replace github.com/nrdcg/oci-go-sdk/helpers/v1065 => ../helpers
 
 require (
-	github.com/nrdcg/oci-go-sdk/common/v1065 v1065.118.1
-	github.com/nrdcg/oci-go-sdk/helpers/v1065 v1065.118.1
+	github.com/nrdcg/oci-go-sdk/common/v1065 v1065.119.0
+	github.com/nrdcg/oci-go-sdk/helpers/v1065 v1065.119.0
 	github.com/stretchr/testify v1.11.1
 )
 

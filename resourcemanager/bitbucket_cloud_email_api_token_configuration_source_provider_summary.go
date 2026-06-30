@@ -20,9 +20,9 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary Summary information for a configuration source provider of the type `BITBUCKET_CLOUD_USERNAME_APPPASSWORD`.
-// This type corresponds to a configuration source provider in Bitbucket cloud that is authenticated with a username and app password.
-type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct {
+// BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary Summary information for a configuration source provider of the type `BITBUCKET_CLOUD_ACCESS_TOKEN`.
+// This type corresponds to a configuration source provider in Bitbucket Cloud that is authenticated with Atlassian account email and API token.
+type BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the configuration source provider.
 	Id *string `mandatory:"false" json:"id"`
@@ -42,6 +42,9 @@ type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct 
 	TimeCreated *common.SDKTime `mandatory:"false" json:"timeCreated"`
 
 	PrivateServerConfigDetails *PrivateServerConfigDetails `mandatory:"false" json:"privateServerConfigDetails"`
+
+	// Indicates whether this configuration source provider uses legacy Bitbucket Cloud username/app-password credentials and must be migrated.
+	IsMigrationRequired *bool `mandatory:"false" json:"isMigrationRequired"`
 
 	// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
 	// For more information, see Resource Tags (https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -69,63 +72,68 @@ type BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary struct 
 }
 
 // GetId returns Id
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetId() *string {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetId() *string {
 	return m.Id
 }
 
 // GetCompartmentId returns CompartmentId
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetCompartmentId() *string {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetCompartmentId() *string {
 	return m.CompartmentId
 }
 
 // GetDisplayName returns DisplayName
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetDisplayName() *string {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetDisplayName() *string {
 	return m.DisplayName
 }
 
 // GetDescription returns Description
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetDescription() *string {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetDescription() *string {
 	return m.Description
 }
 
 // GetTimeCreated returns TimeCreated
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetTimeCreated() *common.SDKTime {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetTimeCreated() *common.SDKTime {
 	return m.TimeCreated
 }
 
 // GetLifecycleState returns LifecycleState
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetLifecycleState() ConfigurationSourceProviderLifecycleStateEnum {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetLifecycleState() ConfigurationSourceProviderLifecycleStateEnum {
 	return m.LifecycleState
 }
 
 // GetPrivateServerConfigDetails returns PrivateServerConfigDetails
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetPrivateServerConfigDetails() *PrivateServerConfigDetails {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetPrivateServerConfigDetails() *PrivateServerConfigDetails {
 	return m.PrivateServerConfigDetails
 }
 
+// GetIsMigrationRequired returns IsMigrationRequired
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetIsMigrationRequired() *bool {
+	return m.IsMigrationRequired
+}
+
 // GetFreeformTags returns FreeformTags
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetFreeformTags() map[string]string {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetFreeformTags() map[string]string {
 	return m.FreeformTags
 }
 
 // GetDefinedTags returns DefinedTags
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetDefinedTags() map[string]map[string]interface{} {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetDefinedTags() map[string]map[string]interface{} {
 	return m.DefinedTags
 }
 
 // GetSystemTags returns SystemTags
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) GetSystemTags() map[string]map[string]interface{} {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) GetSystemTags() map[string]map[string]interface{} {
 	return m.SystemTags
 }
 
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) String() string {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) String() string {
 	return common.PointerString(m)
 }
 
 // ValidateEnumValue returns an error when providing an unsupported enum value
 // This function is being called during constructing API request process
 // Not recommended for calling this function directly
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) ValidateEnumValue() (bool, error) {
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) ValidateEnumValue() (bool, error) {
 	errMessage := []string{}
 
 	if _, ok := GetMappingConfigurationSourceProviderLifecycleStateEnum(string(m.LifecycleState)); !ok && m.LifecycleState != "" {
@@ -138,14 +146,14 @@ func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) Val
 }
 
 // MarshalJSON marshals to json representation
-func (m BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary) MarshalJSON() (buff []byte, e error) {
-	type MarshalTypeBitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary
+func (m BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary) MarshalJSON() (buff []byte, e error) {
+	type MarshalTypeBitbucketCloudEmailApiTokenConfigurationSourceProviderSummary BitbucketCloudEmailApiTokenConfigurationSourceProviderSummary
 	s := struct {
 		DiscriminatorParam string `json:"configSourceProviderType"`
-		MarshalTypeBitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary
+		MarshalTypeBitbucketCloudEmailApiTokenConfigurationSourceProviderSummary
 	}{
-		"BITBUCKET_CLOUD_USERNAME_APPPASSWORD",
-		(MarshalTypeBitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary)(m),
+		"BITBUCKET_CLOUD_ACCESS_TOKEN",
+		(MarshalTypeBitbucketCloudEmailApiTokenConfigurationSourceProviderSummary)(m),
 	}
 
 	return json.Marshal(&s)

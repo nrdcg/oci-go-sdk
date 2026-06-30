@@ -5,6 +5,7 @@ package common
 
 import (
 	"bytes"
+	"crypto"
 	"crypto/rsa"
 	"fmt"
 	"io/ioutil"
@@ -78,6 +79,23 @@ func (kp testKeyProvider) PrivateRSAKey() (*rsa.PrivateKey, error) {
 }
 
 func (kp testKeyProvider) KeyID() (string, error) {
+	keyID := strings.Join([]string{testTenancyOCID, testUserOCID, testFingerprint}, "/")
+	return keyID, nil
+}
+
+type signerOnlyKeyProvider struct {
+	signer crypto.Signer
+}
+
+func (kp signerOnlyKeyProvider) PrivateRSAKey() (*rsa.PrivateKey, error) {
+	return nil, fmt.Errorf("PrivateRSAKey should not be called when PrivateKeySigner is implemented")
+}
+
+func (kp signerOnlyKeyProvider) PrivateKeySigner() (crypto.Signer, error) {
+	return kp.signer, nil
+}
+
+func (kp signerOnlyKeyProvider) KeyID() (string, error) {
 	keyID := strings.Join([]string{testTenancyOCID, testUserOCID, testFingerprint}, "/")
 	return keyID, nil
 }
@@ -252,6 +270,102 @@ func TestOCIRequestSigner_ComputeSignature2(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, r.ContentLength, int64(316))
 	assert.Equal(t, expectedSignature2, signature)
+}
+
+func TestOCIRequestSigner_SignatureScheme_PKCS1v15(t *testing.T) {
+	s := ociRequestSigner{
+		KeyProvider:    testKeyProvider{},
+		GenericHeaders: defaultGenericHeaders,
+		ShouldHashBody: defaultBodyHashPredicate,
+		BodyHeaders:    defaultBodyHeaders,
+		SigningMethod: SigningMethod{
+			SignatureScheme: RSASignatureScheme(PKCS1v15)}}
+	u, _ := url.Parse(testURL2)
+	r := http.Request{
+		Proto:      "HTTP/1.1",
+		ProtoMajor: 1,
+		ProtoMinor: 1,
+		Header:     make(http.Header),
+		URL:        u,
+	}
+	bodyBuffer := bytes.NewBufferString(testBody)
+	r.Body = ioutil.NopCloser(bodyBuffer)
+	r.ContentLength = int64(bodyBuffer.Len())
+	r.Header.Set(requestHeaderDate, "Thu, 05 Jan 2014 21:31:40 GMT")
+	r.Header.Set(requestHeaderContentType, "application/json")
+	r.Header.Set(requestHeaderContentLength, strconv.FormatInt(r.ContentLength, 10))
+	r.Method = http.MethodPost
+	calculateHashOfBody(&r)
+	signature, err := s.computeSignature(&r)
+
+	assert.NoError(t, err)
+	assert.Equal(t, r.ContentLength, int64(316))
+	assert.Equal(t, expectedSignature2, signature)
+}
+
+func TestOCIRequestSigner_SignatureScheme_PSS(t *testing.T) {
+	s := ociRequestSigner{
+		KeyProvider:    testKeyProvider{},
+		GenericHeaders: defaultGenericHeaders,
+		ShouldHashBody: defaultBodyHashPredicate,
+		BodyHeaders:    defaultBodyHeaders,
+		SigningMethod: SigningMethod{
+			SignatureScheme: RSASignatureScheme(PSS)}}
+	u, _ := url.Parse(testURL2)
+	r := http.Request{
+		Proto:      "HTTP/1.1",
+		ProtoMajor: 1,
+		ProtoMinor: 1,
+		Header:     make(http.Header),
+		URL:        u,
+	}
+	bodyBuffer := bytes.NewBufferString(testBody)
+	r.Body = ioutil.NopCloser(bodyBuffer)
+	r.ContentLength = int64(bodyBuffer.Len())
+	r.Header.Set(requestHeaderDate, "Thu, 05 Jan 2014 21:31:40 GMT")
+	r.Header.Set(requestHeaderContentType, "application/json")
+	r.Header.Set(requestHeaderContentLength, strconv.FormatInt(r.ContentLength, 10))
+	r.Method = http.MethodPost
+	calculateHashOfBody(&r)
+	assert.Equal(t, r.ContentLength, int64(316))
+
+	var sign1 string
+	sign1, err := s.computeSignature(&r)
+	assert.NoError(t, err)
+
+	var sign2 string
+	sign2, err = s.computeSignature(&r)
+	assert.NoError(t, err)
+
+	assert.NotEqual(t, sign1, sign2)
+}
+
+func TestOCIRequestSigner_UsesCryptoSignerWhenAvailable(t *testing.T) {
+	pass := ""
+	privateKey, err := PrivateKeyFromBytes([]byte(testPrivateKey), &pass)
+	assert.NoError(t, err)
+
+	s := ociRequestSigner{
+		KeyProvider:    signerOnlyKeyProvider{signer: privateKey},
+		GenericHeaders: defaultGenericHeaders,
+		ShouldHashBody: defaultBodyHashPredicate,
+		BodyHeaders:    defaultBodyHeaders,
+	}
+	url, _ := url.Parse(testURL)
+	r := http.Request{
+		Proto:      "HTTP/1.1",
+		ProtoMajor: 1,
+		ProtoMinor: 1,
+		Header:     make(http.Header),
+		URL:        url,
+	}
+	r.Header.Set(requestHeaderDate, "Thu, 05 Jan 2014 21:31:40 GMT")
+	r.Method = http.MethodGet
+
+	signature, err := s.computeSignature(&r)
+
+	assert.NoError(t, err)
+	assert.Equal(t, expectedSignature, signature)
 }
 
 func TestOCIRequestSigner_Sign2(t *testing.T) {
