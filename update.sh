@@ -133,9 +133,9 @@ cd common
 
 go mod init github.com/${DEST_ORG}/${REPO_NAME}/common/${DEST_MAJOR_VERSION}
 go mod edit -go ${CUR_GO} -toolchain=none
-# force v1.5.0 to use go 1.24 (https://github.com/thales-transfer/crypto11/issues/137)
+# force the version to use go 1.25.0 (https://github.com/thales-transfer/crypto11/issues/137)
 # https://github.com/oracle/oci-go-sdk/blob/master/go.mod#L3
-go get github.com/ThalesGroup/crypto11@v1.5.0
+go get github.com/ThalesGroup/crypto11@v1.6.2
 go mod tidy
 go mod edit -toolchain=none
 
