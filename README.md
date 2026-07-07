@@ -9,7 +9,7 @@ Are you a Developer using the OCI SDK? If so, please fill out our survey to help
 
 
 ## Dependencies
-- Install [Go programming language](https://golang.org/dl/), The Go SDK supports the two most recent Golang releases (currently 1.24 and 1.25).
+- Install [Go programming language](https://golang.org/dl/), The Go SDK supports the two most recent Golang releases (currently 1.25 and 1.26).
 - Install [GNU Make](https://www.gnu.org/software/make/), using the package manager or binary distribution tool appropriate for your platform.
  
 ## Versioning

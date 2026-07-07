@@ -1,10 +1,10 @@
 module github.com/nrdcg/oci-go-sdk/apiaccesscontrol/v1065
 
-go 1.25.8
+go 1.25.0
 
 replace github.com/nrdcg/oci-go-sdk/common/v1065 => ../common
 
-require github.com/nrdcg/oci-go-sdk/common/v1065 v1065.119.0
+require github.com/nrdcg/oci-go-sdk/common/v1065 v1065.120.0
 
 require (
 	github.com/gofrs/flock v0.13.0 // indirect

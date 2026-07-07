@@ -1,9 +1,9 @@
 module github.com/nrdcg/oci-go-sdk/common/v1065
 
-go 1.25.8
+go 1.25.0
 
 require (
-	github.com/ThalesGroup/crypto11 v1.6.1
+	github.com/ThalesGroup/crypto11 v1.6.2
 	github.com/gofrs/flock v0.13.0
 	github.com/sony/gobreaker/v2 v2.4.0
 	github.com/stretchr/testify v1.11.1
