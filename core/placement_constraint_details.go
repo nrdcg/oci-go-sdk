@@ -61,6 +61,10 @@ func (m *placementconstraintdetails) UnmarshalPolymorphicJSON(data []byte) (inte
 		mm := HostGroupPlacementConstraintDetails{}
 		err = json.Unmarshal(data, &mm)
 		return mm, err
+	case "COMPUTE_CLUSTER":
+		mm := ComputeClusterPlacementConstraintDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "COMPUTE_BARE_METAL_HOST":
 		mm := ComputeBareMetalHostPlacementConstraintDetails{}
 		err = json.Unmarshal(data, &mm)

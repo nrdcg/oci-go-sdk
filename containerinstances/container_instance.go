@@ -57,6 +57,9 @@ type ContainerInstance struct {
 	// The container restart policy is applied for all containers in container instance.
 	ContainerRestartPolicy ContainerInstanceContainerRestartPolicyEnum `mandatory:"true" json:"containerRestartPolicy"`
 
+	// TenantId id of the container instance.
+	TenantId *string `mandatory:"false" json:"tenantId"`
+
 	// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
 	// Example: `{"bar-key": "value"}`
 	FreeformTags map[string]string `mandatory:"false" json:"freeformTags"`
@@ -93,6 +96,8 @@ type ContainerInstance struct {
 
 	// The image pulls secrets so you can access private registry to pull container images.
 	ImagePullSecrets []ImagePullSecret `mandatory:"false" json:"imagePullSecrets"`
+
+	SecurityContext ContainerInstanceSecurityContext `mandatory:"false" json:"securityContext"`
 }
 
 func (m ContainerInstance) String() string {
@@ -120,6 +125,7 @@ func (m ContainerInstance) ValidateEnumValue() (bool, error) {
 // UnmarshalJSON unmarshals from json
 func (m *ContainerInstance) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
+		TenantId                         *string                                     `json:"tenantId"`
 		FreeformTags                     map[string]string                           `json:"freeformTags"`
 		DefinedTags                      map[string]map[string]interface{}           `json:"definedTags"`
 		SystemTags                       map[string]map[string]interface{}           `json:"systemTags"`
@@ -131,6 +137,7 @@ func (m *ContainerInstance) UnmarshalJSON(data []byte) (e error) {
 		DnsConfig                        *ContainerDnsConfig                         `json:"dnsConfig"`
 		GracefulShutdownTimeoutInSeconds *int64                                      `json:"gracefulShutdownTimeoutInSeconds"`
 		ImagePullSecrets                 []imagepullsecret                           `json:"imagePullSecrets"`
+		SecurityContext                  containerinstancesecuritycontext            `json:"securityContext"`
 		Id                               *string                                     `json:"id"`
 		DisplayName                      *string                                     `json:"displayName"`
 		CompartmentId                    *string                                     `json:"compartmentId"`
@@ -150,6 +157,8 @@ func (m *ContainerInstance) UnmarshalJSON(data []byte) (e error) {
 		return
 	}
 	var nn interface{}
+	m.TenantId = model.TenantId
+
 	m.FreeformTags = model.FreeformTags
 
 	m.DefinedTags = model.DefinedTags
@@ -192,6 +201,16 @@ func (m *ContainerInstance) UnmarshalJSON(data []byte) (e error) {
 			m.ImagePullSecrets[i] = nil
 		}
 	}
+	nn, e = model.SecurityContext.UnmarshalPolymorphicJSON(model.SecurityContext.JsonData)
+	if e != nil {
+		return
+	}
+	if nn != nil {
+		m.SecurityContext = nn.(ContainerInstanceSecurityContext)
+	} else {
+		m.SecurityContext = nil
+	}
+
 	m.Id = model.Id
 
 	m.DisplayName = model.DisplayName

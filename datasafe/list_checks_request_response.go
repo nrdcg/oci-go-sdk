@@ -205,16 +205,19 @@ type ListChecksSortByEnum string
 const (
 	ListChecksSortByTitle    ListChecksSortByEnum = "title"
 	ListChecksSortByCategory ListChecksSortByEnum = "category"
+	ListChecksSortByKey      ListChecksSortByEnum = "key"
 )
 
 var mappingListChecksSortByEnum = map[string]ListChecksSortByEnum{
 	"title":    ListChecksSortByTitle,
 	"category": ListChecksSortByCategory,
+	"key":      ListChecksSortByKey,
 }
 
 var mappingListChecksSortByEnumLowerCase = map[string]ListChecksSortByEnum{
 	"title":    ListChecksSortByTitle,
 	"category": ListChecksSortByCategory,
+	"key":      ListChecksSortByKey,
 }
 
 // GetListChecksSortByEnumValues Enumerates the set of values for ListChecksSortByEnum
@@ -231,6 +234,7 @@ func GetListChecksSortByEnumStringValues() []string {
 	return []string{
 		"title",
 		"category",
+		"key",
 	}
 }
 

@@ -59,15 +59,18 @@ type AssociatedResourceSummaryAssociatedResourceTypeEnum string
 
 // Set of constants representing the allowable values for AssociatedResourceSummaryAssociatedResourceTypeEnum
 const (
-	AssociatedResourceSummaryAssociatedResourceTypeAuditPolicy AssociatedResourceSummaryAssociatedResourceTypeEnum = "AUDIT_POLICY"
+	AssociatedResourceSummaryAssociatedResourceTypePolicy AssociatedResourceSummaryAssociatedResourceTypeEnum = "AUDIT_POLICY"
+	AssociatedResourceSummaryAssociatedResourceTypeReport AssociatedResourceSummaryAssociatedResourceTypeEnum = "AUDIT_REPORT"
 )
 
 var mappingAssociatedResourceSummaryAssociatedResourceTypeEnum = map[string]AssociatedResourceSummaryAssociatedResourceTypeEnum{
-	"AUDIT_POLICY": AssociatedResourceSummaryAssociatedResourceTypeAuditPolicy,
+	"AUDIT_POLICY": AssociatedResourceSummaryAssociatedResourceTypePolicy,
+	"AUDIT_REPORT": AssociatedResourceSummaryAssociatedResourceTypeReport,
 }
 
 var mappingAssociatedResourceSummaryAssociatedResourceTypeEnumLowerCase = map[string]AssociatedResourceSummaryAssociatedResourceTypeEnum{
-	"audit_policy": AssociatedResourceSummaryAssociatedResourceTypeAuditPolicy,
+	"audit_policy": AssociatedResourceSummaryAssociatedResourceTypePolicy,
+	"audit_report": AssociatedResourceSummaryAssociatedResourceTypeReport,
 }
 
 // GetAssociatedResourceSummaryAssociatedResourceTypeEnumValues Enumerates the set of values for AssociatedResourceSummaryAssociatedResourceTypeEnum
@@ -83,6 +86,7 @@ func GetAssociatedResourceSummaryAssociatedResourceTypeEnumValues() []Associated
 func GetAssociatedResourceSummaryAssociatedResourceTypeEnumStringValues() []string {
 	return []string{
 		"AUDIT_POLICY",
+		"AUDIT_REPORT",
 	}
 }
 

@@ -57,6 +57,10 @@ func (m *createcontainervolumedetails) UnmarshalPolymorphicJSON(data []byte) (in
 
 	var err error
 	switch m.VolumeType {
+	case "OCI_FSS_FILE_SYSTEM":
+		mm := CreateContainerOciFssVolumeDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "CONFIGFILE":
 		mm := CreateContainerConfigFileVolumeDetails{}
 		err = json.Unmarshal(data, &mm)

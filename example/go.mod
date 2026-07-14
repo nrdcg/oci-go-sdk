@@ -59,34 +59,34 @@ replace github.com/nrdcg/oci-go-sdk/vault/v1065 => ../vault
 replace github.com/nrdcg/oci-go-sdk/workrequests/v1065 => ../workrequests
 
 require (
-	github.com/nrdcg/oci-go-sdk/artifacts/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/audit/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/budget/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/common/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/containerengine/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/core/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/database/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/databasetools/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/datalabelingservice/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/datalabelingservicedataplane/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/dns/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/email/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/functions/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/generativeaiinference/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/healthchecks/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/helpers/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/identity/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/identitydomains/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/keymanagement/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/limits/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/loadbalancer/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/monitoring/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/mysql/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/objectstorage/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/resourcemanager/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/resourcesearch/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/vault/v1065 v1065.120.0
-	github.com/nrdcg/oci-go-sdk/workrequests/v1065 v1065.120.0
+	github.com/nrdcg/oci-go-sdk/artifacts/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/audit/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/budget/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/common/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/containerengine/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/core/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/database/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/databasetools/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/datalabelingservice/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/datalabelingservicedataplane/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/dns/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/email/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/functions/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/generativeaiinference/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/healthchecks/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/helpers/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/identity/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/identitydomains/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/keymanagement/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/limits/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/loadbalancer/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/monitoring/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/mysql/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/objectstorage/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/resourcemanager/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/resourcesearch/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/vault/v1065 v1065.121.0
+	github.com/nrdcg/oci-go-sdk/workrequests/v1065 v1065.121.0
 )
 
 require (
@@ -97,6 +97,6 @@ require (
 	github.com/sony/gobreaker/v2 v2.4.0 // indirect
 	github.com/thales-e-security/pool v0.0.2 // indirect
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
-	golang.org/x/crypto v0.45.0 // indirect
-	golang.org/x/sys v0.38.0 // indirect
+	golang.org/x/crypto v0.52.0 // indirect
+	golang.org/x/sys v0.45.0 // indirect
 )

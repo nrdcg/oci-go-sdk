@@ -551,7 +551,7 @@ func (client ComputeManagementClient) createClusterNetwork(ctx context.Context, 
 }
 
 // CreateInstanceConfiguration Creates an instance configuration. An instance configuration is a template that defines the
-// settings to use when creating Compute instances.
+// settings to use when creating Compute instances or GPU Memory Clusters.
 //
 // # See also
 //

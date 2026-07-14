@@ -83,6 +83,10 @@ func (m *createinstanceconfigurationbase) UnmarshalPolymorphicJSON(data []byte) 
 
 	var err error
 	switch m.Source {
+	case "GMC":
+		mm := CreateGmcConfigurationDetails{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "NONE":
 		mm := CreateInstanceConfigurationDetails{}
 		err = json.Unmarshal(data, &mm)
@@ -140,16 +144,19 @@ type CreateInstanceConfigurationBaseSourceEnum string
 const (
 	CreateInstanceConfigurationBaseSourceNone     CreateInstanceConfigurationBaseSourceEnum = "NONE"
 	CreateInstanceConfigurationBaseSourceInstance CreateInstanceConfigurationBaseSourceEnum = "INSTANCE"
+	CreateInstanceConfigurationBaseSourceGmc      CreateInstanceConfigurationBaseSourceEnum = "GMC"
 )
 
 var mappingCreateInstanceConfigurationBaseSourceEnum = map[string]CreateInstanceConfigurationBaseSourceEnum{
 	"NONE":     CreateInstanceConfigurationBaseSourceNone,
 	"INSTANCE": CreateInstanceConfigurationBaseSourceInstance,
+	"GMC":      CreateInstanceConfigurationBaseSourceGmc,
 }
 
 var mappingCreateInstanceConfigurationBaseSourceEnumLowerCase = map[string]CreateInstanceConfigurationBaseSourceEnum{
 	"none":     CreateInstanceConfigurationBaseSourceNone,
 	"instance": CreateInstanceConfigurationBaseSourceInstance,
+	"gmc":      CreateInstanceConfigurationBaseSourceGmc,
 }
 
 // GetCreateInstanceConfigurationBaseSourceEnumValues Enumerates the set of values for CreateInstanceConfigurationBaseSourceEnum
@@ -166,6 +173,7 @@ func GetCreateInstanceConfigurationBaseSourceEnumStringValues() []string {
 	return []string{
 		"NONE",
 		"INSTANCE",
+		"GMC",
 	}
 }
 
