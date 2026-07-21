@@ -16,7 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// Capacity Service instance capacity metadata (e.g.: OLPU count, number of users, ...etc...).
+// Capacity Service instance capacity metadata (for example, OLPU count, number of users, and so on).
 type Capacity struct {
 
 	// The capacity model to use.
@@ -25,7 +25,7 @@ type Capacity struct {
 	CapacityType CapacityTypeEnum `mandatory:"true" json:"capacityType"`
 
 	// The capacity value selected, either the number of OCPUs (OLPU_COUNT) or the number of users (USER_COUNT).
-	// This parameter affects the number of OCPUs, amount of memory, and other resources allocated to the instance.
+	// This parameter affects the number of OCPUs, amount of memory, and other resources allocated to the Analytics instance.
 	CapacityValue *int `mandatory:"true" json:"capacityValue"`
 }
 
