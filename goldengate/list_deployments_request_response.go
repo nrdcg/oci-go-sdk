@@ -188,6 +188,7 @@ const (
 	ListDeploymentsSupportedConnectionTypeGooglePubsub          ListDeploymentsSupportedConnectionTypeEnum = "GOOGLE_PUBSUB"
 	ListDeploymentsSupportedConnectionTypeMicrosoftFabric       ListDeploymentsSupportedConnectionTypeEnum = "MICROSOFT_FABRIC"
 	ListDeploymentsSupportedConnectionTypeIceberg               ListDeploymentsSupportedConnectionTypeEnum = "ICEBERG"
+	ListDeploymentsSupportedConnectionTypeAiModel               ListDeploymentsSupportedConnectionTypeEnum = "AI_MODEL"
 )
 
 var mappingListDeploymentsSupportedConnectionTypeEnum = map[string]ListDeploymentsSupportedConnectionTypeEnum{
@@ -220,6 +221,7 @@ var mappingListDeploymentsSupportedConnectionTypeEnum = map[string]ListDeploymen
 	"GOOGLE_PUBSUB":           ListDeploymentsSupportedConnectionTypeGooglePubsub,
 	"MICROSOFT_FABRIC":        ListDeploymentsSupportedConnectionTypeMicrosoftFabric,
 	"ICEBERG":                 ListDeploymentsSupportedConnectionTypeIceberg,
+	"AI_MODEL":                ListDeploymentsSupportedConnectionTypeAiModel,
 }
 
 var mappingListDeploymentsSupportedConnectionTypeEnumLowerCase = map[string]ListDeploymentsSupportedConnectionTypeEnum{
@@ -252,6 +254,7 @@ var mappingListDeploymentsSupportedConnectionTypeEnumLowerCase = map[string]List
 	"google_pubsub":           ListDeploymentsSupportedConnectionTypeGooglePubsub,
 	"microsoft_fabric":        ListDeploymentsSupportedConnectionTypeMicrosoftFabric,
 	"iceberg":                 ListDeploymentsSupportedConnectionTypeIceberg,
+	"ai_model":                ListDeploymentsSupportedConnectionTypeAiModel,
 }
 
 // GetListDeploymentsSupportedConnectionTypeEnumValues Enumerates the set of values for ListDeploymentsSupportedConnectionTypeEnum
@@ -295,6 +298,7 @@ func GetListDeploymentsSupportedConnectionTypeEnumStringValues() []string {
 		"GOOGLE_PUBSUB",
 		"MICROSOFT_FABRIC",
 		"ICEBERG",
+		"AI_MODEL",
 	}
 }
 
