@@ -149,6 +149,9 @@ const (
 	ListSubscriptionsLifecycleDetailsDeleting              ListSubscriptionsLifecycleDetailsEnum = "DELETING"
 	ListSubscriptionsLifecycleDetailsUpdating              ListSubscriptionsLifecycleDetailsEnum = "UPDATING"
 	ListSubscriptionsLifecycleDetailsDeleted               ListSubscriptionsLifecycleDetailsEnum = "DELETED"
+	ListSubscriptionsLifecycleDetailsPendingCancellation   ListSubscriptionsLifecycleDetailsEnum = "PENDING_CANCELLATION"
+	ListSubscriptionsLifecycleDetailsSuspended             ListSubscriptionsLifecycleDetailsEnum = "SUSPENDED"
+	ListSubscriptionsLifecycleDetailsCanceled              ListSubscriptionsLifecycleDetailsEnum = "CANCELED"
 )
 
 var mappingListSubscriptionsLifecycleDetailsEnum = map[string]ListSubscriptionsLifecycleDetailsEnum{
@@ -164,6 +167,9 @@ var mappingListSubscriptionsLifecycleDetailsEnum = map[string]ListSubscriptionsL
 	"DELETING":               ListSubscriptionsLifecycleDetailsDeleting,
 	"UPDATING":               ListSubscriptionsLifecycleDetailsUpdating,
 	"DELETED":                ListSubscriptionsLifecycleDetailsDeleted,
+	"PENDING_CANCELLATION":   ListSubscriptionsLifecycleDetailsPendingCancellation,
+	"SUSPENDED":              ListSubscriptionsLifecycleDetailsSuspended,
+	"CANCELED":               ListSubscriptionsLifecycleDetailsCanceled,
 }
 
 var mappingListSubscriptionsLifecycleDetailsEnumLowerCase = map[string]ListSubscriptionsLifecycleDetailsEnum{
@@ -179,6 +185,9 @@ var mappingListSubscriptionsLifecycleDetailsEnumLowerCase = map[string]ListSubsc
 	"deleting":               ListSubscriptionsLifecycleDetailsDeleting,
 	"updating":               ListSubscriptionsLifecycleDetailsUpdating,
 	"deleted":                ListSubscriptionsLifecycleDetailsDeleted,
+	"pending_cancellation":   ListSubscriptionsLifecycleDetailsPendingCancellation,
+	"suspended":              ListSubscriptionsLifecycleDetailsSuspended,
+	"canceled":               ListSubscriptionsLifecycleDetailsCanceled,
 }
 
 // GetListSubscriptionsLifecycleDetailsEnumValues Enumerates the set of values for ListSubscriptionsLifecycleDetailsEnum
@@ -205,6 +214,9 @@ func GetListSubscriptionsLifecycleDetailsEnumStringValues() []string {
 		"DELETING",
 		"UPDATING",
 		"DELETED",
+		"PENDING_CANCELLATION",
+		"SUSPENDED",
+		"CANCELED",
 	}
 }
 
@@ -263,21 +275,18 @@ type ListSubscriptionsSortByEnum string
 const (
 	ListSubscriptionsSortByTimecreated ListSubscriptionsSortByEnum = "timeCreated"
 	ListSubscriptionsSortByDisplayname ListSubscriptionsSortByEnum = "displayName"
-	ListSubscriptionsSortBySelftokenid ListSubscriptionsSortByEnum = "selfTokenId"
 	ListSubscriptionsSortByProductid   ListSubscriptionsSortByEnum = "productId"
 )
 
 var mappingListSubscriptionsSortByEnum = map[string]ListSubscriptionsSortByEnum{
 	"timeCreated": ListSubscriptionsSortByTimecreated,
 	"displayName": ListSubscriptionsSortByDisplayname,
-	"selfTokenId": ListSubscriptionsSortBySelftokenid,
 	"productId":   ListSubscriptionsSortByProductid,
 }
 
 var mappingListSubscriptionsSortByEnumLowerCase = map[string]ListSubscriptionsSortByEnum{
 	"timecreated": ListSubscriptionsSortByTimecreated,
 	"displayname": ListSubscriptionsSortByDisplayname,
-	"selftokenid": ListSubscriptionsSortBySelftokenid,
 	"productid":   ListSubscriptionsSortByProductid,
 }
 
@@ -295,7 +304,6 @@ func GetListSubscriptionsSortByEnumStringValues() []string {
 	return []string{
 		"timeCreated",
 		"displayName",
-		"selfTokenId",
 		"productId",
 	}
 }
