@@ -65,7 +65,7 @@ type UpdateOssChannelDetails struct {
 	StreamPoolId *string `mandatory:"false" json:"streamPoolId"`
 
 	// The authentication token to use when connecting to the Oracle Streaming Service.
-	AuthToken *string `mandatory:"false" json:"authToken"`
+	AuthToken *string `mandatory:"false" json:"authToken" sensitive:"true"`
 }
 
 // GetName returns Name

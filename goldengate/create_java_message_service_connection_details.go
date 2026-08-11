@@ -118,7 +118,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "jndiSecurityCredentialsSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	JndiSecurityCredentials *string `mandatory:"false" json:"jndiSecurityCredentials"`
+	JndiSecurityCredentials *string `mandatory:"false" json:"jndiSecurityCredentials" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the security credentials are stored associated to the principal.
 	// Note: When provided, 'jndiSecurityCredentials' field must not be provided.
@@ -141,7 +141,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "passwordSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	Password *string `mandatory:"false" json:"password"`
+	Password *string `mandatory:"false" json:"password" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored,
 	// that Oracle GoldenGate uses to connect the associated Java Message Service.
@@ -152,7 +152,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "trustStoreSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	TrustStore *string `mandatory:"false" json:"trustStore"`
+	TrustStore *string `mandatory:"false" json:"trustStore" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the content of the TrustStore file is stored.
 	// Note: When provided, 'trustStore' field must not be provided.
@@ -162,7 +162,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "trustStorePasswordSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	TrustStorePassword *string `mandatory:"false" json:"trustStorePassword"`
+	TrustStorePassword *string `mandatory:"false" json:"trustStorePassword" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the TrustStore password is stored.
 	// Note: When provided, 'trustStorePassword' field must not be provided.
@@ -172,7 +172,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "keyStoreSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	KeyStore *string `mandatory:"false" json:"keyStore"`
+	KeyStore *string `mandatory:"false" json:"keyStore" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the content of the KeyStore file is stored.
 	// Note: When provided, 'keyStore' field must not be provided.
@@ -182,7 +182,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "keyStorePasswordSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	KeyStorePassword *string `mandatory:"false" json:"keyStorePassword"`
+	KeyStorePassword *string `mandatory:"false" json:"keyStorePassword" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the KeyStore password is stored.
 	// Note: When provided, 'keyStorePassword' field must not be provided.
@@ -193,7 +193,7 @@ type CreateJavaMessageServiceConnectionDetails struct {
 	// Deprecated: This field is deprecated and replaced by "sslKeyPasswordSecretId".
 	// This change follows the GoldenGate "Plain Text Fields in Connections" deprecation:
 	// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
-	SslKeyPassword *string `mandatory:"false" json:"sslKeyPassword"`
+	SslKeyPassword *string `mandatory:"false" json:"sslKeyPassword" sensitive:"true"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored for the cert inside of the Keystore.
 	// In case it differs from the KeyStore password, it should be provided.
