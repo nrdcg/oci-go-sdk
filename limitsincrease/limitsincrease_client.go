@@ -150,7 +150,7 @@ func (client LimitsIncreaseClient) cancelLimitsIncreaseItemRequest(ctx context.C
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseItemRequest/CancelLimitsIncreaseItemRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "CancelLimitsIncreaseItemRequest", apiReferenceLink)
 		return response, err
 	}
@@ -215,7 +215,7 @@ func (client LimitsIncreaseClient) cancelLimitsIncreaseRequest(ctx context.Conte
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/CancelLimitsIncreaseRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "CancelLimitsIncreaseRequest", apiReferenceLink)
 		return response, err
 	}
@@ -280,7 +280,7 @@ func (client LimitsIncreaseClient) createLimitsIncreaseRequest(ctx context.Conte
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/CreateLimitsIncreaseRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "CreateLimitsIncreaseRequest", apiReferenceLink)
 		return response, err
 	}
@@ -340,7 +340,7 @@ func (client LimitsIncreaseClient) deleteLimitsIncreaseRequest(ctx context.Conte
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/DeleteLimitsIncreaseRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "DeleteLimitsIncreaseRequest", apiReferenceLink)
 		return response, err
 	}
@@ -400,7 +400,7 @@ func (client LimitsIncreaseClient) getLimitsIncreaseItemRequest(ctx context.Cont
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseItemRequest/GetLimitsIncreaseItemRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "GetLimitsIncreaseItemRequest", apiReferenceLink)
 		return response, err
 	}
@@ -460,7 +460,7 @@ func (client LimitsIncreaseClient) getLimitsIncreaseRequest(ctx context.Context,
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/GetLimitsIncreaseRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "GetLimitsIncreaseRequest", apiReferenceLink)
 		return response, err
 	}
@@ -520,7 +520,7 @@ func (client LimitsIncreaseClient) listLimitsIncreaseItemRequests(ctx context.Co
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseItemRequestCollection/ListLimitsIncreaseItemRequests"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "ListLimitsIncreaseItemRequests", apiReferenceLink)
 		return response, err
 	}
@@ -583,7 +583,7 @@ func (client LimitsIncreaseClient) listLimitsIncreaseQuestions(ctx context.Conte
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseQuestionCollection/ListLimitsIncreaseQuestions"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "ListLimitsIncreaseQuestions", apiReferenceLink)
 		return response, err
 	}
@@ -643,7 +643,7 @@ func (client LimitsIncreaseClient) listLimitsIncreaseRequests(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/ListLimitsIncreaseRequests"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "ListLimitsIncreaseRequests", apiReferenceLink)
 		return response, err
 	}
@@ -703,7 +703,7 @@ func (client LimitsIncreaseClient) patchLimitsIncreaseRequest(ctx context.Contex
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/PatchLimitsIncreaseRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "PatchLimitsIncreaseRequest", apiReferenceLink)
 		return response, err
 	}
@@ -763,7 +763,7 @@ func (client LimitsIncreaseClient) updateLimitsIncreaseRequest(ctx context.Conte
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/limits-increase/20251101/LimitsIncreaseRequest/UpdateLimitsIncreaseRequest"
 		err = common.PostProcessServiceError(err, "LimitsIncrease", "UpdateLimitsIncreaseRequest", apiReferenceLink)
 		return response, err
 	}
