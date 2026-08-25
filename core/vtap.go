@@ -285,6 +285,7 @@ const (
 	VtapSourceTypeDbSystem                VtapSourceTypeEnum = "DB_SYSTEM"
 	VtapSourceTypeExadataVmCluster        VtapSourceTypeEnum = "EXADATA_VM_CLUSTER"
 	VtapSourceTypeAutonomousDataWarehouse VtapSourceTypeEnum = "AUTONOMOUS_DATA_WAREHOUSE"
+	VtapSourceTypeNetworkFirewall         VtapSourceTypeEnum = "NETWORK_FIREWALL"
 )
 
 var mappingVtapSourceTypeEnum = map[string]VtapSourceTypeEnum{
@@ -294,6 +295,7 @@ var mappingVtapSourceTypeEnum = map[string]VtapSourceTypeEnum{
 	"DB_SYSTEM":                 VtapSourceTypeDbSystem,
 	"EXADATA_VM_CLUSTER":        VtapSourceTypeExadataVmCluster,
 	"AUTONOMOUS_DATA_WAREHOUSE": VtapSourceTypeAutonomousDataWarehouse,
+	"NETWORK_FIREWALL":          VtapSourceTypeNetworkFirewall,
 }
 
 var mappingVtapSourceTypeEnumLowerCase = map[string]VtapSourceTypeEnum{
@@ -303,6 +305,7 @@ var mappingVtapSourceTypeEnumLowerCase = map[string]VtapSourceTypeEnum{
 	"db_system":                 VtapSourceTypeDbSystem,
 	"exadata_vm_cluster":        VtapSourceTypeExadataVmCluster,
 	"autonomous_data_warehouse": VtapSourceTypeAutonomousDataWarehouse,
+	"network_firewall":          VtapSourceTypeNetworkFirewall,
 }
 
 // GetVtapSourceTypeEnumValues Enumerates the set of values for VtapSourceTypeEnum
@@ -323,6 +326,7 @@ func GetVtapSourceTypeEnumStringValues() []string {
 		"DB_SYSTEM",
 		"EXADATA_VM_CLUSTER",
 		"AUTONOMOUS_DATA_WAREHOUSE",
+		"NETWORK_FIREWALL",
 	}
 }
 

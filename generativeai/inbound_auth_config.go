@@ -19,13 +19,11 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// InboundAuthConfig The client-side inbound authentication configuration for the Hosted Application.
-// Defines the network access rules.
+// InboundAuthConfig The inbound authentication configuration for the Hosted Application.
 // When unspecified, the service applies the default inbound authentication configuration type.
 type InboundAuthConfig struct {
 
-	// Inbound authentication configuration type of network access
-	// (IDCS_AUTH_CONFIG).
+	// The inbound authentication configuration type for the Hosted Application.
 	InboundAuthConfigType InboundAuthConfigInboundAuthConfigTypeEnum `mandatory:"true" json:"inboundAuthConfigType"`
 
 	IdcsConfig *IdcsAuthConfig `mandatory:"false" json:"idcsConfig"`

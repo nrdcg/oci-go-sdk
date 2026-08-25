@@ -141,7 +141,7 @@ func (client InstanceClient) cancelWorkRequest(ctx context.Context, request comm
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/WorkRequest/CancelWorkRequest"
 		err = common.PostProcessServiceError(err, "Instance", "CancelWorkRequest", apiReferenceLink)
 		return response, err
 	}
@@ -200,7 +200,7 @@ func (client InstanceClient) changeInstanceCompartment(ctx context.Context, requ
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/Instance/ChangeInstanceCompartment"
 		err = common.PostProcessServiceError(err, "Instance", "ChangeInstanceCompartment", apiReferenceLink)
 		return response, err
 	}
@@ -263,7 +263,7 @@ func (client InstanceClient) createInstance(ctx context.Context, request common.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/Instance/CreateInstance"
 		err = common.PostProcessServiceError(err, "Instance", "CreateInstance", apiReferenceLink)
 		return response, err
 	}
@@ -321,7 +321,7 @@ func (client InstanceClient) deleteInstance(ctx context.Context, request common.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/Instance/DeleteInstance"
 		err = common.PostProcessServiceError(err, "Instance", "DeleteInstance", apiReferenceLink)
 		return response, err
 	}
@@ -379,7 +379,7 @@ func (client InstanceClient) getInstance(ctx context.Context, request common.OCI
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/Instance/GetInstance"
 		err = common.PostProcessServiceError(err, "Instance", "GetInstance", apiReferenceLink)
 		return response, err
 	}
@@ -437,7 +437,7 @@ func (client InstanceClient) getWorkRequest(ctx context.Context, request common.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/WorkRequest/GetWorkRequest"
 		err = common.PostProcessServiceError(err, "Instance", "GetWorkRequest", apiReferenceLink)
 		return response, err
 	}
@@ -495,7 +495,7 @@ func (client InstanceClient) listInstances(ctx context.Context, request common.O
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/InstanceCollection/ListInstances"
 		err = common.PostProcessServiceError(err, "Instance", "ListInstances", apiReferenceLink)
 		return response, err
 	}
@@ -553,7 +553,7 @@ func (client InstanceClient) listWorkRequestErrors(ctx context.Context, request 
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/WorkRequestError/ListWorkRequestErrors"
 		err = common.PostProcessServiceError(err, "Instance", "ListWorkRequestErrors", apiReferenceLink)
 		return response, err
 	}
@@ -611,7 +611,7 @@ func (client InstanceClient) listWorkRequestLogs(ctx context.Context, request co
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/WorkRequestLogEntry/ListWorkRequestLogs"
 		err = common.PostProcessServiceError(err, "Instance", "ListWorkRequestLogs", apiReferenceLink)
 		return response, err
 	}
@@ -669,7 +669,7 @@ func (client InstanceClient) listWorkRequests(ctx context.Context, request commo
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/WorkRequest/ListWorkRequests"
 		err = common.PostProcessServiceError(err, "Instance", "ListWorkRequests", apiReferenceLink)
 		return response, err
 	}
@@ -727,7 +727,7 @@ func (client InstanceClient) updateInstance(ctx context.Context, request common.
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ddfs/20260831/Instance/UpdateInstance"
 		err = common.PostProcessServiceError(err, "Instance", "UpdateInstance", apiReferenceLink)
 		return response, err
 	}
