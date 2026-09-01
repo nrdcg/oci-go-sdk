@@ -271,7 +271,7 @@ MODULE_LIST=$(find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DES
 } > "${INITIAL_PATH}/readme.md.tmp" && mv "${INITIAL_PATH}/readme.md.tmp" "${INITIAL_PATH}/readme.md"
 
 echo "The user needs to run:"
-echo "git commit -m 'chore: ${LIB_VERSION}'"
+echo "git commit -m \"chore: ${LIB_VERSION}\""
 
 cd -
 
