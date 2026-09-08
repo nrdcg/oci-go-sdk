@@ -17,7 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// SuccessDestinationDetails An object that represents the destination to which Oracle Functions will send an invocation record with the details of the successful detached function invocation.
+// SuccessDestinationDetails Note: Deprecated. Use the new resource model APIs instead.
+// An object that represents the destination to which Oracle Functions will send an invocation record with the details of the successful detached function invocation.
 // A stream is an example of a success destination.
 // Example: `{"kind": "STREAM", "streamId": "stream_OCID"}`
 type SuccessDestinationDetails interface {

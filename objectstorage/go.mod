@@ -7,8 +7,8 @@ replace github.com/nrdcg/oci-go-sdk/common/v1065 => ../common
 replace github.com/nrdcg/oci-go-sdk/helpers/v1065 => ../helpers
 
 require (
-	github.com/nrdcg/oci-go-sdk/common/v1065 v1065.124.1
-	github.com/nrdcg/oci-go-sdk/helpers/v1065 v1065.124.1
+	github.com/nrdcg/oci-go-sdk/common/v1065 v1065.124.2
+	github.com/nrdcg/oci-go-sdk/helpers/v1065 v1065.124.2
 	github.com/stretchr/testify v1.12.1
 )
 

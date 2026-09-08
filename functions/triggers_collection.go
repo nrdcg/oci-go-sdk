@@ -16,7 +16,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// TriggersCollection Results of a Trigger search. Contains boh TriggerSummary items and other information, such as metadata.
+// TriggersCollection Note: Deprecated. Use the new resource model APIs instead.
+// Results of a Trigger search. Contains boh TriggerSummary items and other information, such as metadata.
 type TriggersCollection struct {
 
 	// List of TriggerSummary.

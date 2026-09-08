@@ -16,7 +16,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateApplicationDetails Properties to update an application.
+// UpdateApplicationDetails Note: Deprecated. Use the new resource model APIs instead.
+// Properties to update an application.
 type UpdateApplicationDetails struct {
 
 	// Application configuration. These values are passed on to the function as environment variables, functions may override application configuration.

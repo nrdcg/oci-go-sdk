@@ -17,7 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// FailureDestinationDetails An object that represents the destination to which Oracle Functions will send an invocation record with the details of the error of the failed detached function invocation.
+// FailureDestinationDetails Note: Deprecated. Use the new resource model APIs instead.
+// An object that represents the destination to which Oracle Functions will send an invocation record with the details of the error of the failed detached function invocation.
 // A notification is an example of a failure destination.
 // Example: `{"kind": "NOTIFICATION", "topicId": "topic_OCID"}`
 type FailureDestinationDetails interface {

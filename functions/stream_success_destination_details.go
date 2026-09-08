@@ -17,7 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// StreamSuccessDestinationDetails The destination stream in the Streaming service to which to send the response of the successful detached function invocation.
+// StreamSuccessDestinationDetails Note: Deprecated. Use the new resource model APIs instead.
+// The destination stream in the Streaming service to which to send the response of the successful detached function invocation.
 // Example: `{"kind": "STREAM", "streamId": "stream_OCID"}`
 type StreamSuccessDestinationDetails struct {
 

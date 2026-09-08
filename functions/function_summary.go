@@ -17,7 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// FunctionSummary Summary of a function.
+// FunctionSummary Note: Deprecated. Use the new resource model APIs instead.
+// Summary of a function.
 type FunctionSummary struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the function.

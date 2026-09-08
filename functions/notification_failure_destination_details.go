@@ -17,7 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// NotificationFailureDestinationDetails The destination topic in the Notifications service to which to send the response of the failed detached function invocation.
+// NotificationFailureDestinationDetails Note: Deprecated. Use the new resource model APIs instead.
+// The destination topic in the Notifications service to which to send the response of the failed detached function invocation.
 // Example: `{"kind": "NOTIFICATION", "topicId": "topic_OCID"}`
 type NotificationFailureDestinationDetails struct {
 

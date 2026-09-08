@@ -16,7 +16,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// PolicyDetails A policy required for this PBF execution.
+// PolicyDetails Note: Deprecated. Use the new resource model APIs instead.
+// "A policy required for this PBF execution."
 type PolicyDetails struct {
 
 	// Policy required for PBF execution

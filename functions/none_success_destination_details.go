@@ -17,7 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// NoneSuccessDestinationDetails Specifies no success destination
+// NoneSuccessDestinationDetails Note: Deprecated. Use the new resource model APIs instead.
+// Specifies no success destination
 // Example: `{"kind": "NONE"}`
 type NoneSuccessDestinationDetails struct {
 }

@@ -16,7 +16,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// Trigger PBF specific triggers for activating a PBF.
+// Trigger Note: Deprecated. Use the new resource model APIs instead.
+// PBF specific triggers for activating a PBF.
 type Trigger struct {
 
 	// A brief descriptive name for the PBF trigger.

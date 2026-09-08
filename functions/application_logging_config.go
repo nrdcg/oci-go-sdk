@@ -16,7 +16,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ApplicationLoggingConfig Set logging configuration for an application. This is only used if Service Logs for the application are enabled in the OCI Logging service.
+// ApplicationLoggingConfig Note: Deprecated. Use the new resource model APIs instead.
+// Set logging configuration for an application. This is only used if Service Logs for the application are enabled in the OCI Logging service.
 type ApplicationLoggingConfig struct {
 
 	// Specify the format of log lines emitted by functions in this application.
