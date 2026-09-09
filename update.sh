@@ -270,10 +270,15 @@ MODULE_LIST=$(find . -name go.mod -execdir go list -f "- \`{{.ImportPath}} ${DES
     sed -n '/<!-- end module list -->/,$p' "${INITIAL_PATH}/readme.md"
 } > "${INITIAL_PATH}/readme.md.tmp" && mv "${INITIAL_PATH}/readme.md.tmp" "${INITIAL_PATH}/readme.md"
 
-echo "The user needs to run:"
-echo "git commit -m \"chore: ${LIB_VERSION}\""
+#echo "The user needs to run:"
+#echo "git commit -m \"chore: ${LIB_VERSION}\""
 
 cd -
 
-rm -rf ${SRC_DIR}
-rm -rf ${DEST}
+rm -rf "${SRC_DIR}"
+rm -rf "${DEST}"
+
+cd "${INITIAL_PATH}"
+git add readme.md
+git commit -m "chore: ${LIB_VERSION}"
+git push
