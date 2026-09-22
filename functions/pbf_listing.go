@@ -16,8 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// PbfListing Note: Deprecated. Use the new resource model APIs instead.
-// PbfListing resources provide details about the available PBFs for consumption by the user.
+// PbfListing PbfListing resources provide details about the available PBFs for consumption by the user.
 // This resource contains details about PBF's functionality, policies required, configuration parameters expected
 // etc.
 type PbfListing struct {

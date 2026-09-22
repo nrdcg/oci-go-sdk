@@ -16,8 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ApplicationSummary Note: Deprecated. Use the new resource model APIs instead.
-// Summary of an application.
+// ApplicationSummary Summary of an application.
 type ApplicationSummary struct {
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the application.

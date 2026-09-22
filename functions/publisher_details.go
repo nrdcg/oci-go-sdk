@@ -16,8 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// PublisherDetails Note: Deprecated. Use the new resource model APIs instead.
-// Contains details about the publisher of this PBF Listing.
+// PublisherDetails Contains details about the publisher of this PBF Listing.
 type PublisherDetails struct {
 
 	// Name of the Publisher

@@ -56,6 +56,14 @@ func (m *pricingplan) UnmarshalPolymorphicJSON(data []byte) (interface{}, error)
 
 	var err error
 	switch m.PlanType {
+	case "HYBRID":
+		mm := HybridPricingPlan{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
+	case "USAGE_BASED":
+		mm := UsageBasedPricingPlan{}
+		err = json.Unmarshal(data, &mm)
+		return mm, err
 	case "METERED":
 		mm := MeteredPricingPlan{}
 		err = json.Unmarshal(data, &mm)
@@ -96,18 +104,24 @@ type PricingPlanPlanTypeEnum string
 
 // Set of constants representing the allowable values for PricingPlanPlanTypeEnum
 const (
-	PricingPlanPlanTypeMetered PricingPlanPlanTypeEnum = "METERED"
-	PricingPlanPlanTypeFixed   PricingPlanPlanTypeEnum = "FIXED"
+	PricingPlanPlanTypeMetered    PricingPlanPlanTypeEnum = "METERED"
+	PricingPlanPlanTypeFixed      PricingPlanPlanTypeEnum = "FIXED"
+	PricingPlanPlanTypeUsageBased PricingPlanPlanTypeEnum = "USAGE_BASED"
+	PricingPlanPlanTypeHybrid     PricingPlanPlanTypeEnum = "HYBRID"
 )
 
 var mappingPricingPlanPlanTypeEnum = map[string]PricingPlanPlanTypeEnum{
-	"METERED": PricingPlanPlanTypeMetered,
-	"FIXED":   PricingPlanPlanTypeFixed,
+	"METERED":     PricingPlanPlanTypeMetered,
+	"FIXED":       PricingPlanPlanTypeFixed,
+	"USAGE_BASED": PricingPlanPlanTypeUsageBased,
+	"HYBRID":      PricingPlanPlanTypeHybrid,
 }
 
 var mappingPricingPlanPlanTypeEnumLowerCase = map[string]PricingPlanPlanTypeEnum{
-	"metered": PricingPlanPlanTypeMetered,
-	"fixed":   PricingPlanPlanTypeFixed,
+	"metered":     PricingPlanPlanTypeMetered,
+	"fixed":       PricingPlanPlanTypeFixed,
+	"usage_based": PricingPlanPlanTypeUsageBased,
+	"hybrid":      PricingPlanPlanTypeHybrid,
 }
 
 // GetPricingPlanPlanTypeEnumValues Enumerates the set of values for PricingPlanPlanTypeEnum
@@ -124,6 +138,8 @@ func GetPricingPlanPlanTypeEnumStringValues() []string {
 	return []string{
 		"METERED",
 		"FIXED",
+		"USAGE_BASED",
+		"HYBRID",
 	}
 }
 

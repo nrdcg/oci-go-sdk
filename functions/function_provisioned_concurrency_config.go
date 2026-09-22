@@ -17,8 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// FunctionProvisionedConcurrencyConfig Note: Deprecated. Use the new resource model APIs instead.
-// Define the strategy for provisioned concurrency for the function.
+// FunctionProvisionedConcurrencyConfig Define the strategy for provisioned concurrency for the function.
 type FunctionProvisionedConcurrencyConfig interface {
 }
 

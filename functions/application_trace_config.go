@@ -16,8 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// ApplicationTraceConfig Note: Deprecated. Use the new resource model APIs instead.
-// Define the tracing configuration for an application.
+// ApplicationTraceConfig Define the tracing configuration for an application.
 type ApplicationTraceConfig struct {
 
 	// Define if tracing is enabled for the resource.

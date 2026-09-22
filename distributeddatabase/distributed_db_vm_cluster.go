@@ -16,8 +16,11 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// DistributedDbVmCluster The Exadata VM cluster for Distributed Database Resource
+// DistributedDbVmCluster The Exadata VM cluster for Distributed Database Resource.
 type DistributedDbVmCluster struct {
+
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment for VM Cluster.
+	CompartmentId *string `mandatory:"true" json:"compartmentId"`
 
 	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet associated with the Exadata VM cluster on Exascale Infrastructure.
 	SubnetId *string `mandatory:"true" json:"subnetId"`
@@ -31,7 +34,7 @@ type DistributedDbVmCluster struct {
 	// The public key portion of one or more key pairs used for SSH access to the Exadata VM cluster on Exascale Infrastructure.
 	SshPublicKeys []string `mandatory:"true" json:"sshPublicKeys"`
 
-	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exadata VM cluster on Exascale Infrastructure.
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
 	VmClusterId *string `mandatory:"false" json:"vmClusterId"`
 
 	// The user-friendly name for the Exadata VM cluster on Exascale Infrastructure. The name does not need to be unique.
@@ -81,6 +84,9 @@ type DistributedDbVmCluster struct {
 	// Enabling incident logs collection allows Oracle to receive Events service notifications for guest VM issues, collect incident logs and traces, and use them to diagnose issues and resolve them.
 	// Optionally enable incident logs collection while provisioning a system. You can also disable or enable incident logs collection anytime using the `UpdateVmCluster` API.
 	IsIncidentLogsEnabled *bool `mandatory:"false" json:"isIncidentLogsEnabled"`
+
+	// The OCID (https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.
+	SubscriptionId *string `mandatory:"false" json:"subscriptionId"`
 }
 
 func (m DistributedDbVmCluster) String() string {

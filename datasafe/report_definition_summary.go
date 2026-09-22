@@ -113,6 +113,7 @@ const (
 	ReportDefinitionSummaryCategorySummary            ReportDefinitionSummaryCategoryEnum = "SUMMARY"
 	ReportDefinitionSummaryCategoryActivityAuditing   ReportDefinitionSummaryCategoryEnum = "ACTIVITY_AUDITING"
 	ReportDefinitionSummaryCategorySecurityAssessment ReportDefinitionSummaryCategoryEnum = "SECURITY_ASSESSMENT"
+	ReportDefinitionSummaryCategoryCryptoAssessment   ReportDefinitionSummaryCategoryEnum = "CRYPTO_ASSESSMENT"
 	ReportDefinitionSummaryCategoryFirewallViolations ReportDefinitionSummaryCategoryEnum = "FIREWALL_VIOLATIONS"
 	ReportDefinitionSummaryCategoryAllowedSql         ReportDefinitionSummaryCategoryEnum = "ALLOWED_SQL"
 )
@@ -122,6 +123,7 @@ var mappingReportDefinitionSummaryCategoryEnum = map[string]ReportDefinitionSumm
 	"SUMMARY":             ReportDefinitionSummaryCategorySummary,
 	"ACTIVITY_AUDITING":   ReportDefinitionSummaryCategoryActivityAuditing,
 	"SECURITY_ASSESSMENT": ReportDefinitionSummaryCategorySecurityAssessment,
+	"CRYPTO_ASSESSMENT":   ReportDefinitionSummaryCategoryCryptoAssessment,
 	"FIREWALL_VIOLATIONS": ReportDefinitionSummaryCategoryFirewallViolations,
 	"ALLOWED_SQL":         ReportDefinitionSummaryCategoryAllowedSql,
 }
@@ -131,6 +133,7 @@ var mappingReportDefinitionSummaryCategoryEnumLowerCase = map[string]ReportDefin
 	"summary":             ReportDefinitionSummaryCategorySummary,
 	"activity_auditing":   ReportDefinitionSummaryCategoryActivityAuditing,
 	"security_assessment": ReportDefinitionSummaryCategorySecurityAssessment,
+	"crypto_assessment":   ReportDefinitionSummaryCategoryCryptoAssessment,
 	"firewall_violations": ReportDefinitionSummaryCategoryFirewallViolations,
 	"allowed_sql":         ReportDefinitionSummaryCategoryAllowedSql,
 }
@@ -151,6 +154,7 @@ func GetReportDefinitionSummaryCategoryEnumStringValues() []string {
 		"SUMMARY",
 		"ACTIVITY_AUDITING",
 		"SECURITY_ASSESSMENT",
+		"CRYPTO_ASSESSMENT",
 		"FIREWALL_VIOLATIONS",
 		"ALLOWED_SQL",
 	}

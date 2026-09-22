@@ -16,8 +16,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// TriggerSummary Note: Deprecated. Use the new resource model APIs instead.
-// Summary of the Trigger.
+// TriggerSummary Summary of the Trigger.
 type TriggerSummary struct {
 
 	// A brief descriptive name for the PBF trigger.

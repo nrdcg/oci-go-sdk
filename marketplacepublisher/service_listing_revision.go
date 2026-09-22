@@ -78,6 +78,8 @@ type ServiceListingRevision struct {
 
 	Icon *ListingRevisionIconAttachment `mandatory:"false" json:"icon"`
 
+	Banner *ListingRevisionBannerAttachment `mandatory:"false" json:"banner"`
+
 	// Status notes for the listing revision.
 	StatusNotes *string `mandatory:"false" json:"statusNotes"`
 
@@ -206,6 +208,11 @@ func (m ServiceListingRevision) GetSupportLinks() []NamedLink {
 // GetIcon returns Icon
 func (m ServiceListingRevision) GetIcon() *ListingRevisionIconAttachment {
 	return m.Icon
+}
+
+// GetBanner returns Banner
+func (m ServiceListingRevision) GetBanner() *ListingRevisionBannerAttachment {
+	return m.Banner
 }
 
 // GetStatus returns Status
