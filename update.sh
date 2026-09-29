@@ -26,8 +26,8 @@ DEST_TAG=v10${SRC_BASE_VERSION}
 
 ## Clone options
 
-SRC_DIR=$(mktemp -d)
-DEST=$(mktemp -d)
+SRC_DIR=$(mktemp -d -t .oci.src.XXXXXXXXXX)
+DEST=$(mktemp -d -t .oci.dst.XXXXXXXXXX)
 
 DEST_BRANCH="modules"
 
@@ -251,6 +251,10 @@ git push -q origin ${DEST_BRANCH}
 for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'| grep -v 'example'); do
     echo "tag: ${row}/${DEST_TAG}"
     git tag "${row}/${DEST_TAG}"
+done
+
+for row in $(ls -d */ | sed 's|[/]||g' | grep -v 'cmd'| grep -v 'example'); do
+    echo "push: ${row}/${DEST_TAG}"
     git push -q origin "${row}/${DEST_TAG}"
 done
 
