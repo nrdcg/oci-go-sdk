@@ -231,6 +231,8 @@ type OpensearchCluster struct {
 	LoadBalancerConfig *LoadBalancerConfig `mandatory:"false" json:"loadBalancerConfig"`
 
 	CertificateConfig *CertificateConfig `mandatory:"false" json:"certificateConfig"`
+
+	RemoteReindexTrustConfig *RemoteReindexTrustConfig `mandatory:"false" json:"remoteReindexTrustConfig"`
 }
 
 func (m OpensearchCluster) String() string {

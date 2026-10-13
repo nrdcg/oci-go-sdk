@@ -64,6 +64,7 @@ const (
 	DatabaseToolNameOrds            DatabaseToolNameEnum = "ORDS"
 	DatabaseToolNameMongodbApi      DatabaseToolNameEnum = "MONGODB_API"
 	DatabaseToolNameSpatialStudio   DatabaseToolNameEnum = "SPATIAL_STUDIO"
+	DatabaseToolNameEssbase         DatabaseToolNameEnum = "ESSBASE"
 )
 
 var mappingDatabaseToolNameEnum = map[string]DatabaseToolNameEnum{
@@ -75,6 +76,7 @@ var mappingDatabaseToolNameEnum = map[string]DatabaseToolNameEnum{
 	"ORDS":             DatabaseToolNameOrds,
 	"MONGODB_API":      DatabaseToolNameMongodbApi,
 	"SPATIAL_STUDIO":   DatabaseToolNameSpatialStudio,
+	"ESSBASE":          DatabaseToolNameEssbase,
 }
 
 var mappingDatabaseToolNameEnumLowerCase = map[string]DatabaseToolNameEnum{
@@ -86,6 +88,7 @@ var mappingDatabaseToolNameEnumLowerCase = map[string]DatabaseToolNameEnum{
 	"ords":             DatabaseToolNameOrds,
 	"mongodb_api":      DatabaseToolNameMongodbApi,
 	"spatial_studio":   DatabaseToolNameSpatialStudio,
+	"essbase":          DatabaseToolNameEssbase,
 }
 
 // GetDatabaseToolNameEnumValues Enumerates the set of values for DatabaseToolNameEnum
@@ -108,6 +111,7 @@ func GetDatabaseToolNameEnumStringValues() []string {
 		"ORDS",
 		"MONGODB_API",
 		"SPATIAL_STUDIO",
+		"ESSBASE",
 	}
 }
 
