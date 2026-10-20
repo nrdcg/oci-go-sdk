@@ -22,7 +22,7 @@ type InvoicingUser struct {
 	// Name.
 	Name *string `mandatory:"false" json:"name"`
 
-	// userName.
+	// User name.
 	UserName *string `mandatory:"false" json:"userName"`
 
 	// First name.
@@ -34,7 +34,7 @@ type InvoicingUser struct {
 	// Email.
 	Email *string `mandatory:"false" json:"email"`
 
-	// TCA contact ID.
+	// TCA (Trading Community Architecture) contact ID.
 	TcaContactId *int64 `mandatory:"false" json:"tcaContactId"`
 
 	// TCA customer account site ID.

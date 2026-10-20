@@ -19,7 +19,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// UpdateDedicatedAiClusterDetails The data to update a dedicated AI cluster.
+// UpdateDedicatedAiClusterDetails The data to update a dedicated AI cluster. Properties not defined by this schema are rejected.
 type UpdateDedicatedAiClusterDetails struct {
 
 	// A user-friendly name. Does not have to be unique, and it's changeable.

@@ -92,7 +92,7 @@ func (client *InvoiceSummaryClient) ConfigurationProvider() *common.Configuratio
 	return client.config
 }
 
-// ListInvoicelineComputedUsages This is a collection API which returns a list of Invoiced Computed Usages for given Invoiceline id.
+// ListInvoicelineComputedUsages Collection API that returns a list of invoiced computed usages for the given invoice line ID.
 //
 // # See also
 //
@@ -149,7 +149,7 @@ func (client InvoiceSummaryClient) listInvoicelineComputedUsages(ctx context.Con
 	return response, err
 }
 
-// ListInvoices This is a collection API which returns a list of Invoices for given filters.
+// ListInvoices Collection API that returns a list of invoices according to the given filters.
 //
 // # See also
 //

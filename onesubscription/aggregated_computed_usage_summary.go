@@ -16,13 +16,13 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// AggregatedComputedUsageSummary Subscribed Service Contract details
+// AggregatedComputedUsageSummary Subscribed service contract details.
 type AggregatedComputedUsageSummary struct {
 
-	// Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM
+	// Subscription ID is an identifier associated with the service used for filtering the computed usage in SPM (Subscription Plan Management).
 	SubscriptionId *string `mandatory:"true" json:"subscriptionId"`
 
-	// Subscribed service line parent id
+	// Subscribed service line parent ID.
 	ParentSubscribedServiceId *string `mandatory:"false" json:"parentSubscribedServiceId"`
 
 	ParentProduct *ComputedUsageProduct `mandatory:"false" json:"parentProduct"`
@@ -36,13 +36,13 @@ type AggregatedComputedUsageSummary struct {
 	// Subscribed service asociated subscription plan number.
 	PlanNumber *string `mandatory:"false" json:"planNumber"`
 
-	// Currency code
+	// Currency code.
 	CurrencyCode *string `mandatory:"false" json:"currencyCode"`
 
-	// Inernal SPM Ratecard Id at line level
+	// Inernal SPM rate card ID at line level.
 	RateCardId *string `mandatory:"false" json:"rateCardId"`
 
-	// Subscribed services pricing model
+	// Subscribed services pricing model.
 	PricingModel AggregatedComputedUsageSummaryPricingModelEnum `mandatory:"false" json:"pricingModel,omitempty"`
 
 	// Aggregation of computed usages for the subscribed service.

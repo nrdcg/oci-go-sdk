@@ -1,10 +1,10 @@
 module github.com/nrdcg/oci-go-sdk/databasetools/v1065
 
-go 1.25.0
+go 1.26.0
 
 replace github.com/nrdcg/oci-go-sdk/common/v1065 => ../common
 
-require github.com/nrdcg/oci-go-sdk/common/v1065 v1065.127.0
+require github.com/nrdcg/oci-go-sdk/common/v1065 v1065.128.0
 
 require (
 	github.com/gofrs/flock v0.13.1 // indirect

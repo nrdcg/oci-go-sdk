@@ -16,19 +16,19 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// SubscriptionProduct Product description
+// SubscriptionProduct Product description.
 type SubscriptionProduct struct {
 
-	// Product part numner
+	// Product part number.
 	PartNumber *string `mandatory:"true" json:"partNumber"`
 
-	// Product name
+	// Product name.
 	Name *string `mandatory:"true" json:"name"`
 
-	// Unit of measure
+	// Unit of measure.
 	UnitOfMeasure *string `mandatory:"true" json:"unitOfMeasure"`
 
-	// Product provisioning group
+	// Product provisioning group.
 	ProvisioningGroup *string `mandatory:"false" json:"provisioningGroup"`
 }
 
