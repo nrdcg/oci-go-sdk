@@ -32,6 +32,9 @@ type CreatePipelineRunDetails struct {
 	// A user-friendly display name for the resource.
 	DisplayName *string `mandatory:"false" json:"displayName"`
 
+	// Retention period in days for pipeline run.
+	PipelineRunRetentionPeriodInDaysOverride *int `mandatory:"false" json:"pipelineRunRetentionPeriodInDaysOverride"`
+
 	ConfigurationOverrideDetails PipelineConfigurationDetails `mandatory:"false" json:"configurationOverrideDetails"`
 
 	LogConfigurationOverrideDetails *PipelineLogConfigurationDetails `mandatory:"false" json:"logConfigurationOverrideDetails"`
@@ -81,6 +84,7 @@ func (m *CreatePipelineRunDetails) UnmarshalJSON(data []byte) (e error) {
 	model := struct {
 		ProjectId                                    *string                                     `json:"projectId"`
 		DisplayName                                  *string                                     `json:"displayName"`
+		PipelineRunRetentionPeriodInDaysOverride     *int                                        `json:"pipelineRunRetentionPeriodInDaysOverride"`
 		ConfigurationOverrideDetails                 pipelineconfigurationdetails                `json:"configurationOverrideDetails"`
 		LogConfigurationOverrideDetails              *PipelineLogConfigurationDetails            `json:"logConfigurationOverrideDetails"`
 		InfrastructureConfigurationOverrideDetails   *PipelineInfrastructureConfigurationDetails `json:"infrastructureConfigurationOverrideDetails"`
@@ -102,6 +106,8 @@ func (m *CreatePipelineRunDetails) UnmarshalJSON(data []byte) (e error) {
 	m.ProjectId = model.ProjectId
 
 	m.DisplayName = model.DisplayName
+
+	m.PipelineRunRetentionPeriodInDaysOverride = model.PipelineRunRetentionPeriodInDaysOverride
 
 	nn, e = model.ConfigurationOverrideDetails.UnmarshalPolymorphicJSON(model.ConfigurationOverrideDetails.JsonData)
 	if e != nil {

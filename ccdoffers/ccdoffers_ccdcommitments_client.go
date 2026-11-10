@@ -146,7 +146,7 @@ func (client CcdCommitmentsClient) createCcdCommitment(ctx context.Context, requ
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/CreateCcdCommitment"
 		err = common.PostProcessServiceError(err, "CcdCommitments", "CreateCcdCommitment", apiReferenceLink)
 		return response, err
 	}
@@ -204,7 +204,7 @@ func (client CcdCommitmentsClient) deleteCcdCommitment(ctx context.Context, requ
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/DeleteCcdCommitment"
 		err = common.PostProcessServiceError(err, "CcdCommitments", "DeleteCcdCommitment", apiReferenceLink)
 		return response, err
 	}
@@ -262,7 +262,7 @@ func (client CcdCommitmentsClient) getCcdCommitment(ctx context.Context, request
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/GetCcdCommitment"
 		err = common.PostProcessServiceError(err, "CcdCommitments", "GetCcdCommitment", apiReferenceLink)
 		return response, err
 	}
@@ -320,7 +320,7 @@ func (client CcdCommitmentsClient) listCcdCommitments(ctx context.Context, reque
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitmentCollection/ListCcdCommitments"
 		err = common.PostProcessServiceError(err, "CcdCommitments", "ListCcdCommitments", apiReferenceLink)
 		return response, err
 	}
@@ -378,7 +378,7 @@ func (client CcdCommitmentsClient) updateCcdCommitment(ctx context.Context, requ
 	defer common.CloseBodyIfValid(httpResponse)
 	response.RawResponse = httpResponse
 	if err != nil {
-		apiReferenceLink := ""
+		apiReferenceLink := "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/UpdateCcdCommitment"
 		err = common.PostProcessServiceError(err, "CcdCommitments", "UpdateCcdCommitment", apiReferenceLink)
 		return response, err
 	}

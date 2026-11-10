@@ -21,6 +21,11 @@ import (
 // FsuGoalVersionDetails Goal version or image details for the Exadata Fleet Update Cycle.
 type FsuGoalVersionDetails interface {
 
+	// Indicates whether the customer acknowledged the risk of selecting an older eligible software version
+	// for this Exadata Fleet Update Cycle. This value is used for downstream
+	// Database service APIs that requires older-version acknowledgement.
+	GetIsOlderVersionAcknowledged() *bool
+
 	// Goal home policy to use when Staging the Goal Version during patching.
 	// CREATE_NEW: Create a new DBHome (for Database Collections) for the specified image or version.
 	// USE_EXISTING: All database targets in the same VMCluster or CloudVmCluster will be moved to a shared database home.
@@ -36,10 +41,11 @@ type FsuGoalVersionDetails interface {
 }
 
 type fsugoalversiondetails struct {
-	JsonData      []byte
-	HomePolicy    FsuGoalVersionDetailsHomePolicyEnum `mandatory:"false" json:"homePolicy,omitempty"`
-	NewHomePrefix *string                             `mandatory:"false" json:"newHomePrefix"`
-	Type          string                              `json:"type"`
+	JsonData                   []byte
+	IsOlderVersionAcknowledged *bool                               `mandatory:"false" json:"isOlderVersionAcknowledged"`
+	HomePolicy                 FsuGoalVersionDetailsHomePolicyEnum `mandatory:"false" json:"homePolicy,omitempty"`
+	NewHomePrefix              *string                             `mandatory:"false" json:"newHomePrefix"`
+	Type                       string                              `json:"type"`
 }
 
 // UnmarshalJSON unmarshals json
@@ -53,6 +59,7 @@ func (m *fsugoalversiondetails) UnmarshalJSON(data []byte) error {
 	if err != nil {
 		return err
 	}
+	m.IsOlderVersionAcknowledged = s.Model.IsOlderVersionAcknowledged
 	m.HomePolicy = s.Model.HomePolicy
 	m.NewHomePrefix = s.Model.NewHomePrefix
 	m.Type = s.Model.Type
@@ -85,6 +92,11 @@ func (m *fsugoalversiondetails) UnmarshalPolymorphicJSON(data []byte) (interface
 		common.Logf("Received unsupported enum value for FsuGoalVersionDetails: %s.", m.Type)
 		return *m, nil
 	}
+}
+
+// GetIsOlderVersionAcknowledged returns IsOlderVersionAcknowledged
+func (m fsugoalversiondetails) GetIsOlderVersionAcknowledged() *bool {
+	return m.IsOlderVersionAcknowledged
 }
 
 // GetHomePolicy returns HomePolicy
