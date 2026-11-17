@@ -75,6 +75,8 @@ type CreateLustreFileSystemDetails struct {
 	ClusterPlacementGroupId *string `mandatory:"false" json:"clusterPlacementGroupId"`
 
 	MaintenanceWindow *MaintenanceWindow `mandatory:"false" json:"maintenanceWindow"`
+
+	TieringConfiguration *TieringConfigurationDetails `mandatory:"false" json:"tieringConfiguration"`
 }
 
 func (m CreateLustreFileSystemDetails) String() string {
