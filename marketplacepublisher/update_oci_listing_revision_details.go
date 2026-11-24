@@ -74,9 +74,6 @@ type UpdateOciListingRevisionDetails struct {
 	// The unique id of the term attached to the listing.
 	TermId *string `mandatory:"false" json:"termId"`
 
-	// Custom link to the listing
-	VanityUrl *string `mandatory:"false" json:"vanityUrl"`
-
 	// OCIDs of service listings attached to lead gen listing
 	RecommendedServiceProviderListingIds []string `mandatory:"false" json:"recommendedServiceProviderListingIds"`
 
@@ -88,6 +85,9 @@ type UpdateOciListingRevisionDetails struct {
 
 	// Is this listing rover exportable
 	IsRoverExportable *bool `mandatory:"false" json:"isRoverExportable"`
+
+	// Custom link to the listing
+	VanityUrl *string `mandatory:"false" json:"vanityUrl"`
 
 	// Url to demo of the listing
 	DemoUrl *string `mandatory:"false" json:"demoUrl"`
@@ -219,11 +219,11 @@ func (m *UpdateOciListingRevisionDetails) UnmarshalJSON(data []byte) (e error) {
 		Products                             []ListingProduct                  `json:"products"`
 		PartnerRegistrationUrl               *string                           `json:"partnerRegistrationUrl"`
 		TermId                               *string                           `json:"termId"`
-		VanityUrl                            *string                           `json:"vanityUrl"`
 		RecommendedServiceProviderListingIds []string                          `json:"recommendedServiceProviderListingIds"`
 		AvailabilityAndPricingPolicy         *string                           `json:"availabilityAndPricingPolicy"`
 		PricingPlans                         []pricingplan                     `json:"pricingPlans"`
 		IsRoverExportable                    *bool                             `json:"isRoverExportable"`
+		VanityUrl                            *string                           `json:"vanityUrl"`
 		DemoUrl                              *string                           `json:"demoUrl"`
 		SelfPacedTrainingUrl                 *string                           `json:"selfPacedTrainingUrl"`
 	}{}
@@ -271,8 +271,6 @@ func (m *UpdateOciListingRevisionDetails) UnmarshalJSON(data []byte) (e error) {
 
 	m.TermId = model.TermId
 
-	m.VanityUrl = model.VanityUrl
-
 	m.RecommendedServiceProviderListingIds = make([]string, len(model.RecommendedServiceProviderListingIds))
 	copy(m.RecommendedServiceProviderListingIds, model.RecommendedServiceProviderListingIds)
 	m.AvailabilityAndPricingPolicy = model.AvailabilityAndPricingPolicy
@@ -290,6 +288,8 @@ func (m *UpdateOciListingRevisionDetails) UnmarshalJSON(data []byte) (e error) {
 		}
 	}
 	m.IsRoverExportable = model.IsRoverExportable
+
+	m.VanityUrl = model.VanityUrl
 
 	m.DemoUrl = model.DemoUrl
 

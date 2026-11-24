@@ -17,9 +17,7 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// OracleMigration Oracle Migration resource.
-// Deprecated: The parent-level Oracle migration configuration properties on this model are deprecated.
-// Use `migrationSettings` instead.
+// OracleMigration Oracle Migration resource
 type OracleMigration struct {
 
 	// The OCID of the resource being referenced.
@@ -68,8 +66,6 @@ type OracleMigration struct {
 	// Usage of system tag keys. These predefined keys are scoped to namespaces.
 	// Example: `{"orcl-cloud": {"free-tier-retained": "true"}}`
 	SystemTags map[string]map[string]interface{} `mandatory:"false" json:"systemTags"`
-
-	MigrationSettings OracleMigrationSettings `mandatory:"false" json:"migrationSettings"`
 
 	DataTransferMediumDetails OracleDataTransferMediumDetails `mandatory:"false" json:"dataTransferMediumDetails"`
 
@@ -250,7 +246,6 @@ func (m *OracleMigration) UnmarshalJSON(data []byte) (e error) {
 		FreeformTags                        map[string]string                 `json:"freeformTags"`
 		DefinedTags                         map[string]map[string]interface{} `json:"definedTags"`
 		SystemTags                          map[string]map[string]interface{} `json:"systemTags"`
-		MigrationSettings                   oraclemigrationsettings           `json:"migrationSettings"`
 		DataTransferMediumDetails           oracledatatransfermediumdetails   `json:"dataTransferMediumDetails"`
 		InitialLoadSettings                 *OracleInitialLoadSettings        `json:"initialLoadSettings"`
 		AdvisorSettings                     *OracleAdvisorSettings            `json:"advisorSettings"`
@@ -293,16 +288,6 @@ func (m *OracleMigration) UnmarshalJSON(data []byte) (e error) {
 	m.DefinedTags = model.DefinedTags
 
 	m.SystemTags = model.SystemTags
-
-	nn, e = model.MigrationSettings.UnmarshalPolymorphicJSON(model.MigrationSettings.JsonData)
-	if e != nil {
-		return
-	}
-	if nn != nil {
-		m.MigrationSettings = nn.(OracleMigrationSettings)
-	} else {
-		m.MigrationSettings = nil
-	}
 
 	nn, e = model.DataTransferMediumDetails.UnmarshalPolymorphicJSON(model.DataTransferMediumDetails.JsonData)
 	if e != nil {

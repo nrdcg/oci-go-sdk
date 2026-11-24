@@ -175,6 +175,7 @@ const (
 	ListDeploymentsSupportedConnectionTypeHdfs                       ListDeploymentsSupportedConnectionTypeEnum = "HDFS"
 	ListDeploymentsSupportedConnectionTypeOracleAiDataPlatform       ListDeploymentsSupportedConnectionTypeEnum = "ORACLE_AI_DATA_PLATFORM"
 	ListDeploymentsSupportedConnectionTypeOracleAiDataPlatformEngine ListDeploymentsSupportedConnectionTypeEnum = "ORACLE_AI_DATA_PLATFORM_ENGINE"
+	ListDeploymentsSupportedConnectionTypeOracleAiDataCatalogStorage ListDeploymentsSupportedConnectionTypeEnum = "ORACLE_AI_DATA_CATALOG_STORAGE"
 	ListDeploymentsSupportedConnectionTypeOracleNosql                ListDeploymentsSupportedConnectionTypeEnum = "ORACLE_NOSQL"
 	ListDeploymentsSupportedConnectionTypeMongodb                    ListDeploymentsSupportedConnectionTypeEnum = "MONGODB"
 	ListDeploymentsSupportedConnectionTypeAmazonKinesis              ListDeploymentsSupportedConnectionTypeEnum = "AMAZON_KINESIS"
@@ -212,6 +213,7 @@ var mappingListDeploymentsSupportedConnectionTypeEnum = map[string]ListDeploymen
 	"HDFS":                           ListDeploymentsSupportedConnectionTypeHdfs,
 	"ORACLE_AI_DATA_PLATFORM":        ListDeploymentsSupportedConnectionTypeOracleAiDataPlatform,
 	"ORACLE_AI_DATA_PLATFORM_ENGINE": ListDeploymentsSupportedConnectionTypeOracleAiDataPlatformEngine,
+	"ORACLE_AI_DATA_CATALOG_STORAGE": ListDeploymentsSupportedConnectionTypeOracleAiDataCatalogStorage,
 	"ORACLE_NOSQL":                   ListDeploymentsSupportedConnectionTypeOracleNosql,
 	"MONGODB":                        ListDeploymentsSupportedConnectionTypeMongodb,
 	"AMAZON_KINESIS":                 ListDeploymentsSupportedConnectionTypeAmazonKinesis,
@@ -249,6 +251,7 @@ var mappingListDeploymentsSupportedConnectionTypeEnumLowerCase = map[string]List
 	"hdfs":                           ListDeploymentsSupportedConnectionTypeHdfs,
 	"oracle_ai_data_platform":        ListDeploymentsSupportedConnectionTypeOracleAiDataPlatform,
 	"oracle_ai_data_platform_engine": ListDeploymentsSupportedConnectionTypeOracleAiDataPlatformEngine,
+	"oracle_ai_data_catalog_storage": ListDeploymentsSupportedConnectionTypeOracleAiDataCatalogStorage,
 	"oracle_nosql":                   ListDeploymentsSupportedConnectionTypeOracleNosql,
 	"mongodb":                        ListDeploymentsSupportedConnectionTypeMongodb,
 	"amazon_kinesis":                 ListDeploymentsSupportedConnectionTypeAmazonKinesis,
@@ -297,6 +300,7 @@ func GetListDeploymentsSupportedConnectionTypeEnumStringValues() []string {
 		"HDFS",
 		"ORACLE_AI_DATA_PLATFORM",
 		"ORACLE_AI_DATA_PLATFORM_ENGINE",
+		"ORACLE_AI_DATA_CATALOG_STORAGE",
 		"ORACLE_NOSQL",
 		"MONGODB",
 		"AMAZON_KINESIS",
@@ -407,6 +411,7 @@ const (
 	ListDeploymentsDeploymentTypeDataTransforms             ListDeploymentsDeploymentTypeEnum = "DATA_TRANSFORMS"
 	ListDeploymentsDeploymentTypeVeridataServer             ListDeploymentsDeploymentTypeEnum = "VERIDATA_SERVER"
 	ListDeploymentsDeploymentTypeVeridataAgent              ListDeploymentsDeploymentTypeEnum = "VERIDATA_AGENT"
+	ListDeploymentsDeploymentTypeAiDataCatalog              ListDeploymentsDeploymentTypeEnum = "AI_DATA_CATALOG"
 )
 
 var mappingListDeploymentsDeploymentTypeEnum = map[string]ListDeploymentsDeploymentTypeEnum{
@@ -422,6 +427,7 @@ var mappingListDeploymentsDeploymentTypeEnum = map[string]ListDeploymentsDeploym
 	"DATA_TRANSFORMS":              ListDeploymentsDeploymentTypeDataTransforms,
 	"VERIDATA_SERVER":              ListDeploymentsDeploymentTypeVeridataServer,
 	"VERIDATA_AGENT":               ListDeploymentsDeploymentTypeVeridataAgent,
+	"AI_DATA_CATALOG":              ListDeploymentsDeploymentTypeAiDataCatalog,
 }
 
 var mappingListDeploymentsDeploymentTypeEnumLowerCase = map[string]ListDeploymentsDeploymentTypeEnum{
@@ -437,6 +443,7 @@ var mappingListDeploymentsDeploymentTypeEnumLowerCase = map[string]ListDeploymen
 	"data_transforms":              ListDeploymentsDeploymentTypeDataTransforms,
 	"veridata_server":              ListDeploymentsDeploymentTypeVeridataServer,
 	"veridata_agent":               ListDeploymentsDeploymentTypeVeridataAgent,
+	"ai_data_catalog":              ListDeploymentsDeploymentTypeAiDataCatalog,
 }
 
 // GetListDeploymentsDeploymentTypeEnumValues Enumerates the set of values for ListDeploymentsDeploymentTypeEnum
@@ -463,6 +470,7 @@ func GetListDeploymentsDeploymentTypeEnumStringValues() []string {
 		"DATA_TRANSFORMS",
 		"VERIDATA_SERVER",
 		"VERIDATA_AGENT",
+		"AI_DATA_CATALOG",
 	}
 }
 

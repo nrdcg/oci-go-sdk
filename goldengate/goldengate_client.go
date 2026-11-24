@@ -579,7 +579,7 @@ func (client GoldenGateClient) changeConnectionCompartment(ctx context.Context, 
 	return response, err
 }
 
-// ChangeConnectionSubscription Associate a GoldanGate connection with a different subscription.
+// ChangeConnectionSubscription Associate a GoldenGate connection with a different subscription.
 //
 // # See also
 //

@@ -17,8 +17,8 @@ import (
 	"github.com/nrdcg/oci-go-sdk/common/v1065"
 )
 
-// CreateOracleAwsS3DataTransferMediumDetails AWS S3 bucket details used for source Connection resources with RDS_ORACLE type.
-// Only supported for source Connection resources with RDS_ORACLE type.
+// CreateOracleAwsS3DataTransferMediumDetails AWS S3 bucket details used to transfer Data Pump dump files for Oracle migrations.
+// Supported for source Connection resources with ORACLE_DATABASE, ORACLE_EXADATA, or AMAZON_RDS_ORACLE type.
 type CreateOracleAwsS3DataTransferMediumDetails struct {
 
 	// S3 bucket name.
